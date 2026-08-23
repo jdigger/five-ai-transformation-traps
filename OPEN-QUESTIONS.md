@@ -44,6 +44,10 @@ were specified but had never been built. Roughly:
 **Do not cut:** the Trap 1 refund loop, the Trap 2 architecture reveal, the Trap 5 ladder.
 Those are the three slides the talk is built on.
 
+**Competing demands on the same minutes:** Q-08 wants ~15 seconds in Trap 1 and Q-09 wants
+~1 minute in Trap 3 — the trap already marked for the deepest cut. Resolve those two while
+doing the Trap 3 pass, not separately.
+
 **Open sub-question:** is 45–50 a hard cap from the organizers, or a target? Changes the
 aggressiveness of the cut.
 
@@ -124,6 +128,98 @@ without asking?"*
 
 **Recommendation:** prepare the prompts; use them only if the room goes quiet. A prepared
 Q&A block already exists in the final slide's notes.
+
+---
+
+### Q-08 🟡 Does any of this change the value or the practice of TDD?
+Unaddressed anywhere in the deck, and near-certain to be asked in the room — it is an
+Agile meetup, and TDD is the most concrete shared practice the audience has.
+
+**The interesting half.** Test-first ordering was always partly a design-pressure
+mechanism and partly a *don't-fool-yourself* mechanism: a test written before the
+implementation cannot have been derived from the implementation. That second half is
+exactly the Trap 1 property — *could this check catch the original mistake?* So the honest
+claim is that **AI makes TDD's ordering discipline more valuable, not less**, because
+derived-check contamination is now fast, fluent, and voluminous. It also removes the
+oldest objection to TDD ("tests are expensive to write"), which cuts in TDD's favour.
+
+**The honest limit — do not skip this.** TDD gives you independence between the test and
+the *implementation*. It gives you nothing against a misread *requirement*: you write a
+test-first test encoding the misunderstanding, implement to it, and you are exactly as
+wrong. That gap is precisely where the refund example lives (D-19), and it is why the
+Trap 1 evidence slide reaches for invariants, replay against real history, and the person
+who wrote the policy instead.
+
+**A concrete Monday technique that falls out of this**, and probably the most useful thing
+in the whole question: *"AI, write the implementation"* followed by *"AI, now write the
+tests"* in the same context is the maximum-contamination case. Generating tests from the
+requirement in a **fresh** context, before the implementation exists, is meaningfully
+better evidence for roughly the same effort. That is TDD's ordering applied to an AI
+workflow, and it costs nothing to adopt.
+
+**Second-order:** red-green-refactor is the Trap 3 learning loop (*question → try →
+evidence → learn*) running on a 30-second cadence, and AI makes each cycle cheaper. But
+watch the design-pressure half — if you are not writing the code, you feel a bad interface
+less, which is the Trap 3 warning about staying connected to implementation evidence (D-28).
+
+**Recommendation:** do **not** add a TDD section — it would cost minutes the talk does not
+have (Q-01) and risks a practice-taxonomy detour (D-17). Instead:
+1. Add **one spoken sentence** on the *"Could this check catch the original mistake?"*
+   slide — TDD is one historical answer to that exact question, and the room already owns
+   it. Roughly 15 seconds, and it earns real credibility with an Agile audience.
+2. Put the **full nuanced answer above into the prepared Q&A block** on the final slide.
+   Someone will ask.
+
+The fresh-context technique is the one piece good enough that it could justify its own
+line on the Trap 1 evidence slide if a rehearsal shows room.
+
+---
+
+### Q-09 🟡 Should steel-manning and red-teaming be named explicitly?
+They are already the method of the entire talk, but always unnamed and always local:
+
+- **T1** — *"Use AI to challenge your thinking, then use evidence to challenge both of you."*
+- **T2** — *"What assumptions did I bake into that question?"*, *"Why are these two services?"*
+- **T3** — *"Challenge my understanding"*, *"What's the strongest argument for the approach
+  I rejected?"* (that second one is a steel-man, verbatim, unnamed)
+
+Right now these read as three separate tips. Named once, they compress into **one move
+applied at three levels** — the answer, the question, your own understanding — which maps
+onto the trap progression (D-14) instead of fighting it. That is a real gain against the
+success criterion (D-03): one thing to carry out of the room beats three.
+
+**The genuinely non-obvious part, and the reason this is worth more than a label.**
+The two halves are asymmetric with respect to what AI actually changed. AI is *superb* at
+generating the steel-man — it will argue any position fluently, instantly, tirelessly,
+with no ego and no politics, which is exactly what makes human steel-manning so rare and
+so expensive. But it is much weaker at telling you **which** critique deserves your
+attention. So:
+
+> Generating the counter-argument became free. Deciding which counter-arguments matter
+> did not.
+
+That is the concrete, sayable version of D-12 (scarcity and attention), which is currently
+buried as speaker-only understanding. *"Red-team your ideas with AI"* on its own would be
+banal; the asymmetry is not.
+
+**The case against.** D-14 deliberately refuses to explain the trap progression to the
+audience; naming a cross-cutting theme risks the same meta-layer problem. D-17 caps
+frameworks hard, and "steel-man / red-team" could grow into a sixth one. *Red-team* is mild
+in-group jargon and *steel-man* more so — the business and management half of the room
+(D-01) may not have either. And the deck already says the behaviour in plain language,
+which may make the label pure overhead.
+
+**Recommendation:** name it **once**, in Trap 3, and never again — Trap 3 is where
+*"Challenge my understanding"* already lives, and it is the trap that turns the lens on the
+practitioner. Say both words, define neither at length, attach the asymmetry above, and let
+T1 and T2 re-read as instances of it in hindsight. Do **not** give it a slide of its own, a
+diagram, or a place in the five closing questions.
+
+**Conflict to resolve first:** this costs ~1 minute in the one trap already marked for
+cutting (R-01, Q-01). It competes directly with the Trap 3 trim rather than being free.
+My instinct is that it *replaces* some of what should be cut there — naming the move is a
+better use of Trap 3's minutes than the fourth argument currently in its notes — but that
+should be decided while doing the Trap 3 pass, not before it.
 
 ---
 
