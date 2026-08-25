@@ -332,38 +332,32 @@ And it doesn't help.
 ---
 layout: default
 class: canvas-slide
-clicks: 4
 ---
 
 <div class="diagram">
 
 <div class="caption dimmable" :class="{ dimmed: $clicks >= 4 }">"HOW DO WE SPEED UP REFUND APPROVALS?"</div>
 
-<div class="dimmable" :class="{ dimmed: $clicks >= 4 }">
+<div class="chain">
+<div class="node dimmable" :class="{ dimmed: $clicks >= 4 }">Refund request</div>
+<span class="arrow dimmable" :class="{ dimmed: $clicks >= 4 }">&rarr;</span>
 
-<div class="flow-h">
-<div class="node">Refund request</div>
-<span class="arrow">&rarr;</span>
+<div class="approvals" :class="{ parallel: $clicks >= 2 }">
 <div class="node">Agent</div>
-<span class="arrow">&rarr;</span>
-<div class="node">Supervisor</div>
-<span class="arrow">&rarr;</span>
-<div class="node">Finance</div>
-<span class="arrow">&rarr;</span>
-<div class="node">Refunded</div>
+<span class="seq">&rarr;</span>
+<div class="node" :class="{ hot: $clicks >= 4 }">Supervisor</div>
+<span class="seq">&rarr;</span>
+<div class="node" :class="{ hot: $clicks >= 4 }">Finance</div>
 </div>
 
-<div class="reveal-list compact mt-8">
+<span class="arrow dimmable" :class="{ dimmed: $clicks >= 4 }">&rarr;</span>
+<div class="node dimmable" :class="{ dimmed: $clicks >= 4 }">Refunded</div>
+</div>
+
+<div class="reveal-list compact mt-4 dimmable" :class="{ dimmed: $clicks >= 4 }">
 <div class="item" v-click="1"><span class="mark">&rarr;</span><span>Route by amount and risk score</span></div>
-<div class="item" v-click="1"><span class="mark">&rarr;</span><span>Run the three approvals in parallel, not in sequence</span></div>
-<div class="item" v-click="2"><span class="mark">&rarr;</span><span>Reminders at four hours, escalation at twenty-four</span></div>
-<div class="item" v-click="2"><span class="mark">&rarr;</span><span>An exception queue, and a dashboard so nothing sits invisible</span></div>
-</div>
-
-<div class="annot good mt-6" v-click="3">
-Cycle time genuinely drops. This is a good answer.
-</div>
-
+<div class="item" v-click="2"><span class="mark">&rarr;</span><span>Approve in parallel, not in sequence</span></div>
+<div class="item" v-click="3"><span class="mark">&rarr;</span><span>Reminders, escalation, an exception queue, a dashboard</span></div>
 </div>
 
 <div class="overlay-q" v-click="4">Why does a $12 refund<br>need three approvals?</div>
@@ -371,40 +365,57 @@ Cycle time genuinely drops. This is a good answer.
 </div>
 
 <!--
-~2:30
+~2:45
 
-Somebody asks AI this. It is a completely reasonable question — refunds are slow,
-customers are annoyed, somebody owns that metric.
+Somebody asks AI this. Completely reasonable question — refunds are slow, customers are
+annoyed, somebody owns that metric.
+
+Walk the chain first, out loud, so nobody is guessing:
+"Three approvals. The agent who takes the call. Their supervisor. Somebody in finance."
+
+Everyone here has worked in a company like this.
 
 And AI gives you a genuinely good answer.
 
-[click 1] Route by amount and risk score, so the easy ones move. And this one is
-actually clever — run the three approvals in PARALLEL instead of in sequence. Nobody
-had thought of that. It's free. It works.
+[click 1] Route by amount and risk score, so the easy ones move.
 
-[click 2] Reminders, escalation, an exception queue for the weird ones, a dashboard so
-no request sits in somebody's inbox for three days invisibly.
+[click 2 — THE DIAGRAM RESTACKS. Stop talking. Let them watch it happen. Then:]
+And this one is actually clever. Those three approvals were happening in SEQUENCE — the
+supervisor can't look at it until the agent is done, finance can't look until the
+supervisor is done. They don't have to. Run them at the same time.
 
-[click 3] Every one of those is a real improvement. Cycle time drops, maybe a lot. If
-someone brought me this I would say yes, do it.
+Nobody had thought of that. It's free. It genuinely works.
+
+[click 3] Reminders, escalation, an exception queue for the weird ones, a dashboard so
+nothing sits in an inbox for three days invisibly.
+
+Every one of those is a real improvement. Cycle time drops, maybe a lot. If someone
+brought me this I would say yes, do it.
 
 Let's stipulate: this is right. Trap 1 does not apply. We checked it.
 
-[click 4 — let it grey out, then say it. Long pause.]
+[click 4 — everything greys out EXCEPT the three approvals, and two of them go orange.
+Long pause. Let them read it.]
 
 Why does a $12 refund need three approvals?
 
-Nothing in that question invited anybody to ask. The question handed AI a policy and
-asked it to make the policy faster. And it did — beautifully.
+And then the harder version — point at the orange boxes:
 
-Nobody typed "three approvals is required." It just... came along.
+At twelve dollars, the supervisor and finance aren't a control. They are two people
+reviewing a decision that was always entirely inside the agent's authority.
+
+We just made two unnecessary approvals faster. In parallel. With a dashboard.
+
+Nothing in the question invited anybody to ask. It handed AI a policy and asked it to
+make the policy faster — and it did, beautifully. Nobody typed "three approvals is
+required." It just came along.
 
 Now to be fair: maybe there are excellent reasons. Fraud. An auditor. A bad quarter in
-2019 that nobody wants to repeat. Segregation of duties is a real control and I am not
-telling you to delete it.
+2019 nobody wants to repeat. Segregation of duties is a real control and I am not
+telling you to delete it. Above some threshold all three of those people belong there.
 
-I'm saying it should WIN that argument, not skip it. And that nobody has re-run that
-argument since the policy was written, probably by someone who no longer works there.
+The question is whether anyone has re-run that argument since the policy was written —
+probably by somebody who no longer works here.
 
 FOR THE ENGINEERS — one sentence, then move on. Do not expand this:
 "The engineering version of this is the two services that didn't have to be two

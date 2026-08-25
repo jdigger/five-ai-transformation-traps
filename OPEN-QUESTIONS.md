@@ -323,4 +323,6 @@ further. If 28 minutes turns out to be 35, the cut list in Q-01 is far too gentl
 | Trap 5 title was `[TITLE TBD]` on the slide | D-37 — provisional title set; still open as Q-04 | 2026-08-23 |
 | Progressive reveals faked by duplicating slides | D-42 — `v-click` throughout | 2026-08-23 |
 | Trap 2's example needed Kafka/outbox knowledge much of the room doesn't have | D-44 — refund approval chain instead; architecture survives as one spoken sentence | 2026-08-25 |
+| The approval chain asserted "run in parallel" in a bullet while the diagram sat still | D-45 — the diagram restacks sequential→parallel on click 2 | 2026-08-25 |
+| "Why three approvals" didn't say which ones were unnecessary | D-45 — Supervisor and Finance turn orange at the reveal; Agent stays neutral | 2026-08-25 |
 | No visual language at all | D-38, D-39, D-40, D-41 | 2026-08-23 |

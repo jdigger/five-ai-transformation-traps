@@ -206,7 +206,7 @@
 
 /* the question that lands on top of a dimmed diagram --------------------- */
 .overlay-q {
-  font-size: 3rem; font-weight: 650; line-height: 1.08; color: var(--good);
+  font-size: 2.75rem; font-weight: 650; line-height: 1.08; color: var(--good);
   letter-spacing: -0.022em; margin-top: 2rem;
   border-left: 10px solid var(--good); padding-left: 1.6rem;
 }
@@ -291,6 +291,29 @@
 
 /* the reveal-list quote glyph -------------------------------------------- */
 .reveal-list .item .mark { font-size: 1.9rem; line-height: 1; }
+
+/* --- approval chain: sequential collapsing to parallel ------------------- */
+/* The diagram itself has to show why parallel is faster. A bullet claiming it
+   is not evidence — same rule the talk is about. */
+
+.chain { display: flex; align-items: center; gap: 0.5rem; }
+
+.approvals {
+  position: relative; display: flex; align-items: center; gap: 0.5rem;
+  padding-top: 1.25rem;
+}
+.approvals::before {
+  content: "THREE APPROVALS";
+  position: absolute; top: 0; left: 0;
+  font-size: 0.66rem; letter-spacing: 0.18em; font-weight: 700; color: var(--ink-soft);
+  white-space: nowrap;
+}
+.approvals .seq { color: #b9b2a8; font-size: 1.35rem; line-height: 1; flex: none; transition: opacity 260ms ease; }
+
+/* the switch */
+.approvals.parallel { flex-direction: column; align-items: stretch; gap: 0.28rem; }
+.approvals.parallel .seq { display: none; }
+.approvals.parallel .node { width: 100%; padding: 0.3rem 0.9rem; font-size: 1rem; }
 
 /* a denser variant, for when a diagram and a list share one slide */
 .reveal-list.compact { gap: 0.6rem; }

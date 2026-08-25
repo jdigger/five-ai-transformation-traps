@@ -284,6 +284,34 @@ grow back into a slide.
 duties are real controls. The point is that the policy should *win* the argument, and that
 nobody has re-run it since it was written.
 
+### D-45 · The approval diagram must *perform* the change, and the reveal names who
+**Decided** 2026-08-25 · **Status** Active · **Extends** D-44
+
+Two things the first version of this slide got wrong:
+
+**1. The picture has to show why parallel is faster.** Originally the chain sat still while
+a bullet *claimed* "run the three approvals in parallel." On click 2 the three approvers
+now physically restack from a sequential row into a parallel fork/join between the request
+and the refund. The audience sees the change rather than being told about it.
+
+This one is on principle, not polish: a bullet asserting an improvement is exactly the
+"sophisticated answer that never established the premise" the talk is about. The slide
+should not commit its own Trap 1.
+
+**2. The reveal has to say *which* approvals.** "Why three approvals" is vague on its own.
+At the reveal, Supervisor and Finance turn orange while Agent stays neutral — because at
+twelve dollars those two are not a control, they are reviewing a decision that was always
+entirely inside the agent's authority. The optimization made two unnecessary approvals
+faster, in parallel, with a dashboard.
+
+Also: the three approvers are labelled `THREE APPROVALS` on screen and named out loud —
+"the agent who takes the call, their supervisor, somebody in finance." Without that the
+chain reads as a pipeline rather than as three separate people saying yes.
+
+**The blessing line is spoken, not shown.** *"Cycle time genuinely drops, this is a good
+answer"* was on the slide and is now in the speaker's mouth — it belongs there (D-05), and
+removing it bought the vertical space the parallel stack needed.
+
 ### D-22 · Trap 2 also carries the greenfield version
 **Decided** pre-2026-08-23 · **Status** Active
 

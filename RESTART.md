@@ -98,9 +98,23 @@ npm run dev
 ```
 
 Then open `http://localhost:3030`. Useful URL forms while building:
-`http://localhost:3030/9?clicks=6` jumps to slide 9 with six reveals fired —
+`http://localhost:3030/9?clicks=4` jumps to slide 9 with four reveals fired —
 **always check reveal states this way rather than assuming**, and screenshot the slide.
 Presenter view with notes is at `http://localhost:3030/presenter/`.
+
+**Two traps in the tooling itself, both of which have already cost time:**
+
+- **Slidev counts *registered* `v-click` elements, not the highest index you wrote.** A
+  slide whose beats are 1, 3, 4, 5 — because beat 2 is only a `:class="{ x: $clicks >= 2 }"`
+  binding with no `v-click` element — caps at four clicks, and the last reveal silently
+  never fires. `clicks:` in the slide frontmatter does **not** rescue this. Keep click
+  indices contiguous and back every beat with a real `v-click` element; drive purely
+  visual changes off `$clicks >= n` *in addition to*, never *instead of*, a real element.
+- **HMR does not always pick up structural edits.** If a slide renders at its base state
+  when you asked for clicks, reload the page before concluding the markup is wrong.
+
+Content is vertically centred and will silently overflow a 450px-tall frame before it
+clips. Screenshot the **tallest** click state of any slide you change, not just the first.
 
 ```bash
 npm run build
