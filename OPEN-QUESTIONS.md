@@ -270,6 +270,18 @@ redesigning the slide.
 See Q-02. The mitigation is a single spoken sentence; if it gets dropped, the talk has
 manufactured a statistic. Ironic and bad.
 
+### R-10 🟡 Trap 2's two examples now sit in the same domain
+Both the approval chain (D-44) and the greenfield agent question (D-22) are customer-service
+problems, back to back. Risk: they read as the same joke told twice.
+
+They are genuinely different kinds of hidden decision — the first is a question that assumed
+a **policy**, the second is a question that assumed a **solution** — and that distinction is
+what makes the pair worth more than either alone. But it is currently only implicit.
+
+**Action:** make the speaker notes name the difference explicitly at the transition, and
+watch for it in rehearsal. If the room does not feel the second one as a new idea, move the
+greenfield example out of customer service rather than cutting it.
+
 ### R-07 ⚪ Trap 4 is the most likely source of a hostile question
 Putting *"If developers are 2× as productive, why do we need this many developers?"* on
 screen invites a manager in the room to press it. The prepared answer refuses the weak
@@ -310,4 +322,5 @@ further. If 28 minutes turns out to be 35, the cut list in Q-01 is far too gentl
 | Prompt injection specified but never built | D-24 — one slide, framed as a framing problem | 2026-08-23 |
 | Trap 5 title was `[TITLE TBD]` on the slide | D-37 — provisional title set; still open as Q-04 | 2026-08-23 |
 | Progressive reveals faked by duplicating slides | D-42 — `v-click` throughout | 2026-08-23 |
+| Trap 2's example needed Kafka/outbox knowledge much of the room doesn't have | D-44 — refund approval chain instead; architecture survives as one spoken sentence | 2026-08-25 |
 | No visual language at all | D-38, D-39, D-40, D-41 | 2026-08-23 |

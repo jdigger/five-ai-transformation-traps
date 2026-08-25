@@ -206,8 +206,8 @@
 
 /* the question that lands on top of a dimmed diagram --------------------- */
 .overlay-q {
-  font-size: 3.2rem; font-weight: 650; line-height: 1.1; color: var(--good);
-  letter-spacing: -0.022em; margin-top: 3.5rem;
+  font-size: 3rem; font-weight: 650; line-height: 1.08; color: var(--good);
+  letter-spacing: -0.022em; margin-top: 2rem;
   border-left: 10px solid var(--good); padding-left: 1.6rem;
 }
 
@@ -291,3 +291,8 @@
 
 /* the reveal-list quote glyph -------------------------------------------- */
 .reveal-list .item .mark { font-size: 1.9rem; line-height: 1; }
+
+/* a denser variant, for when a diagram and a list share one slide */
+.reveal-list.compact { gap: 0.6rem; }
+.reveal-list.compact .item { font-size: 1.18rem; font-weight: 450; }
+.reveal-list.compact .item .mark { font-size: 1.18rem; }

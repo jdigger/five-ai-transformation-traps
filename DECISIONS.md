@@ -235,7 +235,7 @@ times. The real insight is that *a question can quietly contain important decisi
 the AI ever answers it.* Get to "What did my question already decide?" fast.
 
 ### D-21 · Trap 2 owns the services/Kafka architecture, and it must be genuinely good
-**Decided** pre-2026-08-23, re-sited 2026-08-23 · **Status** Active
+**Decided** pre-2026-08-23, re-sited 2026-08-23 · **Status** Superseded by D-44 on 2026-08-25
 
 Build the outbox → Kafka → idempotent consumer design up over five clicks, explicitly
 bless it, *then* reveal "Why are these two services?" and grey the whole diagram out.
@@ -244,6 +244,45 @@ bless it, *then* reveal "Why are these two services?" and grey the whole diagram
 plainly: CAP didn't change; the boundary may be completely justified (independent
 scaling, ownership, deployment, failure isolation) — **it should win the argument, not
 skip it.**
+
+### D-44 · Trap 2's on-screen example is the refund approval chain, not the architecture
+**Decided** 2026-08-25 · **Status** Active · **Supersedes** D-21
+
+On screen: *"How do we speed up refund approvals?"* over the chain
+`Refund request → Agent → Supervisor → Finance → Refunded`. AI's answer builds up —
+route by amount and risk score, run the three approvals **in parallel rather than in
+sequence**, reminders at four hours, escalation at twenty-four, an exception queue, a
+dashboard. It is explicitly blessed on screen: *"Cycle time genuinely drops. This is a
+good answer."* Then the whole thing greys out under:
+
+> **Why does a $12 refund need three approvals?**
+
+**Why the swap.** The slide's mechanic requires the audience to be *genuinely impressed
+by the answer before the reveal.* Transactional outbox, Kafka and idempotent consumers
+are outside the working experience of much of a mixed audience (D-01) — managers and
+business technologists watch jargon go past, cannot be impressed, and the reveal lands on
+nothing. Legibility is not a nicety here; it is a precondition for the trap to function.
+
+**Why this example specifically:**
+- Everyone in the room has personally suffered an approval chain. No setup required.
+- The AI answer is legibly *good* — "run them in parallel instead of in sequence" is a
+  real, non-obvious improvement that engineers respect and managers immediately grasp.
+- The hidden premise is a **policy** silently treated as a constraint, which is a cleaner
+  instance of D-20 than an architecture boundary is.
+- The dollar amount is withheld until the reveal. The question never mentioned amounts and
+  neither did the answer — that *is* the trap, precisely.
+- It threads the deck's single domain: the refund from Trap 1 (D-19), the approvals here,
+  and "issue the refund" at the top of Trap 5's authority ladder (D-33). One story, three
+  different ways to be wrong.
+
+**Keep the architecture version as exactly one spoken sentence** for the engineers,
+immediately after the reveal — the two services that didn't have to be two services, CAP
+didn't change, the boundary was a design choice. It is in the speaker notes and must not
+grow back into a slide.
+
+**Say out loud that the approvals may be justified** — fraud, auditors, segregation of
+duties are real controls. The point is that the policy should *win* the argument, and that
+nobody has re-run it since it was written.
 
 ### D-22 · Trap 2 also carries the greenfield version
 **Decided** pre-2026-08-23 · **Status** Active
@@ -490,3 +529,4 @@ unknown projector.
 | "Where should the human enter the loop?" as Trap 5's question | It's the governance answer; authority is the real variable (D-33) |
 | Explaining the five-trap progression to the audience | Turns a natural narrative into homework (D-14) |
 | ASCII diagrams; stock AI imagery | Reads as terminal output / generic AI talk (D-41) |
+| Outbox/Kafka architecture as Trap 2's on-screen example | Outside the experience of much of a mixed audience; the reveal only works if the room can be impressed by the answer first (D-44) |

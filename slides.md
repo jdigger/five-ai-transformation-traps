@@ -332,70 +332,85 @@ And it doesn't help.
 ---
 layout: default
 class: canvas-slide
-clicks: 6
+clicks: 4
 ---
 
 <div class="diagram">
 
-<div class="caption dimmable" :class="{ dimmed: $clicks >= 6 }">"HOW SHOULD THESE TWO SERVICES MAINTAIN CONSISTENCY?"</div>
+<div class="caption dimmable" :class="{ dimmed: $clicks >= 4 }">"HOW DO WE SPEED UP REFUND APPROVALS?"</div>
 
-<div class="dimmable" :class="{ dimmed: $clicks >= 6 }">
+<div class="dimmable" :class="{ dimmed: $clicks >= 4 }">
 
 <div class="flow-h">
-<div class="node">Service A</div>
-<span class="arrow" v-click="2">→</span>
-<div class="node" v-click="2">Outbox<span class="sub">same transaction</span></div>
-<span class="arrow" v-click="3">→</span>
-<div class="node" v-click="3">Kafka<span class="sub">at-least-once</span></div>
-<span class="arrow" v-click="4">→</span>
-<div class="node" v-click="4">Consumer<span class="sub">idempotent</span></div>
-<span class="arrow" v-click="1">→</span>
-<div class="node">Service B</div>
+<div class="node">Refund request</div>
+<span class="arrow">&rarr;</span>
+<div class="node">Agent</div>
+<span class="arrow">&rarr;</span>
+<div class="node">Supervisor</div>
+<span class="arrow">&rarr;</span>
+<div class="node">Finance</div>
+<span class="arrow">&rarr;</span>
+<div class="node">Refunded</div>
 </div>
 
-<div class="annot good mt-10" v-click="5">
-At-least-once delivery. Retries with backoff. A reconciliation job for the
-cases retries can't fix. This is a good design.
+<div class="reveal-list compact mt-8">
+<div class="item" v-click="1"><span class="mark">&rarr;</span><span>Route by amount and risk score</span></div>
+<div class="item" v-click="1"><span class="mark">&rarr;</span><span>Run the three approvals in parallel, not in sequence</span></div>
+<div class="item" v-click="2"><span class="mark">&rarr;</span><span>Reminders at four hours, escalation at twenty-four</span></div>
+<div class="item" v-click="2"><span class="mark">&rarr;</span><span>An exception queue, and a dashboard so nothing sits invisible</span></div>
+</div>
+
+<div class="annot good mt-6" v-click="3">
+Cycle time genuinely drops. This is a good answer.
 </div>
 
 </div>
 
-<div class="overlay-q" v-click="6">Why are these two services?</div>
+<div class="overlay-q" v-click="4">Why does a $12 refund<br>need three approvals?</div>
 
 </div>
 
 <!--
-~2:30 KEEP
+~2:30
 
-Somebody asks AI this question. It's a real question — I've been asked it, I've
-asked it.
+Somebody asks AI this. It is a completely reasonable question — refunds are slow,
+customers are annoyed, somebody owns that metric.
 
-And AI gives you a genuinely excellent answer.
+And AI gives you a genuinely good answer.
 
-[clicks 2-4] Transactional outbox so you don't dual-write. Kafka. Idempotent
-consumer so redelivery is safe.
+[click 1] Route by amount and risk score, so the easy ones move. And this one is
+actually clever — run the three approvals in PARALLEL instead of in sequence. Nobody
+had thought of that. It's free. It works.
 
-[click 5] It explains at-least-once semantics correctly. It handles the retry
-storm. It suggests reconciliation for what retries can't fix. If a senior
-engineer on my team brought me this, I'd approve it.
+[click 2] Reminders, escalation, an exception queue for the weird ones, a dashboard so
+no request sits in somebody's inbox for three days invisibly.
+
+[click 3] Every one of those is a real improvement. Cycle time drops, maybe a lot. If
+someone brought me this I would say yes, do it.
 
 Let's stipulate: this is right. Trap 1 does not apply. We checked it.
 
-[click 6 — let the diagram fade, then say it]
+[click 4 — let it grey out, then say it. Long pause.]
 
-Why are these two services?
+Why does a $12 refund need three approvals?
 
-Long pause here.
+Nothing in that question invited anybody to ask. The question handed AI a policy and
+asked it to make the policy faster. And it did — beautifully.
 
-Nothing about the question invited that. The question handed AI a boundary and
-asked it to cope with the boundary. And it coped beautifully.
+Nobody typed "three approvals is required." It just... came along.
 
-To be clear about what I am NOT saying: CAP didn't change. If there's a
-distributed boundary, the trade-off is real and this machinery is what you need.
-And maybe the boundary is completely justified — independent scaling, separate
-ownership, deployment isolation, failure isolation. Those are real reasons.
+Now to be fair: maybe there are excellent reasons. Fraud. An auditor. A bad quarter in
+2019 that nobody wants to repeat. Segregation of duties is a real control and I am not
+telling you to delete it.
 
-I'm saying it should WIN that argument, not skip it.
+I'm saying it should WIN that argument, not skip it. And that nobody has re-run that
+argument since the policy was written, probably by someone who no longer works there.
+
+FOR THE ENGINEERS — one sentence, then move on. Do not expand this:
+"The engineering version of this is the two services that didn't have to be two
+services. CAP didn't change — if there's a distributed boundary the trade-off is real
+and you need all that machinery. But the boundary itself was a design choice, and the
+excellent answer to 'how do we keep these consistent' never once asks why there are two."
 -->
 
 ---
@@ -403,14 +418,14 @@ layout: default
 class: statement-slide
 ---
 
-# The boundary might be exactly right.
+# The constraint might be exactly right.
 
 # It should **win** the argument — not skip it.
 
 <!--
 ~1:00
 
-That's the whole move. Not "microservices bad." Not "less AI."
+That's the whole move. Not "approvals bad." Not "microservices bad." Not "less AI."
 
 A question can quietly contain a decision before the AI ever answers it. And
 because the answer is so good, the decision never gets examined — the quality of
