@@ -679,7 +679,6 @@ somebody enforced everything they could.
 ---
 layout: default
 class: canvas-slide
-clicks: 4
 ---
 
 <div class="diagram">
@@ -1051,7 +1050,6 @@ everybody in the argument.
 ---
 layout: default
 class: canvas-slide
-clicks: 4
 ---
 
 <div class="diagram">
@@ -1146,7 +1144,6 @@ The concept: this is about AUTHORITY, not correctness.
 ---
 layout: default
 class: canvas-slide
-clicks: 5
 ---
 
 <div class="diagram">
@@ -1230,7 +1227,6 @@ I don't want to replace AI maximalism with governance maximalism.
 ---
 layout: default
 class: fact-slide
-clicks: 3
 ---
 
 <div class="big">10,000 AI decisions</div>

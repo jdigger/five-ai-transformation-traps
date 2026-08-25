@@ -712,6 +712,51 @@ still reserved width and wrapped "Refund request" onto two lines at *every* clic
 a variant of the reveal-verification rule in `RESTART.md`: a hidden element can damage
 the slide you are not looking at.
 
+
+### D-51 · Coherency of the examples comes before the timing trim
+**Decided** 2026-08-25 · **Status** Active
+
+The working order is now: get the examples and the narrative move through the deck right,
+*then* cut to time. Trimming is mechanical; perfecting what is said is not.
+
+**Why:** the last two sessions found two example-level defects that no amount of trimming
+would have surfaced — the notorious-vs-hidden inversion (D-49) and the `$12` beat being
+self-contradicted by click 1 (D-50). Both were found by reasoning about the example, not
+the clock. Cutting first would have preserved the defects in a shorter deck.
+
+**Consequence:** Q-01 stops being a gate. The timing tally is still recomputed after every
+content change and still reported, but a number over budget no longer blocks work. The
+cut happens once, near the end, against a stable deck.
+
+**This supersedes the "Bias to cutting" instruction in `RESTART.md`** for the current
+phase, and `RESTART.md` has been updated to say so.
+
+### D-52 · No slide declares `clicks:` in frontmatter unless it exceeds its `v-click` count
+**Decided** 2026-08-25 · **Status** Active
+
+Removed `clicks:` from slides 15, 23, 25 and 27. Slidev auto-counts registered `v-click`
+elements, which is always the correct number when every beat is backed by an element.
+
+**The bug this fixes — the mirror of the trap already in `RESTART.md`.** That trap is
+*too few* registered elements silently capping a slide. This is the opposite: `clicks:`
+declaring *more* clicks than there are elements creates **dead presses** at the end of a
+slide. Live, that is the speaker pressing forward, nothing happening, and pressing again.
+Found on four slides, including the **Trap 5 authority ladder** — one of the three slides
+the talk is built on, and the one that most depends on rhythm.
+
+| Slide | Declared | Real beats | Dead |
+|---|---|---|---|
+| 15 · prompt injection | 4 | 2 | 2 |
+| 23 · pipeline metrics | 4 | 3 | 1 |
+| 25 · authority ladder | 5 | 4 | 1 |
+| 27 · 10,000 decisions | 3 | 2 | 1 |
+
+**Why removal rather than correction:** a corrected number drifts the moment a beat is
+added or removed, and the mismatch is invisible in the source. Absence cannot drift.
+
+**Kept:** slides 5 and 28, where the declared count matches the element count exactly.
+Neither is load-bearing; they can go too if they ever disagree.
+
 ---
 
 ## G. Rejected — do not reopen without new information

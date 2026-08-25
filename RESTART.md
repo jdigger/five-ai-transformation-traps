@@ -64,8 +64,11 @@ reproduce the exact failure the talk warns about. But equally, do not continuous
 redesign concepts that are already doing their job. Presentation reality drives changes
 now, not further theorizing.
 
-**Bias to cutting.** The talk is over budget (`OPEN-QUESTIONS.md` Q-01). Adding anything
-means naming what it displaces.
+**Coherency before cutting (D-51).** The current phase is getting the examples and the
+narrative move through the deck right. Trimming is mechanical; perfecting what is said is
+not. Recompute and report the timing tally after every content change, but do **not** let
+a number over budget block or shrink the work — the cut happens once, near the end,
+against a stable deck. Q-01 is not a gate.
 
 ## Maintenance — this is part of the work, not paperwork
 
