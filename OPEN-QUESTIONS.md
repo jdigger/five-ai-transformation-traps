@@ -15,12 +15,12 @@ Everything still in flux for **The Five Biggest AI Transformation Traps**.
 
 ## Needs a decision
 
-### Q-01 🔴 The talk is over budget: 49:00 planned against a 45–47 min target
-The speaker-note tally currently sums to **49:00** across 29 timed slides, and note-time is
+### Q-01 🟡 The talk is over budget: 49:15 planned against a 45–47 min target
+The speaker-note tally sums to **49:15** across 29 timed slides, and note-time is
 systematically optimistic — a live room, a laugh, a clarifying question, and it's 55.
 
-The overrun came from implementing D-23 (infer/enforce) and D-24 (prompt injection), which
-were specified but had never been built. Roughly:
+**The sub-question is settled: this is a target, not a hard cap (D-47).** ~10 minutes of
+slack exist. That halves the cut and changes where it comes from.
 
 | Block | Budget |
 |---|---|
@@ -32,39 +32,23 @@ were specified but had never been built. Roughly:
 | Trap 5 | ~6:30 |
 | Close | ~4:00 |
 
-**Recommendation — cut roughly 6 minutes, in this order:**
-1. **Trap 3** (~2:00). It is still the junk drawer (see R-01). The four slides are fine;
-   the *notes* argue four things where one spine belongs.
-2. **The "ask it to attack your framing" prompt slide** (~1:30). Good Monday material, but
-   it largely restates the trap that precedes it.
-3. **Trap 4's capacity slide + 2× slide** (~1:30). These overlap; the 2× question can
-   absorb the capacity argument.
-4. **The Sowell callback** (~1:00). It can be 30 seconds and land harder.
+**Current plan — cut ~3 minutes, all of it from Trap 3.** Not because the clock demands
+it, but because Trap 3 is a junk drawer (R-01): four slides whose *notes* argue four
+things where one spine belongs. Everything else is now judged on quality alone.
 
-**Do not cut:** the Trap 1 refund loop, the Trap 2 architecture reveal, the Trap 5 ladder.
-Those are the three slides the talk is built on.
+**No longer on the cut list** (D-47 released them): the Sowell callback, the
+"ask it to attack your framing" prompt slide, and Trap 4's capacity/2× pair. If any of
+them goes, it goes because it isn't earning its place — not to buy minutes.
 
-**Competing demands on the same minutes:** Q-08 wants ~15 seconds in Trap 1 and Q-09 wants
-~1 minute in Trap 3 — the trap already marked for the deepest cut. Resolve those two while
-doing the Trap 3 pass, not separately.
+**Do not cut:** the Trap 1 refund loop, the Trap 2 architecture reveal, the Trap 5
+ladder. Those are the three slides the talk is built on.
 
-**Open sub-question:** is 45–50 a hard cap from the organizers, or a target? Changes the
-aggressiveness of the cut.
+**Blocked on rehearsal.** Every number in the table above is a guess made while writing
+(R-09). The speaker is clocking opening → end of Trap 2 before the Trap 3 pass sizes its
+cut. If ~28 minutes turns out to be 35, this plan is too gentle even with the slack.
 
----
-
-### Q-02 🟡 The Trap 4 metrics are invented — is there real data?
-`−60% coding time · +80% PRs · +110% review wait · −8% idea to production` are **made up**.
-The speaker notes instruct the presenter to say so out loud.
-
-Real numbers from a real organization — even rough, even anonymized — would make Trap 4
-dramatically stronger and would blunt the "engineers rationalizing their salaries"
-red-team objection better than any argument can.
-
-**Recommendation:** if real data exists, use it and say whose it is. If not, keep the
-invented numbers *and keep the disclaimer* — the shape of the claim is the point, and
-inventing numbers while announcing you invented them is honest. Quietly presenting
-invented numbers as observed would be the exact Trap 1 failure the talk warns about.
+**Q-08 and Q-09 no longer compete with the trim** (D-47) — both are affordable. They
+still have to earn their place in Trap 3, and that is decided during the pass.
 
 ---
 
@@ -98,17 +82,21 @@ Decide after a rehearsal of the ladder slide, not from the page.
 
 ---
 
-### Q-05 🟡 Venue and logistics are unknown
-Unresolved and each one changes the build:
+### Q-05 🟡 Venue and logistics are still largely unknown
+The **projector question is handled**: the venue is unknown, so the deck now assumes the
+worst and dims to 30% instead of 16% (D-46). That closes the part of this that was
+blocking a build decision.
 
-- **Room size / screen size / projector or TV** → type sizes, and whether the 16% greyed-out
-  architecture in Trap 2 will actually be visible (R-05)
-- **Recorded?** → changes how carefully invented numbers and anecdotes must be flagged
-- **Lectern with a confidence monitor?** → whether Slidev presenter view with notes is usable,
-  which the entire notes strategy (D-05) assumes
-- **Meetup name and date on the cover slide** → currently the cover carries only "Jim Moore"
+Still unresolved, and each one changes something:
 
----
+- **Room size / screen size** → type sizes. The deck has never been checked at distance.
+- **Recorded?** → changes how hard the invented-numbers disclaimer (D-48, R-06) and any
+  first-person story (Q-03) have to be flagged, because they outlive the room.
+- **Lectern with a confidence monitor?** → whether Slidev presenter view with notes is
+  usable, which the entire notes strategy (D-05) assumes. If there's no monitor, the
+  notes strategy needs a fallback and that is a real rebuild.
+- **Meetup name and date on the cover slide** → the cover currently carries only
+  "Jim Moore".
 
 ### Q-06 ⚪ Will the slides be shared afterward, and should they stand alone?
 They currently **do not** stand alone, deliberately (D-05) — the rigor is in the notes.
@@ -258,17 +246,28 @@ green build in twenty minutes, every artifact saying "verified."
 
 **Untested.** Watch whether it survives a live challenge.
 
-### R-05 🟡 The Trap 2 grey-out is unverified on real hardware
-The reveal dims the architecture to 16% opacity. On a washed-out projector in a bright room
-it may vanish entirely — which kills the effect, because the audience is supposed to still
-see the ghost of the design they just approved.
+### R-05 ⚪ The Trap 2 grey-out is mitigated but still unverified on real hardware
+Raised from 16% to 30% (D-46) and verified in the browser at slide 9, click 4 — the
+chain recedes without disappearing. That is insurance taken blind, not a test.
 
-**Action:** test on the actual projector. If it disappears, raise to ~30% rather than
-redesigning the slide.
+**Action:** if a tech check is possible, look at slide 9 click 4 on the actual screen. If
+the ghost still washes out, go to ~45% rather than redesigning the slide. If the room
+turns out to be dark with a good screen, 30% is slightly safe and could go back toward
+20% for a harder gut-punch — but only with the hardware in front of you.
 
 ### R-06 🟡 Invented numbers may be quoted back as real
-See Q-02. The mitigation is a single spoken sentence; if it gets dropped, the talk has
-manufactured a statistic. Ironic and bad.
+Now settled policy, not an open trade-off: the numbers stay invented and the speaker says
+so out loud (D-48). That makes this risk **load-bearing** — the disclaimer is the only
+thing standing between this talk and a manufactured statistic.
+
+**Two failure modes to watch in rehearsal:**
+1. It gets dropped under time pressure. Then the talk has manufactured a statistic, which
+   is precisely the Trap 1 failure it warns about. Ironic and bad.
+2. It arrives *late* — after the audience has had a beat to believe the numbers. The
+   disclaimer has to land in the same breath as the metrics, not after them.
+
+If the talk is recorded (Q-05), both get worse, because the numbers outlive the room and
+the disclaimer may not travel with the clip.
 
 ### R-10 🟡 Trap 2's two examples now sit in the same domain
 Both the approval chain (D-44) and the greenfield agent question (D-22) are customer-service
@@ -297,8 +296,10 @@ tutorial that costs five minutes the talk does not have.
 Every number in Q-01's table is a guess made while writing. The whole timing model is
 unvalidated.
 
-**Action:** rehearse the opening → end of Trap 2 block against a clock before building
-further. If 28 minutes turns out to be 35, the cut list in Q-01 is far too gentle.
+**Action — accepted and assigned 2026-08-25.** The speaker is clocking opening → end of
+Trap 2 out loud before the Trap 3 pass sizes its cut. Q-01's cut stays provisional until
+that number lands. If 28 minutes turns out to be 35, the plan in Q-01 is far too gentle
+even with D-47's slack.
 
 ---
 
@@ -326,3 +327,7 @@ further. If 28 minutes turns out to be 35, the cut list in Q-01 is far too gentl
 | The approval chain asserted "run in parallel" in a bullet while the diagram sat still | D-45 — the diagram restacks sequential→parallel on click 2 | 2026-08-25 |
 | "Why three approvals" didn't say which ones were unnecessary | D-45 — Supervisor and Finance turn orange at the reveal; Agent stays neutral | 2026-08-25 |
 | No visual language at all | D-38, D-39, D-40, D-41 | 2026-08-23 |
+| Q-01's sub-question: is 45–50 a hard cap or a target? | D-47 — a target, ~10 min slack; the cut halves to ~3 min, all from Trap 3 | 2026-08-25 |
+| Q-02 — are Trap 4's metrics real? | D-48 — no real data; keep them invented and say so out loud | 2026-08-25 |
+| R-05's build decision: is 16% opacity safe on unknown hardware? | D-46 — no; raised to 30% | 2026-08-25 |
+| R-11 — the refund chain is notorious, not hidden, which inverts Trap 2's reveal | D-49 — the reveal moves to the deleted escalation chain; $12 becomes a spoken second beat | 2026-08-25 |

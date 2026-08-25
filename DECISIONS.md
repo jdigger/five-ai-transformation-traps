@@ -285,6 +285,9 @@ duties are real controls. The point is that the policy should *win* the argument
 nobody has re-run it since it was written.
 
 ### D-45 · The approval diagram must *perform* the change, and the reveal names who
+**Note:** the *reveal* half of this decision is **superseded by D-49**. The restack on
+click 2 stands unchanged; what click 4 exposes has moved from "which approvers are
+unnecessary" to "the order was the control."
 **Decided** 2026-08-25 · **Status** Active · **Extends** D-44
 
 Two things the first version of this slide got wrong:
@@ -529,7 +532,8 @@ Hidden clicks keep their layout space, so nothing shifts as reveals land.
 
 Reveals that are load-bearing and must not be flattened:
 - Trap 1 — the green build flips from teal to **orange** on the final reveal
-- Trap 2 — the architecture greys to 16% as "Why are these two services?" lands beneath it
+- Trap 2 — the architecture greys out as "Why are these two services?" lands beneath it
+  (the figure is now 30%, not 16% — D-46)
 - Trap 4 — `−8% idea to production` gets its **own** beat after the other three metrics,
   rendered neutral (not teal), because it is the punchline, not a win
 - Trap 5 — the authority ladder escalates in color, one rung per click
@@ -539,6 +543,111 @@ Reveals that are load-bearing and must not be flattened:
 
 Light is forced so there is exactly one design to maintain and one thing to test on an
 unknown projector.
+
+---
+
+
+### D-46 · The Trap 2 grey-out dims to 30%, not 16%
+**Decided** 2026-08-25 · **Status** Active
+**Supersedes:** the `16%` figure recorded in D-42's load-bearing-reveals list.
+
+`.dimmable.dimmed` is now `opacity: 0.30` (plus `grayscale(1)`), up from `0.16`.
+
+**Why:** the venue is unknown (Q-05), so the deck must assume the worst — a projector in
+a lit room. The reveal only works if the audience can still see the *ghost* of the
+architecture they just approved sitting underneath the question. At 16% on washed-out
+hardware it vanishes, and a vanished diagram reads as a slide malfunction rather than a
+gut-punch (R-05). Verified in the browser at slide 9, click 4: the chain and the three
+bullets recede without disappearing, and Supervisor + Finance still pop orange against
+them.
+
+**Rejected:** redesigning the slide for high-contrast hardware. A one-value change buys
+the insurance; the design is right.
+
+### D-47 · 45–50 minutes is a target with roughly 10 minutes of slack, not a hard cap
+**Decided** 2026-08-25 · **Status** Active
+
+The organizers have not imposed a hard stop. Running to ~55 is survivable.
+
+**Why it matters:** it halves the cut. Q-01's recommendation assumed a hard cap and
+listed ~6 minutes across four cuts. Against a soft target the cut is **~3 minutes, taken
+entirely from Trap 3** — and taken because Trap 3 is a junk drawer (R-01), not because
+the clock demands it. The Sowell callback, the attack-your-framing prompt slide, and
+Trap 4's capacity/2× pair are **no longer on the cut list** and should be judged on
+quality alone.
+
+**Consequence for Q-08 and Q-09:** both now fit without displacing anything. Q-08's one
+spoken sentence on the *"Could this check catch the original mistake?"* slide and Q-09's
+single naming of steel-man/red-team in Trap 3 are affordable. They still have to earn
+their place, but they no longer compete with the trim.
+
+**Still true:** note-time is systematically optimistic, and no number has been rehearsed
+(R-09). The slack is insurance against that, not budget to spend.
+
+### D-48 · Trap 4's metrics stay invented, and the speaker says so out loud
+**Decided** 2026-08-25 · **Status** Active
+
+No real organizational data exists. `−60% coding time · +80% PRs · +110% review wait ·
+−8% idea to production` remain as written, with the spoken disclaimer intact.
+
+**Why:** the *shape* of the claim is the point — three metrics improve, the one that
+matters doesn't. Inventing numbers while announcing you invented them is honest.
+Quietly presenting invented numbers as observed would be the exact Trap 1 failure this
+talk warns about.
+
+**This makes R-06 load-bearing.** The disclaimer is now the only thing standing between
+this talk and a manufactured statistic being quoted back as real. It must not be dropped
+under time pressure, and it must arrive in the same breath as the numbers — not after
+the audience has had a beat to believe them.
+
+**Rejected:** sourcing public industry figures instead. They would carry the same
+citation burden, invite a fight about methodology, and cost minutes on a detour away
+from the argument.
+
+### D-49 · Trap 2's reveal is the deleted escalation chain, not the $12 policy
+**Decided** 2026-08-25 · **Status** Active
+**Supersedes:** the reveal half of D-45 (orange on Supervisor + Finance; the on-screen
+question *"Why does a $12 refund need three approvals?"*).
+**Resolves:** R-11.
+
+Click 4 now asks **"Why were they in that order?"** Everything dims to 30% except the
+three approvers, and the two sequence arrows — deleted by the parallel restack on click
+2 — **come back, in orange, running down the stack.** No approver turns orange.
+
+**Why the old reveal failed.** A *sequential* three-approval chain for a $12 refund is
+not a hidden assumption; it is the most complained-about thing in the building. Agents
+feel it on every call. It would surface within weeks of rollout, not years. So the room's
+honest reaction to *"why does a $12 refund need three approvals?"* is **"we know"** — and
+Trap 2 requires the assumed decision to be genuinely unexamined. The old note's line
+*"Nobody had thought of that"* could not survive the objection.
+
+**Why the new reveal works.** In sequence, the supervisor reviews *the agent's decision*
+and finance reviews *the supervisor's*. The order is not latency — the order **is** the
+control. It encodes escalation. Parallelising silently deletes it: three independent
+opinions on the raw request, nobody reviewing anybody. The diagram looks equivalent; the
+governance is not. **Nobody complains, because nobody can see it** — which is exactly the
+invisibility Trap 2 needs.
+
+It also promotes the click-2 restack from a clever win to **the crime itself**, performed
+on screen while the room nods along. That reveal was already built and verified.
+
+**The $12 question survives as a spoken second beat**, and its notoriety becomes the
+point: one question the organization has asked a thousand times and never had authority
+to act on, one nobody has ever asked. The typed prompt — *"how do we speed up refund
+approvals"* — invited neither.
+
+**The R-02 tension, handled deliberately.** Losing escalation semantics is the answer
+being *wrong*, which sounds like Trap 1. The Trap 2 reading is carried by the **question**:
+"speed up approvals" treats a review hierarchy as three units of latency. Approvals-as-queue
+is the hidden decision, and nobody typed it. This must be said explicitly or the two traps
+re-blur.
+
+**Rejected:** a fifth click for the escalation loss (Trap 2 is already the longest block);
+swapping the example out entirely (any replacement inherits the same challenge, and
+D-44/D-45's build is verified); making rubber-stamping its own beat — it is one spoken
+sentence, flagged in the note as a different talk.
+
+**Cost:** the slide's note goes ~2:45 → ~3:15. Affordable under D-47.
 
 ---
 
@@ -557,4 +666,6 @@ unknown projector.
 | "Where should the human enter the loop?" as Trap 5's question | It's the governance answer; authority is the real variable (D-33) |
 | Explaining the five-trap progression to the audience | Turns a natural narrative into homework (D-14) |
 | ASCII diagrams; stock AI imagery | Reads as terminal output / generic AI talk (D-41) |
+| Sourcing public industry figures for Trap 4 instead of invented ones | Same citation burden, invites a methodology fight, costs minutes on a detour (D-48) |
+| "Why does a $12 refund need three approvals?" as Trap 2's on-screen reveal | The room already knows; a sequential chain is notorious, not hidden, so the reveal inverts (D-49) |
 | Outbox/Kafka architecture as Trap 2's on-screen example | Outside the experience of much of a mixed audience; the reveal only works if the room can be impressed by the answer first (D-44) |

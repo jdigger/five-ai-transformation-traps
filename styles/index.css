@@ -200,9 +200,12 @@
 }
 .annot.good { color: var(--good); border-left-color: var(--good); }
 
-/* dimming: the diagram deflates when the real question arrives ----------- */
+/* dimming: the diagram deflates when the real question arrives -----------
+   0.30, not 0.16 (D-46). The audience must still see the ghost of the design
+   they just approved; on an unknown projector in a lit room 16% vanishes and
+   the reveal reads as a slide malfunction rather than a gut-punch. */
 .dimmable { transition: opacity 420ms ease, filter 420ms ease; }
-.dimmable.dimmed { opacity: 0.16; filter: grayscale(1); }
+.dimmable.dimmed { opacity: 0.30; filter: grayscale(1); }
 
 /* the question that lands on top of a dimmed diagram --------------------- */
 .overlay-q {
@@ -314,6 +317,22 @@
 .approvals.parallel { flex-direction: column; align-items: stretch; gap: 0.28rem; }
 .approvals.parallel .seq { display: none; }
 .approvals.parallel .node { width: 100%; padding: 0.3rem 0.9rem; font-size: 1rem; }
+
+/* the reveal: the arrows come BACK, in orange (D-49).
+   The sequence was never latency — it was the escalation chain, each level
+   reviewing the level beneath it. Parallelising deleted it, and the deleted
+   thing is invisible, which is the whole point. So it has to return on screen. */
+.approvals.parallel.exposed { gap: 0.1rem; }
+.approvals.parallel.exposed .seq {
+  display: block; align-self: center;
+  transform: rotate(90deg);
+  color: var(--trap); font-weight: 700;
+  animation: seq-return 520ms ease both;
+}
+@keyframes seq-return {
+  from { opacity: 0; transform: rotate(90deg) translateX(-0.5rem); }
+  to   { opacity: 1; transform: rotate(90deg) translateX(0); }
+}
 
 /* a denser variant, for when a diagram and a list share one slide */
 .reveal-list.compact { gap: 0.6rem; }

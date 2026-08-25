@@ -342,12 +342,12 @@ class: canvas-slide
 <div class="node dimmable" :class="{ dimmed: $clicks >= 4 }">Refund request</div>
 <span class="arrow dimmable" :class="{ dimmed: $clicks >= 4 }">&rarr;</span>
 
-<div class="approvals" :class="{ parallel: $clicks >= 2 }">
+<div class="approvals" :class="{ parallel: $clicks >= 2, exposed: $clicks >= 4 }">
 <div class="node">Agent</div>
 <span class="seq">&rarr;</span>
-<div class="node" :class="{ hot: $clicks >= 4 }">Supervisor</div>
+<div class="node">Supervisor</div>
 <span class="seq">&rarr;</span>
-<div class="node" :class="{ hot: $clicks >= 4 }">Finance</div>
+<div class="node">Finance</div>
 </div>
 
 <span class="arrow dimmable" :class="{ dimmed: $clicks >= 4 }">&rarr;</span>
@@ -360,12 +360,12 @@ class: canvas-slide
 <div class="item" v-click="3"><span class="mark">&rarr;</span><span>Reminders, escalation, an exception queue, a dashboard</span></div>
 </div>
 
-<div class="overlay-q" v-click="4">Why does a $12 refund<br>need three approvals?</div>
+<div class="overlay-q" v-click="4">Why were they<br>in that order?</div>
 
 </div>
 
 <!--
-~2:45
+~3:15
 
 Somebody asks AI this. Completely reasonable question — refunds are slow, customers are
 annoyed, somebody owns that metric.
@@ -384,40 +384,64 @@ And this one is actually clever. Those three approvals were happening in SEQUENC
 supervisor can't look at it until the agent is done, finance can't look until the
 supervisor is done. They don't have to. Run them at the same time.
 
-Nobody had thought of that. It's free. It genuinely works.
+It's free. It genuinely works. Cycle time drops, maybe a lot.
 
 [click 3] Reminders, escalation, an exception queue for the weird ones, a dashboard so
 nothing sits in an inbox for three days invisibly.
 
-Every one of those is a real improvement. Cycle time drops, maybe a lot. If someone
-brought me this I would say yes, do it.
+Every one of those is a real improvement. If someone brought me this I would say yes,
+do it.
 
 Let's stipulate: this is right. Trap 1 does not apply. We checked it.
 
-[click 4 — everything greys out EXCEPT the three approvals, and two of them go orange.
-Long pause. Let them read it.]
+[click 4 — everything greys out, and THE ARROWS COME BACK, in orange, running down
+the stack. Long pause. Let them read it.]
 
-Why does a $12 refund need three approvals?
+Why were they in that order?
 
-And then the harder version — point at the orange boxes:
+[Wait. Do not fill the silence. Then:]
 
-At twelve dollars, the supervisor and finance aren't a control. They are two people
-reviewing a decision that was always entirely inside the agent's authority.
+Because the supervisor was not a second opinion. The supervisor was reviewing the
+AGENT'S DECISION. And finance was reviewing the supervisor's.
 
-We just made two unnecessary approvals faster. In parallel. With a dashboard.
+That order wasn't latency. That order was the control. It was an escalation chain —
+each level reviewing the level beneath it.
 
-Nothing in the question invited anybody to ask. It handed AI a policy and asked it to
-make the policy faster — and it did, beautifully. Nobody typed "three approvals is
-required." It just came along.
+[point at the orange arrows]
 
-Now to be fair: maybe there are excellent reasons. Fraud. An auditor. A bad quarter in
-2019 nobody wants to repeat. Segregation of duties is a real control and I am not
-telling you to delete it. Above some threshold all three of those people belong there.
+We just deleted it. Three people now look at the same raw request at the same time, and
+nobody reviews anybody. Faster. With a dashboard.
 
-The question is whether anyone has re-run that argument since the policy was written —
-probably by somebody who no longer works here.
+And here is the part that matters: nobody will ever complain about this. The old process
+people complained about constantly. This one looks identical and takes a third of the
+time.
 
-FOR THE ENGINEERS — one sentence, then move on. Do not expand this:
+[THE SECOND QUESTION — expect the room to already own this one:]
+
+Now the other question. Why does a $12 refund need three approvals at all?
+
+You already know the answer to that one. Somebody in your building has been saying it
+for years.
+
+That's the difference between the two questions. One of them your organization has asked
+a thousand times and never had the authority to act on. The other one nobody has ever
+asked — including me, until I drew this slide.
+
+And what we typed — "how do we speed up refund approvals" — invited neither. It handed
+AI a policy and asked it to make the policy faster, and it did, beautifully. Nobody
+typed "three approvals is required." Nobody typed "the order doesn't mean anything."
+Both just came along.
+
+To be fair: maybe there are excellent reasons for all three. Fraud. An auditor. A bad
+quarter in 2019 nobody wants to repeat. Segregation of duties is a real control and I am
+not telling you to delete it. Above some threshold all three of those people belong
+there — and in that order.
+
+[ONE sentence. Do not expand this — it is a different talk:]
+And if you're thinking "the supervisor was rubber-stamping it anyway" — probably. Which
+means we automated the process on the wiki, not the one people were actually running.
+
+FOR THE ENGINEERS — one sentence, then move on. Do not expand this either:
 "The engineering version of this is the two services that didn't have to be two
 services. CAP didn't change — if there's a distributed boundary the trade-off is real
 and you need all that machinery. But the boundary itself was a design choice, and the
