@@ -299,7 +299,7 @@
 /* The diagram itself has to show why parallel is faster. A bullet claiming it
    is not evidence — same rule the talk is about. */
 
-.chain { display: flex; align-items: center; gap: 0.5rem; }
+.chain { display: flex; align-items: center; gap: 0.5rem; position: relative; }
 
 .approvals {
   position: relative; display: flex; align-items: center; gap: 0.5rem;
@@ -332,6 +332,23 @@
 @keyframes seq-return {
   from { opacity: 0; transform: rotate(90deg) translateX(-0.5rem); }
   to   { opacity: 1; transform: rotate(90deg) translateX(0); }
+}
+
+/* the consequence, in the empty space right of the chain (D-50).
+   Deleting an escalation chain doesn't just remove a control — it removes the
+   FILTER. Supervisor and Finance used to see the exceptions; now they see
+   everything. That complaint is the only signal anything was lost, and it will
+   be filed as a capacity problem. */
+.load-note {
+  /* absolute so the hidden state reserves NO width — in flow it squeezed the
+     chain at every click state and wrapped "Refund request" onto two lines. */
+  position: absolute; right: 0; top: 50%; transform: translateY(-50%);
+  padding-left: 0.85rem; border-left: 3px solid var(--trap);
+  width: 11.5rem; font-size: 0.85rem; line-height: 1.4; color: var(--ink);
+}
+.load-note .lead {
+  font-size: 0.6rem; letter-spacing: 0.16em; font-weight: 700;
+  color: var(--trap); margin-bottom: 0.28rem;
 }
 
 /* a denser variant, for when a diagram and a list share one slide */

@@ -649,6 +649,69 @@ sentence, flagged in the note as a different talk.
 
 **Cost:** the slide's note goes ~2:45 → ~3:15. Affordable under D-47.
 
+
+### D-50 · The chain is an escalation chain, and the reveal pays off in workload
+**Decided** 2026-08-25 · **Status** Active
+**Extends:** D-49. **Fixes:** a contradiction present since D-44.
+
+Three linked changes to slide 9, all raised by the speaker during construction.
+
+**1 · The chain is an escalation chain, not three mandatory sign-offs.**
+The agent handles the refund; the supervisor sees what the agent escalates; finance sees
+what the supervisor escalates. Each level reviews the level beneath it **and sees a
+fraction of what it saw**.
+
+This had been straddled. D-49's reveal used escalation semantics ("each level reviewing
+the level beneath it") while the diagram's `THREE APPROVALS` label said mandatory
+sign-off. Committing to escalation is strictly better: the label becomes **load-bearing
+irony** — it is the organization's own wrong summary of its own process, and it is what
+got typed into the prompt. AI optimized the *description*, not the process.
+
+**2 · A fifth click: the workload consequence.**
+An annotation appears right of the chain — *A WEEK LATER · Supervisor and Finance are
+drowning.* Deleting an escalation chain removes the **filter** as well as the control:
+those two used to see the exceptions, now they see every refund.
+
+This is the proof, and it is what makes the deleted control detectable at all. The
+crucial beat is how the complaint arrives: *"we don't have enough people."* It gets filed
+as a **capacity problem** — answered with headcount, a triage filter, or somebody
+suggesting AI triage the queue. Nobody says the word "control." The dashboard stays green,
+because cycle time was the metric.
+
+**Reverses D-49's rejection of a fifth click.** New information: the consequence is the
+strongest beat on the deck's best slide and cannot be carried by speech alone.
+
+**3 · The `$12` beat is cut entirely.**
+It was self-contradicting: click 1 (*"route by amount and risk score"*) already sends a
+$12 refund straight through, so the slide's own first suggestion answered the question the
+reveal was saving. Under escalation semantics it is doubly dead — a $12 refund never left
+the agent in the first place. Cutting it also disposes of R-11's notorious-vs-hidden
+problem completely rather than managing it.
+
+**What click 1 now means.** AI reconstructing a threshold policy from the two variables
+visible in the data — amount and risk. Plausible, and a guess at a policy whose reasons
+were never recorded. Set up lightly at click 1, paid off at the reveal.
+
+**The mechanism, now stated explicitly — this is Trap 2's actual point.**
+The reason for the order was never written down. Not in the code, not in the ticket, not
+on the wiki (the wiki says "three approvals"). It was in the head of whoever set the
+thresholds, probably after something went wrong, and they left. **AI cannot ask about a
+constraint nobody recorded — and neither can a new architect, a new dev team, or you in
+your first week.** This generalizes the trap beyond AI, which also blunts the
+"engineers rationalizing their salaries" objection: AI did not create this failure, it
+made it fast.
+
+**Cost:** ~3:15 → ~3:30; deck at 50:00. Affordable under D-47, and the $12 cut pays part
+of it back.
+
+**Rejected:** turning Supervisor and Finance orange at click 5 — the arrows already carry
+orange and a second focus makes the frame busy; the annotation points at them instead.
+
+**Build note:** `.load-note` is absolutely positioned. In normal flow its hidden state
+still reserved width and wrapped "Refund request" onto two lines at *every* click state —
+a variant of the reveal-verification rule in `RESTART.md`: a hidden element can damage
+the slide you are not looking at.
+
 ---
 
 ## G. Rejected — do not reopen without new information
@@ -667,5 +730,6 @@ sentence, flagged in the note as a different talk.
 | Explaining the five-trap progression to the audience | Turns a natural narrative into homework (D-14) |
 | ASCII diagrams; stock AI imagery | Reads as terminal output / generic AI talk (D-41) |
 | Sourcing public industry figures for Trap 4 instead of invented ones | Same citation burden, invites a methodology fight, costs minutes on a detour (D-48) |
+| The `$12` question anywhere in Trap 2, on screen or spoken | Self-contradicting: click 1 routes by amount, so the slide already answers it (D-50) |
 | "Why does a $12 refund need three approvals?" as Trap 2's on-screen reveal | The room already knows; a sequential chain is notorious, not hidden, so the reveal inverts (D-49) |
 | Outbox/Kafka architecture as Trap 2's on-screen example | Outside the experience of much of a mixed audience; the reveal only works if the room can be impressed by the answer first (D-44) |

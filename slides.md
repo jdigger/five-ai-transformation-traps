@@ -352,6 +352,11 @@ class: canvas-slide
 
 <span class="arrow dimmable" :class="{ dimmed: $clicks >= 4 }">&rarr;</span>
 <div class="node dimmable" :class="{ dimmed: $clicks >= 4 }">Refunded</div>
+
+<div class="load-note" v-click="5">
+<div class="lead">A WEEK LATER</div>
+Supervisor and Finance are drowning.
+</div>
 </div>
 
 <div class="reveal-list compact mt-4 dimmable" :class="{ dimmed: $clicks >= 4 }">
@@ -365,19 +370,27 @@ class: canvas-slide
 </div>
 
 <!--
-~3:15
+~3:30
 
 Somebody asks AI this. Completely reasonable question — refunds are slow, customers are
 annoyed, somebody owns that metric.
 
-Walk the chain first, out loud, so nobody is guessing:
-"Three approvals. The agent who takes the call. Their supervisor. Somebody in finance."
+Walk the chain first, out loud, and use the organization's OWN words for it:
+"Three approvals. The agent who takes the call. Their supervisor. Somebody in finance.
+That's what the wiki says. That's what everybody calls it."
+
+Do NOT explain escalation here. Let them hear "three approvals," because that is what
+the company believes it has, and that belief is what got typed into the prompt.
 
 Everyone here has worked in a company like this.
 
 And AI gives you a genuinely good answer.
 
 [click 1] Route by amount and risk score, so the easy ones move.
+
+Note what just happened, lightly — pay it off at the reveal, don't spend it now:
+AI just reconstructed a threshold policy out of the two variables it could see in the
+data. Amount, and risk. It's plausible. It looks like an improvement.
 
 [click 2 — THE DIAGRAM RESTACKS. Stop talking. Let them watch it happen. Then:]
 And this one is actually clever. Those three approvals were happening in SEQUENCE — the
@@ -390,54 +403,71 @@ It's free. It genuinely works. Cycle time drops, maybe a lot.
 nothing sits in an inbox for three days invisibly.
 
 Every one of those is a real improvement. If someone brought me this I would say yes,
-do it.
+do it. I would have said yes.
 
 Let's stipulate: this is right. Trap 1 does not apply. We checked it.
 
-[click 4 — everything greys out, and THE ARROWS COME BACK, in orange, running down
-the stack. Long pause. Let them read it.]
+[click 4 — everything greys out, and THE ARROWS COME BACK, in orange, running down the
+stack. Long pause. Let them read it.]
 
 Why were they in that order?
 
 [Wait. Do not fill the silence. Then:]
 
-Because the supervisor was not a second opinion. The supervisor was reviewing the
-AGENT'S DECISION. And finance was reviewing the supervisor's.
+Because it was never three approvals. It was an escalation chain.
 
-That order wasn't latency. That order was the control. It was an escalation chain —
-each level reviewing the level beneath it.
+The agent handled the refund. The supervisor saw the ones the agent escalated. Finance
+saw the ones the supervisor escalated. Each level reviewing the level beneath it — and
+each level seeing a fraction of what the level beneath it saw.
+
+That order wasn't latency. That order was the control. And it was the filter.
 
 [point at the orange arrows]
 
-We just deleted it. Three people now look at the same raw request at the same time, and
-nobody reviews anybody. Faster. With a dashboard.
+We just deleted both.
 
-And here is the part that matters: nobody will ever complain about this. The old process
-people complained about constantly. This one looks identical and takes a third of the
-time.
+[click 5 — the consequence appears. This is the proof, and it is the best beat on the
+slide. Do not rush it.]
 
-[THE SECOND QUESTION — expect the room to already own this one:]
+Here's how you find out. Not from the dashboard — the dashboard is green, cycle time is
+down, that was the metric.
 
-Now the other question. Why does a $12 refund need three approvals at all?
+You find out because a week after this ships, the supervisor and the finance team are
+drowning. They used to see the exceptions. Now they see every single refund, because
+"in parallel" means everybody looks at everything.
 
-You already know the answer to that one. Somebody in your building has been saying it
-for years.
+And listen to what that complaint sounds like when it arrives: "we don't have enough
+people." It gets filed as a capacity problem. It gets a headcount request, or a
+prioritization filter, or — and this is the part that should worry you — somebody
+suggests using AI to triage the queue.
 
-That's the difference between the two questions. One of them your organization has asked
-a thousand times and never had the authority to act on. The other one nobody has ever
-asked — including me, until I drew this slide.
+Nobody in that conversation says the word "control." The governance is gone and the
+ticket says CAPACITY.
 
-And what we typed — "how do we speed up refund approvals" — invited neither. It handed
-AI a policy and asked it to make the policy faster, and it did, beautifully. Nobody
-typed "three approvals is required." Nobody typed "the order doesn't mean anything."
-Both just came along.
+[THE MECHANISM — this is the actual point of Trap 2, land it clearly:]
 
-To be fair: maybe there are excellent reasons for all three. Fraud. An auditor. A bad
-quarter in 2019 nobody wants to repeat. Segregation of duties is a real control and I am
-not telling you to delete it. Above some threshold all three of those people belong
-there — and in that order.
+So why didn't anyone catch it? Not because the AI was bad. Because the reason for that
+order was never written down.
 
-[ONE sentence. Do not expand this — it is a different talk:]
+It isn't in the code. It isn't in the ticket. It isn't on the wiki — the wiki says
+"three approvals." It was in the head of whoever set those thresholds, probably after
+something went wrong, and they left in 2019.
+
+AI cannot ask about a constraint nobody recorded. Neither can a new architect. Neither
+can a new dev team. Neither could you, on your first week.
+
+That's the trap. It is not an AI problem — AI just made it fast. What we typed,
+"how do we speed up refund approvals," handed AI a description of a process and asked it
+to make the description faster. And it did, beautifully.
+
+Nobody typed "the order doesn't mean anything." It just came along.
+
+To be fair: maybe there are excellent reasons to change it. Maybe the thresholds are
+twenty years stale and the whole chain should go. Segregation of duties is a real
+control and I am not telling you to delete it, and I am not telling you to keep it. I am
+telling you that nobody in this story ever made that decision. It got made anyway.
+
+[ONE sentence. Do not expand — it is a different talk:]
 And if you're thinking "the supervisor was rubber-stamping it anyway" — probably. Which
 means we automated the process on the wiki, not the one people were actually running.
 
