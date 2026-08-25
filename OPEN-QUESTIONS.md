@@ -213,7 +213,15 @@ should be decided while doing the Trap 3 pass, not before it.
 
 ## Risks & watch list
 
-### R-01 🔴 Trap 3 is still the junk drawer
+### R-01 ⚪ Trap 3 is the junk drawer — CONTESTED, probably stale
+**Challenged 2026-08-25 by a full read of the deck. See R-12: the sprawl is in Trap 2.**
+Trap 3 is now three content slides with one clean spine (offloading is good → two modes →
+go find out). Its *notes* still over-argue, and a trim is worth doing, but it is no longer
+the worst offender and should not be the default place minutes come from.
+
+Original entry follows.
+
+### R-01a · Trap 3 is still the junk drawer
 It carries learning, juniors, seniors, cognitive offloading, seams, experiments, red
 teaming, Agile loops, and expertise development. The slides are now sparse, but the notes
 still argue all of it.
@@ -280,6 +288,105 @@ what makes the pair worth more than either alone. But it is currently only impli
 **Action:** make the speaker notes name the difference explicitly at the transition, and
 watch for it in rehearsal. If the room does not feel the second one as a new idea, move the
 greenfield example out of customer service rather than cutting it.
+
+**Update 2026-08-25:** unresolved and now worse — Trap 2 holds *three* customer-service
+scenarios, and slide 12 restates slide 9's approval point outright. See R-16.
+
+### R-12 🔴 Trap 2 is the actual junk drawer: six slides, four unrelated examples
+Found 2026-08-25 by reading the whole deck end to end.
+
+Trap 2 runs slides 9–15 at ~13:30 — nearly double any other trap — and carries four
+distinct ideas:
+
+| Slides | Example | Really about |
+|---|---|---|
+| 9 | Refund approval / escalation chain | a question that assumed a **policy** |
+| 10–12 | Greenfield "how should we build our AI agent" | a question that assumed a **solution** |
+| 13 | Ask it to attack your framing | the Monday technique |
+| 14 | Infer vs Enforce | *a different topic* |
+| 15 | Prompt injection | *Trap 5's question* (see R-13) |
+
+Slides 9 and 11–12 are the trap. 13 is its payoff. **14 and 15 are passengers**, and both
+notes betray it — slide 14's has to argue the connection ("this is the same question…
+applied to a choice we make constantly"), and slide 15's states outright: *"here's why
+this is a Trap 2 slide and not a security slide."* When a note has to argue that a slide
+belongs, it usually doesn't.
+
+**Recommendation:** the deck's cut, when it comes, should come from Trap 2, not Trap 3.
+Do not act on this before deciding R-13, which may remove slide 15 for a better reason.
+
+### R-13 🔴 The prompt-injection slide spoils Trap 5, fifteen minutes early
+Slide 15's payload is *"the reframe is: what can it DO if it IS tricked?"* — and its note
+then says, out loud, *"that question — what can it do when it's wrong — is where we're
+going to end up at the end of this talk."*
+
+That is slide 26's title, verbatim, and slide 26 is Trap 5's central question. The deck
+currently announces its own ending during Trap 2. Whatever force *"What can it do when
+it's wrong?"* has when it finally arrives, it has already been spent.
+
+**Options:**
+1. **Move the slide into Trap 5**, where its question is native. It becomes the concrete
+   case that motivates the ladder instead of pre-empting it. Costs Trap 5 ~2:00 and gains
+   Trap 2 the same — and R-12 says Trap 2 is where the minutes should come from.
+2. **Cut it.** The security engineer's objection (R-08) is then answered from the Q&A
+   block rather than the deck. Cheapest, and loses a genuinely good slide.
+3. **Keep it in Trap 2 and strip the forward reference**, ending on the trust-boundary
+   point alone. Keeps the sprawl (R-12) and wastes the best thing on the slide.
+
+**Recommendation: option 1.** It fixes R-12 and R-13 with one move and costs no material.
+
+**Also:** at its tallest click state the slide sits ~26px off the bottom of the frame.
+If it stays anywhere, it needs tightening.
+
+### R-14 🟡 "Nobody wrote it down" is now the mechanism in BOTH Trap 1 and Trap 2
+Introduced into Trap 2 by D-50 and it is the strongest thing in that trap — but Trap 1
+already had it: *"they never refund the setup fee — everybody in billing knows that,
+nobody ever wrote it down."*
+
+Two consecutive traps now diagnose the same root cause, which is exactly the R-02 blur.
+
+**The distinction is real and needs saying, not assuming:**
+- **Trap 1** — an undocumented **rule** made the *answer* wrong. The check couldn't catch it.
+- **Trap 2** — an undocumented **rationale** made the *question* unchallengeable. The
+  answer was right.
+
+Rule vs rationale is crisp and one sentence carries it. **Recommendation:** make Trap 2's
+note name the contrast explicitly at the reveal ("in Trap 1 the missing thing was a rule;
+here it's the reason"), and leave Trap 1 alone.
+
+### R-15 🟡 Trap 5's ladder quietly contradicts Trap 2 — or could become its payoff
+Slide 25's top rung is **"Issue the refund"** — autonomously, by an AI. Trap 2 spent 3:30
+establishing that refunds at this company move through a layered human escalation chain.
+As written, the two never acknowledge each other.
+
+**This is an opportunity, not just a defect.** If it is the same company, Trap 5's top rung
+is the control that Trap 2 quietly deleted, now handed to an AI. That is a genuine
+narrative callback across three traps, and it costs one sentence.
+
+**Careful:** D-14 refuses to explain the *trap progression* to the audience. This is not
+that — it is a concrete callback inside the example domain, not a meta-explanation of
+structure. But it must stay one sentence or it becomes the thing D-14 forbids.
+
+### R-16 🟡 Trap 2 makes the approval point twice, and R-10 is now worse
+Slide 12's option list includes *"maybe the 18 minutes is four minutes of work and fourteen
+minutes of waiting for a second approval, in which case the answer isn't software at all."*
+
+That is slide 9's example, restated, three slides later — and it lands as a throwaway
+option in a list rather than as the thing the room just spent three and a half minutes on.
+
+Trap 2 now has **three** customer-service scenarios (refund approvals, the service agent,
+the customer's email), which is R-10 unresolved and compounded.
+
+**Recommendation:** cut the approval clause from slide 12's list and replace it with a
+non-approval, non-customer-service option, so the greenfield example reads as a genuinely
+new kind of hidden decision (a question that assumed a *solution*, not a *policy*).
+
+### R-17 ⚪ An unexploited handoff from Trap 2 into Trap 4
+Slide 9's click 5 now ends on *"the ticket says CAPACITY."* Trap 4 is titled *Faster
+Doesn't Mean You Should Do More* and is entirely about capacity and where it goes.
+
+Nothing connects them. One transition sentence would make Trap 4 arrive as something the
+deck already earned rather than a new subject.
 
 ### R-07 ⚪ Trap 4 is the most likely source of a hostile question
 Putting *"If developers are 2× as productive, why do we need this many developers?"* on
