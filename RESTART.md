@@ -128,7 +128,7 @@ Then open `http://localhost:3030`. Useful URL forms while building:
 **always check reveal states this way rather than assuming**, and screenshot the slide.
 Presenter view with notes is at `http://localhost:3030/presenter/`.
 
-**Two traps in the tooling itself, both of which have already cost time:**
+**Four traps in the tooling itself, all of which have already cost time:**
 
 - **Slidev counts *registered* `v-click` elements, not the highest index you wrote.** A
   slide whose beats are 1, 3, 4, 5 — because beat 2 is only a `:class="{ x: $clicks >= 2 }"`
@@ -136,6 +136,16 @@ Presenter view with notes is at `http://localhost:3030/presenter/`.
   never fires. `clicks:` in the slide frontmatter does **not** rescue this. Keep click
   indices contiguous and back every beat with a real `v-click` element; drive purely
   visual changes off `$clicks >= n` *in addition to*, never *instead of*, a real element.
+- **And the mirror of it: `clicks:` in frontmatter declaring MORE clicks than there are
+  elements creates dead presses** — the speaker clicks forward, nothing happens, they
+  click again. Do not add `clicks:` to frontmatter at all (D-52); let Slidev auto-count.
+  This bit four slides including the Trap 5 authority ladder, where rhythm carries the
+  whole reveal.
+- **A hidden `v-click` element still occupies layout.** One left in normal flow squeezed
+  the Trap 2 chain and wrapped a node onto two lines at *every* click state — including
+  the base state, which is the one you are least likely to re-screenshot. Position reveal
+  annotations absolutely, and check a changed slide's **base** state as well as its
+  tallest.
 - **HMR does not always pick up structural edits.** If a slide renders at its base state
   when you asked for clicks, reload the page before concluding the markup is wrong.
 
