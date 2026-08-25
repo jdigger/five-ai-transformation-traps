@@ -91,6 +91,29 @@ Update the tracking files **in the same session** as the change, before reportin
 **`RESTART.md`** (this file) — only when the *process* changes. It must not accumulate
 decisions or open questions; those belong in the other two files.
 
+## Editing: use the Slidev MCP server
+
+A Slidev MCP server is configured for this repo (`claude mcp add slidev -- npx slidev mcp
+slides.md`). Prefer it over hand-editing `slides.md` for anything structural:
+
+| Tool | Use it for |
+|---|---|
+| `slidev-get-info` | deck overview: entry file, title, slide count |
+| `slidev-list-slides` | number → title → layout for every slide |
+| `slidev-get-slide` | one slide's frontmatter, content and speaker note, separately |
+| `slidev-update-slide` | change content / note / frontmatter without touching the rest |
+| `slidev-insert-slide` · `remove-slide` · `move-slide` | add, cut, reorder |
+
+**Why it matters here.** Slides are separated by `---`, which is also the frontmatter
+delimiter, so text-splicing a slide out of this file silently eats separators and merges
+two slides — that has already happened once. And slide *numbers* are what the browser
+needs for verification, but nothing in the file tells you them; `slidev-list-slides` does.
+The cutting pass in Q-01 in particular should go through `remove-slide` / `move-slide`.
+
+**What it does not do:** it cannot tell you whether a slide *renders* correctly, fits the
+frame, or whether its reveals fire. That still needs the browser loop below. Structural
+edits through the MCP, visual verification through screenshots.
+
 ## Running and verifying
 
 ```bash
