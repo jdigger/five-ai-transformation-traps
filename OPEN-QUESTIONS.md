@@ -338,22 +338,6 @@ it's wrong?"* has when it finally arrives, it has already been spent.
 **Also:** at its tallest click state the slide sits ~26px off the bottom of the frame.
 If it stays anywhere, it needs tightening.
 
-### R-14 🟡 "Nobody wrote it down" is now the mechanism in BOTH Trap 1 and Trap 2
-Introduced into Trap 2 by D-50 and it is the strongest thing in that trap — but Trap 1
-already had it: *"they never refund the setup fee — everybody in billing knows that,
-nobody ever wrote it down."*
-
-Two consecutive traps now diagnose the same root cause, which is exactly the R-02 blur.
-
-**The distinction is real and needs saying, not assuming:**
-- **Trap 1** — an undocumented **rule** made the *answer* wrong. The check couldn't catch it.
-- **Trap 2** — an undocumented **rationale** made the *question* unchallengeable. The
-  answer was right.
-
-Rule vs rationale is crisp and one sentence carries it. **Recommendation:** make Trap 2's
-note name the contrast explicitly at the reveal ("in Trap 1 the missing thing was a rule;
-here it's the reason"), and leave Trap 1 alone.
-
 ### R-15 🟡 Trap 5's ladder quietly contradicts Trap 2 — or could become its payoff
 Slide 25's top rung is **"Issue the refund"** — autonomously, by an AI. Trap 2 spent 3:30
 establishing that refunds at this company move through a layered human escalation chain.
@@ -438,3 +422,4 @@ even with D-47's slack.
 | Q-02 — are Trap 4's metrics real? | D-48 — no real data; keep them invented and say so out loud | 2026-08-25 |
 | R-05's build decision: is 16% opacity safe on unknown hardware? | D-46 — no; raised to 30% | 2026-08-25 |
 | R-11 — the refund chain is notorious, not hidden, which inverts Trap 2's reveal | D-49 — the reveal moves to the deleted escalation chain; $12 becomes a spoken second beat | 2026-08-25 |
+| R-14 — "nobody wrote it down" is the mechanism in both Trap 1 and Trap 2 | D-53 — a missing *rule* makes the answer wrong; a missing *rationale* makes the question unchallengeable | 2026-08-25 |

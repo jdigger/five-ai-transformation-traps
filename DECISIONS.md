@@ -757,6 +757,55 @@ added or removed, and the mismatch is invisible in the source. Absence cannot dr
 **Kept:** slides 5 and 28, where the declared count matches the element count exactly.
 Neither is load-bearing; they can go too if they ever disagree.
 
+
+### D-53 · The escalation must be VISIBLE before the reveal — volumes on the diagram
+**Decided** 2026-08-25 · **Status** Active
+**Extends:** D-49, D-50.
+
+Each approver carries a weekly volume: **Agent 2,000 · Supervisor 200 · Finance 20** in
+sequence. On the click-2 restack **all three become 2,000**, in neutral grey, unremarked.
+They turn orange at click 4 with the returning arrows.
+
+**The defect this fixes — and it was the real reason the slide felt unclear.** The diagram
+drew a *pipeline*: every request flowing through all three boxes. That is exactly what
+"three approvals" means. Then at click 4 the speaker asserted it had been an escalation
+chain all along. **The audience could not verify that from anything they had seen** — they
+had to accept that the picture meant something other than what it drew.
+
+Compare Trap 1, which works because you *watch* green flip to orange. Nothing is asserted
+there. Trap 2 was asking the room to take the reveal on trust, and trust is precisely what
+this talk is about not extending.
+
+**With volumes on screen the slide inverts:** the catastrophe happens visibly, at click 2,
+in the same instant the room is being told the optimization is clever. The evidence is
+present from the first frame, delivered in a bored voice as scene-setting, and ignored.
+
+That yields the line the slide had been missing:
+
+> It was on the screen the whole time. We were watching the cycle time.
+
+**Deliberate risk accepted:** an alert audience member may catch it at click 2, before the
+reveal. That is the **best** outcome, not a failure — the note tells the speaker to say
+"hold that" and continue. A reveal that some of the room beats you to is stronger than one
+nobody could have seen coming, and it protects D-44's requirement that the room be
+impressed before it is caught.
+
+**Also strengthens the mechanism.** It is now explicit that the *information* was never
+missing — the volumes were readable, and AI could have read them. What was missing was the
+**rationale**. This lets Trap 1 and Trap 2 be distinguished in one line, resolving R-14:
+
+> A missing rule makes the answer wrong. A missing rationale makes the question
+> unchallengeable.
+
+**Numbers are deliberately round** (2,000 / 200 / 20) so they read as structural
+illustration, not measurement. This is not the R-06 / D-48 situation: nobody will quote a
+diagram's decimal funnel as industry data.
+
+**Build note:** the volume labels widened every box, which reintroduced the base-state
+wrap on "Refund request" and then overran the frame entirely. Fixed with `flex: none`,
+`white-space: nowrap`, and smaller type inside `.chain`. Caught by the base-state check
+added to `RESTART.md` in the previous commit — on its first use.
+
 ---
 
 ## G. Rejected — do not reopen without new information

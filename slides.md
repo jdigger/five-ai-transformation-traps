@@ -343,11 +343,11 @@ class: canvas-slide
 <span class="arrow dimmable" :class="{ dimmed: $clicks >= 4 }">&rarr;</span>
 
 <div class="approvals" :class="{ parallel: $clicks >= 2, exposed: $clicks >= 4 }">
-<div class="node">Agent</div>
+<div class="node">Agent<span class="vol">2,000</span></div>
 <span class="seq">&rarr;</span>
-<div class="node">Supervisor</div>
+<div class="node">Supervisor<span class="vol">{{ $clicks >= 2 ? '2,000' : '200' }}</span></div>
 <span class="seq">&rarr;</span>
-<div class="node">Finance</div>
+<div class="node">Finance<span class="vol">{{ $clicks >= 2 ? '2,000' : '20' }}</span></div>
 </div>
 
 <span class="arrow dimmable" :class="{ dimmed: $clicks >= 4 }">&rarr;</span>
@@ -379,8 +379,11 @@ Walk the chain first, out loud, and use the organization's OWN words for it:
 "Three approvals. The agent who takes the call. Their supervisor. Somebody in finance.
 That's what the wiki says. That's what everybody calls it."
 
-Do NOT explain escalation here. Let them hear "three approvals," because that is what
-the company believes it has, and that belief is what got typed into the prompt.
+Then read the numbers, flatly, like housekeeping. Do NOT make anything of them yet:
+"Two thousand refunds a week. Two hundred reach a supervisor. Twenty reach finance."
+
+That is the whole trick of this slide. The evidence is on screen from the first frame,
+stated in a bored voice, and the room files it as scene-setting.
 
 Everyone here has worked in a company like this.
 
@@ -398,6 +401,10 @@ supervisor can't look at it until the agent is done, finance can't look until th
 supervisor is done. They don't have to. Run them at the same time.
 
 It's free. It genuinely works. Cycle time drops, maybe a lot.
+
+[DO NOT point at the numbers. They just changed, in front of everybody, and the job
+right now is to be pleased about the cycle time. If somebody in the room calls it out
+here — that is the best possible outcome. Say "hold that" and keep going.]
 
 [click 3] Reminders, escalation, an exception queue for the weird ones, a dashboard so
 nothing sits in an inbox for three days invisibly.
@@ -420,11 +427,23 @@ The agent handled the refund. The supervisor saw the ones the agent escalated. F
 saw the ones the supervisor escalated. Each level reviewing the level beneath it — and
 each level seeing a fraction of what the level beneath it saw.
 
-That order wasn't latency. That order was the control. And it was the filter.
+[NOW point at the numbers. This is the moment the slide exists for:]
 
-[point at the orange arrows]
+Two thousand. Two hundred. Twenty.
 
-We just deleted both.
+That is not three people doing the same job slowly. That is a funnel. The order was the
+control — and the numbers were the proof, and they have been on this screen since before
+I said a word.
+
+[point at the three 2,000s]
+
+Look at them now.
+
+It was on the screen the whole time. We were watching the cycle time.
+
+That order wasn't latency. That order was the control, and it was the filter. We deleted
+both — and the deletion was visible, in the moment, to anyone who was looking at the
+right number.
 
 [click 5 — the consequence appears. This is the proof, and it is the best beat on the
 slide. Do not rush it.]
@@ -433,8 +452,8 @@ Here's how you find out. Not from the dashboard — the dashboard is green, cycl
 down, that was the metric.
 
 You find out because a week after this ships, the supervisor and the finance team are
-drowning. They used to see the exceptions. Now they see every single refund, because
-"in parallel" means everybody looks at everything.
+drowning. Two hundred to two thousand. Twenty to two thousand. A hundred-fold increase
+in finance's workload, and it shipped as a performance improvement.
 
 And listen to what that complaint sounds like when it arrives: "we don't have enough
 people." It gets filed as a capacity problem. It gets a headcount request, or a
@@ -446,8 +465,18 @@ ticket says CAPACITY.
 
 [THE MECHANISM — this is the actual point of Trap 2, land it clearly:]
 
-So why didn't anyone catch it? Not because the AI was bad. Because the reason for that
-order was never written down.
+So why didn't anyone catch it? Not because the AI was bad — and notice, not because the
+information was missing either. The volumes were right there. AI could have read them.
+
+Because the REASON for that order was never written down.
+
+In Trap 1 the missing thing was a rule — nobody wrote down that the setup fee isn't
+refundable, so the answer came out wrong. Here the missing thing is a rationale. Every
+fact you needed was available. What was missing was why anybody had arranged them that
+way, and without that, the question went unchallenged.
+
+A missing rule makes the answer wrong. A missing rationale makes the question
+unchallengeable.
 
 It isn't in the code. It isn't in the ticket. It isn't on the wiki — the wiki says
 "three approvals." It was in the head of whoever set those thresholds, probably after

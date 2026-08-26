@@ -299,7 +299,12 @@
 /* The diagram itself has to show why parallel is faster. A bullet claiming it
    is not evidence — same rule the talk is about. */
 
-.chain { display: flex; align-items: center; gap: 0.5rem; position: relative; }
+.chain { display: flex; align-items: center; gap: 0.35rem; position: relative; }
+/* Volume labels widen every box. Without flex:none the end nodes shrink and
+   wrap; without the smaller type the whole chain overruns the frame. */
+.chain > .node { flex: none; white-space: nowrap; }
+.chain .node { font-size: 1.05rem; padding: 0.62rem 0.85rem; }
+.chain .arrow { font-size: 1.1rem; }
 
 .approvals {
   position: relative; display: flex; align-items: center; gap: 0.5rem;
@@ -312,6 +317,18 @@
   white-space: nowrap;
 }
 .approvals .seq { color: #b9b2a8; font-size: 1.35rem; line-height: 1; flex: none; transition: opacity 260ms ease; }
+
+/* Volume per step (D-53). The escalation has to be VISIBLE before the reveal,
+   or click 4 asserts the filtering instead of exposing it. 2,000 -> 200 -> 20
+   in sequence; all three become 2,000 the instant the restack lands. */
+.approvals .node { padding-left: 0.85rem; padding-right: 0.85rem; white-space: nowrap; }
+.approvals .vol {
+  margin-left: auto; padding-left: 0.7rem;
+  font-variant-numeric: tabular-nums; font-size: 0.74rem; font-weight: 600;
+  color: var(--ink-soft); letter-spacing: 0.02em;
+  transition: color 260ms ease;
+}
+.approvals.exposed .vol { color: var(--trap); }
 
 /* the switch */
 .approvals.parallel { flex-direction: column; align-items: stretch; gap: 0.28rem; }
