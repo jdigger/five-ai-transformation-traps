@@ -20,7 +20,7 @@ stay discarded.
 ## A. Audience, format, objective
 
 ### D-01 · Audience is mixed technical + management
-**Decided** pre-2026-08-23 · **Status** Active
+**Decided** pre-2026-08-23 · **Status** Active · **Refined by D-54** (the mix tilts geeks)
 
 Engineers, architects, Agile practitioners, engineering managers, technology leaders,
 business/technology managers. At a local Agile meetup.
@@ -805,6 +805,48 @@ diagram's decimal funnel as industry data.
 wrap on "Refund request" and then overran the frame entirely. Fixed with `flex: none`,
 `white-space: nowrap`, and smaller type inside `.chain`. Caught by the base-state check
 added to `RESTART.md` in the previous commit — on its first use.
+
+
+### D-54 · The room tilts geeks, and the humour register is in-group and slightly blue
+**Decided** 2026-08-25 · **Status** Active
+**Refines:** D-01. Does **not** supersede it — the room is still mixed, just weighted.
+
+**Audience.** Speaker's read of the actual room: still mixed (D-01 stands — Trap 4 needs
+the management half), but **weighted toward engineers**. Content pitched at the technical
+half will mostly land; content requiring management context still needs its scaffolding.
+
+**Register.** Mildly risqué, in-group technical humour — *"nerdgasm"*, *"hot and bothered"*
+about an architecture, *"long-distance relationship"* for a service boundary — is
+**extremely effective at drawing both the laugh and the memory** with this room. It is
+also easy to overuse, and the speaker has flagged that himself.
+
+**The working rule that makes it safe — the target is always our own appetite for
+complexity, never a person or a group.** *"We get hot and bothered about an outbox
+pattern"* is solidarity: the speaker is inside the joke and so is the room. The same
+energy aimed at a role — architects, PMs, the finance team — becomes contempt and costs
+the room instantly. Every laugh in this deck should be self-implicating, which is already
+the deck's established voice (*"I would have said yes"*, *"I have caught myself doing the
+second one"*).
+
+**Budget: three laughs, not a set.** The design intent is a principal engineer at a
+whiteboard (see `styles/index.css`), not a comedy set. Current plan:
+1. **Trap 2** — the Kafka buffet, *after* the refund reveal has done the work. Deferred
+   until the R-12/R-13 restructure so Trap 2's minutes get allocated once.
+2. **Trap 4** — wants one badly; it is the most likely hostile-question moment (R-07) and
+   a laugh defuses a room better than an argument does.
+3. Reserve. Do not spend it just because a spot exists.
+
+**Trap 5's ladder stays cold** — deliberately unfunny. The escalation is doing the work
+and a laugh would release exactly the tension the slide is building.
+
+**This does NOT reopen D-44.** D-44 rejected the Kafka/outbox architecture as Trap 2's
+on-screen example partly on mixed-audience grounds, which this weakens — but the refund
+escalation chain has since become far stronger on its own merits (D-49, D-50, D-53). It
+now wins on quality, not on accessibility. Kafka returns as the *laugh*, not the example.
+
+**Raises the stakes on Q-05 (is it recorded?).** A register that works in a room among
+peers travels differently as a clip. If the talk is recorded, this needs a second look —
+not necessarily a change, but a deliberate decision rather than a default.
 
 ---
 

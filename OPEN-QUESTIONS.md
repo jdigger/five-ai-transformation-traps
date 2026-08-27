@@ -91,7 +91,10 @@ Still unresolved, and each one changes something:
 
 - **Room size / screen size** → type sizes. The deck has never been checked at distance.
 - **Recorded?** → changes how hard the invented-numbers disclaimer (D-48, R-06) and any
-  first-person story (Q-03) have to be flagged, because they outlive the room.
+  first-person story (Q-03) have to be flagged, because they outlive the room. **Now also
+  gates the humour register (D-54):** in-group, slightly blue technical humour works among
+  peers in a room and travels differently as a clip. This is the highest-value unanswered
+  item in Q-05.
 - **Lectern with a confidence monitor?** → whether Slidev presenter view with notes is
   usable, which the entire notes strategy (D-05) assumes. If there's no monitor, the
   notes strategy needs a fallback and that is a real rebuild.
