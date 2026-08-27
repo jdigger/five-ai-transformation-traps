@@ -848,6 +848,54 @@ now wins on quality, not on accessibility. Kafka returns as the *laugh*, not the
 peers travels differently as a clip. If the talk is recorded, this needs a second look —
 not necessarily a change, but a deliberate decision rather than a default.
 
+
+### D-55 · The prompt-injection slide moves into Trap 5, between the ladder and its question
+**Decided** 2026-08-25 · **Status** Active
+**Resolves:** R-13. **Partially resolves:** R-12, R-16.
+
+Slide order is now `23 TRAP 05 · 24 ladder · 25 prompt injection · 26 "What can it do when
+it's wrong?"`. Trap 2 drops to six slides / 12:45; Trap 5 rises to five / 8:30.
+
+**Why it had to leave Trap 2.** Its payload was *"the reframe is: what can it DO if it IS
+tricked?"* — slide 26's title, verbatim — and its note then said out loud that this is
+where the talk ends up. **The deck announced its own ending fifteen minutes early**, and
+whatever force Trap 5's central question had on arrival was already spent.
+
+**Why Trap 5 is where it belongs, not merely where it does least harm.** The ladder's
+first rung is *"Read the customer's email."* Prompt injection is what happens when that
+email is hostile. The two slides now compose into one argument the deck could not make
+before:
+
+> Rung one is an input we do not control. Rung five is issuing a refund.
+
+That is Trap 5 in a sentence, and it exists only because of the adjacency. The slide is no
+longer a passenger arguing for its seat — it is the reason the ladder is dangerous.
+
+**The Trap 2 callback survives and improves.** *"How do we stop it being tricked"* still
+put the defense inside the model, and the note still names that as a framing failure — but
+now as **Trap 2 turning up again in a security review**, which is reinforcement rather
+than a spoiler, because Trap 2 already happened.
+
+**Also in this pass:**
+- **Slide 14 (infer/enforce) inherits the handoff into Trap 3**, which the injection slide
+  used to carry, and slide 24 gains a one-line handoff into the injection slide.
+- **R-16 fixed.** Slide 12's option list no longer restates slide 9's approval point; the
+  18 minutes is now spent hunting three systems for order history. The note explains why:
+  slide 9 was a question that assumed a **policy**, slide 12 is a question that assumed a
+  **solution**, and repeating an approval story collapses the distinction.
+- **The Kafka buffet lands** (D-54), replacing the one-sentence engineers' aside on slide
+  9. ~45s, after the reveal has done its work, ending on *"nobody asked why these two
+  services need a long-distance relationship."* The self-implication rule is written into
+  the note so it cannot drift into contempt.
+
+**Still open from R-12: slide 14 (infer/enforce) remains a passenger.** Its note still has
+to argue that it belongs. Deliberately NOT moved in this pass — Trap 5 is now at 8:30 and
+adding it would just relocate the junk drawer. Recommendation is to cut it on quality
+grounds, not move it; recorded as R-18.
+
+**Cost:** deck 50:00 → 50:45, all of it the Kafka bit. Trap 2 is no longer the longest
+block.
+
 ---
 
 ## G. Rejected — do not reopen without new information
