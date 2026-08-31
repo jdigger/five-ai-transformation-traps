@@ -896,6 +896,45 @@ grounds, not move it; recorded as R-18.
 **Cost:** deck 50:00 → 50:45, all of it the Kafka bit. Trap 2 is no longer the longest
 block.
 
+
+### D-56 · Not recorded — and the invented metrics get an on-screen qualifier anyway
+**Decided** 2026-08-25 · **Status** Active
+**Resolves:** the "recorded?" half of Q-05. **Reframes:** R-06.
+
+**No video recording.** Confirmed by the speaker.
+
+**What that unblocks.** D-54's humor register is cleared: in-group, slightly blue
+technical humor works among peers in a room, and the risk was always a thirty-second clip
+traveling without its context. No clip. The register stands as written, and the
+self-implication rule (target our own appetite for complexity, never a person) remains the
+thing that keeps it safe — that rule was never about recording.
+
+Q-03's first-person stories also no longer need flagging for posterity. They only have to
+be true for the room.
+
+**What it does NOT resolve, and this is the important half.** R-06's risk was never
+specific to video. **Sharing the slides re-creates it in a worse form**, because the
+Trap 4 disclaimer lived entirely in the speaker notes: the deck showed
+`−60% · +80% · +110% · −8%` with nothing on screen saying they were invented. Any
+slides-only artifact would distribute four manufactured statistics with no caveat
+attached — which is precisely the Trap 1 failure this talk is about, committed by the
+talk itself.
+
+**So the qualifier moves onto the slide**, regardless of what gets shared:
+
+> WHAT GOT FASTER?  *illustrative figures, not measured*
+
+Styled as a chart label rather than a footnote, present from the first frame, in the
+caption where the eye lands before the numbers do.
+
+**Why do this now, before the sharing question is settled (Q-06):** it is protective under
+every option and costs nothing under any of them. The speaker says it out loud anyway, so
+on screen it is reinforcement, not repetition — and it closes R-06's real failure mode,
+which was the spoken line being dropped under time pressure.
+
+**Rejected:** waiting for Q-06 to be decided. The cheap insurance is cheap now and the
+decision it protects against is exactly the one still open.
+
 ---
 
 ## G. Rejected — do not reopen without new information

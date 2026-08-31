@@ -170,6 +170,13 @@
   color: var(--ink-soft); margin-bottom: 1.6rem; font-weight: 600;
 }
 
+/* A qualifier that must survive the slide leaving the room (D-56). Reads as a
+   chart label, not a footnote, and is present from the first frame. */
+.diagram .caption .qualifier {
+  text-transform: none; letter-spacing: 0.01em; font-weight: 500;
+  color: #9aa1ad; margin-left: 0.75rem; font-size: 0.88em;
+}
+
 .node {
   border: 1.5px solid var(--rule); background: #fff; border-radius: 10px;
   padding: 0.85rem 1.35rem; font-size: 1.22rem; font-weight: 500;

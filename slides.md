@@ -1059,7 +1059,7 @@ class: canvas-slide
 
 <div class="diagram">
 
-<div class="caption">WHAT GOT FASTER?</div>
+<div class="caption">WHAT GOT FASTER?<span class="qualifier">illustrative figures, not measured</span></div>
 
 <div class="flow-h">
 <div class="node ghost">Idea</div><span class="arrow">→</span>

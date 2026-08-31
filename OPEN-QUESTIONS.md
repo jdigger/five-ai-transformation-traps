@@ -94,26 +94,44 @@ blocking a build decision.
 Still unresolved, and each one changes something:
 
 - **Room size / screen size** → type sizes. The deck has never been checked at distance.
-- **Recorded?** → changes how hard the invented-numbers disclaimer (D-48, R-06) and any
-  first-person story (Q-03) have to be flagged, because they outlive the room. **Now also
-  gates the humor register (D-54):** in-group, slightly blue technical humor works among
-  peers in a room and travels differently as a clip. This is the highest-value unanswered
-  item in Q-05.
+- ~~**Recorded?**~~ → **Resolved: no video recording (D-56).** This cleared the humor
+  register (D-54) and removed the posterity burden from Q-03's stories.
 - **Lectern with a confidence monitor?** → whether Slidev presenter view with notes is
   usable, which the entire notes strategy (D-05) assumes. If there's no monitor, the
   notes strategy needs a fallback and that is a real rebuild.
 - **Meetup name and date on the cover slide** → the cover currently carries only
   "Jim Moore".
 
-### Q-06 ⚪ Will the slides be shared afterward, and should they stand alone?
-They currently **do not** stand alone, deliberately (D-05) — the rigor is in the notes.
-Someone reading the deck cold gets provocative fragments and no argument.
+### Q-06 🟡 What gets shared afterward — slides, slides + notes, or a rollup?
+Speaker is undecided between three forms. Raised in priority: the deck deliberately does
+**not** stand alone (D-05 — the rigor is in the notes), so this choice materially changes
+what a reader gets.
 
-**Recommendation:** don't compromise the live deck for this. If sharing is expected,
-export a companion document from the speaker notes after the talk is finalized — Slidev can
-export with notes. Keep the two artifacts separate rather than thickening the slides.
+**a · Presentation slides only — actively bad, and I'd argue against it.**
+R-03 already flags that *"A Great Answer Doesn't Mean You're Right"*, *"Faster Doesn't Mean
+You Should Do More"* and *"Are You Understanding Faster — or Avoiding Understanding?"* each
+read as anti-AI when seen out of context, and all three are defused **verbally only**. A
+slides-only artifact ships the provocations without any of the qualifications. D-56 fixed
+the worst instance (the Trap 4 metrics) but not the general problem.
 
----
+**b · Slides + speaker notes — honest, complete, nearly free.**
+The notes are written as stage directions, not prose — *"[beat]"*, *"do NOT point at the
+numbers"*, *"take the laugh"*. A reader gets a shooting script rather than an essay, which
+is charming to some and strange to others, and it does expose the performance mechanics to
+anyone who was in the room. Zero additional work; Slidev exports it directly.
+
+**c · A rollup — most useful, some work.**
+The highest-value version is small, not a document: **the five Monday questions, one page,
+two or three sentences each.** That is the artifact most likely to end up pinned to a wall,
+and it maps exactly onto the success criterion (D-03 — a better question a month later).
+Slide 28 already *is* this in skeleton form, and the notes already contain the prose.
+
+**Recommendation: (c), scoped to one page, optionally alongside (b) for anyone who wants
+the full argument.** Explicitly not (a) on its own. Do not thicken the live deck to make
+it stand alone — that trade was settled in D-05 and remains right.
+
+**Decide after the deck is finalized**, since the rollup is generated *from* the notes and
+would need regenerating after any content change.
 
 ### Q-07 ⚪ Is the 10–15 minutes open Q&A or facilitated discussion?
 An Agile meetup often prefers discussion over interrogation. If discussion is wanted, two
@@ -270,19 +288,16 @@ the ghost still washes out, go to ~45% rather than redesigning the slide. If the
 turns out to be dark with a good screen, 30% is slightly safe and could go back toward
 20% for a harder gut-punch — but only with the hardware in front of you.
 
-### R-06 🟡 Invented numbers may be quoted back as real
-Now settled policy, not an open trade-off: the numbers stay invented and the speaker says
-so out loud (D-48). That makes this risk **load-bearing** — the disclaimer is the only
-thing standing between this talk and a manufactured statistic.
+### R-06 ⚪ Invented numbers may be quoted back as real
+Largely mitigated. The numbers stay invented and the speaker says so (D-48), **and the
+slide now carries `illustrative figures, not measured` on screen** (D-56), so the caveat
+travels with the artifact instead of living only in the speaker's mouth. That closes the
+original failure mode — the spoken line being dropped under time pressure — and the
+no-recording decision removes the clip risk entirely.
 
-**Two failure modes to watch in rehearsal:**
-1. It gets dropped under time pressure. Then the talk has manufactured a statistic, which
-   is precisely the Trap 1 failure it warns about. Ironic and bad.
-2. It arrives *late* — after the audience has had a beat to believe the numbers. The
-   disclaimer has to land in the same breath as the metrics, not after them.
-
-If the talk is recorded (Q-05), both get worse, because the numbers outlive the room and
-the disclaimer may not travel with the clip.
+**Residual watch:** the qualifier is small by design. If the deck is shared as images or
+re-used in someone else's slides, it could still be cropped out. Not worth making it
+uglier; worth knowing.
 
 ### R-10 🟡 Trap 2's two examples now sit in the same domain
 Both the approval chain (D-44) and the greenfield agent question (D-22) are customer-service
@@ -396,3 +411,4 @@ even with D-47's slack.
 | R-13 — the prompt-injection slide spoiled Trap 5's question fifteen minutes early | D-55 — moved into Trap 5 between the ladder and its question | 2026-08-25 |
 | R-16 — slide 12 restated slide 9's approval point | D-55 — replaced with a non-approval option; the note names the policy/solution distinction | 2026-08-25 |
 | R-12 — Trap 2 is the junk drawer | D-55 — largely resolved; narrowed to R-18 (slide 14 alone) | 2026-08-25 |
+| Q-05's "is it recorded?" | D-56 — no video recording; clears the humor register and Q-03's posterity burden | 2026-08-25 |
