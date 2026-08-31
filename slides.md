@@ -414,7 +414,7 @@ do it. I would have said yes.
 
 Let's stipulate: this is right. Trap 1 does not apply. We checked it.
 
-[click 4 — everything greys out, and THE ARROWS COME BACK, in orange, running down the
+[click 4 — everything grays out, and THE ARROWS COME BACK, in orange, running down the
 stack. Long pause. Let them read it.]
 
 Why were they in that order?

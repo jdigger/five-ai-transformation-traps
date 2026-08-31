@@ -238,7 +238,7 @@ the AI ever answers it.* Get to "What did my question already decide?" fast.
 **Decided** pre-2026-08-23, re-sited 2026-08-23 · **Status** Superseded by D-44 on 2026-08-25
 
 Build the outbox → Kafka → idempotent consumer design up over five clicks, explicitly
-bless it, *then* reveal "Why are these two services?" and grey the whole diagram out.
+bless it, *then* reveal "Why are these two services?" and gray the whole diagram out.
 
 **Why:** the rhetorical force depends on the audience nodding along first. Also state
 plainly: CAP didn't change; the boundary may be completely justified (independent
@@ -253,7 +253,7 @@ On screen: *"How do we speed up refund approvals?"* over the chain
 route by amount and risk score, run the three approvals **in parallel rather than in
 sequence**, reminders at four hours, escalation at twenty-four, an exception queue, a
 dashboard. It is explicitly blessed on screen: *"Cycle time genuinely drops. This is a
-good answer."* Then the whole thing greys out under:
+good answer."* Then the whole thing grays out under:
 
 > **Why does a $12 refund need three approvals?**
 
@@ -307,7 +307,7 @@ twelve dollars those two are not a control, they are reviewing a decision that w
 entirely inside the agent's authority. The optimization made two unnecessary approvals
 faster, in parallel, with a dashboard.
 
-Also: the three approvers are labelled `THREE APPROVALS` on screen and named out loud —
+Also: the three approvers are labeled `THREE APPROVALS` on screen and named out loud —
 "the agent who takes the call, their supervisor, somebody in finance." Without that the
 chain reads as a pipeline rather than as three separate people saying yes.
 
@@ -532,7 +532,7 @@ Hidden clicks keep their layout space, so nothing shifts as reveals land.
 
 Reveals that are load-bearing and must not be flattened:
 - Trap 1 — the green build flips from teal to **orange** on the final reveal
-- Trap 2 — the architecture greys out as "Why are these two services?" lands beneath it
+- Trap 2 — the architecture grays out as "Why are these two services?" lands beneath it
   (the figure is now 30%, not 16% — D-46)
 - Trap 4 — `−8% idea to production` gets its **own** beat after the other three metrics,
   rendered neutral (not teal), because it is the punchline, not a win
@@ -547,7 +547,7 @@ unknown projector.
 ---
 
 
-### D-46 · The Trap 2 grey-out dims to 30%, not 16%
+### D-46 · The Trap 2 gray-out dims to 30%, not 16%
 **Decided** 2026-08-25 · **Status** Active
 **Supersedes:** the `16%` figure recorded in D-42's load-bearing-reveals list.
 
@@ -763,7 +763,7 @@ Neither is load-bearing; they can go too if they ever disagree.
 **Extends:** D-49, D-50.
 
 Each approver carries a weekly volume: **Agent 2,000 · Supervisor 200 · Finance 20** in
-sequence. On the click-2 restack **all three become 2,000**, in neutral grey, unremarked.
+sequence. On the click-2 restack **all three become 2,000**, in neutral gray, unremarked.
 They turn orange at click 4 with the returning arrows.
 
 **The defect this fixes — and it was the real reason the slide felt unclear.** The diagram
@@ -807,7 +807,7 @@ wrap on "Refund request" and then overran the frame entirely. Fixed with `flex: 
 added to `RESTART.md` in the previous commit — on its first use.
 
 
-### D-54 · The room tilts geeks, and the humour register is in-group and slightly blue
+### D-54 · The room tilts geeks, and the humor register is in-group and slightly blue
 **Decided** 2026-08-25 · **Status** Active
 **Refines:** D-01. Does **not** supersede it — the room is still mixed, just weighted.
 
@@ -815,7 +815,7 @@ added to `RESTART.md` in the previous commit — on its first use.
 the management half), but **weighted toward engineers**. Content pitched at the technical
 half will mostly land; content requiring management context still needs its scaffolding.
 
-**Register.** Mildly risqué, in-group technical humour — *"nerdgasm"*, *"hot and bothered"*
+**Register.** Mildly risqué, in-group technical humor — *"nerdgasm"*, *"hot and bothered"*
 about an architecture, *"long-distance relationship"* for a service boundary — is
 **extremely effective at drawing both the laugh and the memory** with this room. It is
 also easy to overuse, and the speaker has flagged that himself.

@@ -37,6 +37,10 @@ conceptually does not work when presented, say so and change it.
 
 ## Working method
 
+**American English throughout.** Slides, speaker notes, tracking files, and CSS comments:
+*humor*, *organization*, *gray*, *defense*, *behavior*, *centered*. The speaker is American
+and so is the room.
+
 **Keep three layers separate.** What appears on screen · what the speaker says · what the
 speaker understands but never explains. Never solve complexity by putting more words on a
 slide.
@@ -149,7 +153,7 @@ Presenter view with notes is at `http://localhost:3030/presenter/`.
 - **HMR does not always pick up structural edits.** If a slide renders at its base state
   when you asked for clicks, reload the page before concluding the markup is wrong.
 
-Content is vertically centred and will silently overflow a 450px-tall frame before it
+Content is vertically centered and will silently overflow a 450px-tall frame before it
 clips. Screenshot the **tallest** click state of any slide you change, not just the first.
 
 ```bash

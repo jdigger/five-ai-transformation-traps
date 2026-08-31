@@ -96,7 +96,7 @@ Still unresolved, and each one changes something:
 - **Room size / screen size** → type sizes. The deck has never been checked at distance.
 - **Recorded?** → changes how hard the invented-numbers disclaimer (D-48, R-06) and any
   first-person story (Q-03) have to be flagged, because they outlive the room. **Now also
-  gates the humour register (D-54):** in-group, slightly blue technical humour works among
+  gates the humor register (D-54):** in-group, slightly blue technical humor works among
   peers in a room and travels differently as a clip. This is the highest-value unanswered
   item in Q-05.
 - **Lectern with a confidence monitor?** → whether Slidev presenter view with notes is
@@ -136,7 +136,7 @@ implementation cannot have been derived from the implementation. That second hal
 exactly the Trap 1 property — *could this check catch the original mistake?* So the honest
 claim is that **AI makes TDD's ordering discipline more valuable, not less**, because
 derived-check contamination is now fast, fluent, and voluminous. It also removes the
-oldest objection to TDD ("tests are expensive to write"), which cuts in TDD's favour.
+oldest objection to TDD ("tests are expensive to write"), which cuts in TDD's favor.
 
 **The honest limit — do not skip this.** TDD gives you independence between the test and
 the *implementation*. It gives you nothing against a misread *requirement*: you write a
@@ -201,7 +201,7 @@ banal; the asymmetry is not.
 audience; naming a cross-cutting theme risks the same meta-layer problem. D-17 caps
 frameworks hard, and "steel-man / red-team" could grow into a sixth one. *Red-team* is mild
 in-group jargon and *steel-man* more so — the business and management half of the room
-(D-01) may not have either. And the deck already says the behaviour in plain language,
+(D-01) may not have either. And the deck already says the behavior in plain language,
 which may make the label pure overhead.
 
 **Recommendation:** name it **once**, in Trap 3, and never again — Trap 3 is where
@@ -261,7 +261,7 @@ green build in twenty minutes, every artifact saying "verified."
 
 **Untested.** Watch whether it survives a live challenge.
 
-### R-05 ⚪ The Trap 2 grey-out is mitigated but still unverified on real hardware
+### R-05 ⚪ The Trap 2 gray-out is mitigated but still unverified on real hardware
 Raised from 16% to 30% (D-46) and verified in the browser at slide 9, click 4 — the
 chain recedes without disappearing. That is insurance taken blind, not a test.
 
@@ -345,7 +345,7 @@ deck already earned rather than a new subject.
 ### R-07 ⚪ Trap 4 is the most likely source of a hostile question
 Putting *"If developers are 2× as productive, why do we need this many developers?"* on
 screen invites a manager in the room to press it. The prepared answer refuses the weak
-defence and asks to measure instead (D-31) — which is honest but will not satisfy someone
+defense and asks to measure instead (D-31) — which is honest but will not satisfy someone
 who wants reassurance.
 
 ### R-08 ⚪ A security engineer will challenge the prompt-injection slide
@@ -367,7 +367,7 @@ even with D-47's slack.
 ## Only a rehearsal will resolve these
 
 - Whether the Trap 1 refund loop needs six clicks or is too slow
-- Whether the Trap 2 grey-out lands as a gut-punch or reads as a slide malfunction
+- Whether the Trap 2 gray-out lands as a gut-punch or reads as a slide malfunction
 - Whether the Trap 5 ladder earns 2:30 of silence-and-clicking
 - Whether the five closing questions land as a callback or a summary (D-16 forbids summary)
 - Whether Trap 3's two-column *Help me / Challenge me* slide is self-evident or needs setup
