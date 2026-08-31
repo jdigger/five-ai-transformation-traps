@@ -107,7 +107,7 @@ established.
 ## Slide 5 · Refund requirement loop
 
 ```
-~3:00  — the money slide of Trap 1. Do not rush the clicks.
+~3:30  — the money slide of Trap 1. Do not rush the clicks.
 
 Read the requirement out loud. "Customers who cancel mid-cycle get a prorated refund." Ask the room: does anybody see a problem with that sentence?
 
@@ -131,8 +131,19 @@ The problem is that the check repeated the mistake.
 
 So we shipped a refund calculator that overpays. Quietly. Correctly, according to every test we have.
 
-RED-TEAM NOTE (if challenged: "a human would make the same mistake"):
-Yes — absolutely. A human reading that sentence makes the identical error. What's different is the SPEED and the CONFIDENCE. We got an implementation, a test suite, and a green build in twenty minutes, and every artifact in front of us says "verified." The volume of convincing-looking evidence went up without the amount of actual evidence going up at all.
+Somebody in here is thinking: a human would have made exactly the same mistake.
+
+Yes. Absolutely. A human reading that sentence makes the identical error. That is not the interesting part.
+
+But one human makes it once. A second human, reading it separately, probably makes a different mistake — which is the entire reason code review has ever worked. The second person was never valuable because they were guaranteed to be smarter. They were valuable because they were independent.
+
+Point at the 47 passing tests:
+
+"You didn't get forty-seven checks. You got one check, forty-seven times."
+
+The mistake and the thing that was supposed to catch it are no longer independent events. The amount of convincing-looking evidence went up while its independence went to zero, and every artifact still says "verified."
+
+Independence used to arrive as a by-product of friction — different people, different days, the time the work took. Now we have to build it on purpose.
 ```
 
 
@@ -169,6 +180,10 @@ None of these are exotic. Notice what they have in common: none of them come fro
 [click 4] So: use AI to challenge your thinking. Genuinely — ask it to attack your design, generate the tests, find the edge cases. It's good at it.
 
 Then use evidence to challenge both of you.
+
+A fresh context matters. "Write the implementation, now write the tests" in one session is maximum contamination. Generating tests from the requirement in a new context, before the implementation exists, restores some independence for roughly the same effort.
+
+None of this is new. Pairing, test-first, and an on-site customer were all ways XP manufactured independence. AI makes that machinery cheaper at the same moment it makes the independence more necessary.
 
 PROPORTIONALITY — say this out loud, it matters:
 Don't do all three for a throwaway prototype. The two questions that set the budget are "how sure do we need to be?" and "how bad is it if we're wrong?" A refund calculator earns the replay. A spike you're deleting Friday does not. Spending ten dollars to verify a ten-cent experiment is also an engineering failure.
@@ -398,30 +413,13 @@ me to a direction I hadn't thought about.
 
 [click 4] The tool will not do this on its own. Ask a leading question, get a
 led answer. It is extremely agreeable and that is the failure mode.
-```
 
-
-## Slide 14 · Infer vs Enforce
-
-```
-~2:00
-
-This is the same question — what did the framing already decide — applied to a choice we make constantly without naming it.
-
-Left: there are things that are cheap to say precisely and cheap to check. You cannot refund more than someone paid. That's an invariant. Write it down, assert it, done. Handing that to a model to judge is strictly worse in every dimension: slower, more expensive, and less reliable.
-
-[click 1] Right: and then there are things that technically have rules, but the rules live in fifteen years of tribal knowledge across four teams, two of which no longer exist. You could write them down. It would take a year and be stale in a month.
-
-That is a legitimately excellent place for inference plus review.
-
-[click 2] Infer what you must, enforce what you can — but do NOT hear that as "enforce everything you possibly can." Enforcement is not free. Every rule you encode is rigidity you carry, false rejections your team works around, and one more thing to maintain. There are systems in this room that are slow because somebody enforced everything they could.
-
-TRANSITION — this is now the last slide of Trap 2, so it carries the handoff:
+TRANSITION — this is the last slide of Trap 2, so it carries the handoff:
 So that's the answer, and that's the question. Now something more personal. If AI can explain unfamiliar systems, generate the code, and challenge the architecture this fast — what does that do to how WE learn?
 ```
 
 
-## Slide 15 · TRAP 03 intro
+## Slide 14 · TRAP 03 intro
 
 ```
 ~0:30
@@ -436,7 +434,7 @@ passing through "now I understand this."
 ```
 
 
-## Slide 16 · Cognitive offloading is a feature
+## Slide 15 · Cognitive offloading is a feature
 
 ```
 ~2:00
@@ -461,7 +459,7 @@ That's what you keep.
 ```
 
 
-## Slide 17 · Help me / Challenge me
+## Slide 16 · Help me / Challenge me
 
 ```
 ~2:30
@@ -490,7 +488,7 @@ What I'd say instead: offload implementation effort without disconnecting from i
 ```
 
 
-## Slide 18 · How can we find out?
+## Slide 17 · How can we find out?
 
 ```
 ~2:00
@@ -522,7 +520,7 @@ Alright. Suppose all of this works and we really are dramatically faster. Now wh
 ```
 
 
-## Slide 19 · TRAP 04 intro
+## Slide 18 · TRAP 04 intro
 
 ```
 ~0:30
@@ -535,7 +533,7 @@ Otherwise this reads as anti-productivity and half the room stops listening.
 ```
 
 
-## Slide 20 · AI gave you capacity
+## Slide 19 · AI gave you capacity
 
 ```
 ~2:00
@@ -557,7 +555,7 @@ I'm not going to dodge that last one.
 ```
 
 
-## Slide 21 · If developers are 2x as productive
+## Slide 20 · If developers are 2x as productive
 
 ```
 ~2:30
@@ -585,7 +583,7 @@ What I do know is that being wrong about where the work went is bad for everybod
 ```
 
 
-## Slide 22 · What got faster? (pipeline + metrics)
+## Slide 21 · What got faster? (pipeline + metrics)
 
 ```
 ~2:30
@@ -617,7 +615,7 @@ One more change. So far AI has mostly been handing us things. Answers. Code. Des
 ```
 
 
-## Slide 23 · TRAP 05 intro
+## Slide 22 · TRAP 05 intro
 
 ```
 ~0:30
@@ -634,7 +632,7 @@ The concept: this is about AUTHORITY, not correctness.
 ```
 
 
-## Slide 24 · Authority ladder
+## Slide 23 · Authority ladder
 
 ```
 ~2:30 across the reveals. Go slowly. Let each one land.
@@ -660,7 +658,7 @@ And before we ask what it should be allowed to do — one more thing about that 
 ```
 
 
-## Slide 25 · Prompt injection
+## Slide 24 · Prompt injection
 
 ```
 ~2:00 — keep this tight. This is NOT a security tutorial, and the room will try to make it one.
@@ -699,7 +697,7 @@ The question is what it can do when that happens.
 ```
 
 
-## Slide 26 · Q: What can it do when it's wrong?
+## Slide 25 · Q: What can it do when it's wrong?
 
 ```
 ~2:00
@@ -722,14 +720,14 @@ I don't want to replace AI maximalism with governance maximalism.
 ```
 
 
-## Slide 27 · 10,000 decisions / which 100?
+## Slide 26 · 10,000 decisions / which 100?
 
 ```
 ~1:30
 
 Here's the arithmetic nobody does.
 
-[click 1] You will not get more than about a hundred genuinely careful human reviews out of a week. That's a real number about human attention, not a budgeting problem.
+[click 1] Ten thousand and one hundred are deliberately round. The point is the orders-of-magnitude gap: genuinely careful human review will cover only a small fraction of the decisions AI can produce.
 
 [click 2] So: which hundred?
 
@@ -746,7 +744,7 @@ If you take one thing from Trap 5: authority and oversight should grow together.
 ```
 
 
-## Slide 28 · Five questions for Monday
+## Slide 27 · Five questions for Monday
 
 ```
 ~2:30
@@ -766,7 +764,7 @@ was worth your evening.
 ```
 
 
-## Slide 29 · Sowell callback
+## Slide 28 · Sowell callback
 
 ```
 ~1:30
@@ -787,7 +785,7 @@ And keep doing it, because this is going to move again next year.
 ```
 
 
-## Slide 30 · The goal isn't maximum AI
+## Slide 29 · The goal isn't maximum AI
 
 ```
 Stop here.
@@ -830,9 +828,9 @@ Q: "I'm a small business, I need to survive 18 months, not build a talent
 
 ---
 
-## Addendum · Trap 1's core argument (D-58, 2026-08-25)
+## Background · Trap 1's core argument (D-58, 2026-08-25)
 
-Superseding the *"IF CHALLENGED"* framing in the Slide 5 and Slide 7 sections above.
+The Slide 5 and Slide 7 sections above carry the live version of this argument. This section preserves the deeper reasoning behind those stage choices.
 
 **"A human would make the same mistake" is not an objection to be parried. It is the
 argument.**

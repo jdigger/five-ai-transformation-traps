@@ -100,13 +100,13 @@ the callback wording).
 - **Trap 2, slide 9** — sequential→parallel restack on click 2 with the volumes visibly
   going `200→2,000` and `20→2,000` unremarked; arrows returning orange at click 4;
   *"it was on the screen the whole time"* (D-45, D-49, D-50, D-53).
-- **Trap 5, slide 24** — the authority ladder escalating one rung per click, cold.
+- **Trap 5, slide 23** — the authority ladder escalating one rung per click, cold.
 - **The close** — five questions → Sowell callback → *"The goal isn't maximum AI."* **No
   re-summary after it** (D-16).
 
 ### Current state
 
-30 slides · ~52:30 planned · builds clean. Opening through Trap 2 is presentation-quality.
+29 slides · ~50:30 planned · builds clean. Opening through Trap 2 is presentation-quality.
 Traps 3–5 have had a structural pass but not a full narrative one. Nothing has been
 rehearsed against a clock (R-09) — **every timing number in this deck is a guess.**
 
@@ -423,7 +423,7 @@ maybe the agent still wins — now it *won* instead of being assumed.
 **Why:** prevents Trap 2 from reading as a legacy-systems or anti-microservices complaint.
 
 ### D-23 · Inference vs enforcement lives inside Trap 2, one slide
-**Decided** pre-2026-08-23, implemented 2026-08-23 · **Status** Active
+**Decided** pre-2026-08-23, implemented 2026-08-23 · **Status** Superseded by D-60
 
 `refundAmount <= amountPaid` is cheap to state and cheap to check — never ask a model
 whether it "seems reasonable." *"Does this PR fit the conventions of a 15-year-old
@@ -1216,6 +1216,24 @@ turn a frame into the sixth framework D-17 forbids.
 
 ---
 
+### D-60 · Cut the inference-versus-enforcement slide
+**Decided** 2026-08-31 · **Status** Active · **Supersedes:** D-23
+
+Remove the two-minute inference-versus-enforcement slide from the end of Trap 2. Move its
+handoff into Trap 3 onto the preceding *Ask It to Attack Your Framing* slide. Downstream
+slide numbers decrease by one; the deck becomes 29 slides and ~50:30 planned.
+
+**Why:** the slide's content was useful, but it did not advance Trap 2's claim. The trap
+had already exposed the hidden decision, shown the greenfield version, and given the room
+a Monday technique. Reusing Trap 1's invariant to introduce a new infer/enforce axis made
+the ending feel like an appendix and weakened the transition into the personal stakes of
+Trap 3.
+
+**Rejected:** moving the slide into Trap 5. That would preserve the conceptual overload
+and make the authority section carry a second job.
+
+---
+
 ## G. Rejected — do not reopen without new information
 
 | Idea | Why it was rejected |
@@ -1236,3 +1254,4 @@ turn a frame into the sixth framework D-17 forbids.
 | The `$12` question anywhere in Trap 2, on screen or spoken | Self-contradicting: click 1 routes by amount, so the slide already answers it (D-50) |
 | "Why does a $12 refund need three approvals?" as Trap 2's on-screen reveal | The room already knows; a sequential chain is notorious, not hidden, so the reveal inverts (D-49) |
 | Outbox/Kafka architecture as Trap 2's on-screen example | Outside the experience of much of a mixed audience; the reveal only works if the room can be impressed by the answer first (D-44) |
+| Inference vs enforcement as a standalone slide | Useful material, but a passenger after Trap 2 had already completed its argument (D-60) |

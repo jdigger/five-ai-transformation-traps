@@ -488,59 +488,8 @@ It's very good at this. It just never volunteers.
 
 **[4]** The tool will not do this on its own. Ask a leading question, get a led answer.
 > "It is extremely agreeable, and that is the failure mode."
--->
-
----
-layout: default
-class: canvas-slide
----
-
-<div class="diagram">
-
-<div class="compare">
-
-<div class="col left">
-<h4>Enforce</h4>
-<div class="lede"><code>refundAmount &lt;= amountPaid</code></div>
-<div class="note">One line. Always true. Cheap to state, cheap to check.<br><br>Don't ask a model whether this "seems reasonable." Ever.</div>
-</div>
-
-<div class="col right" v-click="1">
-<h4>Infer</h4>
-<div class="lede">"Does this PR fit the conventions of a 15-year-old codebase?"</div>
-<div class="note">Hundreds of real conventions nobody ever wrote down. Encoding them all costs more than they're worth.<br><br>Inference plus inspection is a good trade here.</div>
-</div>
-
-</div>
-
-<div class="kicker" v-click="2">
-Infer what you must. Enforce what you can.<br>
-<span class="fine">Enforcement has its own bill: rigidity, false rejections, maintenance, slower experiments.</span>
-</div>
-
-</div>
-
-<!--
-~2:00
-
-- The same question — *what did the framing already decide* — applied to a choice we make constantly without naming it.
-
-**LEFT · Enforce**
-- Cheap to say precisely, cheap to check. You cannot refund more than someone paid. That's an invariant: write it, assert it, done.
-- Handing that to a model is strictly worse in every dimension — slower, more expensive, less reliable.
-
-**[1] RIGHT · Infer**
-- Things that technically have rules, but the rules live in fifteen years of tribal knowledge across four teams, two of which no longer exist.
-- You could write them down. It would take a year and be stale in a month.
-- A legitimately excellent place for inference plus review.
-
-**[2]** Infer what you must, enforce what you can.
-- **Do NOT let them hear "enforce everything you possibly can."** Enforcement isn't free: rigidity you carry, false rejections your team works around, one more thing to maintain.
-- There are systems in this room that are slow because somebody enforced everything they could.
 
 → That's the answer, and that's the question. Now something more personal. If AI can explain unfamiliar systems, generate the code, and challenge the architecture this fast — what does that do to how *we* learn?
-
-- **R-18:** this slide is still a passenger in Trap 2. Cut-or-keep decision pending.
 -->
 
 ---
@@ -985,7 +934,7 @@ class: fact-slide
 
 - Here's the arithmetic nobody does.
 
-**[1]** You will not get more than about a hundred genuinely careful human reviews out of a week. That's a real number about human attention, not a budgeting problem.
+**[1]** Ten thousand and one hundred are deliberately round. The point is the orders-of-magnitude gap: genuinely careful human review will cover only a small fraction of the decisions AI can produce.
 
 **[2]** So: **which hundred?**
 - *"Keep a human in the loop"* is not an answer to that question.

@@ -15,30 +15,31 @@ Everything still in flux for **The Five Biggest AI Transformation Traps**.
 
 ## Needs a decision
 
-### Q-01 🟡 The talk is over budget: 49:15 planned against a 45–47 min target
-The speaker-note tally sums to **49:15** across 29 timed slides, and note-time is
-systematically optimistic — a live room, a laugh, a clarifying question, and it's 55.
+### Q-01 🟡 The talk is over budget: 50:30 planned against a 45–47 min target
+The speaker-note tally sums to **50:30** across 28 timed slides, and note-time is
+systematically optimistic — a live room, a laugh, and pauses on the three money slides
+will push the delivery longer.
 
 **The sub-question is settled: this is a target, not a hard cap (D-47).** ~10 minutes of
 slack exist. That halves the cut and changes where it comes from.
 
 | Block | Slides | Budget |
 |---|---|---|
-| Opening | 1–3 | 4:00 |
-| Trap 1 | 4–7 | 7:00 |
-| Trap 2 | 8–14 | 12:45 |
-| Trap 3 | 15–18 | 7:00 |
-| Trap 4 | 19–22 | 7:30 |
-| Trap 5 | 23–27 | 8:30 |
-| Close | 28–30 | 4:00 |
+| Opening | 1–3 | 4:15 |
+| Trap 1 | 4–7 | 7:30 |
+| Trap 2 | 8–13 | 10:45 |
+| Trap 3 | 14–17 | 7:45 |
+| Trap 4 | 18–21 | 7:30 |
+| Trap 5 | 22–26 | 8:30 |
+| Close | 27–29 | 4:15 |
 
-*Recomputed from the note markers 2026-08-25 after D-55. The previous version of this
-table was stale in both directions — it had Trap 4 at 9:30 (actually 7:30) and Trap 5 at
-6:30 (now 8:30). Slide 30 is deliberately untimed, so 29 slides carry markers.*
+*Recomputed from the note markers 2026-08-31 after D-60. Slide 29 is deliberately
+untimed, so 28 slides carry markers.*
 
-**Current plan — cut ~3 minutes, all of it from Trap 3.** Not because the clock demands
-it, but because Trap 3 is a junk drawer (R-01): four slides whose *notes* argue four
-things where one spine belongs. Everything else is now judged on quality alone.
+**Current plan — rehearse before choosing the remaining cut.** D-60 removed two minutes
+from Trap 2 on quality grounds. The deck still needs roughly 3:30 to reach the top of the
+target range, and note-time is optimistic. Trap 3 remains dense, but R-01 explicitly
+warns against treating it as the automatic source of every remaining minute.
 
 **No longer on the cut list** (D-47 released them): the Sowell callback, the
 "ask it to attack your framing" prompt slide, and Trap 4's capacity/2× pair. If any of
@@ -48,8 +49,8 @@ them goes, it goes because it isn't earning its place — not to buy minutes.
 ladder. Those are the three slides the talk is built on.
 
 **Blocked on rehearsal.** Every number in the table above is a guess made while writing
-(R-09). The speaker is clocking opening → end of Trap 2 before the Trap 3 pass sizes its
-cut. If ~28 minutes turns out to be 35, this plan is too gentle even with the slack.
+(R-09). The speaker is clocking opening → end of Trap 2 before deciding where the
+remaining cut comes from.
 
 **Q-08 and Q-09 no longer compete with the trim** (D-47) — both are affordable. They
 still have to earn their place in Trap 3, and that is decided during the pass.
@@ -124,7 +125,7 @@ anyone who was in the room. Zero additional work; Slidev exports it directly.
 The highest-value version is small, not a document: **the five Monday questions, one page,
 two or three sentences each.** That is the artifact most likely to end up pinned to a wall,
 and it maps exactly onto the success criterion (D-03 — a better question a month later).
-Slide 28 already *is* this in skeleton form, and the notes already contain the prose.
+Slide 27 already *is* this in skeleton form, and the notes already contain the prose.
 
 **Recommendation: (c), scoped to one page, optionally alongside (b) for anyone who wants
 the full argument.** Explicitly not (a) on its own. Do not thicken the live deck to make
@@ -325,31 +326,8 @@ greenfield example out of customer service rather than cutting it.
 **Update 2026-08-25:** unresolved and now worse — Trap 2 holds *three* customer-service
 scenarios, and slide 12 restates slide 9's approval point outright. See R-16.
 
-### R-18 🟡 Slide 14 (infer vs enforce) is still a passenger in Trap 2
-Narrowed from R-12, which is otherwise resolved by D-55. Trap 2 is now six slides / 12:45
-and no longer the longest block, but slide 14 remains the one slide whose note has to
-*argue* that it belongs: *"this is the same question — what did the framing already decide
-— applied to a choice we make constantly."* That is a stretch, and a note arguing for a
-slide's seat is usually the tell.
-
-**Do not move it to Trap 5.** Trap 5 is now at 8:30 after D-55; adding infer/enforce there
-would relocate the junk drawer rather than empty it.
-
-**Recommendation: cut it, on quality grounds rather than time.** Its strongest line —
-*enforcement is not free* — is a qualification, and its best artifact, the
-`refundAmount <= amountPaid` invariant, already does real work on Trap 1's evidence slide,
-where it is *evidence that didn't come from the requirement* rather than an abstract
-principle. The slide largely re-explains something the deck already said once, better.
-
-**Against cutting:** *"infer what you must, enforce what you can"* is genuinely useful
-Monday material and is the only place the deck discusses where to put determinism. If it
-survives, it needs a real justification for sitting in Trap 2 — or its own home.
-
-**Decide during the Trap 4 pass**, alongside R-17's handoff, so Trap 2's shape is settled
-in one pass rather than three.
-
 ### R-15 🟡 Trap 5's ladder quietly contradicts Trap 2 — or could become its payoff
-Slide 25's top rung is **"Issue the refund"** — autonomously, by an AI. Trap 2 spent 3:30
+Slide 23's top rung is **"Issue the refund"** — autonomously, by an AI. Trap 2 spent 3:30
 establishing that refunds at this company move through a layered human escalation chain.
 As written, the two never acknowledge each other.
 
@@ -424,3 +402,4 @@ even with D-47's slack.
 | R-12 — Trap 2 is the junk drawer | D-55 — largely resolved; narrowed to R-18 (slide 14 alone) | 2026-08-25 |
 | Q-05's "is it recorded?" | D-56 — no video recording; clears the humor register and Q-03's posterity burden | 2026-08-25 |
 | R-04 — someone will say the refund requirement is just a bad requirement | D-58 — inverted; the objection is now Trap 1's led core beat, and the mechanism is named as collapsed independence | 2026-08-25 |
+| R-18 — inference vs enforcement was a passenger in Trap 2 | D-60 — cut; the handoff moved onto the framing-prompt slide | 2026-08-31 |
