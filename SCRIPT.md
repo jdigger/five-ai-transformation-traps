@@ -147,24 +147,7 @@ Independence used to arrive as a by-product of friction — different people, di
 ```
 
 
-## Slide 6 · Q: Could this check catch the original mistake?
-
-```
-~1:30
-
-This is the question I want in your code reviews and your architecture reviews.
-
-Notice what it is NOT. It's not "was a human involved." It's not "did AI write this." Those are proxies, and they're bad ones — a human writing a test from the same misunderstanding is exactly as useless.
-
-The question is about causation. Could this thing have gone red?
-
-If the answer is no — if it is structurally impossible for this check to fail when we've misunderstood the problem — then it isn't a check. It's a restatement.
-
-This is the recurring visual for the whole talk: this teal bar means "here's a question to use on Monday." You'll see it four more times.
-```
-
-
-## Slide 7 · Evidence that didn't come from that sentence
+## Slide 6 · Evidence that didn't come from that sentence
 
 ```
 ~2:00
@@ -188,8 +171,29 @@ None of this is new. Pairing, test-first, and an on-site customer were all ways 
 PROPORTIONALITY — say this out loud, it matters:
 Don't do all three for a throwaway prototype. The two questions that set the budget are "how sure do we need to be?" and "how bad is it if we're wrong?" A refund calculator earns the replay. A spike you're deleting Friday does not. Spending ten dollars to verify a ten-cent experiment is also an engineering failure.
 
+All of these techniques differ, but they force the same question.
+```
+
+
+## Slide 7 · Q: What do we actually know?
+
+```
+~1:30
+
+Pause. This is the conclusion of Trap 1.
+
+What do we actually know?
+
+The operational version for a code review or architecture review is: could this check catch the original mistake? Is there any path where it goes red?
+
+Notice what it is NOT. It's not "was a human involved." It's not "did AI write this." Those are proxies, and they're bad ones — a human writing a test from the same misunderstanding is exactly as useless.
+
+If it is structurally impossible for this check to fail when we've misunderstood the problem, then it isn't a check. It's a restatement.
+
+This is the recurring visual for the whole talk: this teal bar means "here's a question to use on Monday." Every trap will now end here.
+
 TRANSITION:
-But now suppose we do all of that. Suppose we check it properly and the answer really is right. We can still have a much bigger problem.
+Now suppose the answer really is right. We can still have a much bigger problem.
 ```
 
 
@@ -397,7 +401,7 @@ sneaking in through the phrasing of a question.
 ## Slide 13 · Ask it to attack your framing
 
 ```
-~1:30
+~1:00
 
 This is a Monday-morning thing, and it's a positive use of AI, not a warning
 about it.
@@ -414,12 +418,27 @@ me to a direction I hadn't thought about.
 [click 4] The tool will not do this on its own. Ask a leading question, get a
 led answer. It is extremely agreeable and that is the failure mode.
 
-TRANSITION — this is the last slide of Trap 2, so it carries the handoff:
-So that's the answer, and that's the question. Now something more personal. If AI can explain unfamiliar systems, generate the code, and challenge the architecture this fast — what does that do to how WE learn?
+All three prompts are ways of forcing one question.
 ```
 
 
-## Slide 14 · TRAP 03 intro
+## Slide 14 · Q: What did our question already decide?
+
+```
+~0:30
+
+Pause. This is the conclusion of Trap 2.
+
+What did our question already decide?
+
+The approval order may be right. The agent may be right. The service boundary may be right. The trap is letting the wording make that decision before the evidence does.
+
+TRANSITION:
+Now something more personal. If AI can explain unfamiliar systems, generate the code, and challenge the architecture this fast — what does that do to how WE learn?
+```
+
+
+## Slide 15 · TRAP 03 intro
 
 ```
 ~0:30
@@ -434,7 +453,7 @@ passing through "now I understand this."
 ```
 
 
-## Slide 15 · Cognitive offloading is a feature
+## Slide 16 · Cognitive offloading is a feature
 
 ```
 ~2:00
@@ -459,7 +478,7 @@ That's what you keep.
 ```
 
 
-## Slide 16 · Help me / Challenge me
+## Slide 17 · Help me / Challenge me
 
 ```
 ~2:30
@@ -488,10 +507,10 @@ What I'd say instead: offload implementation effort without disconnecting from i
 ```
 
 
-## Slide 17 · How can we find out?
+## Slide 18 · How can we find out?
 
 ```
-~2:00
+~2:15
 
 This is the Agile center of the talk, and I want to name something directly.
 
@@ -515,12 +534,27 @@ Test what reality can cheaply answer. Use judgment for what it can't. And know w
 ALSO WORTH SAYING:
 AI made bad questions cheap too. And irrelevant critiques. And prototypes nobody needed. More alternatives is not automatically better. The scarce thing now is deciding which questions deserve your attention at all.
 
-TRANSITION:
-Alright. Suppose all of this works and we really are dramatically faster. Now what?
+The loop only works if I stay connected to its evidence.
 ```
 
 
-## Slide 18 · TRAP 04 intro
+## Slide 19 · Q: Am I understanding faster — or avoiding understanding?
+
+```
+~0:30
+
+Pause. This is the conclusion of Trap 3.
+
+Am I understanding faster — or avoiding understanding?
+
+This is not "did I write the code myself?" It is whether I can still test my mental model against what the system actually does.
+
+TRANSITION:
+Suppose all of this works and we really are dramatically faster. Now what?
+```
+
+
+## Slide 20 · TRAP 04 intro
 
 ```
 ~0:30
@@ -533,7 +567,7 @@ Otherwise this reads as anti-productivity and half the room stops listening.
 ```
 
 
-## Slide 19 · AI gave you capacity
+## Slide 21 · AI gave you capacity
 
 ```
 ~2:00
@@ -555,7 +589,7 @@ I'm not going to dodge that last one.
 ```
 
 
-## Slide 20 · If developers are 2x as productive
+## Slide 22 · If developers are 2x as productive
 
 ```
 ~2:30
@@ -583,10 +617,10 @@ What I do know is that being wrong about where the work went is bad for everybod
 ```
 
 
-## Slide 21 · What got faster? (pipeline + metrics)
+## Slide 23 · What got faster? (pipeline + metrics)
 
 ```
-~2:30
+~2:00
 
 Here's the pipeline. AI hit one box in it, hard.
 
@@ -610,12 +644,27 @@ You'll get back something like: "implementation time dropped, but review wait in
 
 That is a hypothesis, not a finding. Now go check it with telemetry. Same rule as Trap 1 — could that check catch the mistake?
 
-TRANSITION:
-One more change. So far AI has mostly been handing us things. Answers. Code. Designs. Increasingly, it doesn't hand you the thing. It just does it.
+Before we decide what to do with the new capacity, name the decision.
 ```
 
 
-## Slide 22 · TRAP 05 intro
+## Slide 24 · Q: What got faster — and where should that capacity go?
+
+```
+~0:30
+
+Pause. This is the conclusion of Trap 4.
+
+What got faster — and where should that capacity go?
+
+Those are two separate questions. "Coding got faster" does not answer either one for the whole organization.
+
+TRANSITION:
+So far AI has mostly been handing us things: answers, code, designs. Increasingly, it doesn't hand you the thing. It just does it.
+```
+
+
+## Slide 25 · TRAP 05 intro
 
 ```
 ~0:30
@@ -632,7 +681,7 @@ The concept: this is about AUTHORITY, not correctness.
 ```
 
 
-## Slide 23 · Authority ladder
+## Slide 26 · Authority ladder
 
 ```
 ~2:30 across the reveals. Go slowly. Let each one land.
@@ -658,7 +707,7 @@ And before we ask what it should be allowed to do — one more thing about that 
 ```
 
 
-## Slide 24 · Prompt injection
+## Slide 27 · Prompt injection
 
 ```
 ~2:00 — keep this tight. This is NOT a security tutorial, and the room will try to make it one.
@@ -692,35 +741,12 @@ Rung five is issuing a refund.
 
 So the question was never whether it can be tricked. Something, someday, will trick it.
 
-TRANSITION — straight into the next slide, no pause. The next slide is the answer to the sentence you just said:
-The question is what it can do when that happens.
+TRANSITION — straight into the scale problem, no pause:
+And that authority can now act much faster than careful human oversight.
 ```
 
 
-## Slide 25 · Q: What can it do when it's wrong?
-
-```
-~2:00
-
-Not "can AI be wrong." Everything is wrong sometimes. Humans are wrong. Future models will be much better than today's and this question does not go away — it gets more important, because we'll grant more authority.
-
-Three follow-ups, and they're the ones you already use for everything else:
-
-How bad is it? A wrong draft sitting in a queue is not a wrong wire transfer.
-
-Will we notice? — and this is the one I want to dwell on. Our entire monitoring tradition is built on things that break loudly. Exception, crash, timeout, p99. AI failure doesn't look like that. AI failure looks like: the operation completed successfully, and what it did was wrong. Nothing threw. Every dashboard is green. That's the whole problem.
-
-For AI systems, "nothing threw an exception" is an especially weak definition of success.
-
-Can we undo it? Reversibility buys you more than almost any control does.
-
-AND — do not gold-plate. Controls are not free either. They cost latency, flexibility, engineering time, and customer experience. If the consequence is small and reversible, let the system move. "Yeah, that might break, and we're fine with that" is a legitimate engineering conclusion. Deliberately accepting risk is engineering.
-
-I don't want to replace AI maximalism with governance maximalism.
-```
-
-
-## Slide 26 · 10,000 decisions / which 100?
+## Slide 28 · 10,000 decisions / which 100?
 
 ```
 ~1:30
@@ -741,10 +767,42 @@ There are real mechanisms. Enforceable authorization and least privilege, so the
 And AI can do a lot of this work itself. The point is not humans supervising machines — that framing loses eventually. The point is designing accountability that scales with authority.
 
 If you take one thing from Trap 5: authority and oversight should grow together. Right now we are very good at scaling one of them.
+
+Oversight cannot scale by asking people to stare at more decisions. So end on the authority question.
 ```
 
 
-## Slide 27 · Five questions for Monday
+## Slide 29 · Q: What can it do when it's wrong?
+
+```
+~2:00
+
+Pause. This is the conclusion of Trap 5.
+
+What can it do when it's wrong?
+
+Not "can AI be wrong." Everything is wrong sometimes. Humans are wrong. Future models will be much better than today's and this question does not go away — it gets more important, because we'll grant more authority.
+
+Three follow-ups, and they're the ones you already use for everything else:
+
+How bad is it? A wrong draft sitting in a queue is not a wrong wire transfer.
+
+Will we notice? — and this is the one I want to dwell on. Our entire monitoring tradition is built on things that break loudly. Exception, crash, timeout, p99. AI failure doesn't look like that. AI failure looks like: the operation completed successfully, and what it did was wrong. Nothing threw. Every dashboard is green. That's the whole problem.
+
+For AI systems, "nothing threw an exception" is an especially weak definition of success.
+
+Can we undo it? Reversibility buys you more than almost any control does.
+
+AND — do not gold-plate. Controls are not free either. They cost latency, flexibility, engineering time, and customer experience. If the consequence is small and reversible, let the system move. "Yeah, that might break, and we're fine with that" is a legitimate engineering conclusion. Deliberately accepting risk is engineering.
+
+I don't want to replace AI maximalism with governance maximalism.
+
+TRANSITION:
+Five traps. Five questions.
+```
+
+
+## Slide 30 · Five questions for Monday
 
 ```
 ~2:30
@@ -753,18 +811,18 @@ That's it. That's the talk.
 
 [reveal one at a time, say each one, brief callback to its trap]
 
-1 — A great answer isn't evidence. What do we actually know?
-2 — The question can decide the answer. What did ours already decide?
-3 — Offload the work, not the understanding.
-4 — Capacity is not a plan.
-5 — Authority is the thing that changed, not intelligence.
+1 — What do we actually know?
+2 — What did our question already decide?
+3 — Am I understanding faster — or avoiding understanding?
+4 — What got faster — and where should that capacity go?
+5 — What can it do when it's wrong?
 
 If one of these makes you stop and ask a better question a month from now, this
 was worth your evening.
 ```
 
 
-## Slide 28 · Sowell callback
+## Slide 31 · Sowell callback
 
 ```
 ~1:30
@@ -785,7 +843,7 @@ And keep doing it, because this is going to move again next year.
 ```
 
 
-## Slide 29 · The goal isn't maximum AI
+## Slide 32 · The goal isn't maximum AI
 
 ```
 Stop here.

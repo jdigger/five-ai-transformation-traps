@@ -16,7 +16,7 @@ Everything still in flux for **The Five Biggest AI Transformation Traps**.
 ## Needs a decision
 
 ### Q-01 🟡 The talk is over budget: 50:30 planned against a 45–47 min target
-The speaker-note tally sums to **50:30** across 28 timed slides, and note-time is
+The speaker-note tally sums to **50:30** across 31 timed slides, and note-time is
 systematically optimistic — a live room, a laugh, and pauses on the three money slides
 will push the delivery longer.
 
@@ -27,14 +27,14 @@ slack exist. That halves the cut and changes where it comes from.
 |---|---|---|
 | Opening | 1–3 | 4:15 |
 | Trap 1 | 4–7 | 7:30 |
-| Trap 2 | 8–13 | 10:45 |
-| Trap 3 | 14–17 | 7:45 |
-| Trap 4 | 18–21 | 7:30 |
-| Trap 5 | 22–26 | 8:30 |
-| Close | 27–29 | 4:15 |
+| Trap 2 | 8–14 | 10:45 |
+| Trap 3 | 15–19 | 7:45 |
+| Trap 4 | 20–24 | 7:30 |
+| Trap 5 | 25–29 | 8:30 |
+| Close | 30–32 | 4:15 |
 
-*Recomputed from the note markers 2026-08-31 after D-60. Slide 29 is deliberately
-untimed, so 28 slides carry markers.*
+*Recomputed from the note markers 2026-08-31 after D-61. Slide 32 is deliberately
+untimed, so 31 slides carry markers.*
 
 **Current plan — rehearse before choosing the remaining cut.** D-60 removed two minutes
 from Trap 2 on quality grounds. The deck still needs roughly 3:30 to reach the top of the
@@ -125,7 +125,7 @@ anyone who was in the room. Zero additional work; Slidev exports it directly.
 The highest-value version is small, not a document: **the five Monday questions, one page,
 two or three sentences each.** That is the artifact most likely to end up pinned to a wall,
 and it maps exactly onto the success criterion (D-03 — a better question a month later).
-Slide 27 already *is* this in skeleton form, and the notes already contain the prose.
+Slide 30 already *is* this in skeleton form, and the notes already contain the prose.
 
 **Recommendation: (c), scoped to one page, optionally alongside (b) for anyone who wants
 the full argument.** Explicitly not (a) on its own. Do not thicken the live deck to make
@@ -327,7 +327,7 @@ greenfield example out of customer service rather than cutting it.
 scenarios, and slide 12 restates slide 9's approval point outright. See R-16.
 
 ### R-15 🟡 Trap 5's ladder quietly contradicts Trap 2 — or could become its payoff
-Slide 23's top rung is **"Issue the refund"** — autonomously, by an AI. Trap 2 spent 3:30
+Slide 26's top rung is **"Issue the refund"** — autonomously, by an AI. Trap 2 spent 3:30
 establishing that refunds at this company move through a layered human escalation chain.
 As written, the two never acknowledge each other.
 

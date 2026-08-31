@@ -184,27 +184,6 @@ Finance meant: unused <em>whole days</em> only —<br>and the setup fee is never
 
 ---
 layout: default
-class: q-slide
----
-
-# Could this check catch the original mistake?
-
-## Not "did AI write this test?" — if the implementation misread the requirement, is there any path where this test goes red?
-
-<!--
-~1:30
-
-- The question I want in your code reviews and architecture reviews.
-- **Notice what it is NOT.** Not "was a human involved." Not "did AI write this." Those are bad proxies — a human writing a test from the same misunderstanding is exactly as useless.
-- It's about causation. Could this thing have gone red?
-
-> If it is structurally impossible for this check to fail when we've misunderstood the problem — then it isn't a check. It's a restatement.
-
-- **Name the recurring surface, once:** the teal bar means *here's a question for Monday.* You'll see it four more times.
--->
-
----
-layout: default
 class: canvas-slide
 ---
 
@@ -253,7 +232,33 @@ Use AI to challenge your thinking —<br>then use evidence to challenge both of 
 - Don't do all three for a throwaway prototype. Budget is set by *how sure do we need to be?* and *how bad is it if we're wrong?*
 - A refund calculator earns the replay. A spike you're deleting Friday does not. Spending ten dollars to verify a ten-cent experiment is also an engineering failure.
 
-→ Suppose we do all of that, and the answer really is right. We can still have a much bigger problem.
+→ These techniques differ, but they force the same question.
+-->
+
+---
+layout: default
+class: q-slide
+---
+
+# What do we actually know?
+
+## Could this check catch the original mistake — is there any path where it goes red?
+
+<!--
+~1:30
+
+- **Pause. This is the conclusion of Trap 1.**
+> What do we actually know?
+
+- The operational version for a code review or architecture review is: *could this check catch the original mistake?*
+- **Notice what it is NOT.** Not "was a human involved." Not "did AI write this." Those are bad proxies — a human writing a test from the same misunderstanding is exactly as useless.
+- It's about causation. Could this thing have gone red?
+
+> If it is structurally impossible for this check to fail when we've misunderstood the problem — then it isn't a check. It's a restatement.
+
+- **Name the recurring surface, once:** the teal bar means *here's a question for Monday.* Every trap will now end here.
+
+→ Suppose the answer really is right. We can still have a much bigger problem.
 -->
 
 ---
@@ -477,7 +482,7 @@ It's very good at this. It just never volunteers.
 </div>
 
 <!--
-~1:30
+~1:00
 
 - A Monday-morning thing, and a **positive** use of AI, not a warning about it.
 - Before you ask AI for the design, spend ninety seconds asking it to attack the question.
@@ -489,7 +494,28 @@ It's very good at this. It just never volunteers.
 **[4]** The tool will not do this on its own. Ask a leading question, get a led answer.
 > "It is extremely agreeable, and that is the failure mode."
 
-→ That's the answer, and that's the question. Now something more personal. If AI can explain unfamiliar systems, generate the code, and challenge the architecture this fast — what does that do to how *we* learn?
+→ All three prompts are ways of forcing one question.
+-->
+
+---
+layout: default
+class: q-slide
+---
+
+# What did our question already decide?
+
+## A constraint may be right. Make it win the argument instead of letting it skip the argument.
+
+<!--
+~0:30
+
+- **Pause. This is the conclusion of Trap 2.**
+> What did our question already decide?
+
+- The approval order may be right. The agent may be right. The service boundary may be right.
+- The trap is letting the wording make that decision before the evidence does.
+
+→ Now something more personal. If AI can explain unfamiliar systems, generate the code, and challenge the architecture this fast — what does that do to how *we* learn?
 -->
 
 ---
@@ -628,7 +654,7 @@ When reality can answer the question cheaply, stop arguing and ask reality.<br>
 </div>
 
 <!--
-~2:45
+~2:15
 
 - The Agile center of the talk. Name it directly.
 - *"Somebody here is thinking: you've rediscovered Agile. Yes. Correct. Guilty."*
@@ -656,6 +682,27 @@ When reality can answer the question cheaply, stop arguing and ask reality.<br>
 - Test what reality can cheaply answer. Use judgment for what it can't. **And know which one you're doing.**
 - AI made bad questions cheap too. And irrelevant critiques. And prototypes nobody needed.
 > The scarce thing now is deciding which questions deserve your attention at all.
+
+→ The loop only works if I stay connected to its evidence.
+-->
+
+---
+layout: default
+class: q-slide
+---
+
+# Am I understanding faster — or avoiding understanding?
+
+## Offload the work. Stay close enough to the evidence to keep your judgment calibrated.
+
+<!--
+~0:30
+
+- **Pause. This is the conclusion of Trap 3.**
+> Am I understanding faster — or avoiding understanding?
+
+- This is not "did I write the code myself?"
+- It is whether I can still test my mental model against what the system actually does.
 
 → Suppose all of this works and we really are dramatically faster. Now what?
 -->
@@ -751,13 +798,13 @@ class: canvas-slide
 </div>
 
 <div class="kicker hot" v-click="3">
-So how much more productive are we?
+Coding throughput is not delivery.
 </div>
 
 </div>
 
 <!--
-~2:30
+~2:00
 
 - Here's the pipeline. AI hit one box in it, hard.
 
@@ -770,7 +817,7 @@ So how much more productive are we?
 > So — how much more productive are we?
 - There is not enough information in "coding got sixty percent faster" to answer that. **The constraint moved and we celebrated the wrong number.**
 
-**[3]**
+**[3] Coding throughput is not delivery.**
 - **NOT a Theory of Constraints lecture** — you all know constraints move. The AI-specific part is the **speed and the disguise**.
 - We can change implementation capacity enormously, almost overnight, and the outputs *look* like finished intellectual work.
 > Two hundred PRs of plausible code is not two hundred PRs of progress, but it photographs identically.
@@ -780,7 +827,28 @@ So how much more productive are we?
 - You'll get: *"implementation time dropped, but review wait increased, concentrated in changes touching these three components."*
 - **That is a hypothesis, not a finding.** Go check it with telemetry. Same rule as Trap 1 — could that check catch the mistake?
 
-→ So far AI has mostly been *handing* us things. Answers, code, designs. Increasingly it doesn't hand you the thing. It just does it.
+→ Before we decide what to do with the new capacity, name the decision.
+-->
+
+---
+layout: default
+class: q-slide
+---
+
+# What got faster — and where should that capacity go?
+
+## Capacity is not a plan. Measure where the constraint moved before deciding how to spend it.
+
+<!--
+~0:30
+
+- **Pause. This is the conclusion of Trap 4.**
+> What got faster — and where should that capacity go?
+
+- Those are two separate questions.
+- "Coding got faster" does not answer either one for the whole organization.
+
+→ So far AI has mostly been *handing* us things: answers, code, designs. Increasingly it doesn't hand you the thing. It just does it.
 -->
 
 ---
@@ -886,34 +954,6 @@ Interpreting instructions written in English is the entire job.
 
 ---
 layout: default
-class: q-slide
----
-
-# What can it do when it's wrong?
-
-## How bad is it? &nbsp;·&nbsp; Will we notice? &nbsp;·&nbsp; Can we undo it?
-
-<!--
-~2:00
-
-- Not "can AI be wrong." Everything is wrong sometimes. Humans are wrong.
-- **Better models don't retire this question — they sharpen it**, because we'll grant more authority.
-
-**Three follow-ups, the ones you already use for everything else:**
-- **How bad is it?** A wrong draft in a queue is not a wrong wire transfer.
-- **Will we notice?** — dwell here. Our entire monitoring tradition is built on things that break *loudly*. Exception, crash, timeout, p99.
-> AI failure looks like: the operation completed successfully, and what it did was wrong. Nothing threw. Every dashboard is green.
-- For AI systems, "nothing threw an exception" is an especially weak definition of success.
-- **Can we undo it?** Reversibility buys you more than almost any control does.
-
-**DO NOT GOLD-PLATE:**
-- Controls aren't free either — latency, flexibility, engineering time, customer experience.
-- If the consequence is small and reversible, let the system move. *"Yeah, that might break, and we're fine with that"* is a legitimate engineering conclusion. **Deliberately accepting risk is engineering.**
-> I don't want to replace AI maximalism with governance maximalism.
--->
-
----
-layout: default
 class: fact-slide
 ---
 
@@ -948,6 +988,41 @@ class: fact-slide
 > The point is designing accountability that scales with authority.
 
 - **If you take one thing from Trap 5:** authority and oversight should grow together. Right now we are very good at scaling one of them.
+
+→ Oversight cannot scale by asking people to stare at more decisions. So end on the authority question.
+-->
+
+---
+layout: default
+class: q-slide
+---
+
+# What can it do when it's wrong?
+
+## How bad is it? &nbsp;·&nbsp; Will we notice? &nbsp;·&nbsp; Can we undo it?
+
+<!--
+~2:00
+
+- **Pause. This is the conclusion of Trap 5.**
+> What can it do when it's wrong?
+
+- Not "can AI be wrong." Everything is wrong sometimes. Humans are wrong.
+- **Better models don't retire this question — they sharpen it**, because we'll grant more authority.
+
+**Three follow-ups, the ones you already use for everything else:**
+- **How bad is it?** A wrong draft in a queue is not a wrong wire transfer.
+- **Will we notice?** — dwell here. Our entire monitoring tradition is built on things that break *loudly*. Exception, crash, timeout, p99.
+> AI failure looks like: the operation completed successfully, and what it did was wrong. Nothing threw. Every dashboard is green.
+- For AI systems, "nothing threw an exception" is an especially weak definition of success.
+- **Can we undo it?** Reversibility buys you more than almost any control does.
+
+**DO NOT GOLD-PLATE:**
+- Controls aren't free either — latency, flexibility, engineering time, customer experience.
+- If the consequence is small and reversible, let the system move. *"Yeah, that might break, and we're fine with that"* is a legitimate engineering conclusion. **Deliberately accepting risk is engineering.**
+> I don't want to replace AI maximalism with governance maximalism.
+
+→ Five traps. Five questions.
 -->
 
 ---
@@ -976,11 +1051,11 @@ clicks: 5
 - *"That's it. That's the talk."*
 - Reveal one at a time. Say each, with a brief callback to its trap. **Do not re-explain the traps.**
 
-**[1]** A great answer isn't evidence. *What do we actually know?*
-**[2]** The question can decide the answer. *What did ours already decide?*
-**[3]** Offload the work, not the understanding.
-**[4]** Capacity is not a plan.
-**[5]** Authority is the thing that changed, not intelligence.
+**[1]** *What do we actually know?* — a great answer isn't evidence.
+**[2]** *What did our question already decide?* — the wording can choose before we do.
+**[3]** *Am I understanding faster — or avoiding understanding?* — offload the work, not the evidence.
+**[4]** *What got faster — and where should that capacity go?* — capacity is not a plan.
+**[5]** *What can it do when it's wrong?* — authority is the thing that changed, not intelligence.
 
 > If one of these makes you stop and ask a better question a month from now, this was worth your evening.
 -->

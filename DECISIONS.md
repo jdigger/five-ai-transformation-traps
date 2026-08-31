@@ -60,7 +60,7 @@ mention AI** — they were always questions about the human system.
 |---|---|---|---|
 | 1 | A great answer doesn't mean you're right | Prorated refund requirement → impl + tests → green → wrong | *What do we actually know?* |
 | 2 | AI can solve the wrong problem really well | Refund escalation chain, parallelized | *What did our question already decide?* |
-| 3 | Are you understanding faster, or avoiding understanding? | *Help me understand* / *Challenge my understanding* | *Am I understanding faster — or avoiding it?* |
+| 3 | Are you understanding faster, or avoiding understanding? | *Help me understand* / *Challenge my understanding* | *Am I understanding faster — or avoiding understanding?* |
 | 4 | Faster doesn't mean you should do more | The pipeline: one box got faster, end-to-end didn't | *What got faster — and where should that capacity go?* |
 | 5 | When AI gets it wrong, what is it allowed to do? | The authority ladder, ending at *issue the refund* | *What can it do when it's wrong?* |
 
@@ -100,13 +100,14 @@ the callback wording).
 - **Trap 2, slide 9** — sequential→parallel restack on click 2 with the volumes visibly
   going `200→2,000` and `20→2,000` unremarked; arrows returning orange at click 4;
   *"it was on the screen the whole time"* (D-45, D-49, D-50, D-53).
-- **Trap 5, slide 23** — the authority ladder escalating one rung per click, cold.
-- **The close** — five questions → Sowell callback → *"The goal isn't maximum AI."* **No
+- **Trap 5, slide 26** — the authority ladder escalating one rung per click, cold.
+- **The close** — five questions on slide 30 → Sowell callback → *"The goal isn't maximum AI."* **No
   re-summary after it** (D-16).
 
 ### Current state
 
-29 slides · ~50:30 planned · builds clean. Opening through Trap 2 is presentation-quality.
+32 slides · ~50:30 planned. Every trap ends on its exact Monday question (D-61).
+Opening through Trap 2 is presentation-quality.
 Traps 3–5 have had a structural pass but not a full narrative one. Nothing has been
 rehearsed against a clock (R-09) — **every timing number in this deck is a guess.**
 
@@ -1231,6 +1232,37 @@ Trap 3.
 
 **Rejected:** moving the slide into Trap 5. That would preserve the conceptual overload
 and make the authority section carry a second job.
+
+---
+
+### D-61 · Every trap ends on its exact Monday question
+**Decided** 2026-08-31 · **Status** Active
+
+Each trap now resolves onto the same dedicated `q-slide` surface, using the exact wording
+that returns in *Five Questions for Monday*:
+
+1. *What do we actually know?*
+2. *What did our question already decide?*
+3. *Am I understanding faster — or avoiding understanding?*
+4. *What got faster — and where should that capacity go?*
+5. *What can it do when it's wrong?*
+
+Trap 1's question moved after its independent-evidence examples. Trap 5's question moved
+after the oversight-scale arithmetic. Traps 2–4 gained short question slides after their
+existing technique or evidence slide. Those preceding slides each gave thirty seconds to
+the new landing slide, so the planned runtime remains **50:30**.
+
+**Why:** the close previously introduced a clean five-question formulation that the room
+had not consistently experienced. Trap 1 ended on evidence, Trap 2 on prompt examples,
+Trap 3 on *How can we find out?*, Trap 4 on *How much more productive are we?*, and Trap 5
+continued past its question to *Which 100?* The recap was therefore a translation exercise
+instead of recognition. Repeating one visual grammar and one exact sentence makes each
+question the felt conclusion of its trap; slide 30 can now trigger five callbacks instead
+of teaching five labels.
+
+**Rejected:** merely changing the recap wording, or placing each question in a small final
+callout on a dense slide. Both preserve the mismatch between what the audience experiences
+and what the close asks them to remember.
 
 ---
 
