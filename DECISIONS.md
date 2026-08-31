@@ -935,6 +935,57 @@ which was the spoken line being dropped under time pressure.
 **Rejected:** waiting for Q-06 to be decided. The cheap insurance is cheap now and the
 decision it protects against is exactly the one still open.
 
+
+### D-57 · Speaker notes are lectern cues, not a script; the prose moves to SCRIPT.md
+**Decided** 2026-08-25 · **Status** Active
+**Amends:** D-05, which established that the rigor lives in the notes. Still true — but
+"the notes" now means two artifacts, not one.
+
+**The problem.** The notes had become a **script**: full prose, complete sentences,
+paragraph arguments. Unusable at a lectern. The speaker is talking to a room, not reading
+to a camera, and speaks *around* the slides. Prose forces you to either read it or hunt
+through it, and both lose the room.
+
+**The split.**
+- **`slides.md` notes** — scannable delivery cues. What shows on the confidence monitor.
+- **`SCRIPT.md`** — the long-form prose, one section per slide. Read in the days before,
+  never at the lectern. Also the source for any shared rollup (Q-06).
+
+**Cue notation** (all 30 slides converted):
+
+| Form | Means |
+|---|---|
+| `~M:SS` first line | timing; still drives the tally, unchanged |
+| `**[n]** heading` | a click beat |
+| `- bullet` | a cue — say it in your own words |
+| `> blockquote` | **engineered line — say close to verbatim** |
+| `**BOLD LEAD:**` | a guardrail: don't drop this / don't expand this |
+| `→` | transition into the next slide |
+
+**Markdown constraint that shapes the format:** adjacent lines collapse into a paragraph
+when rendered, which would silently rebuild the exact problem being fixed. Every cue must
+be a list item, a heading, or a blockquote. **Never leave a bare line next to another
+bare line.**
+
+**Use `/notes`, not `/presenter`, at the lectern.** The default presenter view spends most
+of the screen on the current slide — which is already on the projector — and leaves the
+notes a corner. `http://localhost:3030/notes` is full-width notes with a click-progress
+bar and font-size controls, and it stays in sync. This materially changes the Q-05
+confidence-monitor requirement: the deck needs a second screen showing `/notes`, not
+presenter view.
+
+**Known limit:** slide 9 (4:15, five beats plus mechanism plus the Kafka laugh) still
+scrolls. Its setup and first two beats are visible on open, which is the part you need
+cold. Accepted rather than trimmed further — a four-minute slide has four minutes of
+content.
+
+**One content addition made during the conversion, flagged deliberately rather than
+slipped in:** Q-08's full TDD answer is now in slide 30's prepared Q&A block. That was
+Q-08's own recommendation #2, and it costs **zero stage time**. Q-08's recommendation #1
+— one spoken sentence on the Trap 1 question slide — was **not** added, because that does
+cost stage time and is a content decision, not a formatting one. Q-08 stays open for that
+half.
+
 ---
 
 ## G. Rejected — do not reopen without new information

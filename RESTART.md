@@ -37,6 +37,13 @@ conceptually does not work when presented, say so and change it.
 
 ## Working method
 
+**Speaker notes are lectern cues, not prose (D-57).** `slides.md` notes are scannable
+delivery cues for a live room; `SCRIPT.md` holds the long-form prose. Notation: `~M:SS`
+first line · `**[n]**` a click beat · `-` a cue said in your own words · `>` an engineered
+line said close to verbatim · `**BOLD LEAD:**` a guardrail · `→` a transition.
+**Every cue must be a list item, heading, or blockquote** — adjacent bare lines collapse
+into a paragraph when rendered and silently rebuild the script.
+
 **American English throughout.** Slides, speaker notes, tracking files, and CSS comments:
 *humor*, *organization*, *gray*, *defense*, *behavior*, *centered*. The speaker is American
 and so is the room.
@@ -130,9 +137,12 @@ npm run dev
 Then open `http://localhost:3030`. Useful URL forms while building:
 `http://localhost:3030/9?clicks=4` jumps to slide 9 with four reveals fired —
 **always check reveal states this way rather than assuming**, and screenshot the slide.
-Presenter view with notes is at `http://localhost:3030/presenter/`.
+**For notes, use `http://localhost:3030/notes`, not `/presenter/`** — presenter view
+gives notes a small corner; `/notes` is full-width with a click-progress bar and font-size
+controls, and stays in sync (D-57). `/presenter/` is still right for checking slide + next
++ timer together.
 
-**Four traps in the tooling itself, all of which have already cost time:**
+**Five traps in the tooling itself, all of which have already cost time:**
 
 - **Slidev counts *registered* `v-click` elements, not the highest index you wrote.** A
   slide whose beats are 1, 3, 4, 5 — because beat 2 is only a `:class="{ x: $clicks >= 2 }"`
@@ -150,6 +160,9 @@ Presenter view with notes is at `http://localhost:3030/presenter/`.
   the base state, which is the one you are least likely to re-screenshot. Position reveal
   annotations absolutely, and check a changed slide's **base** state as well as its
   tallest.
+- **HMR does not reliably pick up speaker-note edits at all.** The `/notes` and
+  `/presenter` views will happily serve stale notes through a hard reload. Restart the dev
+  server after editing notes, or you will verify the previous version and believe it.
 - **HMR does not always pick up structural edits.** If a slide renders at its base state
   when you asked for clicks, reload the page before concluding the markup is wrong.
 
