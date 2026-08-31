@@ -1,0 +1,5 @@
+[mcp_servers.slidev]
+command = "npx"
+args = ["--no-install", "slidev", "mcp", "slides.md"]
+startup_timeout_sec = 30
+enabled = true

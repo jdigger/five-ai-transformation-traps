@@ -115,8 +115,11 @@ decisions or open questions; those belong in the other two files.
 
 ## Editing: use the Slidev MCP server
 
-A Slidev MCP server is configured for this repo (`claude mcp add slidev -- npx slidev mcp
-slides.md`). Prefer it over hand-editing `slides.md` for anything structural:
+A Slidev MCP server is configured for this repo. Codex loads it from
+`.codex/config.toml`; restart Codex and open a new task after first cloning or adding the
+configuration. Claude can register the same server with
+`claude mcp add slidev -- npx --no-install slidev mcp slides.md`. Prefer it over
+hand-editing `slides.md` for anything structural:
 
 | Tool | Use it for |
 |---|---|
