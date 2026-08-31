@@ -1049,6 +1049,73 @@ remains *why are we solving this at all?*
 earns a place on screen — either as a sixth beat on slide 5 or as a `statement-slide`
 after it. It currently works as speech pointing at an existing number. Recorded as R-19.
 
+
+### D-59 · XP was independence machinery, and the talk's real subject is the human/technical seam
+**Decided** 2026-08-25 · **Status** Active
+**Extends:** D-58. **Upgrades:** the bare "yes, guilty" concession to the Agile-skeptic
+red-team position.
+
+Two connected additions, both raised by the speaker.
+
+**1 · XP's practices were independence machinery, and the economics that killed them
+inverted.** Trap 3's Agile moment currently concedes — *"you've rediscovered Agile. Yes.
+Correct. Guilty."* — which is charming and extracts nothing. It now goes further:
+
+- Pair programming — two readers, two sets of priors. TDD — a check written *before* the
+  implementation, so it cannot be derived from it. On-site customer — the person who owns
+  the meaning, in the room. Collective ownership and CI — continuous independent
+  verification.
+- Every one was **expensive**, and that expense is why most shops quietly stopped.
+
+> "We didn't abandon those practices because they didn't work. We abandoned them because
+> we couldn't afford them."
+
+- **Two things changed at once and push the same way:** AI cut the price of the machinery,
+  *and* removed the accidental independence friction used to supply for free (D-58).
+  **More affordable and more necessary, simultaneously.**
+
+**The honest limit, and it is what stops this becoming evangelism — AI as a pair partner
+is not a second person.** A human pair brings genuinely different priors. AI in your
+session inherits your framing, your words, your assumptions. **It is the independence
+problem wearing a helpful face** — superb for attention, momentum and unfamiliar
+territory, a *partial* substitute for independence, never a replacement. Same for
+generated tests: excellent, and equally ignorable or overusable. *A thousand tests you
+didn't read is not evidence.*
+
+**Explicitly not "do XP."** The claim is only that the trade which made skipping it
+rational has moved. Which practices, how much, where — judgment and context, as always.
+
+**Guarding D-17 (no new frameworks) and the room.** This must stay a *lineage*, not a
+practice taxonomy. It is also the single most flattering thing the deck can say to an
+Agile meetup, which is a reason for discipline rather than enthusiasm: the honest version
+keeps "these practices were abandoned for real reasons" and "AI pairing is weaker
+independence than a human." Trap 1 carries only a one-sentence pointer; Trap 3 carries the
+argument; nothing else mentions XP.
+
+**2 · The talk's actual subject: technical systems meeting human systems.** Verified
+against all five traps before adopting — T1 what finance meant · T2 why the approvals were
+in that order · T3 how judgment forms · T4 what we're staffed to produce · T5 who is
+allowed to decide. Five for five, and never once named.
+
+That makes the Sowell bookend **load-bearing rather than decorative**, which it had not
+been. Sowell is a systems thinker about *human* systems; the deck is technologists
+thinking about technical ones; the traps are all the seam.
+
+- **Slide 2 plants it in one sentence and does not explain it:**
+> "The parts we wrote down are the technical system. The parts we didn't are still running."
+  — which also seeds Trap 2's mechanism without spoiling it.
+- **Slide 29 pays it off**, naming the seam in each trap in a single breath and landing on:
+> "They are not two systems. They never were."
+
+**Relationship to D-14** (which refuses to explain the trap progression): this is a
+**frame**, not a structural explanation. It says what the talk is *about*; it does not
+diagram how the five traps relate. One sentence at each end, and no slide of its own.
+
+**Cost:** slide 2 +0:15, slide 18 +0:45, slide 29 +0:15. Deck 51:15 → 52:30.
+
+**Rejected:** a dedicated "human systems" slide, and any XP practice checklist. Both would
+turn a frame into the sixth framework D-17 forbids.
+
 ---
 
 ## G. Rejected — do not reopen without new information
@@ -1061,6 +1128,7 @@ after it. It currently works as speech pointing at an existing number. Recorded 
 | "Because somebody has to check the AI" | Weak, defensive, increasingly untrue (D-31) |
 | "You'll move up the value chain" | We don't know that; transformations aren't that neat (D-08) |
 | Arguments from human intellectual superiority | Loses to better models; the argument is about consequences (D-33) |
+| A dedicated "human systems" slide, or an XP practice checklist | Turns a frame into the sixth framework; the bookend carries it in two sentences (D-59) |
 | Any new framework, taxonomy, matrix or maturity model | The deck already has enough conceptual load (D-17) |
 | Academic vocabulary (*epistemic status*, *verification economics*, …) | Wrong room, wrong register (D-07) |
 | "Where should the human enter the loop?" as Trap 5's question | It's the governance answer; authority is the real variable (D-33) |

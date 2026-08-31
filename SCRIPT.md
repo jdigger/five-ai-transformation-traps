@@ -887,3 +887,76 @@ control that was invisible and got optimized away — *duration* in Trap 1, *ord
 2. In both, nobody decided to remove it; it was never written down as a control in the
 first place. Let the room feel the echo. Naming it would pull Trap 1 toward framing, which
 is Trap 2's territory, and re-blur the two traps (R-02).
+
+---
+
+## Addendum · XP as independence machinery, and the human/technical seam (D-59, 2026-08-25)
+
+**XP already solved this, and then we couldn't afford it.**
+
+Everything Trap 1 now argues about independence (see the D-58 addendum) was built into
+Extreme Programming as explicit machinery, installed along the entire path from requirement
+to production:
+
+- **Pair programming** — two readers with different priors on the same problem, continuously.
+- **Test-driven development** — a check authored *before* the implementation exists, and
+  therefore structurally incapable of being derived from it.
+- **On-site customer** — the person who owns the meaning, available to be asked. This is the
+  "show ten of them to the person who wrote the policy" item on Trap 1's evidence slide,
+  thirty years early.
+- **Collective code ownership and continuous integration** — verification by people who did
+  not write the thing, continuously rather than at a gate.
+
+None of it was novel epistemics. It was a deliberate, expensive attempt to buy independence
+that teams were otherwise not getting.
+
+**And expense is why it didn't stick.** Pairing costs two salaries against one keyboard.
+TDD costs visible time up front against invisible time saved later. An on-site customer
+costs a stakeholder's calendar indefinitely. Under cost pressure these are the first things
+cut, and they were cut nearly everywhere — usually while keeping the standups.
+
+**What changed is the price on both sides of the trade.** AI cut the cost of the machinery:
+generating a test suite, producing a critique, arguing an alternative, exploring an
+unfamiliar system. Simultaneously it removed the *accidental* independence that made
+skipping the machinery survivable — the independence we were getting for free from friction,
+from different people, from elapsed time. So the practices got cheaper and the need for them
+got sharper in the same movement.
+
+**The limit that must never be dropped: AI pairing is weaker independence than human
+pairing.** A human pair brings different priors, different scar tissue, different
+misreadings — the non-overlap is the entire product. An AI in your session inherits your
+framing, your vocabulary, and the assumptions embedded in how you asked. It is the same
+correlated-error problem that Trap 1 is about, presented in a form that feels like help.
+This does not make it worthless — it is excellent for attention, momentum, and unfamiliar
+ground, and the fresh-context technique recovers part of the independence. It makes it a
+*partial* substitute that must not be mistaken for the real thing.
+
+**Audience caution.** This is the most flattering thing the deck could possibly say to an
+Agile meetup, and flattery is a failure mode. The honest version keeps both edges: XP was
+abandoned for real reasons, and its AI-powered successor is weaker than the original in the
+specific dimension that mattered most.
+
+---
+
+**The talk's actual subject.**
+
+Every trap is a technical system meeting a human system that nobody wrote down:
+
+| Trap | Technical side | Human system it hit |
+|---|---|---|
+| 1 | implementation + generated tests | what finance actually meant |
+| 2 | an approval workflow optimization | why the approvals were in that order |
+| 3 | offloaded cognition | how judgment actually forms |
+| 4 | pipeline throughput | what an organization is staffed to produce |
+| 5 | autonomous action | who is allowed to decide |
+
+Sowell is a systems thinker about human systems — incentives, institutions, second-order
+consequences, the costs nobody counted. The audience are systems thinkers about technical
+systems. The quote bookends the talk not as decoration but because **the distinction between
+the two is a convenience of our job titles, not a property of the systems.** The parts we
+wrote down are the technical system. The parts we didn't are still running, still enforcing
+constraints, and still absorbing the consequences when a technical change arrives faster
+than they can adapt.
+
+That is why every trap resolves to a question rather than a practice, and why none of the
+five questions are about AI.

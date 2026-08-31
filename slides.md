@@ -41,7 +41,7 @@ class: pull-quote dark-slide
 <div class="attrib">Thomas Sowell</div>
 
 <!--
-~1:30
+~1:45
 
 - The lens for the whole talk. Not a decorative quote.
 - Everything is trade-offs: consistency/availability · flexibility/control · speed/certainty · build/buy · generality/simplicity.
@@ -49,6 +49,10 @@ class: pull-quote dark-slide
 - **AI is not a solution either.** It *moves* the trade-offs — the ones we spent careers learning to make. Fast.
 
 > A decision that was obviously correct five years ago might deserve another look, because the thing underneath it changed.
+
+**PLANT THE FRAME — one sentence, then move on. Do NOT explain it. It gets paid off at the end.**
+- Sowell isn't a technologist. He's a systems thinker about **human** systems — incentives, institutions, second-order consequences. We're technologists, and we think in technical systems.
+> "The parts we wrote down are the technical system. The parts we didn't are still running."
 -->
 
 ---
@@ -242,6 +246,8 @@ Use AI to challenge your thinking —<br>then use evidence to challenge both of 
 
 **[4]** Use AI to challenge your thinking — attack the design, generate tests, find edge cases. Then use evidence to challenge both of you.
 - **Fresh context matters** (the cheap version of TDD's ordering): "write the implementation, now write the tests" in one session is maximum contamination. Generating tests from the requirement in a *new* context, before the implementation exists, is meaningfully better evidence for the same effort.
+
+- **Lineage, one sentence — do not expand here, Trap 3 carries it:** none of this is new. Pairing, test-first, an on-site customer — XP built all of it to manufacture exactly this independence. We're rediscovering why, at a moment when it got cheaper and more necessary at the same time.
 
 **PROPORTIONALITY — say this out loud, it matters:**
 - Don't do all three for a throwaway prototype. Budget is set by *how sure do we need to be?* and *how bad is it if we're wrong?*
@@ -673,10 +679,10 @@ When reality can answer the question cheaply, stop arguing and ask reality.<br>
 </div>
 
 <!--
-~2:00
+~2:45
 
 - The Agile center of the talk. Name it directly.
-- *"Somebody here is thinking you've rediscovered Agile. Yes. Correct. Guilty."*
+- *"Somebody here is thinking: you've rediscovered Agile. Yes. Correct. Guilty."*
 - Twenty-five years of: we don't know everything up front, build feedback loops, working systems produce evidence, learn and adapt.
 - **AI makes that argument stronger, not weaker.** Every objection to running the experiment used to be about cost — another implementation, another prototype, another architecture, another serious critique. They're not expensive anymore.
 
@@ -684,12 +690,22 @@ When reality can answer the question cheaply, stop arguing and ask reality.<br>
 > When reality can answer the question cheaply, stop arguing and go ask reality.
 - The two-hour spike beats the two-hour meeting — and now it's a twenty-minute spike.
 
-**THE QUALIFICATION — do not skip. A senior architect will nail you on this:**
-- Not every question is experimentally answerable. No prototype tells you what maintaining six services across four teams for eight years will feel like. That's a judgment call and it stays one.
-- Test what reality can cheaply answer. Use judgment for what it can't. **And know which one you're doing.**
+**XP — go further than the concession. ~45s. This is the real answer to "you rediscovered Agile":**
+- Look at what XP actually was. **Independence machinery**, installed along the whole path.
+- Pair programming — two readers, two sets of priors. TDD — a check written *before* the implementation, so it can't be derived from it. On-site customer — the person who owns the meaning, in the room. Collective ownership and CI — continuous independent verification.
+- **Every one of those was expensive.** Pairing costs two people. TDD costs time up front. An on-site customer costs somebody's calendar. That expense is why most shops quietly stopped.
+> "We didn't abandon those practices because they didn't work. We abandoned them because we couldn't afford them."
+- **Two things changed at once, and they push the same way:** AI cut the price of that machinery — *and* it removed the accidental independence we were getting for free from friction. **More affordable and more necessary, simultaneously.**
 
-**ALSO WORTH SAYING:**
-- AI made bad questions cheap too. And irrelevant critiques. And prototypes nobody needed. More alternatives is not automatically better.
+**THE HONEST LIMIT — do not skip this, it is what stops it being evangelism:**
+- **AI as a pair partner is not a second person.** A human pair brings genuinely different priors. AI in your session inherits *your* framing, *your* words, *your* assumptions — which is the independence problem again, wearing a helpful face. It's superb for attention, momentum, and unfamiliar territory. It is a **partial** substitute for independence, not a replacement.
+- Same for generated tests: excellent, and *ignorable or overusable*. A thousand tests you didn't read is not evidence.
+- **This is not "do XP."** It's that the trade that made skipping it rational has moved. Which practices, how much, where — that's judgment and context, and it always was.
+
+**THE QUALIFICATION — a senior architect will nail you on this:**
+- Not every question is experimentally answerable. No prototype tells you what maintaining six services across four teams for eight years will feel like. That stays a judgment call.
+- Test what reality can cheaply answer. Use judgment for what it can't. **And know which one you're doing.**
+- AI made bad questions cheap too. And irrelevant critiques. And prototypes nobody needed.
 > The scarce thing now is deciding which questions deserve your attention at all.
 
 → Suppose all of this works and we really are dramatically faster. Now what?
@@ -1030,12 +1046,17 @@ class: pull-quote dark-slide
 <div class="attrib">Thomas Sowell</div>
 
 <!--
-~1:30
+~1:45
 
 - Back to where we started.
 - AI did not give us a world without trade-offs. It **moved** them, faster than any shift I've worked through — internet, distributed systems, Agile, cloud, DevOps, microservices, and a couple of reorganizations I'd rather not relive.
 - **The lesson I actually carry from those:** people were profoundly correct that the internet would change everything, and profoundly wrong about exactly how.
 > I'd assume the same is true of everything I've said tonight.
+
+**PAY OFF THE FRAME from the opening — this is what the quote was doing all along:**
+- Sowell was never writing about software. That's exactly why it holds.
+- Every one of tonight's five traps was the same seam: a technical thing got faster, and ran into a **human** system nobody had written down. What finance meant. Why the approvals were in that order. How people actually build judgment. What we're staffed to produce. Who is allowed to decide.
+> "They are not two systems. They never were."
 
 - Things that were scarce aren't anymore: implementation · knowledge access · alternatives · experiments · critique.
 - **So stop organizing your systems and your teams as if those things still cost what they used to.**
