@@ -16,8 +16,9 @@ red-teaming, and one full implementation pass. **Do not restart the conceptual w
 
 ## Read these first, in this order
 
-1. **`DECISIONS.md`** — every settled decision and *why*, including a rejection list.
-   Treat these as settled. Challenge one only with a concrete reason from construction or
+1. **`DECISIONS.md`** — start with **"The talk as it currently stands"** at the top; it
+   gives you the whole shape in a page. Then the settled decisions and *why*, including a
+   rejection list. Treat these as settled. Challenge one only with a concrete reason from construction or
    rehearsal, and if it changes, record the change (see *Maintenance* below).
 2. **`OPEN-QUESTIONS.md`** — what's genuinely in flux: open questions with recommendations,
    a risk watch list, and items only a rehearsal can settle.
@@ -85,7 +86,14 @@ against a stable deck. Q-01 is not a gate.
 
 Update the tracking files **in the same session** as the change, before reporting done.
 
-**`DECISIONS.md`** — append-only.
+**`DECISIONS.md`** — append-only, **plus one maintained section**.
+- The file opens with **"The talk as it currently stands"** — a derived summary of the
+  argument's shape: the frame, the engine under all five traps, the trap table, the
+  standing commitments, and what must not be flattened. Fifty-odd independent entries are
+  right for provenance and useless for seeing the talk. **Update that section in the same
+  session as any decision that changes the argument**, and keep it derived — if it ever
+  disagrees with an entry, the summary is what's wrong.
+- Everything below it is append-only.
 - A new decision gets the next `D-nn`, with **Decided** (absolute date), **Status**, the
   decision, **Why**, and what was **Rejected** if anything.
 - Never edit a decision to say something different. Mark the old one

@@ -17,6 +17,104 @@ stay discarded.
 
 ---
 
+## The talk as it currently stands
+
+**Maintained summary. Read this first.** The entries below are append-only and
+independent, which is right for provenance and useless for seeing the shape of the talk.
+This section is the shape. It is *derived* from the decisions — if it ever disagrees with
+one, this section is wrong. Update it in the same session as any decision that changes the
+argument.
+
+### What the talk is about
+
+Technical systems meeting human systems (**D-59**). Every trap is a place where something
+technical got faster and ran into a human system nobody had written down. Sowell bookends
+it because he is a systems thinker about *human* systems, and the distinction between the
+two is a convenience of our job titles, not a property of the systems.
+
+> "The parts we wrote down are the technical system. The parts we didn't are still
+> running."
+
+### The engine underneath all five traps
+
+This is the deepest layer, and it is **speaker-only understanding — never explained on
+stage** (D-14). Every trap has the same shape:
+
+> **A cost was quietly doing a job. We removed the cost. The job stopped being done.
+> Nobody noticed, because nobody had written down that the job existed.**
+
+| Trap | The cost we removed | The job it was quietly doing |
+|---|---|---|
+| 1 | the effort of writing code and tests | manufacturing **independence** between the mistake and its check (D-58) |
+| 2 | the latency of a sequential approval chain | **layered review, and filtering** — the order *was* the control (D-49, D-50) |
+| 3 | the difficulty of doing the work yourself | building **understanding and calibrated judgment** |
+| 4 | the scarcity of implementation capacity | **masking** where the real constraint always was |
+| 5 | the effort required to act | **bounding authority** — you could only do so much, so fast |
+
+The five closing questions are the audience-facing form of this. Note that **none of them
+mention AI** — they were always questions about the human system.
+
+### The five traps
+
+| # | Claim | Example | Question for Monday |
+|---|---|---|---|
+| 1 | A great answer doesn't mean you're right | Prorated refund requirement → impl + tests → green → wrong | *What do we actually know?* |
+| 2 | AI can solve the wrong problem really well | Refund escalation chain, parallelized | *What did our question already decide?* |
+| 3 | Are you understanding faster, or avoiding understanding? | *Help me understand* / *Challenge my understanding* | *Am I understanding faster — or avoiding it?* |
+| 4 | Faster doesn't mean you should do more | The pipeline: one box got faster, end-to-end didn't | *What got faster — and where should that capacity go?* |
+| 5 | When AI gets it wrong, what is it allowed to do? | The authority ladder, ending at *issue the refund* | *What can it do when it's wrong?* |
+
+**The progression, also never explained on stage** (D-14): the answer → the question → the
+practitioner → the organization → authority. Widening blast radius: your code, your design,
+you, your org, the world.
+
+**T1 vs T2 must stay distinct** (R-02): T1 is *is the answer actually right?* T2 is *why are
+we solving this problem at all?* Both now involve something undocumented, which is the live
+blur risk. The separating line is D-53's: **a missing rule makes the answer wrong; a missing
+rationale makes the question unchallengeable.**
+
+### One domain, deliberately
+
+Refunds run through Traps 1, 2 and 5 as **one system** examined at different depths — the
+calculation, the approval chain, the authority to issue. Trap 5's top rung is the control
+Trap 2 quietly deleted, now handed to an AI (option 1 of the domain decision; R-15 open for
+the callback wording).
+
+### Commitments that govern every change
+
+- **Every trap carries an explicit positive use of AI.** Not an AI-skeptical talk (D-30, R-03).
+- **No new frameworks, taxonomies, matrices or maturity models** (D-17). The deck is at its
+  conceptual load limit. XP is a *lineage*, not a practice checklist (D-59).
+- **Three layers stay separate:** what is on screen · what is said · what the speaker
+  understands and never explains.
+- **Notes are lectern cues; `SCRIPT.md` holds the prose** (D-57).
+- **Humor: three planned laughs, self-implicating, target our own appetite for complexity —
+  never a person or a role** (D-54). Trap 5's ladder stays cold.
+- **Coherency before cutting** (D-51). Timing is reported, not obeyed, until the deck settles.
+- **Invented numbers are labeled as invented, on screen** (D-48, D-56).
+
+### Load-bearing — do not flatten
+
+- **Trap 1, slide 5** — the green build flips orange as the real rule lands; *"one check,
+  forty-seven times"* delivered pointing at `47 passing` (D-58).
+- **Trap 2, slide 9** — sequential→parallel restack on click 2 with the volumes visibly
+  going `200→2,000` and `20→2,000` unremarked; arrows returning orange at click 4;
+  *"it was on the screen the whole time"* (D-45, D-49, D-50, D-53).
+- **Trap 5, slide 24** — the authority ladder escalating one rung per click, cold.
+- **The close** — five questions → Sowell callback → *"The goal isn't maximum AI."* **No
+  re-summary after it** (D-16).
+
+### Current state
+
+30 slides · ~52:30 planned · builds clean. Opening through Trap 2 is presentation-quality.
+Traps 3–5 have had a structural pass but not a full narrative one. Nothing has been
+rehearsed against a clock (R-09) — **every timing number in this deck is a guess.**
+
+Open questions and risks live in [OPEN-QUESTIONS.md](./OPEN-QUESTIONS.md) and are
+deliberately not duplicated here.
+
+---
+
 ## A. Audience, format, objective
 
 ### D-01 · Audience is mixed technical + management
