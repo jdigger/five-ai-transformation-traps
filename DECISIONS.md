@@ -986,6 +986,69 @@ Q-08's own recommendation #2, and it costs **zero stage time**. Q-08's recommend
 cost stage time and is a content decision, not a formatting one. Q-08 stays open for that
 half.
 
+
+### D-58 · "A human would make the same mistake" is Trap 1's core beat, not a rebuttal
+**Decided** 2026-08-25 · **Status** Active
+**Resolves:** R-04, by inverting it.
+
+The objection was sitting in slide 5's notes under **IF CHALLENGED** — a contingency,
+delivered only if someone pushed. It is now a **led beat**, spoken every time, immediately
+after the finance reveal.
+
+**Why it had to move.** It is not a defense of the argument. It *is* the argument. Trap 1
+is not "AI is unreliable" — everyone already discounts that. Trap 1 is that the shape of
+your evidence changed. Waiting to be challenged means the strongest idea in the trap only
+gets said when a skeptic happens to be in the room and brave enough.
+
+**The mechanism, which the deck previously gestured at and never named: independence
+collapsed while volume rose.**
+
+- A human makes that mistake **once**. A second human reading the same sentence separately
+  probably makes a *different* mistake — **which is the entire reason code review has ever
+  worked.**
+- Implementation and tests generated from one reading make the *same* mistake, guaranteed.
+  The error and its check stopped being independent events.
+- So the count of checks went up while the effective sample size stayed at one:
+
+> "You didn't get forty-seven checks. You got one check, forty-seven times."
+
+The `47 passing · 0 failing` node is already on the slide, so this lands by pointing at an
+artifact that is already there — no new click, no new element.
+
+**The claim that makes it qualitative rather than quantitative:**
+
+> "Independence used to be free. We got it from friction — different people, different
+> days, the time it took. Now you have to build it on purpose."
+
+That is the honest form of "speed and volume changed things." Speed did not merely produce
+more of the same evidence; it **removed the accidental mechanism that used to produce
+independent evidence**, and nobody decided to remove it.
+
+**Consequence for slide 7 — it stops being a checklist.** Its caption was already
+*"evidence that didn't come from that sentence"*, which is a definition of independence
+that was never said aloud. The three items are now framed as **three ways to buy back
+independence you no longer get for free**, each with its source named: the invariant is
+independent because it is *narrower than the requirement*; the replay because it is
+*history, generated before the prompt existed*; the third because it is a *different
+reader* — the one whose understanding actually counts.
+
+**Also folded in:** Q-08's fresh-context technique now appears on slide 7 as one line —
+generating tests in a new context before the implementation exists is TDD's ordering
+discipline applied to an AI workflow, for the same effort. This is the piece Q-08 said was
+"good enough that it could justify its own line on the Trap 1 evidence slide."
+
+**Deliberate relationship to Trap 2 (guarding R-02).** Both traps now involve a control
+that was invisible and got optimized away — duration in Trap 1, order in Trap 2. That
+rhyme is real and worth letting the room feel, but **do not name it**, and do not let Trap
+1 start talking about framing. Trap 1 remains *is the answer actually right?*; Trap 2
+remains *why are we solving this at all?*
+
+**Cost:** slide 5 goes ~3:00 → ~3:30; deck 50:45 → 51:15.
+
+**Open, and deliberately not decided here:** whether *"one check, forty-seven times"*
+earns a place on screen — either as a sixth beat on slide 5 or as a `statement-slide`
+after it. It currently works as speech pointing at an existing number. Recorded as R-19.
+
 ---
 
 ## G. Rejected — do not reopen without new information

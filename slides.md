@@ -71,7 +71,7 @@ class: canvas-slide
 </div>
 
 <div class="kicker" v-click="2">
-What just got dramatically easier —<br>and what should we do differently because of that?
+What just got dramatically easier?<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ...and what should we do differently because of that?
 </div>
 
 </div>
@@ -148,7 +148,7 @@ Finance meant: unused <em>whole days</em> only —<br>and the setup fee is never
 </div>
 
 <!--
-~3:00 — the money slide of Trap 1. Do not rush the clicks.
+~3:30 — the money slide of Trap 1. Do not rush the clicks.
 
 - Read the requirement out loud. Ask the room: does anybody see a problem with that sentence?
 - They won't. It's a perfectly normal requirement. **That's the point.**
@@ -165,8 +165,17 @@ Finance meant: unused <em>whole days</em> only —<br>and the setup fee is never
 **[5]** Finance meant unused *whole days*. And they never refund the setup fee — everybody in billing knows, nobody wrote it down.
 - We shipped a refund calculator that overpays. Quietly. Correctly, according to every test we have.
 
-**IF CHALLENGED — "a human would make the same mistake":**
-- Yes, absolutely — identical error. What's different is the **speed and the confidence**. Implementation, tests, and a green build in twenty minutes, every artifact saying "verified." The volume of convincing-looking evidence went up without the actual evidence going up at all.
+**THE OBJECTION — this is the core of Trap 1. Lead with it, do NOT wait to be challenged.**
+- *"Somebody in here is thinking: a human would have made exactly the same mistake."*
+- **Yes. Absolutely.** A human reading that sentence makes the identical error. That is not the interesting part.
+- But one human makes it **once**. And a second human, reading that sentence separately, probably makes a *different* mistake — **which is the entire reason code review has ever worked.**
+- **Point at the 47:**
+> "You didn't get forty-seven checks. You got one check, forty-seven times."
+- The mistake and the thing that was supposed to catch it are no longer independent events.
+> "Independence used to be free. We got it from friction — different people, different days, the time it took. Now you have to build it on purpose."
+- **That's the qualitative change.** Not that AI is wrong more often. That the *amount* of evidence went up while the *independence* of it went to zero — and every artifact in front of you still says "verified."
+
+→ So what would count as evidence that didn't come from that sentence?
 -->
 
 ---
@@ -218,14 +227,21 @@ Use AI to challenge your thinking —<br>then use evidence to challenge both of 
 <!--
 ~2:00
 
-- None of these are exotic. What they share: **none of them come from anybody's reading of the requirement.**
+- **Frame these as one thing:** three ways to buy back the independence we just lost. Not a checklist of good practices.
+- What they share: **none of them come from anybody's reading of the requirement.**
 
 **[1] Invariant** — free, and not a matter of opinion. You cannot refund more than someone paid. Not "does this seem reasonable" — a line of code that's either true or it isn't.
+- Independence here comes from the claim being *narrower* than the requirement. Nobody had to interpret it.
+
 **[2] Replay** — the strongest, and now trivially cheap, which is itself a thing AI changed. Ninety days of real cancellations, diffed against what finance actually paid.
+- Independence comes from **history**. It was generated before anyone wrote this prompt, by a system that didn't read our sentence.
 > Reality already ran the experiment. We just have to go read the results.
+
 **[3]** The cheapest one is still a human being. Ten examples, thirty minutes, the person who owns the policy.
+- Independence comes from a **different reader** — the one whose understanding is the one that counts.
 
 **[4]** Use AI to challenge your thinking — attack the design, generate tests, find edge cases. Then use evidence to challenge both of you.
+- **Fresh context matters** (the cheap version of TDD's ordering): "write the implementation, now write the tests" in one session is maximum contamination. Generating tests from the requirement in a *new* context, before the implementation exists, is meaningfully better evidence for the same effort.
 
 **PROPORTIONALITY — say this out loud, it matters:**
 - Don't do all three for a throwaway prototype. Budget is set by *how sure do we need to be?* and *how bad is it if we're wrong?*

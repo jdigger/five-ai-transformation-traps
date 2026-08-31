@@ -827,3 +827,63 @@ Q: "I'm a small business, I need to survive 18 months, not build a talent
    Completely legitimate. Then Trap 4 is your trap: figure out what actually
    got faster in YOUR pipeline before you staff to it.
 ```
+
+---
+
+## Addendum · Trap 1's core argument (D-58, 2026-08-25)
+
+Superseding the *"IF CHALLENGED"* framing in the Slide 5 and Slide 7 sections above.
+
+**"A human would make the same mistake" is not an objection to be parried. It is the
+argument.**
+
+Trap 1 is not "AI is unreliable." Everyone in the room already discounts that claim, and
+they are right to — obvious nonsense is obvious and we are getting better at catching it.
+Trap 1 is that **the shape of your evidence changed.**
+
+A human reading an ambiguous requirement makes an error. So does AI. Identical error,
+identical cause. What differs:
+
+1. **One human makes the mistake once.** A second human, reading the same sentence
+   independently, most likely makes a *different* mistake. The non-overlap of two people's
+   misreadings is the whole reason code review, pair programming, and a separate QA
+   function have ever produced value. It was never that the second person was smarter — it
+   was that they were *independent*.
+
+2. **Implementation and tests generated from one reading make the same mistake, with
+   certainty.** Not probably. The error propagates into the artifact whose entire job was
+   to catch it. Forty-seven tests derived from one misunderstanding are not forty-seven
+   checks. They are one check, run forty-seven times, reported as forty-seven successes.
+
+3. **Therefore the count of evidence rose while the effective sample size stayed at one** —
+   and every artifact still displays the surface features of verification. Green build.
+   Coverage number. Passing count. Those signals were calibrated in a world where producing
+   them was expensive, and the expense was doing epistemic work nobody had named.
+
+**The qualitative claim, stated carefully.** Speed did not simply produce more of the same
+kind of evidence. It removed the *accidental mechanism* that used to produce independent
+evidence. Friction — different people, different days, the hours it took — was generating
+independence as a free by-product. Remove the friction and the by-product disappears with
+it, silently, because nobody ever wrote down that it was there.
+
+**Independence used to be free. Now it has to be engineered.**
+
+This is what makes Slide 7 coherent rather than a list of good practices. Each item is a
+different *source* of independence, deliberately purchased:
+
+- **The invariant** — independent because the claim is narrower than the requirement.
+  `refundAmount <= amountPaid` needs no interpretation, so no interpretation can taint it.
+- **The replay** — independent because it is history. Ninety days of real cancellations
+  were produced by a system that never read our sentence and had no opportunity to inherit
+  our misreading.
+- **The policy owner** — independent because it is a different reader, and specifically the
+  reader whose understanding is definitionally correct.
+- **Fresh context** — the cheapest partial fix, and TDD's ordering discipline applied to an
+  AI workflow: generating tests from the requirement in a new context, before the
+  implementation exists, restores *some* independence for the same effort.
+
+**A rhyme worth noticing and not naming on stage.** Trap 1 and Trap 2 both turn on a
+control that was invisible and got optimized away — *duration* in Trap 1, *order* in Trap
+2. In both, nobody decided to remove it; it was never written down as a control in the
+first place. Let the room feel the echo. Naming it would pull Trap 1 toward framing, which
+is Trap 2's territory, and re-blur the two traps (R-02).

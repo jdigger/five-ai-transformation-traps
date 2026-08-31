@@ -271,13 +271,24 @@ This is an accepted trade (the titles work because they're jarring — D-18, D-3
 verbal qualifications are now load-bearing and must not be dropped under time pressure.
 Trap 4's qualification in particular has to arrive *within seconds* of the title.
 
-### R-04 🟡 Someone will say the refund requirement is just a bad requirement
-Expected objection: *"a human would make the same mistake"* or *"that's a spec problem, not
-an AI problem."* Both are half right and the notes carry the answer: yes — what changed is
-the **speed and the volume of convincing-looking evidence**. Implementation, tests, and a
-green build in twenty minutes, every artifact saying "verified."
+### R-19 ⚪ Should "one check, forty-seven times" go on screen?
+Trap 1's core beat (D-58) is currently spoken, delivered while pointing at the
+`47 passing · 0 failing` node that is already on slide 5. That is cheap, uses an artifact
+already present, and costs no clicks.
 
-**Untested.** Watch whether it survives a live challenge.
+**The case for putting it on screen:** it is arguably the single most portable line in the
+deck, it is the one idea from Trap 1 most likely to survive a month (D-03), and Trap 1's
+other load-bearing moment — the green build flipping orange — is visual while this is not.
+
+**Two ways to do it:** a sixth beat on slide 5, or a `statement-slide` immediately after
+it. The statement surface already exists in the visual language (D-40).
+
+**The case against:** slide 5 already ends on the orange flip, which is a strong close.
+A sixth beat risks stepping on it, and a separate slide costs ~45s in a trap that just
+grew to 7:30.
+
+**Recommendation:** decide at rehearsal — specifically, whether the spoken version lands
+without visual support. If it does, leave it alone.
 
 ### R-05 ⚪ The Trap 2 gray-out is mitigated but still unverified on real hardware
 Raised from 16% to 30% (D-46) and verified in the browser at slide 9, click 4 — the
@@ -412,3 +423,4 @@ even with D-47's slack.
 | R-16 — slide 12 restated slide 9's approval point | D-55 — replaced with a non-approval option; the note names the policy/solution distinction | 2026-08-25 |
 | R-12 — Trap 2 is the junk drawer | D-55 — largely resolved; narrowed to R-18 (slide 14 alone) | 2026-08-25 |
 | Q-05's "is it recorded?" | D-56 — no video recording; clears the humor register and Q-03's posterity burden | 2026-08-25 |
+| R-04 — someone will say the refund requirement is just a bad requirement | D-58 — inverted; the objection is now Trap 1's led core beat, and the mechanism is named as collapsed independence | 2026-08-25 |
