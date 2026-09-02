@@ -1383,6 +1383,23 @@ rather than meaning.
 
 ---
 
+### D-66 · The Sowell portrait makes the quote a visual bookend
+**Decided** 2026-09-02 · **Status** Active
+
+The opening and closing Sowell quote slides use the same editorial portrait, derived from
+a public-domain 1964 photograph from Internet Archive Book Images via Wikimedia Commons.
+The treatment preserves Sowell's recognizable glasses, gaze, suit, and pose while translating
+the image into the deck's navy, teal, warm-white, and coral palette.
+
+**Why:** the portrait gives the quote a human source and makes its return near the end feel
+like a deliberate visual callback. Repeating it is intentional bookending, not generic asset
+reuse. The quote remains the primary read; the image occupies the right side and fades into
+the dark ground rather than becoming a biography slide.
+
+The source and ImageGen treatment are recorded in both slides' `[Sources]` notes.
+
+---
+
 ## G. Rejected — do not reopen without new information
 
 | Idea | Why it was rejected |

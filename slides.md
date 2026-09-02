@@ -48,12 +48,23 @@ layout: default
 class: pull-quote dark-slide
 ---
 
+<div class="quote-copy">
+
 # "There are no solutions.<br>There are only trade-offs."
 
 <div class="attrib">Thomas Sowell</div>
 
+</div>
+
+<img class="quote-portrait" src="/portraits/thomas-sowell-editorial.png" alt="Editorial portrait of Thomas Sowell">
+
 <!--
 ~1:45
+
+[Sources]
+- Portrait source: Thomas Sowell Portrait (3x4 cropped), Internet Archive Book Images via Wikimedia Commons, 1964. Public domain in the United States. https://commons.wikimedia.org/wiki/File:Thomas_Sowell_Portrait_(3x4_cropped).jpg
+- Editorial treatment created with OpenAI ImageGen from the public-domain source portrait.
+[/Sources]
 
 - The lens for the whole talk. Not a decorative quote.
 - Everything is trade-offs: consistency/availability · flexibility/control · speed/certainty · build/buy · generality/simplicity.
@@ -406,11 +417,9 @@ class: trap-slide trap-02
 
 # Jim's Draft Script
 
-If you've used any of the frontier models, you've seen they're amazingly good. Scarily good.
+If you've used any of the frontier models like Claude and ChatGPT, you've seen they're amazingly good. Scarily good.
 
 Here we're going to assume — especially as they get even better — that the answer is completely and verifiably right.
-
-And we'll stay close to refunds: the customer-support queue around the product.
 -->
 
 ---
@@ -433,26 +442,45 @@ They should get a correct resolution in under five minutes,<br>any time of day.
 <!--
 ~1:30
 
-- **Do not mention AI yet.** Start with a problem any reasonable business would want fixed.
+- Start with a problem any reasonable business would want fixed.
+- **Do not say AI yet.** “Technology” may enter only at the end, as the hoped-for rescue.
 - Eighteen hours is not a technology problem to the customer. It is simply a long time to be stuck.
-- **[1]** The desired outcome is legitimate: correct resolution, in minutes, whenever the customer needs it.
-- Let the room agree with the goal before introducing the solution.
+- Let the room agree with the seriousness of the problem before allowing the tone to lift.
 
-**Other formulations to work naturally into the spoken setup — choose whichever fits the room; do not read all three like requirements:**
-- “Support volume has doubled, and customers are waiting until the next day. Restore our service level without doubling the team.”
-- “Customers should not have to contact us twice to get a routine problem resolved.”
-- “Our customers wait eighteen hours for support. They should get a correct resolution in under five minutes, any time of day.”
+**The business dynamic to make clear:**
+- Sales growth is good news, but it has brought support growth with it.
+- The existing team now has more incidents than it can absorb.
+- Overload makes each incident take longer; longer incidents grow the queue; the larger queue creates more overload.
+- Support management's request for more people is entirely reasonable.
 
-- These formulations deliberately describe the business pressure without saying “How can AI…?” AI should enter as a credible answer, not be smuggled into the question.
+**[1]**
+- The desired outcome is legitimate: correct resolution, in minutes, whenever the customer needs it.
+
+**DELIVERY NOTE — ROBOT SUPERHERO:**
+- Give “What if technology could swoop in and rescue us?” the lightly theatrical robot-superhero delivery.
+- **Do not say “robot superhero” or “cue the robot superhero.”** That is the tone direction, not the line.
+- Keep the joke aimed at our recurring hope for a technological rescue—not at the support team or the seriousness of the business problem.
+
+- This setup deliberately avoids “How can AI…?” AI should enter on the next slide as a credible answer, not be smuggled into the original problem statement.
 
 
 # Jim's Draft Script
 
-Let's stay with the same customer. The refund may be straightforward with our spiffy new service, but getting help is not.
+The refund may be straightforward with our spiffy new service, but getting help is not.
 
-Support volume has doubled. Customers are waiting until the next day, and some have to contact us twice to get a routine problem resolved.
+Sales are up. That's good. Support volume is up too. That's less good.
 
-That is a real problem. Restore the service level without doubling the team. Get the customer a correct resolution in under five minutes, any time of day.
+The same team of representatives is handling more incidents than it can absorb. People get overwhelmed. Each incident starts taking longer, which grows the queue, which makes the overload worse. The problem begins feeding itself.
+
+Support management has the obvious answer: we need more people.
+
+And this is where somebody says: “What if technology could swoop in and rescue us?”
+
+[Deliver that line with the lightly theatrical robot-superhero tone. Do not name the bit.]
+
+[click]
+
+That is a serious business goal: get the customer a correct resolution in under five minutes, any time of day.
 -->
 
 ---
@@ -1237,12 +1265,23 @@ layout: default
 class: pull-quote dark-slide
 ---
 
+<div class="quote-copy">
+
 # "There are no solutions.<br>There are only trade-offs."
 
 <div class="attrib">Thomas Sowell</div>
 
+</div>
+
+<img class="quote-portrait" src="/portraits/thomas-sowell-editorial.png" alt="Editorial portrait of Thomas Sowell">
+
 <!--
 ~1:45
+
+[Sources]
+- Portrait source: Thomas Sowell Portrait (3x4 cropped), Internet Archive Book Images via Wikimedia Commons, 1964. Public domain in the United States. https://commons.wikimedia.org/wiki/File:Thomas_Sowell_Portrait_(3x4_cropped).jpg
+- Editorial treatment created with OpenAI ImageGen from the public-domain source portrait.
+[/Sources]
 
 - Back to where we started.
 - AI did not give us a world without trade-offs. It **moved** them, faster than any shift I've worked through — internet, distributed systems, Agile, cloud, DevOps, microservices, and a couple of reorganizations I'd rather not relive.

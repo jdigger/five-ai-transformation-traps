@@ -221,25 +221,33 @@ The system does exactly what we asked. That is what makes the trap possible.
 ```
 ~1:30
 
-Do not mention AI yet. Start with a problem any reasonable business would want
-fixed.
+The refund may be straightforward with our spiffy new service, but getting help
+is not.
 
-Let's stay with the same customer. The refund may be straightforward, but
-getting help is not.
+Sales are up. That's good. Support volume is up too. That's less good.
 
-Support volume has doubled. Customers are waiting until the next day, and some
-have to contact us twice to get a routine problem resolved.
+The same team of representatives is handling more incidents than it can absorb.
+People get overwhelmed. Each incident starts taking longer, which grows the
+queue, which makes the overload worse. The problem begins feeding itself.
 
-That is a real problem. Restore the service level without doubling the team.
+Support management has the obvious answer: we need more people.
+
+And this is where somebody says: “What if technology could swoop in and rescue
+us?”
+
+[Deliver that line with the lightly theatrical robot-superhero tone. Do not say
+“robot superhero” or “cue the robot superhero.” The joke is our recurring hope
+for technological rescue, not the support team or the seriousness of the
+problem.]
 
 [click]
 
-Get the customer a correct resolution in under five minutes, any time of day.
+That is a serious business goal: get the customer a correct resolution in under
+five minutes, any time of day.
 
-Those are alternate formulations to work into the spoken setup, not three
-requirements to recite mechanically. The important move is that they describe
-the business pressure without saying “How can AI…?” AI enters as a credible
-answer, not as a premise hidden inside the question.
+Do not say AI until the next slide. The problem statement must stand without it;
+AI should enter as a credible answer rather than a premise hidden inside the
+question.
 ```
 
 
