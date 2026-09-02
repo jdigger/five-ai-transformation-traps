@@ -319,7 +319,7 @@ that work.
 ```
 ~1:30
 
-And yes: a good system should notice that pattern. This one did.
+This would show in the reports when asked.
 
 The failure is not that AI buried the evidence. It is what happened to the
 pressure to notice it.
