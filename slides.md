@@ -10,10 +10,12 @@ fonts:
   mono: JetBrains Mono
 transition: none
 layout: default
-class: cover-slide dark-slide
+class: cover-slide
 ---
 
-# The Five Biggest AI Transformation Traps
+<div class="cover-copy">
+
+# The Five Biggest AI<br>Transformation Traps
 
 ## Do This, Not That
 
@@ -22,6 +24,10 @@ class: cover-slide dark-slide
 Jim Moore
 
 </div>
+
+</div>
+
+<img class="cover-art" src="/illustrations/traps-hero.png" alt="An engineer navigating five visible obstacles while working on a laptop">
 
 <!--
 ~0:30
@@ -124,12 +130,20 @@ AI continues to make getting a REALLY good answer much faster and easier.
 
 ---
 layout: default
-class: trap-slide dark-slide
+class: trap-slide trap-01
 ---
 
-### TRAP 01
+<div class="trap-copy">
+
+### TRAP 01 · THE CONFIDENCE TRAP
 
 # A Great Answer Doesn't Mean You're Right
+
+<div class="trap-promise">Spot it. Then choose differently.</div>
+
+</div>
+
+<img class="trap-art" src="/illustrations/trap-01.png" alt="An engineer following many green checks toward a visible trapdoor">
 
 <!--
 ~0:30
@@ -367,12 +381,20 @@ To restate all of that
 
 ---
 layout: default
-class: trap-slide dark-slide
+class: trap-slide trap-02
 ---
 
-### TRAP 02
+<div class="trap-copy">
+
+### TRAP 02 · THE FRAMING TRAP
 
 # AI Can Solve the Wrong Problem Really Well
+
+<div class="trap-promise">Spot it. Then choose differently.</div>
+
+</div>
+
+<img class="trap-art" src="/illustrations/trap-02.png" alt="An engineer following a polished path toward the wrong target">
 
 <!--
 ~0:30
@@ -426,7 +448,7 @@ They should get a correct resolution in under five minutes,<br>any time of day.
 
 # Jim's Draft Script
 
-Let's stay with the same customer. The refund may be straightforward, but getting help is not.
+Let's stay with the same customer. The refund may be straightforward with our spiffy new service, but getting help is not.
 
 Support volume has doubled. Customers are waiting until the next day, and some have to contact us twice to get a routine problem resolved.
 
@@ -645,12 +667,20 @@ class: q-slide
 
 ---
 layout: default
-class: trap-slide dark-slide
+class: trap-slide trap-03
 ---
 
-### TRAP 03
+<div class="trap-copy">
+
+### TRAP 03 · THE UNDERSTANDING TRAP
 
 # Are You Understanding Faster — or Avoiding Understanding?
+
+<div class="trap-promise">Spot it. Then choose differently.</div>
+
+</div>
+
+<img class="trap-art" src="/illustrations/trap-03.png" alt="An engineer moving quickly over a gap while an open book is left below">
 
 <!--
 ~0:30
@@ -834,12 +864,20 @@ class: q-slide
 
 ---
 layout: default
-class: trap-slide dark-slide
+class: trap-slide trap-04
 ---
 
-### TRAP 04
+<div class="trap-copy">
+
+### TRAP 04 · THE THROUGHPUT TRAP
 
 # Faster Doesn't Mean You Should Do More
+
+<div class="trap-promise">Spot it. Then choose differently.</div>
+
+</div>
+
+<img class="trap-art" src="/illustrations/trap-04.png" alt="An engineer sending a stream of work into a visible bottleneck">
 
 <!--
 ~0:30
@@ -978,12 +1016,20 @@ class: q-slide
 
 ---
 layout: default
-class: trap-slide dark-slide
+class: trap-slide trap-05
 ---
 
-### TRAP 05
+<div class="trap-copy">
+
+### TRAP 05 · THE AUTHORITY TRAP
 
 # When AI Gets It Wrong, What Is It Allowed To Do?
+
+<div class="trap-promise">Spot it. Then choose differently.</div>
+
+</div>
+
+<img class="trap-art" src="/illustrations/trap-05.png" alt="An engineer beside a safety boundary as an automated arm reaches past it">
 
 <!--
 ~0:30

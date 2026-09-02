@@ -1,8 +1,9 @@
 /* ==========================================================================
    Five AI Transformation Traps — deck visual language
    --------------------------------------------------------------------------
-   Design intent: a principal engineer at a whiteboard, not a keynote.
-   Restraint, whitespace, two semantic colors, no decoration.
+   Design intent: a practical evening talk with the energy of a sharp
+   editorial illustration — clear, human, and optimistic without becoming
+   decorative noise.
 
      --trap  (burnt orange)  the mistake / the thing that bites you
      --good  (deep teal)     the better question / the evidence
@@ -14,14 +15,14 @@
 :root {
   --ink:        #16181d;
   --ink-soft:   #575e6d;
-  --paper:      #fbfaf8;
+  --paper:      #fcfbf7;
   --paper-soft: #a9b0bd;
   --rule:       #ded9d1;
   --rule-dark:  #343a46;
-  --trap:       #c2410c;
-  --trap-soft:  #f0a882;
-  --good:       #0e7490;
-  --good-soft:  #7fc4d4;
+  --trap:       #e75b2a;
+  --trap-soft:  #ffb77a;
+  --good:       #087f8c;
+  --good-soft:  #7bd5cf;
 
   --slidev-theme-primary: #0e7490;
 }
@@ -84,21 +85,33 @@
   letter-spacing: 0.22em;
   font-weight: 600;
 }
-.slidev-layout.trap-slide h3 { color: var(--trap-soft); }
+.slidev-layout.trap-slide h3 { color: var(--trap); }
 .slidev-layout.q-slide     h3 { color: var(--good); }
 
 /* ============================================================== COVER ==== */
 
-.slidev-layout.cover-slide { display: flex; flex-direction: column; justify-content: center; }
+.slidev-layout.cover-slide {
+  display: grid; grid-template-columns: 0.94fr 1.06fr; align-items: center;
+  overflow: hidden;
+  background:
+    radial-gradient(circle at 85% 18%, #d9f4ef 0, transparent 30%),
+    linear-gradient(135deg, #fffdf8 0%, #f4fbfa 100%);
+}
+.slidev-layout.cover-slide .cover-copy { position: relative; z-index: 2; }
 .slidev-layout.cover-slide h1 {
-  font-size: 4.1rem; line-height: 1.02; font-weight: 700; max-width: 15ch; margin-bottom: 0.35em;
+  font-size: 3.65rem; line-height: 1.01; font-weight: 750; max-width: 13ch; margin-bottom: 0.35em;
 }
 .slidev-layout.cover-slide h2 {
-  font-size: 1.6rem; font-weight: 500; color: var(--trap-soft); margin: 0 0 2.4rem;
+  font-size: 1.6rem; font-weight: 650; color: var(--good); margin: 0 0 2.4rem;
 }
 .slidev-layout.cover-slide .byline {
-  font-size: 1.05rem; color: var(--paper-soft); border-top: 1px solid var(--rule-dark);
+  font-size: 1.05rem; color: var(--ink-soft); border-top: 1px solid var(--rule);
   padding-top: 1.1rem; max-width: 28ch;
+}
+.slidev-layout.cover-slide .cover-art {
+  width: 121%; max-width: none; height: auto; align-self: end;
+  transform: translate(-3%, 3%);
+  filter: drop-shadow(0 20px 28px rgba(18, 52, 58, 0.13));
 }
 
 /* ============================================================== QUOTE ==== */
@@ -112,16 +125,45 @@
 }
 
 /* ========================================================= TRAP INTRO ==== */
-/* A hard visual break. The deck goes dark; you know a new act started. */
+/* A bright editorial section marker: the hazard is visible, but the engineer
+   is moving through it. The deck teaches navigation, not dread. */
 
-.slidev-layout.trap-slide { display: flex; flex-direction: column; justify-content: center; }
-.slidev-layout.trap-slide h3 { margin-bottom: 1.4rem; }
-.slidev-layout.trap-slide h1 {
-  font-size: 3.9rem; line-height: 1.06; font-weight: 700; max-width: 17ch; margin: 0;
+.slidev-layout.trap-slide {
+  display: grid; grid-template-columns: 0.92fr 1.08fr; align-items: center;
+  overflow: hidden;
+  background:
+    radial-gradient(circle at 88% 15%, #dff7f3 0, transparent 31%),
+    linear-gradient(135deg, #fffdf8 0%, #f5fbfa 100%);
 }
-.slidev-layout.trap-slide h1::after {
-  content: ""; display: block; width: 4.5rem; height: 4px;
-  background: var(--trap); margin-top: 2.2rem;
+.slidev-layout.trap-slide::before {
+  content: ""; position: absolute; left: 0; top: 0; bottom: 0; width: 12px;
+  background: linear-gradient(180deg, var(--trap), #ffb23f);
+}
+.slidev-layout.trap-slide .trap-copy { position: relative; z-index: 2; }
+.slidev-layout.trap-slide h3 { margin-bottom: 1.15rem; }
+.slidev-layout.trap-slide h1 {
+  font-size: 3.2rem; line-height: 1.04; font-weight: 750; max-width: 15ch; margin: 0;
+}
+.slidev-layout.trap-slide .trap-promise {
+  display: inline-block; margin-top: 1.8rem; padding-top: 0.8rem;
+  border-top: 2px solid var(--good-soft); color: var(--good);
+  font-size: 1rem; font-weight: 650; letter-spacing: 0.01em;
+}
+.slidev-layout.trap-slide .trap-art {
+  width: 124%; max-width: none; height: auto; justify-self: center;
+  filter: drop-shadow(0 18px 24px rgba(18, 52, 58, 0.14));
+}
+.slidev-layout.trap-slide.trap-01 .trap-art,
+.slidev-layout.trap-slide.trap-02 .trap-art,
+.slidev-layout.trap-slide.trap-03 .trap-art {
+  width: 112%;
+  transform: translateX(5%);
+}
+.slidev-layout.trap-slide.trap-03 h1 { font-size: 2.9rem; }
+.slidev-layout.trap-slide.trap-05 h1 { font-size: 2.9rem; }
+.slidev-layout.trap-slide.trap-04 .trap-art,
+.slidev-layout.trap-slide.trap-05 .trap-art {
+  transform: translateX(3%);
 }
 
 /* ========================================================== STATEMENT ==== */

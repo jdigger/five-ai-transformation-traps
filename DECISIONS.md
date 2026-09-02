@@ -1354,6 +1354,35 @@ speaker notes, not together on screen, and none begins with “How can AI…?”
 
 ---
 
+### D-65 · Trap openers are bright, illustrated navigation moments
+**Decided** 2026-09-02 · **Status** Active
+
+**Supersedes the trap-opener treatment in D-40 and the blanket no-illustration rule in
+D-41.** The semantic-color rule in D-39 remains active, with a brighter coral/amber trap
+palette and teal constructive palette.
+
+The cover and five trap openers use coordinated flat editorial illustrations of a capable
+engineer moving through visible hazards. Trap slides sit on a warm light ground, retain a
+coral act-break rail, name both the numbered trap and its kind, and repeat the promise:
+
+> Spot it. Then choose differently.
+
+Each illustration makes the specific mechanism visible: correlated checks, the wrong
+target, speed skipping understanding, throughput hitting a bottleneck, and authority
+crossing a boundary. The rest of the deck keeps its restrained boxes-and-rules grammar;
+the illustrations are section markers, not generic AI decoration.
+
+**Why:** five dark problem statements made the negative framing dominate a talk whose
+contract is practical solutions. The new treatment keeps the traps unmistakable while
+making the room feel invited to notice and navigate them. It also gives an evening audience
+a human, energetic visual reset between dense arguments.
+
+**Rejected:** ominous warning imagery, robots/brains/neon futurism, or a single repeated
+trap image. Those would either restore the doom tone or turn the illustration into branding
+rather than meaning.
+
+---
+
 ## G. Rejected — do not reopen without new information
 
 | Idea | Why it was rejected |
