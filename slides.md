@@ -300,6 +300,38 @@ Use AI to challenge your thinking —<br>then use evidence to challenge both of 
 - A refund calculator earns the replay. A spike you're deleting Friday does not. Spending ten dollars to verify a ten-cent experiment is also an engineering failure.
 
 - → These techniques differ, but they force the same question.
+
+
+
+# Jim Draft Script
+
+There are going to be rules that don't need to be included because they've already been established and enforced with normal system design approaches.
+
+Just pointing out that not EVERYTHING needs to be stated or understood for the story to implement. Bounded contexts and the like are all still vital.
+
+--
+
+The 90 days is where AI becomes really useful. Letting it create a quick script or run through appropriate tooling for audit data. Whether the process the calculator is replacing is manual, or an old service, or a SaaS, whatever - you have that audit data of payouts.
+
+Test your logic against reality.
+
+--
+
+Showing a few samples to the owner - nothing to overwhelm, but just to confirm you're on the right track
+
+--
+
+One hugely valuable thing AI is excellent at is challenging you.
+
+Have it identify edge cases. Make it red-team the approaches.
+
+Ideally from another session or - better yet - another model altogether.
+
+Doing that would also help identify the best samples for your domain expert.
+
+**This is obviously overkill for most things.** But when you're talking about something like money going out the door, you really want to be sure.
+
+It's our job as product owners and engineers to know when "vibe coding" is perfect - low stakes, just get it out. Or true design, process, and data validation are needed.
 -->
 
 ---
@@ -326,6 +358,14 @@ class: q-slide
 - **Name the recurring surface, once:** the teal bar means *here's a question for Monday.* Every trap will now end here.
 
 → Suppose the answer really is right. We can still have a much bigger problem.
+
+# Jim's Draft Script
+
+To restate all of that
+
+- how important is it that this is right?
+- does it matter if we have 47 tests all just checking the same potentially flawed understanding?
+- as always, make sure when you've confirmed, it had better have persistent validations (aka tests)
 -->
 
 ---
@@ -343,6 +383,13 @@ class: trap-slide dark-slide
 - An escalation from Trap 1, and the one I think about most.
 - Trap 1: the answer might be wrong. **Here, assume the answer is completely, verifiably right.** Excellent, even.
 - And it doesn't help.
+
+
+# Jim's Draft Script
+
+If you've used any of the frontier models, you've seen they're amazingly good. Scarily good.
+
+Here we're going to assume - especially as they get even better - that the answer is completely and verifiably right.
 -->
 
 ---
@@ -435,6 +482,22 @@ Supervisor and Finance are drowning.
 > "Nobody asked why these two services need a long-distance relationship."
 - Straight to the principle: CAP didn't change. If the boundary is real you need all of it. But the boundary was a design choice somebody made in a meeting.
 - **The rule for this joke:** the target is our own appetite for complexity, mine included. Never a role, never a team.
+
+# Jim's Draft Script:
+
+Refunds are slow, customers are annoyed, and somebody in the business is getting yelled at.
+
+So we put in escalation and exception queues, dashboards for the people involved... Maybe that "agent" is an AI agent since we're all super cool techies like that.
+
+Those prorated refund calculators we wrote are really fast and effective. But it's still taking too long to get to Refunded.
+
+"AI, speed up that process."
+
+AI thinks, "We just need to approve it, and we have these middlemen. Make it parallel instead of synchronous. And my humans think that is much cooler when you do those kinds of things like that. Look at all these uses of sub-agents they get excited about, and my job is to make them happy."
+
+---
+
+Sure enough, time from Request to Refunded got much faster FOR EVERY SINGLE REQUEST. But now Finance is screaming that they need more people to keep up with the increased load.
 -->
 
 ---
