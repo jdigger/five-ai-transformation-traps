@@ -28,10 +28,7 @@ Jim Moore
 
 - Not about today's model, assistant, agent framework, or prompt technique — all wrong by the time you get home.
 - Mistakes I'm watching us make, and have made, as AI changes how we build and how we run technology organizations.
-- Five of them. A question for each you can use Monday.
-
-
-
+- Five of them. In each: a tempting default to stop, a better use of AI, and one question you can use Monday.
 
 # Jim's rough script
 
@@ -380,16 +377,18 @@ class: trap-slide dark-slide
 <!--
 ~0:30
 
-- An escalation from Trap 1, and the one I think about most.
+- Stay in the same customer-service world as the refund example, but move one step outward: from one refund decision to the support queue around the product.
 - Trap 1: the answer might be wrong. **Here, assume the answer is completely, verifiably right.** Excellent, even.
-- And it doesn't help.
+- The system does exactly what we asked. That is what makes the trap possible.
 
 
 # Jim's Draft Script
 
 If you've used any of the frontier models, you've seen they're amazingly good. Scarily good.
 
-Here we're going to assume - especially as they get even better - that the answer is completely and verifiably right.
+Here we're going to assume — especially as they get even better — that the answer is completely and verifiably right.
+
+And we'll stay close to refunds: the customer-support queue around the product.
 -->
 
 ---
@@ -399,141 +398,12 @@ class: canvas-slide
 
 <div class="diagram">
 
-<div class="caption dimmable" :class="{ dimmed: $clicks >= 4 }">"HOW DO WE SPEED UP REFUND APPROVALS?"</div>
+<div class="caption">THE BUSINESS GOAL</div>
 
-<div class="chain">
-<div class="node dimmable" :class="{ dimmed: $clicks >= 4 }">Refund request</div>
-<span class="arrow dimmable" :class="{ dimmed: $clicks >= 4 }">&rarr;</span>
-
-<div class="approvals" :class="{ parallel: $clicks >= 2, exposed: $clicks >= 4 }">
-<div class="node">Agent<span class="vol">2,000</span></div>
-<span class="seq">&rarr;</span>
-<div class="node">Supervisor<span class="vol">{{ $clicks >= 2 ? '2,000' : '200' }}</span></div>
-<span class="seq">&rarr;</span>
-<div class="node">Finance<span class="vol">{{ $clicks >= 2 ? '2,000' : '20' }}</span></div>
-</div>
-
-<span class="arrow dimmable" :class="{ dimmed: $clicks >= 4 }">&rarr;</span>
-<div class="node dimmable" :class="{ dimmed: $clicks >= 4 }">Refunded</div>
-
-<div class="load-note" v-click="5">
-<div class="lead">A WEEK LATER</div>
-Supervisor and Finance are drowning.
-</div>
-</div>
-
-<div class="reveal-list compact mt-4 dimmable" :class="{ dimmed: $clicks >= 4 }">
-<div class="item" v-click="1"><span class="mark">&rarr;</span><span>Route by amount and risk score</span></div>
-<div class="item" v-click="2"><span class="mark">&rarr;</span><span>Approve in parallel, not in sequence</span></div>
-<div class="item" v-click="3"><span class="mark">&rarr;</span><span>Reminders, escalation, an exception queue, a dashboard</span></div>
-</div>
-
-<div class="overlay-q" v-click="4">Why were they<br>in that order?</div>
-
-</div>
-
-<!--
-~4:15 — the money slide of Trap 2.
-
-- Reasonable question. Refunds are slow, customers are annoyed, somebody owns that metric.
-- Walk the chain in **their** words: *"Three approvals. The agent who takes the call. Their supervisor. Somebody in finance. That's what the wiki says."*
-- **Do NOT explain escalation here.** Let them hear "three approvals" — that belief is what got typed into the prompt.
-- Read the volumes **flat, like housekeeping**: two thousand a week · two hundred reach a supervisor · twenty reach finance.
-- The evidence is on screen from the first frame, in a bored voice. They'll file it as scene-setting.
-
-**[1] Route by amount + risk**
-- Light touch: AI just reconstructed a threshold policy from the two variables it could see. Plausible. Looks like an improvement. Pay it off later.
-
-**[2] RESTACK — stop talking, let them watch it happen**
-- Genuinely clever. They were in *sequence* and didn't have to be. Free. Cycle time drops, maybe a lot.
-- **Do NOT point at the numbers.** They just changed in front of everybody. Your job right now is to be pleased about cycle time.
-- If someone calls it out here — best possible outcome. *"Hold that."* Keep going.
-
-**[3] Reminders, escalation, exception queue, dashboard**
-- *"If someone brought me this I would say yes. I would have said yes."*
-- Stipulate: this is right. **Trap 1 does not apply.**
-
-**[4] ARROWS RETURN, ORANGE — long pause, don't fill it**
-> "Why were they in that order?"
-- It was never three approvals. It was an **escalation chain**. Supervisor saw what the agent escalated; finance saw what the supervisor escalated. Each level reviewing the one beneath — and seeing a fraction of it.
-- **Point at the numbers:** *"Two thousand. Two hundred. Twenty. That is not three people doing the same job slowly. That is a funnel."*
-> "It was on the screen the whole time. We were watching the cycle time."
-- The order was the control, and it was the filter. We deleted both.
-
-**[5] A WEEK LATER**
-- Not from the dashboard — the dashboard is green, cycle time was the metric.
-- 200 → 2,000. 20 → 2,000. A hundred-fold increase in finance's workload, shipped as a performance improvement.
-- The complaint arrives as *"we don't have enough people."* Filed as **capacity**. Headcount, a triage filter, or — the worrying one — *"let's use AI to triage the queue."*
-> "Nobody in that conversation says the word 'control.' The governance is gone and the ticket says CAPACITY."
-
-**MECHANISM — the actual point of Trap 2:**
-- Not the AI's fault. And the information wasn't missing — the volumes were readable.
-- The **reason** for that order was never written down. Not the code, not the ticket, not the wiki. It was in the head of whoever set the thresholds, and they left in 2019.
-- AI can't ask about a constraint nobody recorded. Neither can a new architect, a new team, or you in your first week.
-> "A missing rule makes the answer wrong. A missing rationale makes the question unchallengeable."
-
-- **Be fair:** maybe there are excellent reasons. Fraud, an auditor, a bad quarter. Segregation of duties is real. I'm not telling you to delete it or to keep it — I'm telling you **nobody in this story ever made that decision, and it got made anyway.**
-- **ONE sentence, don't expand:** "the supervisor was rubber-stamping it anyway" — probably. Which means we automated the process on the wiki, not the one people were running.
-
-**LAUGH — Kafka buffet, ~45s.** One of only three planned laughs; don't add a fourth.
-- Same story, different vocabulary. *How do we keep these two services consistent?*
-- A **beautiful** plan: Kafka. An outbox table. Idempotency keys. Retries with backoff. A dead-letter queue. *[beat]* And a runbook for the dead-letter queue. *[beat]*
-- *"That is a genuinely fun afternoon. I would enjoy building that. Some of you are enjoying it right now, just hearing the list."* *[beat]*
-> "Nobody asked why these two services need a long-distance relationship."
-- Straight to the principle: CAP didn't change. If the boundary is real you need all of it. But the boundary was a design choice somebody made in a meeting.
-- **The rule for this joke:** the target is our own appetite for complexity, mine included. Never a role, never a team.
-
-# Jim's Draft Script:
-
-Refunds are slow, customers are annoyed, and somebody in the business is getting yelled at.
-
-So we put in escalation and exception queues, dashboards for the people involved... Maybe that "agent" is an AI agent since we're all super cool techies like that.
-
-Those prorated refund calculators we wrote are really fast and effective. But it's still taking too long to get to Refunded.
-
-"AI, speed up that process."
-
-AI thinks, "We just need to approve it, and we have these middlemen. Make it parallel instead of synchronous. And my humans think that is much cooler when you do those kinds of things like that. Look at all these uses of sub-agents they get excited about, and my job is to make them happy."
-
----
-
-Sure enough, time from Request to Refunded got much faster FOR EVERY SINGLE REQUEST. But now Finance is screaming that they need more people to keep up with the increased load.
--->
-
----
-layout: default
-class: statement-slide
----
-
-# The constraint might be exactly right.
-
-# It should **win** the argument — not skip it.
-
-<!--
-~1:00
-
-- That's the whole move. Not "approvals bad." Not "microservices bad." Not "less AI."
-- A question can quietly contain a decision before AI ever answers it. And because the answer is so good, the decision never gets examined —
-> the quality of the answer becomes evidence that the question was right.
-
-- **Self-implicate:** exactly the failure I'd be reproducing if I built a very sophisticated talk and treated its sophistication as proof the framing was correct.
-
-→ And this is not just a legacy problem. It's worse on greenfield.
--->
-
----
-layout: default
-class: canvas-slide
----
-
-<div class="diagram">
-
-<div class="caption">MONDAY, 9AM, GREENFIELD PROJECT</div>
-
-<div class="qmark">"How should we build our AI customer-service <mark class="mark-hot">agent</mark>?"</div>
+<div class="qmark">Our customers wait <mark class="mark-hot">18 hours</mark> for support.</div>
 
 <div class="kicker mt-14" v-click="1">
-What did that question already decide?
+They should get a correct resolution in under five minutes,<br>any time of day.
 </div>
 
 </div>
@@ -541,13 +411,85 @@ What did that question already decide?
 <!--
 ~1:30
 
-- The greenfield version, and more dangerous — no legacy system to blame.
-- Read it. It sounds like the beginning of a design conversation.
-> "It's the end of one."
+- **Do not mention AI yet.** Start with a problem any reasonable business would want fixed.
+- Eighteen hours is not a technology problem to the customer. It is simply a long time to be stuck.
+- **[1]** The desired outcome is legitimate: correct resolution, in minutes, whenever the customer needs it.
+- Let the room agree with the goal before introducing the solution.
+
+**Other formulations to work naturally into the spoken setup — choose whichever fits the room; do not read all three like requirements:**
+- “Support volume has doubled, and customers are waiting until the next day. Restore our service level without doubling the team.”
+- “Customers should not have to contact us twice to get a routine problem resolved.”
+- “Our customers wait eighteen hours for support. They should get a correct resolution in under five minutes, any time of day.”
+
+- These formulations deliberately describe the business pressure without saying “How can AI…?” AI should enter as a credible answer, not be smuggled into the question.
+
+
+# Jim's Draft Script
+
+Let's stay with the same customer. The refund may be straightforward, but getting help is not.
+
+Support volume has doubled. Customers are waiting until the next day, and some have to contact us twice to get a routine problem resolved.
+
+That is a real problem. Restore the service level without doubling the team. Get the customer a correct resolution in under five minutes, any time of day.
+-->
+
+---
+layout: default
+class: statement-slide
+---
+
+<div class="diagram">
+
+<div class="caption">THE SYSTEM WE BUILT</div>
+
+<div class="flow-h mt-10">
+<div class="node">Read the request</div>
+<span class="arrow">&rarr;</span>
+<div class="node">Retrieve context</div>
+<span class="arrow">&rarr;</span>
+<div class="node">Apply policy</div>
+<span class="arrow">&rarr;</span>
+<div class="node">Take action</div>
+<span class="arrow">&rarr;</span>
+<div class="node">Explain result</div>
+</div>
+
+<div class="kicker mt-14" v-click="1">
+18 hours &nbsp;&rarr;&nbsp; under 5 minutes
+</div>
+
+<div class="caption mt-8" v-click="2">CORRECT · PERSONALIZED · AVAILABLE AROUND THE CLOCK</div>
+
+</div>
+
+<!--
+~2:00
+
+- Now introduce AI as the answer, and make it an answer the room should want.
+- Give it the support history, current account and order context, the policies, and the same permitted actions a good support agent has.
+- It reads the request, retrieves the relevant context, applies policy, takes the permitted action, and explains the result.
+- It escalates genuinely uncertain or exceptional cases. **Trap 1 does not apply here.** Stipulate that its answers and actions are correct.
 
 **[1]**
-- We decided "agent" before we said a single word about the problem.
-- Everything downstream — framework evaluation, tool-calling design, eval harness, six months of roadmap — is now in service of a noun somebody typed without noticing.
+- The wait falls from eighteen hours to under five minutes.
+- Let this feel like a win, because it is one.
+
+**[2]**
+- Correct, personalized, always available.
+> “If someone brought me this result, I would say yes.”
+
+- Do not foreshadow a hidden model failure. The system is doing excellent support work.
+
+
+# Jim's Draft Script
+
+So we build the system people are hoping AI can become.
+
+It reads what the customer wrote, pulls the account and order context, applies the policy, takes the action it is allowed to take, and explains what happened. If it is genuinely uncertain, it escalates.
+
+And it works. Correct answers. Personalized. Available around the clock.
+
+The wait drops from eighteen hours to under five minutes. If someone brought me that result, I would say yes.
 -->
 
 ---
@@ -557,19 +499,17 @@ class: canvas-slide
 
 <div class="diagram">
 
-<div class="caption">THE PROBLEM UNDERNEATH</div>
+<div class="caption">ONE WEEK OF SUPPORT</div>
 
-<div class="qmark">Requests take 18 minutes to resolve.<br>We need them under five.</div>
+<div class="fact">800 tickets resolved</div>
 
-<div class="flow-h mt-12">
-<div class="node ghost" v-click="1">AI-assisted human</div>
-<div class="node ghost" v-click="1">Classify + deterministic workflow</div>
-<div class="node ghost" v-click="1">Fix the process</div>
-<div class="node ghost" v-click="1">Autonomous agent</div>
+<div class="kicker mt-12" v-click="1">
+344 describe the same checkout failure.
 </div>
 
-<div class="kicker" v-click="2">
-Maybe the agent still wins.<br>Now it <em>won</em> — instead of being assumed.
+<div class="qmark mt-12" v-click="2">
+We thought we had 344 support cases.<br>
+We had <mark class="mark-hot">one product problem</mark>, reported 344 times.
 </div>
 
 </div>
@@ -577,17 +517,67 @@ Maybe the agent still wins.<br>Now it <em>won</em> — instead of being assumed.
 <!--
 ~2:00
 
-- Same business, same money, different question.
+- Start with the first meaning of the number: workload successfully cleared.
+- Eight hundred tickets resolved. The support metric is green.
 
-**[1] the option space opens**
-- AI in the loop with a human.
-- Classify plus a boring deterministic workflow — frequently the right answer, and nobody gets to give a conference talk about it.
-- Or the 18 minutes is four minutes of work and fourteen hunting three systems for order history — in which case what you needed was one screen, not an agent.
-- Or a fully autonomous agent.
-- **Deliberately not another approval story.** Trap 2 already spent three and a half minutes on one. Slide 9 was a question that assumed a **policy**; this is a question that assumed a **solution**.
+**[1]**
+- Then reveal the repeated pattern: 344 customers describe the same checkout failure.
+- Pause. Give the room time to reclassify what it is seeing.
+- **The system found this cluster.** Do not make the AI implausibly blind; a good support system should detect repeated language and shared context.
 
-**[2]** Maybe the agent wins. Maybe it's obvious. Great.
-> "The point isn't less AI. The point is that it won on the merits instead of sneaking in through the phrasing of a question."
+**[2] — long pause after the second sentence**
+> “We thought we had 344 support cases. We had one product problem, reported 344 times.”
+
+- That is the turn. The work looked like hundreds of independent conversations only because we named the queue “support.”
+
+
+# Jim's Draft Script
+
+At the end of the week the number says: eight hundred tickets resolved. The support metric is green.
+
+But the system also clusters what it saw. Three hundred and forty-four of those customers were describing the same checkout failure.
+
+[Pause.]
+
+We thought we had 344 support cases.
+
+We had one product problem, reported 344 times.
+-->
+
+---
+layout: default
+class: statement-slide
+---
+
+# The system found the pattern.
+
+# The framing decided whether it was **the job**.
+
+<!--
+~1:30
+
+- Preempt the obvious objection: yes, a sophisticated support system should identify the cluster. Ours did.
+- The failure is not that AI missed the root cause.
+- The project was chartered, funded, measured, and owned as **support automation**. Its job was to resolve contacts quickly.
+- The repeated checkout defect appeared in a trend report, while the organization celebrated lower wait time and the product defect stayed in somebody else's backlog.
+> “The AI found the evidence. The framing decided what counted as the job.”
+
+- The hidden decision was not “use AI.” It was: **the product is fixed; support is where this problem lives.**
+- This is not mainly a capacity or metric trap. It is a framing trap: we mistook a stream of evidence about the product for a queue of independent work to complete.
+- The support system remains valuable. The question is whether resolving each contact also makes the recurring reason for contact impossible to ignore.
+
+
+# Jim's Draft Script
+
+And yes: a good system should notice that pattern. This one did.
+
+But we had chartered it as a support-automation project. We funded it, measured it, and assigned ownership around one job: resolve support contacts quickly.
+
+So the trend appeared in a report. Support celebrated the wait-time improvement. The checkout defect stayed in somebody else's backlog.
+
+The AI found the evidence. The framing decided what counted as the job.
+
+The question had already decided that the product was fixed, and support was where the problem lived.
 -->
 
 ---
@@ -616,13 +606,17 @@ It's very good at this. It just never volunteers.
 
 - A Monday-morning thing, and a **positive** use of AI, not a warning about it.
 - Before you ask AI for the design, spend ninety seconds asking it to attack the question.
+- Apply the prompts directly to the support story:
+  - What did “resolve support tickets” already assume?
+  - What if the current product is not a fixed constraint?
+  - Reframe the goal so repeated contact becomes evidence to remove the cause, not merely work to complete.
 
 **[1] [2] [3]** — read the three prompts
 
-- **ANECDOTE PLACEHOLDER (Q-03).** Currently invented — must be replaced with something that actually happened, or cut. The beat is: *I do this now and it's regularly annoying, which is how I know it's working.*
+- The value is the friction: if every answer confirms the framing, you have not challenged it yet.
 
 **[4]** The tool will not do this on its own. Ask a leading question, get a led answer.
-> "It is extremely agreeable, and that is the failure mode."
+> “It is extremely agreeable, and that is the failure mode.”
 
 → All three prompts are ways of forcing one question.
 -->
@@ -642,8 +636,9 @@ class: q-slide
 - **Pause. This is the conclusion of Trap 2.**
 > What did our question already decide?
 
-- The approval order may be right. The agent may be right. The service boundary may be right.
-- The trap is letting the wording make that decision before the evidence does.
+- The support system may be exactly right. The five-minute target may be right.
+- The trap was letting “support queue” decide that 344 reports were 344 pieces of support work instead of one product problem.
+- Make the framing win the argument instead of letting it skip the argument.
 
 → Now something more personal. If AI can explain unfamiliar systems, generate the code, and challenge the architecture this fast — what does that do to how *we* learn?
 -->
@@ -662,7 +657,7 @@ class: trap-slide dark-slide
 
 - Give this room.
 - Deliberately uncomfortable.
-- **ANECDOTE PLACEHOLDER (Q-03)** — *"I have caught myself doing the second one, recently and more than once."* Invented. Replace with something real or cut.
+- Both behaviors can produce working code. Only one keeps your judgment calibrated.
 > AI can take you from "I don't understand this" to "working code" without ever passing through "now I understand this."
 -->
 
@@ -1109,7 +1104,7 @@ class: fact-slide
 **[2]** So: **which hundred?**
 - *"Keep a human in the loop"* is not an answer to that question.
 > A person clicking Approve two thousand times is not supervision — it's a signature.
-- **ANECDOTE / ROOM CHECK (Q-03):** *"and everyone in this room has been that person"* — verify this lands as recognition, not accusation.
+- Many of us know what that feels like. Let the room recognize it without accusing them.
 - **Oversight does not scale just because action scaled.**
 
 **BRIEFLY — say these, don't put them on a slide:**
@@ -1179,6 +1174,7 @@ clicks: 5
 ~2:30
 
 - *"That's it. That's the talk."*
+- The traps were the **not that**. These five questions are the **do this**.
 - Reveal one at a time. Say each, with a brief callback to its trap. **Do not re-explain the traps.**
 
 **[1]** *What do we actually know?* — a great answer isn't evidence.

@@ -46,7 +46,7 @@ stage** (D-14). Every trap has the same shape:
 | Trap | The cost we removed | The job it was quietly doing |
 |---|---|---|
 | 1 | the effort of writing code and tests | manufacturing **independence** between the mistake and its check (D-58) |
-| 2 | the latency of a sequential approval chain | **layered review, and filtering** — the order *was* the control (D-49, D-50) |
+| 2 | the effort and delay of resolving repeated support contacts | making a recurring product failure **operationally painful enough to demand attention** (D-64) |
 | 3 | the difficulty of doing the work yourself | building **understanding and calibrated judgment** |
 | 4 | the scarcity of implementation capacity | **masking** where the real constraint always was |
 | 5 | the effort required to act | **bounding authority** — you could only do so much, so fast |
@@ -59,7 +59,7 @@ mention AI** — they were always questions about the human system.
 | # | Claim | Example | Question for Monday |
 |---|---|---|---|
 | 1 | A great answer doesn't mean you're right | Prorated refund requirement → impl + tests → green → wrong | *What do we actually know?* |
-| 2 | AI can solve the wrong problem really well | Refund escalation chain, parallelized | *What did our question already decide?* |
+| 2 | AI can solve the wrong problem really well | Excellent support automation; 344 “cases” reveal one checkout defect | *What did our question already decide?* |
 | 3 | Are you understanding faster, or avoiding understanding? | *Help me understand* / *Challenge my understanding* | *Am I understanding faster — or avoiding understanding?* |
 | 4 | Faster doesn't mean you should do more | The pipeline: one box got faster, end-to-end didn't | *What got faster — and where should that capacity go?* |
 | 5 | When AI gets it wrong, what is it allowed to do? | The authority ladder, ending at *issue the refund* | *What can it do when it's wrong?* |
@@ -73,16 +73,18 @@ we solving this problem at all?* Both now involve something undocumented, which 
 blur risk. The separating line is D-53's: **a missing rule makes the answer wrong; a missing
 rationale makes the question unchallengeable.**
 
-### One domain, deliberately
+### One customer journey, deliberately
 
-Refunds run through Traps 1, 2 and 5 as **one system** examined at different depths — the
-calculation, the approval chain, the authority to issue. Trap 5's top rung is the control
-Trap 2 quietly deleted, now handed to an AI (option 1 of the domain decision; R-15 open for
-the callback wording).
+Refunds anchor Traps 1 and 5 — the calculation and the authority to issue. Trap 2 stays
+adjacent in customer support: the same customer-service environment, but a cleaner
+mechanism than forcing another refund workflow to carry the argument (D-64). The proximity
+prevents narrative whiplash without requiring every trap to reuse the same process.
 
 ### Commitments that govern every change
 
 - **Every trap carries an explicit positive use of AI.** Not an AI-skeptical talk (D-30, R-03).
+- **The title is a contract:** each trap is the *not that*; its exact Monday question is
+  the *do this*. The opening promises that structure and the close names it (D-63).
 - **No new frameworks, taxonomies, matrices or maturity models** (D-17). The deck is at its
   conceptual load limit. XP is a *lineage*, not a practice checklist (D-59).
 - **Three layers stay separate:** what is on screen · what is said · what the speaker
@@ -97,16 +99,17 @@ the callback wording).
 
 - **Trap 1, slide 5** — the green build flips orange as the real rule lands; *"one check,
   forty-seven times"* delivered pointing at `47 passing` (D-58).
-- **Trap 2, slide 9** — sequential→parallel restack on click 2 with the volumes visibly
-  going `200→2,000` and `20→2,000` unremarked; arrows returning orange at click 4;
-  *"it was on the screen the whole time"* (D-45, D-49, D-50, D-53).
+- **Trap 2, slides 10–12** — the support system must first feel unequivocally successful;
+  slide 11 then reclassifies `344 support cases` as **one product problem reported 344
+  times**; slide 12 makes explicit that the AI found the pattern and the framing decided
+  whether it was the job (D-64).
 - **Trap 5, slide 26** — the authority ladder escalating one rung per click, cold.
 - **The close** — five questions on slide 30 → Sowell callback → *"The goal isn't maximum AI."* **No
   re-summary after it** (D-16).
 
 ### Current state
 
-32 slides · ~50:30 planned. Every trap ends on its exact Monday question (D-61).
+32 slides · ~48:45 planned. Every trap ends on its exact Monday question (D-61).
 Opening through Trap 2 is presentation-quality.
 Traps 3–5 have had a structural pass but not a full narrative one. Nothing has been
 rehearsed against a clock (R-09) — **every timing number in this deck is a guess.**
@@ -1288,6 +1291,66 @@ while ease of access remains distinct from permission.
 **Rejected:** defending the original wording by explaining *invariant* more carefully.
 The technical term was not the problem; the unsupported claim that nobody interpreted it
 was.
+
+---
+
+### D-63 · The session promise is trap → better use → Monday question
+**Decided** 2026-09-01 · **Status** Active
+
+The title's *Do This, Not That* is a contract, not decoration. Each trap supplies the
+tempting default to stop, an explicit positive use of AI, and one exact question the
+audience can use on Monday. The opening now promises that structure; slide 30 pays it off
+plainly: the traps were the *not that*, and the five questions are the *do this*.
+
+Unverified first-person anecdotes do not support that contract. The three story
+placeholders in Traps 2, 3, and 5 were removed rather than spoken as if they happened.
+Concrete examples remain, but the deck no longer borrows credibility from invented scar
+tissue.
+
+**Why:** the deck already contained the practical moves, but the title-to-close mapping was
+implicit. Making it explicit costs seconds and lets the audience judge whether the session
+delivered what it promised. Truthfulness matters more than the warmth of an anecdote.
+
+**Rejected:** adding five new *Do / Don't* slides or another checklist. That would restate
+the talk, add minutes, and violate the framework cap (D-17).
+
+---
+
+### D-64 · Trap 2 uses the support queue as a product-feedback sensor
+**Decided** 2026-09-02 · **Status** Active
+
+**Supersedes as the active implementation:** D-44, D-45, D-49, D-50, D-53, and D-55.
+Those entries remain as history; their refund-approval and greenfield-agent examples are no
+longer in the deck.
+
+Trap 2 begins with a business goal that does not presuppose AI: customers wait eighteen
+hours for support and should receive a correct resolution in under five minutes, at any
+time. AI then enters as a credible solution and succeeds completely. It reads the request,
+retrieves context, applies policy, takes permitted action, explains the result, and cuts the
+wait to minutes.
+
+The reveal is that 344 of 800 resolved contacts describe the same checkout failure:
+
+> We thought we had 344 support cases. We had one product problem, reported 344 times.
+
+The system **does identify the cluster**. The failure is not model blindness. The project
+was chartered, owned, and measured as support automation, so the product signal lands in a
+report while the recurring defect remains outside the job. The mechanism line is:
+
+> The AI found the evidence. The framing decided what counted as the job.
+
+**Why this replaces the approval chain:** parallelizing Agent → Supervisor → Finance looked
+obviously irrational to the room before the reveal. Trap 2 requires the audience to admire
+the answer before discovering what the question already decided. The support system earns
+that admiration cleanly, and customer support is close enough to refunds to avoid narrative
+whiplash. Clarity of purpose matters more than exact single-process symmetry.
+
+The spoken setup may use any of these natural business formulations: restore service after
+volume doubles without doubling the team; stop making customers contact support twice for
+a routine issue; or reduce an eighteen-hour wait to under five minutes. They belong in the
+speaker notes, not together on screen, and none begins with “How can AI…?”
+
+**Cost:** Trap 2 is ~9:00; the full deck is ~48:45 before rehearsal.
 
 ---
 

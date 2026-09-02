@@ -28,7 +28,8 @@ or prompt technique. All of that will be wrong by the time you get home.
 It's about mistakes I'm watching us make — mistakes I've made — as AI changes
 how we build systems and how we run technology organizations.
 
-Five of them. And a question for each one you can actually use on Monday.
+Five of them. In each one: a tempting default to stop, a better use of AI,
+and one question you can actually use on Monday.
 ```
 
 
@@ -204,199 +205,123 @@ Now suppose the answer really is right. We can still have a much bigger problem.
 ```
 ~0:30
 
-This is an escalation from Trap 1, and it's the one I think about most.
+Let's stay in the same customer-service world as the refund example, but move
+one step outward: from one refund decision to the support queue around the
+product.
 
-In Trap 1 the answer might be wrong. Here, I want you to assume the answer is
-completely, verifiably RIGHT. Excellent, even.
+In Trap 1 the answer might be wrong. Here, assume the answer is completely,
+verifiably RIGHT. Excellent, even.
 
-And it doesn't help.
+The system does exactly what we asked. That is what makes the trap possible.
 ```
 
 
-## Slide 9 · Refund approval / escalation chain
-
-```
-~4:15
-
-Somebody asks AI this. Completely reasonable question — refunds are slow, customers are
-annoyed, somebody owns that metric.
-
-Walk the chain first, out loud, and use the organization's OWN words for it: "Three approvals. The agent who takes the call. Their supervisor. Somebody in finance. That's what the wiki says. That's what everybody calls it."
-
-Then read the numbers, flatly, like housekeeping. Do NOT make anything of them yet: "Two thousand refunds a week. Two hundred reach a supervisor. Twenty reach finance."
-
-That is the whole trick of this slide. The evidence is on screen from the first frame, stated in a bored voice, and the room files it as scene-setting.
-
-Everyone here has worked in a company like this.
-
-And AI gives you a genuinely good answer.
-
-[click 1] Route by amount and risk score, so the easy ones move.
-
-Note what just happened, lightly — pay it off at the reveal, don't spend it now: AI just reconstructed a threshold policy out of the two variables it could see in the data. Amount, and risk. It's plausible. It looks like an improvement.
-
-[click 2 — THE DIAGRAM RESTACKS. Stop talking. Let them watch it happen. Then:]
-And this one is actually clever. Those three approvals were happening in SEQUENCE — the supervisor can't look at it until the agent is done, finance can't look until the supervisor is done. They don't have to. Run them at the same time.
-
-It's free. It genuinely works. Cycle time drops, maybe a lot.
-
-[DO NOT point at the numbers. They just changed, in front of everybody, and the job right now is to be pleased about the cycle time. If somebody in the room calls it out here — that is the best possible outcome. Say "hold that" and keep going.]
-
-[click 3] Reminders, escalation, an exception queue for the weird ones, a dashboard so nothing sits in an inbox for three days invisibly.
-
-Every one of those is a real improvement. If someone brought me this I would say yes, do it. I would have said yes.
-
-Let's stipulate: this is right. Trap 1 does not apply. We checked it.
-
-[click 4 — everything grays out, and THE ARROWS COME BACK, in orange, running down the stack. Long pause. Let them read it.]
-
-Why were they in that order?
-
-[Wait. Do not fill the silence. Then:]
-
-Because it was never three approvals. It was an escalation chain.
-
-The agent handled the refund. The supervisor saw the ones the agent escalated. Finance saw the ones the supervisor escalated. Each level reviewing the level beneath it — and each level seeing a fraction of what the level beneath it saw.
-
-[NOW point at the numbers. This is the moment the slide exists for:]
-
-Two thousand. Two hundred. Twenty.
-
-That is not three people doing the same job slowly. That is a funnel. The order was the control — and the numbers were the proof, and they have been on this screen since before I said a word.
-
-[point at the three 2,000s]
-
-Look at them now.
-
-It was on the screen the whole time. We were watching the cycle time.
-
-That order wasn't latency. That order was the control, and it was the filter. We deleted both — and the deletion was visible, in the moment, to anyone who was looking at the right number.
-
-[click 5 — the consequence appears. This is the proof, and it is the best beat on the slide. Do not rush it.]
-
-Here's how you find out. Not from the dashboard — the dashboard is green, cycle time is down, that was the metric.
-
-You find out because a week after this ships, the supervisor and the finance team are drowning. Two hundred to two thousand. Twenty to two thousand. A hundred-fold increase in finance's workload, and it shipped as a performance improvement.
-
-And listen to what that complaint sounds like when it arrives: "we don't have enough people." It gets filed as a capacity problem. It gets a headcount request, or a prioritization filter, or — and this is the part that should worry you — somebody suggests using AI to triage the queue.
-
-Nobody in that conversation says the word "control." The governance is gone and the ticket says CAPACITY.
-
-[THE MECHANISM — this is the actual point of Trap 2, land it clearly:]
-
-So why didn't anyone catch it? Not because the AI was bad — and notice, not because the information was missing either. The volumes were right there. AI could have read them.
-
-Because the REASON for that order was never written down.
-
-In Trap 1 the missing thing was a rule — nobody wrote down that the setup fee isn't refundable, so the answer came out wrong. Here the missing thing is a rationale. Every fact you needed was available. What was missing was why anybody had arranged them that way, and without that, the question went unchallenged.
-
-A missing rule makes the answer wrong. A missing rationale makes the question unchallengeable.
-
-It isn't in the code. It isn't in the ticket. It isn't on the wiki — the wiki says "three approvals." It was in the head of whoever set those thresholds, probably after something went wrong, and they left in 2019.
-
-AI cannot ask about a constraint nobody recorded. Neither can a new architect. Neither can a new dev team. Neither could you, on your first week.
-
-That's the trap. It is not an AI problem — AI just made it fast. What we typed, "how do we speed up refund approvals," handed AI a description of a process and asked it to make the description faster. And it did, beautifully.
-
-Nobody typed "the order doesn't mean anything." It just came along.
-
-To be fair: maybe there are excellent reasons to change it. Maybe the thresholds are twenty years stale and the whole chain should go. Segregation of duties is a real control and I am not telling you to delete it, and I am not telling you to keep it. I am telling you that nobody in this story ever made that decision. It got made anyway.
-
-[ONE sentence. Do not expand — it is a different talk:]
-And if you're thinking "the supervisor was rubber-stamping it anyway" — probably. Which
-means we automated the process on the wiki, not the one people were actually running.
-
-FOR THE ENGINEERS — take the laugh, then generalize. ~45 seconds. This is one of only three planned laughs in the deck (D-54); do not add a fourth here.
-
-Same story, different vocabulary. Somebody asks: how do we keep these two services consistent?
-
-And AI gives you a BEAUTIFUL plan. Kafka. An outbox table. Idempotency keys. Retries with backoff. A dead-letter queue.
-
-[beat]
-
-And a runbook for the dead-letter queue.
-
-[beat — let it land]
-
-And I'll be honest with you: that is a genuinely fun afternoon. I would enjoy building that. Some of you are enjoying it right now, just hearing the list.
-
-[beat]
-
-Nobody asked why these two services need a long-distance relationship.
-
-[Then straight to the principle, no dwelling — the laugh is the delivery mechanism, not the point:]
-
-CAP didn't change. If the boundary is real, every one of those things is real and you need all of it. But the boundary was a design choice somebody made in a meeting, and the excellent answer to "how do we keep these consistent" never once asks why there are two.
-
-THE RULE FOR THIS JOKE (D-54): the target is our own appetite for complexity — mine included. Never a role, never a team. The moment it points at architects or finance or PMs it stops being solidarity and starts being contempt, and the room goes with it.
-```
-
-
-## Slide 10 · The constraint might be exactly right
-
-```
-~1:00
-
-That's the whole move. Not "approvals bad." Not "microservices bad." Not "less AI."
-
-A question can quietly contain a decision before the AI ever answers it. And
-because the answer is so good, the decision never gets examined — the quality of
-the answer becomes evidence that the question was right.
-
-Which, by the way, is exactly the failure mode I'd be reproducing if I built a
-very sophisticated talk and treated its sophistication as proof the framing
-was correct.
-
-And this is not just a legacy problem. It's worse on greenfield.
-```
-
-
-## Slide 11 · Greenfield: how should we build our agent?
+## Slide 9 · The business goal
 
 ```
 ~1:30
 
-Here's the greenfield version, and I think it's more dangerous because there's
-no legacy system to blame.
+Do not mention AI yet. Start with a problem any reasonable business would want
+fixed.
 
-Read it. It sounds like the beginning of a design conversation.
+Let's stay with the same customer. The refund may be straightforward, but
+getting help is not.
 
-It's the end of one.
+Support volume has doubled. Customers are waiting until the next day, and some
+have to contact us twice to get a routine problem resolved.
+
+That is a real problem. Restore the service level without doubling the team.
 
 [click]
 
-We decided "agent" before we said a single word about the problem. Everything
-downstream — the framework evaluation, the tool-calling design, the eval
-harness, six months of roadmap — is now in service of a noun somebody typed
-without noticing.
+Get the customer a correct resolution in under five minutes, any time of day.
+
+Those are alternate formulations to work into the spoken setup, not three
+requirements to recite mechanically. The important move is that they describe
+the business pressure without saying “How can AI…?” AI enters as a credible
+answer, not as a premise hidden inside the question.
 ```
 
 
-## Slide 12 · The problem underneath
+## Slide 10 · The system we built
 
 ```
 ~2:00
 
-Same business, same money, different question.
+So we build the system people are hoping AI can become.
 
-[click 1] And now the option space opens up. AI in the loop with a human.
-Classification plus a boring deterministic workflow — which is frequently the
-right answer and nobody gets to give a conference talk about it. Or maybe the 18
-minutes is four minutes of work and fourteen minutes of the agent hunting through three
-systems for the customer's order history — in which case what you needed was one screen,
-not an agent.
+It reads what the customer wrote, pulls the account and order context, applies
+the policy, takes the action it is allowed to take, and explains what happened.
+If it is genuinely uncertain, it escalates.
 
-[Deliberately NOT another approval story. Trap 2 has already spent three and a half
-minutes on an approval chain; repeating it here makes the greenfield example read as the
-same joke told twice. This one has to be a different KIND of hidden decision — slide 9
-was a question that assumed a policy, this is a question that assumed a solution.]
+And it works. Correct answers. Personalized. Available around the clock. Trap 1
+does not apply here.
 
-Or a fully autonomous agent.
+[click 1]
 
-[click 2] And genuinely — maybe the agent wins. Maybe it's obvious. Great.
+The wait drops from eighteen hours to under five minutes.
 
-The point isn't less AI. The point is that it won on the merits instead of
-sneaking in through the phrasing of a question.
+[click 2]
+
+If someone brought me that result, I would say yes.
+
+Do not foreshadow a hidden model failure. Let this feel like a win, because it
+is one.
+```
+
+
+## Slide 11 · One week of support
+
+```
+~2:00
+
+At the end of the week the number says: eight hundred tickets resolved. The
+support metric is green.
+
+[click 1]
+
+But the system also clusters what it saw. Three hundred and forty-four of those
+customers were describing the same checkout failure.
+
+[Pause. Give the room time to reclassify what it is seeing.]
+
+[click 2]
+
+We thought we had 344 support cases.
+
+We had one product problem, reported 344 times.
+
+[Long pause.]
+
+The system found the cluster. Do not make the AI implausibly blind; a good
+support system should detect repeated language and shared context. The turn is
+that the work looked like hundreds of independent conversations because we
+named the queue “support.”
+```
+
+
+## Slide 12 · The framing decided whether it was the job
+
+```
+~1:30
+
+And yes: a good system should notice that pattern. This one did.
+
+But we had chartered it as a support-automation project. We funded it, measured
+it, and assigned ownership around one job: resolve support contacts quickly.
+
+So the trend appeared in a report. Support celebrated the wait-time
+improvement. The checkout defect stayed in somebody else's backlog.
+
+The AI found the evidence. The framing decided what counted as the job.
+
+The question had already decided that the product was fixed, and support was
+where the problem lived.
+
+This is not mainly a capacity or metric trap. We mistook a stream of evidence
+about the product for a queue of independent work to complete. The support
+system is still valuable; the question is whether resolving each contact also
+makes the recurring reason for contact impossible to ignore.
 ```
 
 
@@ -411,11 +336,15 @@ about it.
 Before you ask AI for the design, spend ninety seconds asking it to attack the
 question.
 
+[Apply the prompts directly to the support story: What did “resolve support
+tickets” already assume? What if the current product is not a fixed constraint?
+Reframe the goal so repeated contact becomes evidence to remove the cause, not
+merely work to complete.]
+
 [clicks]
 
-I do this now and it is regularly annoying, which is how I know it's working.
-Last time it told me that the word "sync" in my question had already committed
-me to a direction I hadn't thought about.
+The value is the friction. If every answer confirms the framing, you have not
+challenged it yet.
 
 [click 4] The tool will not do this on its own. Ask a leading question, get a
 led answer. It is extremely agreeable and that is the failure mode.
@@ -433,7 +362,11 @@ Pause. This is the conclusion of Trap 2.
 
 What did our question already decide?
 
-The approval order may be right. The agent may be right. The service boundary may be right. The trap is letting the wording make that decision before the evidence does.
+The support system may be exactly right. The five-minute target may be right.
+The trap was letting “support queue” decide that 344 reports were 344 pieces of
+support work instead of one product problem.
+
+Make the framing win the argument instead of letting it skip the argument.
 
 TRANSITION:
 Now something more personal. If AI can explain unfamiliar systems, generate the code, and challenge the architecture this fast — what does that do to how WE learn?
@@ -447,8 +380,8 @@ Now something more personal. If AI can explain unfamiliar systems, generate the 
 
 Give this room.
 
-This one is deliberately uncomfortable and I'm including it because I have
-caught myself doing the second one — recently, and more than once.
+This one is deliberately uncomfortable because both behaviors can produce
+working code. Only one keeps your judgment calibrated.
 
 AI can take you from "I don't understand this" to "working code" without ever
 passing through "now I understand this."
@@ -759,7 +692,7 @@ Here's the arithmetic nobody does.
 
 [click 2] So: which hundred?
 
-"Keep a human in the loop" is not an answer to that question. A person clicking Approve two thousand times is not supervision — it's a signature, and everyone in this room has been that person.
+"Keep a human in the loop" is not an answer to that question. A person clicking Approve two thousand times is not supervision — it's a signature. Many of us know what that feels like.
 
 Oversight does not scale just because action scaled.
 
@@ -810,6 +743,8 @@ Five traps. Five questions.
 ~2:30
 
 That's it. That's the talk.
+
+The traps were the "not that." These five questions are the "do this."
 
 [reveal one at a time, say each one, brief callback to its trap]
 

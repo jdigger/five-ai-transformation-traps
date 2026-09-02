@@ -15,8 +15,8 @@ Everything still in flux for **The Five Biggest AI Transformation Traps**.
 
 ## Needs a decision
 
-### Q-01 🟡 The talk is over budget: 50:30 planned against a 45–47 min target
-The speaker-note tally sums to **50:30** across 31 timed slides, and note-time is
+### Q-01 🟡 The talk is over budget: 48:45 planned against a 45–47 min target
+The speaker-note tally sums to **48:45** across 31 timed slides, and note-time is
 systematically optimistic — a live room, a laugh, and pauses on the three money slides
 will push the delivery longer.
 
@@ -27,17 +27,18 @@ slack exist. That halves the cut and changes where it comes from.
 |---|---|---|
 | Opening | 1–3 | 4:15 |
 | Trap 1 | 4–7 | 7:30 |
-| Trap 2 | 8–14 | 10:45 |
+| Trap 2 | 8–14 | 9:00 |
 | Trap 3 | 15–19 | 7:45 |
 | Trap 4 | 20–24 | 7:30 |
 | Trap 5 | 25–29 | 8:30 |
 | Close | 30–32 | 4:15 |
 
-*Recomputed from the note markers 2026-08-31 after D-61. Slide 32 is deliberately
+*Recomputed from the note markers 2026-09-02 after D-64. Slide 32 is deliberately
 untimed, so 31 slides carry markers.*
 
 **Current plan — rehearse before choosing the remaining cut.** D-60 removed two minutes
-from Trap 2 on quality grounds. The deck still needs roughly 3:30 to reach the top of the
+from Trap 2 on quality grounds, and D-64's cleaner example removed another 1:45. The deck
+still needs roughly 1:45 to reach the top of the
 target range, and note-time is optimistic. Trap 3 remains dense, but R-01 explicitly
 warns against treating it as the automatic source of every remaining minute.
 
@@ -45,7 +46,7 @@ warns against treating it as the automatic source of every remaining minute.
 "ask it to attack your framing" prompt slide, and Trap 4's capacity/2× pair. If any of
 them goes, it goes because it isn't earning its place — not to buy minutes.
 
-**Do not cut:** the Trap 1 refund loop, the Trap 2 architecture reveal, the Trap 5
+**Do not cut:** the Trap 1 refund loop, Trap 2's `344 cases → one product problem` reveal, the Trap 5
 ladder. Those are the three slides the talk is built on.
 
 **Blocked on rehearsal.** Every number in the table above is a guess made while writing
@@ -54,24 +55,6 @@ remaining cut comes from.
 
 **Q-08 and Q-09 no longer compete with the trim** (D-47) — both are affordable. They
 still have to earn their place in Trap 3, and that is decided during the pass.
-
----
-
-### Q-03 🟡 The first-person stories are placeholders and need to be true
-Several notes currently contain invented anecdotes written as if they were the speaker's:
-
-- Trap 3 intro: *"I have caught myself doing the second one — recently, and more than once."*
-- Trap 2 framing slide: *"Last time it told me that the word 'sync' in my question had
-  already committed me to a direction I hadn't thought about."*
-- Trap 5: *"everyone in this room has been that person"* (clicking Approve)
-
-**These must be replaced with things that actually happened, or removed.** A talk like this
-lives on the speaker's real scar tissue, and 30 years of it is the single biggest asset
-here that nothing else in the deck can substitute for.
-
-**Highest-value places for a real story:** Trap 1 (a check that couldn't have caught the
-mistake), Trap 4 (a constraint that moved and everyone celebrated the wrong number), Trap 5
-(authority granted before anyone thought about it).
 
 ---
 
@@ -291,15 +274,6 @@ grew to 7:30.
 **Recommendation:** decide at rehearsal — specifically, whether the spoken version lands
 without visual support. If it does, leave it alone.
 
-### R-05 ⚪ The Trap 2 gray-out is mitigated but still unverified on real hardware
-Raised from 16% to 30% (D-46) and verified in the browser at slide 9, click 4 — the
-chain recedes without disappearing. That is insurance taken blind, not a test.
-
-**Action:** if a tech check is possible, look at slide 9 click 4 on the actual screen. If
-the ghost still washes out, go to ~45% rather than redesigning the slide. If the room
-turns out to be dark with a good screen, 30% is slightly safe and could go back toward
-20% for a harder gut-punch — but only with the hardware in front of you.
-
 ### R-06 ⚪ Invented numbers may be quoted back as real
 Largely mitigated. The numbers stay invented and the speaker says so (D-48), **and the
 slide now carries `illustrative figures, not measured` on screen** (D-56), so the caveat
@@ -310,41 +284,6 @@ no-recording decision removes the clip risk entirely.
 **Residual watch:** the qualifier is small by design. If the deck is shared as images or
 re-used in someone else's slides, it could still be cropped out. Not worth making it
 uglier; worth knowing.
-
-### R-10 🟡 Trap 2's two examples now sit in the same domain
-Both the approval chain (D-44) and the greenfield agent question (D-22) are customer-service
-problems, back to back. Risk: they read as the same joke told twice.
-
-They are genuinely different kinds of hidden decision — the first is a question that assumed
-a **policy**, the second is a question that assumed a **solution** — and that distinction is
-what makes the pair worth more than either alone. But it is currently only implicit.
-
-**Action:** make the speaker notes name the difference explicitly at the transition, and
-watch for it in rehearsal. If the room does not feel the second one as a new idea, move the
-greenfield example out of customer service rather than cutting it.
-
-**Update 2026-08-25:** unresolved and now worse — Trap 2 holds *three* customer-service
-scenarios, and slide 12 restates slide 9's approval point outright. See R-16.
-
-### R-15 🟡 Trap 5's ladder quietly contradicts Trap 2 — or could become its payoff
-Slide 26's top rung is **"Issue the refund"** — autonomously, by an AI. Trap 2 spent 3:30
-establishing that refunds at this company move through a layered human escalation chain.
-As written, the two never acknowledge each other.
-
-**This is an opportunity, not just a defect.** If it is the same company, Trap 5's top rung
-is the control that Trap 2 quietly deleted, now handed to an AI. That is a genuine
-narrative callback across three traps, and it costs one sentence.
-
-**Careful:** D-14 refuses to explain the *trap progression* to the audience. This is not
-that — it is a concrete callback inside the example domain, not a meta-explanation of
-structure. But it must stay one sentence or it becomes the thing D-14 forbids.
-
-### R-17 ⚪ An unexploited handoff from Trap 2 into Trap 4
-Slide 9's click 5 now ends on *"the ticket says CAPACITY."* Trap 4 is titled *Faster
-Doesn't Mean You Should Do More* and is entirely about capacity and where it goes.
-
-Nothing connects them. One transition sentence would make Trap 4 arrive as something the
-deck already earned rather than a new subject.
 
 ### R-07 ⚪ Trap 4 is the most likely source of a hostile question
 Putting *"If developers are 2× as productive, why do we need this many developers?"* on
@@ -371,7 +310,7 @@ even with D-47's slack.
 ## Only a rehearsal will resolve these
 
 - Whether the Trap 1 refund loop needs six clicks or is too slow
-- Whether the Trap 2 gray-out lands as a gut-punch or reads as a slide malfunction
+- Whether Trap 2's `344 cases → one product problem` pause gives the room enough time to reclassify the work
 - Whether the Trap 5 ladder earns 2:30 of silence-and-clicking
 - Whether the five closing questions land as a callback or a summary (D-16 forbids summary)
 - Whether Trap 3's two-column *Help me / Challenge me* slide is self-evident or needs setup
@@ -383,6 +322,10 @@ even with D-47's slack.
 
 | Was | Now | Resolved |
 |---|---|---|
+| Trap 2's refund-approval optimization looked irrational before its reveal | D-64 — excellent support automation wins first; 344 contacts then reveal one product defect | 2026-09-02 |
+| R-05 — Trap 2's gray-out needed projector verification | D-64 — the gray-out and approval-chain slide were removed | 2026-09-02 |
+| R-10/R-15/R-17 — duplicated customer-service examples and approval-chain callbacks created cross-trap tension | D-64 — Trap 2 now stays adjacent to refunds without reusing their approval mechanism | 2026-09-02 |
+| Q-03 — three invented anecdote placeholders remained in the spoken track | D-63 — removed them; future personal stories must be true | 2026-09-01 |
 | Trap 1 had no example of its own; it borrowed Trap 2's architecture | D-19 — Trap 1 owns the refund-requirement loop | 2026-08-23 |
 | Inference vs enforcement specified but never built | D-23 — one slide inside Trap 2 | 2026-08-23 |
 | Prompt injection specified but never built | D-24 — one slide, framed as a framing problem | 2026-08-23 |
