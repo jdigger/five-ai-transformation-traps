@@ -1,18 +1,18 @@
 # Script — long-form
 
-**This is not what shows on the lectern screen.** The speaker notes in `slides.md` are
-scannable cues for live delivery; this file is the long-form prose they were distilled
-from — the full arguments, the qualifications in their complete form, and the red-team
-answers written out.
+**Not a rehearsal source. Not spoken from.** The talk is delivered from the speaker
+notes in `slides.md`, which now lead with the draft script for each slide and keep the
+supporting material behind it. That file is the source of truth for what gets said.
 
-**What it is for**
-- Estimating timing (the `~M:SS` markers are authoritative in `slides.md`, not here)
-- Preparing — read this in the days before, not at the lectern
-- The source material for any shared rollup (Q-06)
+**What this file is for**
+- Timing rollups and structure at a glance (the `~M:SS` markers are authoritative in
+  `slides.md`, not here)
+- Reference prose for the full arguments, complete qualifications, and red-team answers
+- Source material for any shared write-up (Q-06)
 
-**Drift.** This file is the *argument of record*, not a word-for-word mirror. Update it
-when the reasoning changes, not when a phrase is retuned. If the two disagree about what
-the talk is *arguing*, this file is wrong and should be fixed.
+**Drift is expected and acceptable.** Do not sync this file phrase-by-phrase against
+`slides.md` — the wording there wins, always. Update this only when the underlying
+*reasoning* changes.
 
 ---
 

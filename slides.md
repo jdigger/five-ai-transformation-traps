@@ -211,6 +211,35 @@ Finance meant: unused <em>whole days</em> only —<br>and the setup fee is never
 <!--
 ~3:30 — the money slide of Trap 1. Do not rush the clicks.
 
+
+Here we go: Standard story card. {read}
+
+Let's take advantage of AI's amazing abilities...
+{impl}
+{tests}
+{green}
+
+Sweet! I'm not going to unnecessarily go back to writing code when the code it generates is generally better - especially as the models get better - than I could anyway.
+
+Or, OMG, all those tedious tests.
+
+However, you must be thinking, "There MUST be something wrong here..." Yep. What is it?
+
+I'll give you a clue: It's NOT that the AI wrote the code and tests, or that the story card was wrong...
+
+{when the 47 passing turns red}
+
+Ok, fine. So we were testing all the right things. With 47 tests, no less. But it was for what we knew. We can't "blame" the AI for that. And a human - especially one that doesn't know rules finance hadn't stated - would likely make the same mistake.
+
+And that's what makes this interesting. Humans are slower and more unreliable, while AI is much faster and more precise — and it happily does work we don't want to do.
+
+That's wonderful. It also changes the trade-offs. We'll get back to that...
+
+Until then, let's look at how we can identify and fix the issues.
+
+
+# Supporting Notes
+
 - Read the requirement out loud. Ask the room: does anybody see a problem with that sentence?
 - They won't. It's a perfectly normal requirement. **That's the point.**
 
@@ -237,33 +266,6 @@ Finance meant: unused <em>whole days</em> only —<br>and the setup fee is never
 - **That's the qualitative change.** Not that AI is wrong more often. That the *amount* of evidence went up while the *independence* of it went to zero — and every artifact in front of you still says "verified."
 
 → So what would count as evidence that didn't come from that sentence?
-
-# Jim's Rough Script
-
-Here we go: Standard story card. {read}
-
-Let's take advantage of AI's amazing abilities...
-{impl}
-{tests}
-{green}
-
-Sweet! I'm not going to unnecessarily go back to writing code when the code it generates is generally better - especially as the models get better - than I could anyway.
-
-Or, OMG, all those tedious tests.
-
-However, you must be thinking, "There MUST be something wrong here..." Yep. What is it?
-
-I'll give you a clue: It's NOT that the AI wrote the code and tests, or that the story card was wrong...
-
-{when the 47 passing turns red}
-
-Ok, fine. So we were testing all the right things. With 47 tests, no less. But it was for what we knew. We can't "blame" the AI for that. And a human - especially one that doesn't know rules finance hadn't stated - would likely make the same mistake.
-
-And that's what makes this interesting. Humans are slower and more unreliable, while AI is much faster and more precise — and it happily does work we don't want to do.
-
-That's wonderful. It also changes the trade-offs. We'll get back to that...
-
-Until then, let's look at how we can identify and fix the issues.
 -->
 
 ---
@@ -294,38 +296,6 @@ Use AI to challenge your thinking —<br>then use evidence to challenge both of 
 <!--
 ~2:00
 
-- **Frame these as one thing:** three ways to buy back the independence we just lost. Not a checklist of good practices.
-- What they share: **none of them come from the implementation's reading of this requirement.**
-
-**[1] A check from a different source**
-- Suppose the ledger already carries a separately established `refundableBalance`. Checking `refundAmount <= refundableBalance` is just a cheap boolean comparison once that rule exists.
-- **Do not call it obvious or interpretation-free.** People still had to decide what counts as refundable, and that rule can still be wrong.
-> The independence comes from provenance: the implementation came from this sentence; the constraint came from somewhere else.
-- It does not prove the whole policy is right. It gives one independently sourced fact a chance to contradict the implementation.
-
-**[2] Replay** — the strongest, and now trivially cheap, which is itself a thing AI changed. Ninety days of real cancellations, diffed against what finance actually paid.
-- Independence comes from **history**. It was generated before anyone wrote this prompt, by a system that didn't read our sentence.
-- AI makes obtaining and comparing that history much easier: a quick script or appropriately controlled access through a tool can do work that once required a specialist and a long queue.
-- **Keep the parenthetical short:** access controls still apply. Ease of access is not permission.
-> Reality already ran the experiment. We just have to go read the results.
-
-**[3]** The cheapest one is still a human being. Ten examples, thirty minutes, the person who owns the policy.
-- Independence comes from a **different reader** — the one whose understanding is the one that counts.
-
-**[4]** Use AI to challenge your thinking — attack the design, generate tests, find edge cases. Then use evidence to challenge both of you.
-- **Fresh context matters** (the cheap version of TDD's ordering): "write the implementation, now write the tests" in one session is maximum contamination. Generating tests from the requirement in a *new* context, before the implementation exists, is meaningfully better evidence for the same effort.
-
-- **Lineage, one sentence — do not expand here, Trap 3 carries it:** none of this is new. Pairing, test-first, an on-site customer — XP built all of it to manufacture exactly this independence. We're rediscovering why, at a moment when it got cheaper and more necessary at the same time.
-
-**PROPORTIONALITY — say this out loud, it matters:**
-- Don't do all three for a throwaway prototype. Budget is set by *how sure do we need to be?* and *how bad is it if we're wrong?*
-- A refund calculator earns the replay. A spike you're deleting Friday does not. Spending ten dollars to verify a ten-cent experiment is also an engineering failure.
-
-- → These techniques differ, but they force the same question.
-
-
-
-# Jim Draft Script
 
 There are going to be rules that don't need to be included because they've already been established and enforced with normal system design approaches.
 
@@ -354,6 +324,38 @@ Doing that would also help identify the best samples for your domain expert.
 **This is obviously overkill for most things.** But when you're talking about something like money going out the door, you really want to be sure.
 
 It's our job as product owners and engineers to know when "vibe coding" is perfect - low stakes, just get it out. Or true design, process, and data validation are needed.
+
+
+# Supporting Notes
+
+- **Frame these as one thing:** three ways to buy back the independence we just lost. Not a checklist of good practices.
+- What they share: **none of them come from the implementation's reading of this requirement.**
+
+**[1] A check from a different source**
+- Suppose the ledger already carries a separately established `refundableBalance`. Checking `refundAmount <= refundableBalance` is just a cheap boolean comparison once that rule exists.
+- **Do not call it obvious or interpretation-free.** People still had to decide what counts as refundable, and that rule can still be wrong.
+> The independence comes from provenance: the implementation came from this sentence; the constraint came from somewhere else.
+- It does not prove the whole policy is right. It gives one independently sourced fact a chance to contradict the implementation.
+
+**[2] Replay** — the strongest, and now trivially cheap, which is itself a thing AI changed. Ninety days of real cancellations, diffed against what finance actually paid.
+- Independence comes from **history**. It was generated before anyone wrote this prompt, by a system that didn't read our sentence.
+- AI makes obtaining and comparing that history much easier: a quick script or appropriately controlled access through a tool can do work that once required a specialist and a long queue.
+- **Keep the parenthetical short:** access controls still apply. Ease of access is not permission.
+> Reality already ran the experiment. We just have to go read the results.
+
+**[3]** The cheapest one is still a human being. Ten examples, thirty minutes, the person who owns the policy.
+- Independence comes from a **different reader** — the one whose understanding is the one that counts.
+
+**[4]** Use AI to challenge your thinking — attack the design, generate tests, find edge cases. Then use evidence to challenge both of you.
+- **Fresh context matters** (the cheap version of TDD's ordering): "write the implementation, now write the tests" in one session is maximum contamination. Generating tests from the requirement in a *new* context, before the implementation exists, is meaningfully better evidence for the same effort.
+
+- **Lineage, one sentence — do not expand here, Trap 3 carries it:** none of this is new. Pairing, test-first, an on-site customer — XP built all of it to manufacture exactly this independence. We're rediscovering why, at a moment when it got cheaper and more necessary at the same time.
+
+**PROPORTIONALITY — say this out loud, it matters:**
+- Don't do all three for a throwaway prototype. Budget is set by *how sure do we need to be?* and *how bad is it if we're wrong?*
+- A refund calculator earns the replay. A spike you're deleting Friday does not. Spending ten dollars to verify a ten-cent experiment is also an engineering failure.
+
+- → These techniques differ, but they force the same question.
 -->
 
 ---
@@ -368,6 +370,16 @@ class: q-slide
 <!--
 ~1:30
 
+
+To restate all of that
+
+- how important is it that this is **right**?
+- does it matter if we have 47 tests all checking the same potentially flawed understanding?
+- as always, make sure when you've confirmed, it had better have **persistent** validations
+
+
+# Supporting Notes
+
 - **Pause. This is the conclusion of Trap 1.**
 > What do we actually know?
 
@@ -380,14 +392,6 @@ class: q-slide
 - **Name the recurring surface, once:** the teal bar means *here's a question for Monday.* Every trap will now end here.
 
 → Suppose the answer really is right. We can still have a much bigger problem.
-
-# Jim's Draft Script
-
-To restate all of that
-
-- how important is it that this is **right**?
-- does it matter if we have 47 tests all checking the same potentially flawed understanding?
-- as always, make sure when you've confirmed, it had better have **persistent** validations
 -->
 
 ---
@@ -410,16 +414,17 @@ class: trap-slide trap-02
 <!--
 ~0:30
 
-- Stay in the same customer-service world as the refund example, but move one step outward: from one refund decision to the support queue around the product.
-- Trap 1: the answer might be wrong. **Here, assume the answer is completely, verifiably right.** Excellent, even.
-- The system does exactly what we asked. That is what makes the trap possible.
-
-
-# Jim's Draft Script
 
 If you've used any of the frontier models like Claude and ChatGPT, you've seen they're amazingly good. Scarily good.
 
 Here we're going to assume — especially as they get even better — that the answer is completely and verifiably right.
+
+
+# Supporting Notes
+
+- Stay in the same customer-service world as the refund example, but move one step outward: from one refund decision to the support queue around the product.
+- Trap 1: the answer might be wrong. **Here, assume the answer is completely, verifiably right.** Excellent, even.
+- The system does exactly what we asked. That is what makes the trap possible.
 -->
 
 ---
@@ -444,20 +449,6 @@ They should get a correct resolution in under five minutes,<br>any time of day.
 <!--
 ~1:30
 
-- Eighteen hours is not a technology problem to the customer. It is simply a long time to be stuck.
-- Let the room agree with the seriousness of the problem before allowing the tone to lift.
-
-**The business dynamic to make clear:**
-- Sales growth is good news, but it has brought support growth with it.
-- The existing team now has more incidents than it can absorb.
-- Overload makes each incident take longer; longer incidents grow the queue; the larger queue creates more overload.
-- Support management's request for more people is entirely reasonable.
-
-**[1]**
-- The desired outcome is legitimate: correct resolution, in minutes, whenever the customer needs it.
-
-
-# Jim's Draft Script
 
 The refund may be straightforward with our spiffy new service, but getting help is not.
 
@@ -472,6 +463,21 @@ But what if technology could swoop in and rescue us?
 [click]
 
 That is a serious business goal: get the customer a correct resolution in under five minutes, any time of day.
+
+
+# Supporting Notes
+
+- Eighteen hours is not a technology problem to the customer. It is simply a long time to be stuck.
+- Let the room agree with the seriousness of the problem before allowing the tone to lift.
+
+**The business dynamic to make clear:**
+- Sales growth is good news, but it has brought support growth with it.
+- The existing team now has more incidents than it can absorb.
+- Overload makes each incident take longer; longer incidents grow the queue; the larger queue creates more overload.
+- Support management's request for more people is entirely reasonable.
+
+**[1]**
+- The desired outcome is legitimate: correct resolution, in minutes, whenever the customer needs it.
 -->
 
 ---
@@ -508,6 +514,22 @@ class: statement-slide
 <!--
 ~2:00
 
+
+It reads what the customer wrote, pulls the account and order context, applies the policy, takes the action it is allowed to take, and explains what happened. If it is genuinely uncertain, it escalates.
+
+And it works. Correct answers. Personalized. Available around the clock.
+
+It follows all the processes correctly in a reliable way. You couldn't ask for a better win.
+
+We can even throw in some Kafka messaging, lots of AI agents, and all that kind of cool stuff that helps it go faster and more reliably.
+
+All the kinds of things that get architects like me all hot and bothered.
+
+The wait drops from eighteen hours to under five minutes.
+
+
+# Supporting Notes
+
 - Now introduce AI as the answer, and make it an answer the room should want.
 - Give it the support history, current account and order context, the policies, and the same permitted actions a good support agent has.
 - It reads the request, retrieves the relevant context, applies policy, takes the permitted action, and explains the result.
@@ -522,21 +544,6 @@ class: statement-slide
 > “If someone brought me this result, I would say yes.”
 
 - Do not foreshadow a hidden model failure. The system is doing excellent support work.
-
-
-# Jim's Draft Script
-
-It reads what the customer wrote, pulls the account and order context, applies the policy, takes the action it is allowed to take, and explains what happened. If it is genuinely uncertain, it escalates.
-
-And it works. Correct answers. Personalized. Available around the clock.
-
-It follows all the processes correctly in a reliable way. You couldn't ask for a better win.
-
-We can even throw in some Kafka messaging, lots of AI agents, and all that kind of cool stuff that helps it go faster and more reliably.
-
-All the kinds of things that get architects like me all hot and bothered.
-
-The wait drops from eighteen hours to under five minutes.
 -->
 
 ---
@@ -559,6 +566,16 @@ class: canvas-slide
 <!--
 ~1:15
 
+
+At the end of the week the number says: eight hundred tickets resolved. The support metric is green.
+
+But the system also clusters what it saw. Three hundred and forty-four of those customers were describing the same checkout failure.
+
+[Pause. Then advance without explaining it.]
+
+
+# Supporting Notes
+
 - Start with the first meaning of the number: workload successfully cleared.
 - Eight hundred tickets resolved. The support metric is green.
 
@@ -567,15 +584,6 @@ class: canvas-slide
 - **The system found this cluster.** Do not make the AI implausibly blind; a good support system should detect repeated language and shared context.
 - Pause. Give the room time to register the repetition, but **do not interpret it yet.**
 - Advance to the next slide for the reclassification.
-
-
-# Jim's Draft Script
-
-At the end of the week the number says: eight hundred tickets resolved. The support metric is green.
-
-But the system also clusters what it saw. Three hundred and forty-four of those customers were describing the same checkout failure.
-
-[Pause. Then advance without explaining it.]
 -->
 
 ---
@@ -590,6 +598,18 @@ class: statement-slide
 <!--
 ~0:45
 
+
+We thought we had 344 support cases.
+
+[Click.]
+
+We had one product problem, reported 344 times.
+
+[Long pause. Let the room complete the reclassification before advancing.]
+
+
+# Supporting Notes
+
 - This slide exists to let the reclassification occupy the whole room.
 - Read the first sentence, then pause.
 
@@ -600,17 +620,6 @@ class: statement-slide
 - Long pause. Do not explain the mechanism yet.
 - The work looked like hundreds of independent conversations only because we named the queue “support.”
 - Advance only after the room has completed the turn for itself.
-
-
-# Jim's Draft Script
-
-We thought we had 344 support cases.
-
-[Click.]
-
-We had one product problem, reported 344 times.
-
-[Long pause. Let the room complete the reclassification before advancing.]
 -->
 
 ---
@@ -627,20 +636,6 @@ class: statement-slide
 <!--
 ~1:30
 
-- Preempt the obvious objection: yes, a sophisticated support system should identify the cluster. Ours did.
-- The failure is not that AI missed or buried the evidence.
-- Before automation, 344 reports created visible organizational pain: a growing queue, long waits, overwhelmed representatives, and a demand for more people.
-- Now those same reports are resolved in minutes. The support dashboard is green. The cluster still appears in a trend report—but the crisis no longer forces anyone to pay attention.
-> “The system didn't hide the evidence. It removed the pain that made the evidence impossible to ignore.”
-
-- **Distinguish noticing from tolerating.** Once the business clearly sees the product defect, it can consciously decide whether the cost of fixing it exceeds the harm it causes. That may be an uncomfortable decision—especially because customers still bear the failure—but at least it is a decision.
-- The trap is that faster support lets the issue fall below organizational attention **before anyone makes that decision.**
-- We silenced the alarm without fixing the checkout failure.
-- By defining success as faster incident resolution, the original question treated repeated contacts as work to complete rather than a signal that had to become impossible to ignore.
-- The support system remains genuinely valuable. That is exactly why this is dangerous: its success can conceal the need for a conscious product decision.
-
-
-# Jim's Draft Script
 
 This would show in the reports when asked.
 
@@ -657,6 +652,21 @@ Once the business notices the defect, it can consciously decide to tolerate it. 
 The trap is that nobody made that decision. Faster support let the problem fall below organizational attention before it could demand one.
 
 We silenced the alarm without fixing the failure.
+
+
+# Supporting Notes
+
+- Preempt the obvious objection: yes, a sophisticated support system should identify the cluster. Ours did.
+- The failure is not that AI missed or buried the evidence.
+- Before automation, 344 reports created visible organizational pain: a growing queue, long waits, overwhelmed representatives, and a demand for more people.
+- Now those same reports are resolved in minutes. The support dashboard is green. The cluster still appears in a trend report—but the crisis no longer forces anyone to pay attention.
+> “The system didn't hide the evidence. It removed the pain that made the evidence impossible to ignore.”
+
+- **Distinguish noticing from tolerating.** Once the business clearly sees the product defect, it can consciously decide whether the cost of fixing it exceeds the harm it causes. That may be an uncomfortable decision—especially because customers still bear the failure—but at least it is a decision.
+- The trap is that faster support lets the issue fall below organizational attention **before anyone makes that decision.**
+- We silenced the alarm without fixing the checkout failure.
+- By defining success as faster incident resolution, the original question treated repeated contacts as work to complete rather than a signal that had to become impossible to ignore.
+- The support system remains genuinely valuable. That is exactly why this is dangerous: its success can conceal the need for a conscious product decision.
 -->
 
 ---
@@ -683,24 +693,6 @@ It's very good at this. It just never volunteers.
 <!--
 ~1:00
 
-- A Monday-morning thing, and a **positive** use of AI, not a warning about it.
-- Before you ask AI for the design, spend ninety seconds asking it to attack the question.
-- Apply the prompts directly to the support story:
-  - What did “resolve support tickets” already assume?
-  - What if the current product is not a fixed constraint?
-  - Reframe the goal so repeated contact becomes evidence to remove the cause, not merely work to complete.
-
-**[1] [2] [3]** — read the three prompts
-
-- The value is the friction: if every answer confirms the framing, you have not challenged it yet.
-
-**[4]** The tool will not do this on its own. Ask a leading question, get a led answer.
-> “It is extremely agreeable, and that is the failure mode.”
-
-→ All three prompts are ways of forcing one question.
-
-
-# Jim's Draft Script
 
 This is the good news part, and it costs you about ninety seconds.
 
@@ -725,6 +717,25 @@ But it will never bring it up on its own.
 Ask a leading question, get a led answer. It is the most agreeable colleague you have ever had, and that is exactly the problem.
 
 If everything it says back agrees with you, you haven't challenged the framing yet. You've just been flattered very efficiently.
+
+
+# Supporting Notes
+
+- A Monday-morning thing, and a **positive** use of AI, not a warning about it.
+- Before you ask AI for the design, spend ninety seconds asking it to attack the question.
+- Apply the prompts directly to the support story:
+  - What did “resolve support tickets” already assume?
+  - What if the current product is not a fixed constraint?
+  - Reframe the goal so repeated contact becomes evidence to remove the cause, not merely work to complete.
+
+**[1] [2] [3]** — read the three prompts
+
+- The value is the friction: if every answer confirms the framing, you have not challenged it yet.
+
+**[4]** The tool will not do this on its own. Ask a leading question, get a led answer.
+> “It is extremely agreeable, and that is the failure mode.”
+
+→ All three prompts are ways of forcing one question.
 -->
 
 ---
@@ -739,17 +750,6 @@ class: q-slide
 <!--
 ~0:30
 
-- **Pause. This is the conclusion of Trap 2.**
-> What did our question already decide?
-
-- The support system may be exactly right. The five-minute target may be right.
-- The trap was letting “support queue” decide that 344 reports were 344 pieces of support work instead of one product problem.
-- Make the framing win the argument instead of letting it skip the argument.
-
-→ Now something more personal. If AI can explain unfamiliar systems, generate the code, and challenge the architecture this fast — what does that do to how *we* learn?
-
-
-# Jim's Draft Script
 
 So the question for Monday.
 
@@ -758,6 +758,18 @@ The support system might be exactly right. Five minutes might be exactly right. 
 - what did the way we asked already settle for us?
 - is that constraint a decision somebody made — or just the shape of the sentence?
 - if it's real, fine. Make it **win** the argument. Don't let it skip the argument.
+
+
+# Supporting Notes
+
+- **Pause. This is the conclusion of Trap 2.**
+> What did our question already decide?
+
+- The support system may be exactly right. The five-minute target may be right.
+- The trap was letting “support queue” decide that 344 reports were 344 pieces of support work instead of one product problem.
+- Make the framing win the argument instead of letting it skip the argument.
+
+→ Now something more personal. If AI can explain unfamiliar systems, generate the code, and challenge the architecture this fast — what does that do to how *we* learn?
 -->
 
 ---
@@ -780,13 +792,6 @@ class: trap-slide trap-03
 <!--
 ~0:30
 
-- Give this room.
-- Deliberately uncomfortable.
-- Both behaviors can produce working code. Only one keeps your judgment calibrated.
-> AI can take you from "I don't understand this" to "working code" without ever passing through "now I understand this."
-
-
-# Jim's Draft Script
 
 This one is more personal, and it's the one I'm least comfortable with.
 
@@ -797,6 +802,14 @@ AI can take you from "I have no idea what this does" to "working code, tests pas
 Both of those paths produce working software.
 
 Only one of them leaves you able to judge the next thing.
+
+
+# Supporting Notes
+
+- Give this room.
+- Deliberately uncomfortable.
+- Both behaviors can produce working code. Only one keeps your judgment calibrated.
+> AI can take you from "I don't understand this" to "working code" without ever passing through "now I understand this."
 -->
 
 ---
@@ -825,18 +838,6 @@ class: canvas-slide
 <!--
 ~2:00
 
-- **Kill the wrong version first.** I am *not* saying you must understand everything AI produces. That's nonsense and it destroys the value of abstraction.
-- Engineering **is** cognitive offloading. I don't want my team implementing B-trees. I don't read the bytecode javac emits. I've never implemented a TCP stack and would like to keep it that way.
-- Every arrow on that line is somebody deciding to stop understanding a layer. Every one was correct. AI is another enormous step and I'm in favor of it.
-
-**[1] the quiet slide**
-- From a true statement to a different statement. Nobody announces it. It just happens on a Tuesday.
-- **The honest version of what you need:** enough to recognize where the seams are — and which ones matter.
-- Transaction boundary meets service boundary · retry meets idempotency · cache meets stale data · generated code meets an undocumented convention · "executed successfully" meets "did the wrong thing."
-> That's what you keep.
-
-
-# Jim's Draft Script
 
 Let me kill the dumb version of this argument before anyone thinks I'm making it.
 
@@ -869,6 +870,19 @@ Where the transaction boundary meets the service boundary. Where retry meets ide
 And my favorite — where "executed successfully" meets "did entirely the wrong thing."
 
 That's the part you keep.
+
+
+# Supporting Notes
+
+- **Kill the wrong version first.** I am *not* saying you must understand everything AI produces. That's nonsense and it destroys the value of abstraction.
+- Engineering **is** cognitive offloading. I don't want my team implementing B-trees. I don't read the bytecode javac emits. I've never implemented a TCP stack and would like to keep it that way.
+- Every arrow on that line is somebody deciding to stop understanding a layer. Every one was correct. AI is another enormous step and I'm in favor of it.
+
+**[1] the quiet slide**
+- From a true statement to a different statement. Nobody announces it. It just happens on a Tuesday.
+- **The honest version of what you need:** enough to recognize where the seams are — and which ones matter.
+- Transaction boundary meets service boundary · retry meets idempotency · cache meets stale data · generated code meets an undocumented convention · "executed successfully" meets "did the wrong thing."
+> That's what you keep.
 -->
 
 ---
@@ -904,30 +918,6 @@ Not junior and senior. Unfamiliar and familiar.<br>
 <!--
 ~2:30
 
-- Two modes. Both enormous. The split is not what people assume.
-
-**LEFT · When you don't know**
-- Collapses the distance between "no idea what's happening" and "a testable mental model." Not an answer — a model I can go check.
-- Applies to a new grad learning Spring transactions *and* to me landing in a Rust codebase.
-
-**[1] RIGHT · When you think you know** — the underrated one, most valuable to the most experienced people here
-- Experience is compressed pattern recognition. Most valuable thing you have.
-- Also exactly the mechanism by which you decide this problem is the one you solved in 2014, and stop looking.
-- Now you can hand your design to something that argues with you at 11pm, free, never tired, never political.
-
-**[2]** Not seniority — familiarity. Most of us are in both states in the same week.
-
-**ON JUNIORS — say some version of this:**
-- Some traditional junior work really is getting less valuable. Boilerplate, routine implementation, simple debugging. I won't pretend otherwise, and I won't argue we should preserve obsolete work because that's how my generation learned.
-- But there's a difference between juniors producing junior artifacts and engineers developing judgment. *"Ask, generate, tests pass, merge"* does not produce the second one.
-
-**ON SENIORS — the uncomfortable half:**
-- No comforting version where AI writes the code and seniors provide the judgment. **AI participates in judgment too** — it already reviews, critiques, designs, analyzes evidence.
-- Instead: offload implementation *effort* without disconnecting from implementation *evidence*.
-> The moment you stop touching real code, real incidents, real production, your judgment stops being calibrated — and we already know what that role looks like. We called it the ivory tower architect and we didn't like it.
-
-
-# Jim's Draft Script
 
 Two modes. Both enormous. And the split isn't the one people expect.
 
@@ -972,6 +962,31 @@ What we can do is offload the implementation **effort** without disconnecting fr
 Because the moment you stop touching real code, real incidents, real production, your judgment stops being calibrated.
 
 And we already have a name for that role. We called it the ivory tower architect, and nobody liked it. Including us.
+
+
+# Supporting Notes
+
+- Two modes. Both enormous. The split is not what people assume.
+
+**LEFT · When you don't know**
+- Collapses the distance between "no idea what's happening" and "a testable mental model." Not an answer — a model I can go check.
+- Applies to a new grad learning Spring transactions *and* to me landing in a Rust codebase.
+
+**[1] RIGHT · When you think you know** — the underrated one, most valuable to the most experienced people here
+- Experience is compressed pattern recognition. Most valuable thing you have.
+- Also exactly the mechanism by which you decide this problem is the one you solved in 2014, and stop looking.
+- Now you can hand your design to something that argues with you at 11pm, free, never tired, never political.
+
+**[2]** Not seniority — familiarity. Most of us are in both states in the same week.
+
+**ON JUNIORS — say some version of this:**
+- Some traditional junior work really is getting less valuable. Boilerplate, routine implementation, simple debugging. I won't pretend otherwise, and I won't argue we should preserve obsolete work because that's how my generation learned.
+- But there's a difference between juniors producing junior artifacts and engineers developing judgment. *"Ask, generate, tests pass, merge"* does not produce the second one.
+
+**ON SENIORS — the uncomfortable half:**
+- No comforting version where AI writes the code and seniors provide the judgment. **AI participates in judgment too** — it already reviews, critiques, designs, analyzes evidence.
+- Instead: offload implementation *effort* without disconnecting from implementation *evidence*.
+> The moment you stop touching real code, real incidents, real production, your judgment stops being calibrated — and we already know what that role looks like. We called it the ivory tower architect and we didn't like it.
 -->
 
 ---
@@ -1001,37 +1016,6 @@ When reality can answer the question cheaply, stop arguing and ask reality.<br>
 <!--
 ~2:15
 
-- The Agile center of the talk. Name it directly.
-- *"Somebody here is thinking: you've rediscovered Agile. Yes. Correct. Guilty."*
-- Twenty-five years of: we don't know everything up front, build feedback loops, working systems produce evidence, learn and adapt.
-- **AI makes that argument stronger, not weaker.** Every objection to running the experiment used to be about cost — another implementation, another prototype, another architecture, another serious critique. They're not expensive anymore.
-
-**[1]**
-> When reality can answer the question cheaply, stop arguing and go ask reality.
-- The two-hour spike beats the two-hour meeting — and now it's a twenty-minute spike.
-
-**XP — go further than the concession. ~45s. This is the real answer to "you rediscovered Agile":**
-- Look at what XP actually was. **Independence machinery**, installed along the whole path.
-- Pair programming — two readers, two sets of priors. TDD — a check written *before* the implementation, so it can't be derived from it. On-site customer — the person who owns the meaning, in the room. Collective ownership and CI — continuous independent verification.
-- **Every one of those was expensive.** Pairing costs two people. TDD costs time up front. An on-site customer costs somebody's calendar. That expense is why most shops quietly stopped.
-> "We didn't abandon those practices because they didn't work. We abandoned them because we couldn't afford them."
-- **Two things changed at once, and they push the same way:** AI cut the price of that machinery — *and* it removed the accidental independence we were getting for free from friction. **More affordable and more necessary, simultaneously.**
-
-**THE HONEST LIMIT — do not skip this, it is what stops it being evangelism:**
-- **AI as a pair partner is not a second person.** A human pair brings genuinely different priors. AI in your session inherits *your* framing, *your* words, *your* assumptions — which is the independence problem again, wearing a helpful face. It's superb for attention, momentum, and unfamiliar territory. It is a **partial** substitute for independence, not a replacement.
-- Same for generated tests: excellent, and *ignorable or overusable*. A thousand tests you didn't read is not evidence.
-- **This is not "do XP."** It's that the trade that made skipping it rational has moved. Which practices, how much, where — that's judgment and context, and it always was.
-
-**THE QUALIFICATION — a senior architect will nail you on this:**
-- Not every question is experimentally answerable. No prototype tells you what maintaining six services across four teams for eight years will feel like. That stays a judgment call.
-- Test what reality can cheaply answer. Use judgment for what it can't. **And know which one you're doing.**
-- AI made bad questions cheap too. And irrelevant critiques. And prototypes nobody needed.
-> The scarce thing now is deciding which questions deserve your attention at all.
-
-→ The loop only works if I stay connected to its evidence.
-
-
-# Jim's Draft Script
 
 Somebody here is thinking "you've rediscovered Agile."
 
@@ -1092,6 +1076,38 @@ Test what reality can answer cheaply. Use judgment for what it can't. And know w
 And — AI made bad questions cheap too. And irrelevant critiques. And prototypes nobody needed.
 
 The scarce thing now isn't answers. It's deciding which questions deserve your attention at all.
+
+
+# Supporting Notes
+
+- The Agile center of the talk. Name it directly.
+- *"Somebody here is thinking: you've rediscovered Agile. Yes. Correct. Guilty."*
+- Twenty-five years of: we don't know everything up front, build feedback loops, working systems produce evidence, learn and adapt.
+- **AI makes that argument stronger, not weaker.** Every objection to running the experiment used to be about cost — another implementation, another prototype, another architecture, another serious critique. They're not expensive anymore.
+
+**[1]**
+> When reality can answer the question cheaply, stop arguing and go ask reality.
+- The two-hour spike beats the two-hour meeting — and now it's a twenty-minute spike.
+
+**XP — go further than the concession. ~45s. This is the real answer to "you rediscovered Agile":**
+- Look at what XP actually was. **Independence machinery**, installed along the whole path.
+- Pair programming — two readers, two sets of priors. TDD — a check written *before* the implementation, so it can't be derived from it. On-site customer — the person who owns the meaning, in the room. Collective ownership and CI — continuous independent verification.
+- **Every one of those was expensive.** Pairing costs two people. TDD costs time up front. An on-site customer costs somebody's calendar. That expense is why most shops quietly stopped.
+> "We didn't abandon those practices because they didn't work. We abandoned them because we couldn't afford them."
+- **Two things changed at once, and they push the same way:** AI cut the price of that machinery — *and* it removed the accidental independence we were getting for free from friction. **More affordable and more necessary, simultaneously.**
+
+**THE HONEST LIMIT — do not skip this, it is what stops it being evangelism:**
+- **AI as a pair partner is not a second person.** A human pair brings genuinely different priors. AI in your session inherits *your* framing, *your* words, *your* assumptions — which is the independence problem again, wearing a helpful face. It's superb for attention, momentum, and unfamiliar territory. It is a **partial** substitute for independence, not a replacement.
+- Same for generated tests: excellent, and *ignorable or overusable*. A thousand tests you didn't read is not evidence.
+- **This is not "do XP."** It's that the trade that made skipping it rational has moved. Which practices, how much, where — that's judgment and context, and it always was.
+
+**THE QUALIFICATION — a senior architect will nail you on this:**
+- Not every question is experimentally answerable. No prototype tells you what maintaining six services across four teams for eight years will feel like. That stays a judgment call.
+- Test what reality can cheaply answer. Use judgment for what it can't. **And know which one you're doing.**
+- AI made bad questions cheap too. And irrelevant critiques. And prototypes nobody needed.
+> The scarce thing now is deciding which questions deserve your attention at all.
+
+→ The loop only works if I stay connected to its evidence.
 -->
 
 ---
@@ -1106,6 +1122,16 @@ class: q-slide
 <!--
 ~0:30
 
+
+So, Monday.
+
+- this is not "did I write the code myself?" — I genuinely don't care about that
+- it's whether I can still test my mental model against what the system actually does
+- offload the work. Stay close enough to the evidence to keep your judgment calibrated.
+
+
+# Supporting Notes
+
 - **Pause. This is the conclusion of Trap 3.**
 > Am I understanding faster — or avoiding understanding?
 
@@ -1113,15 +1139,6 @@ class: q-slide
 - It is whether I can still test my mental model against what the system actually does.
 
 → Suppose all of this works and we really are dramatically faster. Now what?
-
-
-# Jim's Draft Script
-
-So, Monday.
-
-- this is not "did I write the code myself?" — I genuinely don't care about that
-- it's whether I can still test my mental model against what the system actually does
-- offload the work. Stay close enough to the evidence to keep your judgment calibrated.
 -->
 
 ---
@@ -1144,11 +1161,6 @@ class: trap-slide trap-04
 <!--
 ~0:30
 
-- **QUALIFY IMMEDIATELY AND OUT LOUD:** *"And sometimes more is exactly what you should do."*
-- Otherwise this reads as anti-productivity and half the room stops listening.
-
-
-# Jim's Draft Script
 
 Now — and let me say this immediately, before half of you write me off —
 
@@ -1157,6 +1169,12 @@ Now — and let me say this immediately, before half of you write me off —
 This is not an anti-productivity talk. I like shipping things.
 
 But "we got faster" and "we should therefore do more of the same thing" is a leap. And nobody is checking it.
+
+
+# Supporting Notes
+
+- **QUALIFY IMMEDIATELY AND OUT LOUD:** *"And sometimes more is exactly what you should do."*
+- Otherwise this reads as anti-productivity and half the room stops listening.
 -->
 
 ---
@@ -1171,20 +1189,6 @@ class: statement-slide
 <!--
 ~2:00
 
-- Say implementation capacity goes up fifty percent. The automatic response: fifty percent more stories, more PRs, more features.
-- And maybe! Maybe that's exactly where the value is.
-- **But nobody put the other options on the table:**
-- Three prototypes before we commit to one.
-- Review was already the bottleneck and we just made it worse.
-- Integration is the actual problem.
-- Customers don't want more features, they want the three we have to work.
-- We can finally fix the operational thing we've ignored for two years.
-- Or: the same business outcome now genuinely needs fewer people.
-
-- **I'm not going to dodge that last one.**
-
-
-# Jim's Draft Script
 
 Say implementation capacity goes up fifty percent.
 
@@ -1207,6 +1211,21 @@ Maybe we can finally fix that operational thing we've been ignoring for two year
 Or — and here it comes — maybe the same business outcome now genuinely needs fewer people.
 
 I'm not going to dodge that last one.
+
+
+# Supporting Notes
+
+- Say implementation capacity goes up fifty percent. The automatic response: fifty percent more stories, more PRs, more features.
+- And maybe! Maybe that's exactly where the value is.
+- **But nobody put the other options on the table:**
+- Three prototypes before we commit to one.
+- Review was already the bottleneck and we just made it worse.
+- Integration is the actual problem.
+- Customers don't want more features, they want the three we have to work.
+- We can finally fix the operational thing we've ignored for two years.
+- Or: the same business outcome now genuinely needs fewer people.
+
+- **I'm not going to dodge that last one.**
 -->
 
 ---
@@ -1219,20 +1238,6 @@ class: statement-slide
 <!--
 ~2:30
 
-- Put it on the screen. Somebody in your org is already saying it in a meeting you weren't invited to.
-- **This is a legitimate question. It is not hostile.** CFO, engineering is the largest line item, engineers say they're twice as fast — they'd be negligent not to ask.
-- **DO NOT ANSWER "because somebody has to check the AI."** Weak, defensive, increasingly false. Don't build your career on it.
-
-**What a credible conversation sounds like —**
-- *Engineer → manager:* "Implementation got dramatically faster. The extra work is piling up in review — cycle time barely moved. Let me measure that before we generate more."
-- *Manager → VP:* "We're not assuming current staffing is automatically correct. But code production isn't the outcome we're staffed to produce. Let's look at what work disappeared, where work moved, and what happened to delivery."
-
-- If the evidence says the same outcome genuinely takes substantially less engineering labor — that's real, and I'd rather find out from the data than from a spreadsheet somebody else built.
-- **No promises:** I'm not going to stand here and promise everyone moves up the value chain. Historical transformations don't work that neatly. Some skills become less scarce. Some roles shrink. I don't know which, and neither does anyone selling you a certainty.
-> What I do know is that being wrong about where the work went is bad for everybody in the argument.
-
-
-# Jim's Draft Script
 
 There it is. Somebody in your organization is already saying this, in a meeting you weren't invited to.
 
@@ -1261,6 +1266,21 @@ And if the evidence says the same outcome genuinely takes substantially less eng
 I'm not going to stand up here and promise you that everybody moves up the value chain. Historical transformations don't work that neatly. Some skills become less scarce. Some roles shrink. I don't know which ones, and neither does anybody selling you a certainty.
 
 What I do know is that being wrong about where the work went is bad for everyone in the argument.
+
+
+# Supporting Notes
+
+- Put it on the screen. Somebody in your org is already saying it in a meeting you weren't invited to.
+- **This is a legitimate question. It is not hostile.** CFO, engineering is the largest line item, engineers say they're twice as fast — they'd be negligent not to ask.
+- **DO NOT ANSWER "because somebody has to check the AI."** Weak, defensive, increasingly false. Don't build your career on it.
+
+**What a credible conversation sounds like —**
+- *Engineer → manager:* "Implementation got dramatically faster. The extra work is piling up in review — cycle time barely moved. Let me measure that before we generate more."
+- *Manager → VP:* "We're not assuming current staffing is automatically correct. But code production isn't the outcome we're staffed to produce. Let's look at what work disappeared, where work moved, and what happened to delivery."
+
+- If the evidence says the same outcome genuinely takes substantially less engineering labor — that's real, and I'd rather find out from the data than from a spreadsheet somebody else built.
+- **No promises:** I'm not going to stand here and promise everyone moves up the value chain. Historical transformations don't work that neatly. Some skills become less scarce. Some roles shrink. I don't know which, and neither does anyone selling you a certainty.
+> What I do know is that being wrong about where the work went is bad for everybody in the argument.
 -->
 
 ---
@@ -1298,31 +1318,6 @@ Coding throughput is not delivery.
 <!--
 ~2:00
 
-- Here's the pipeline. AI hit one box in it, hard.
-
-**[1] the three metrics**
-- **Say it out loud: these are illustrative, I made them up** — it's on the slide too, but say it anyway. The *shape* is what I keep seeing.
-- Coding time down 60%. Real, measurable, everyone's happy.
-- PRs up 80%. Time waiting on review up 110%.
-
-**[2] −8% idea to production**
-> So — how much more productive are we?
-- There is not enough information in "coding got sixty percent faster" to answer that. **The constraint moved and we celebrated the wrong number.**
-
-**[3] Coding throughput is not delivery.**
-- **NOT a Theory of Constraints lecture** — you all know constraints move. The AI-specific part is the **speed and the disguise**.
-- We can change implementation capacity enormously, almost overnight, and the outputs *look* like finished intellectual work.
-> Two hundred PRs of plausible code is not two hundred PRs of progress, but it photographs identically.
-
-**THE POSITIVE USE — don't skip it:**
-- AI is genuinely good at finding this. Point it at tickets, PR history, CI runs, deploys, incidents, support tickets. Ask where the time actually went.
-- You'll get: *"implementation time dropped, but review wait increased, concentrated in changes touching these three components."*
-- **That is a hypothesis, not a finding.** Go check it with telemetry. Same rule as Trap 1 — could that check catch the mistake?
-
-→ Before we decide what to do with the new capacity, name the decision.
-
-
-# Jim's Draft Script
 
 Here's the pipeline. AI hit exactly one box in it, very hard.
 
@@ -1367,6 +1362,32 @@ You'll get something like: implementation time dropped, but review wait went up,
 That is a **hypothesis.** Not a finding. Go check it with telemetry.
 
 Same rule as Trap 1 — could that check catch the mistake?
+
+
+# Supporting Notes
+
+- Here's the pipeline. AI hit one box in it, hard.
+
+**[1] the three metrics**
+- **Say it out loud: these are illustrative, I made them up** — it's on the slide too, but say it anyway. The *shape* is what I keep seeing.
+- Coding time down 60%. Real, measurable, everyone's happy.
+- PRs up 80%. Time waiting on review up 110%.
+
+**[2] −8% idea to production**
+> So — how much more productive are we?
+- There is not enough information in "coding got sixty percent faster" to answer that. **The constraint moved and we celebrated the wrong number.**
+
+**[3] Coding throughput is not delivery.**
+- **NOT a Theory of Constraints lecture** — you all know constraints move. The AI-specific part is the **speed and the disguise**.
+- We can change implementation capacity enormously, almost overnight, and the outputs *look* like finished intellectual work.
+> Two hundred PRs of plausible code is not two hundred PRs of progress, but it photographs identically.
+
+**THE POSITIVE USE — don't skip it:**
+- AI is genuinely good at finding this. Point it at tickets, PR history, CI runs, deploys, incidents, support tickets. Ask where the time actually went.
+- You'll get: *"implementation time dropped, but review wait increased, concentrated in changes touching these three components."*
+- **That is a hypothesis, not a finding.** Go check it with telemetry. Same rule as Trap 1 — could that check catch the mistake?
+
+→ Before we decide what to do with the new capacity, name the decision.
 -->
 
 ---
@@ -1381,16 +1402,6 @@ class: q-slide
 <!--
 ~0:30
 
-- **Pause. This is the conclusion of Trap 4.**
-> What got faster — and where should that capacity go?
-
-- Those are two separate questions.
-- "Coding got faster" does not answer either one for the whole organization.
-
-→ So far AI has mostly been *handing* us things: answers, code, designs. Increasingly it doesn't hand you the thing. It just does it.
-
-
-# Jim's Draft Script
 
 Monday.
 
@@ -1401,6 +1412,17 @@ Monday.
 Those are two separate questions, and "coding got faster" doesn't answer either one for the whole organization.
 
 Capacity is not a plan.
+
+
+# Supporting Notes
+
+- **Pause. This is the conclusion of Trap 4.**
+> What got faster — and where should that capacity go?
+
+- Those are two separate questions.
+- "Coding got faster" does not answer either one for the whole organization.
+
+→ So far AI has mostly been *handing* us things: answers, code, designs. Increasingly it doesn't hand you the thing. It just does it.
 -->
 
 ---
@@ -1423,12 +1445,6 @@ class: trap-slide trap-05
 <!--
 ~0:30
 
-- **TITLE STILL PROVISIONAL (Q-04)** — alternatives: *AI Can Scale Faster Than Your Ability To Supervise It* · *Who Gave The AI Permission To Do That?*
-- Current pick is the least clever and the most useful: it states the actual question and sets up closing question #5 verbatim.
-- **The concept: this is about AUTHORITY, not correctness.**
-
-
-# Jim's Draft Script
 
 Last one.
 
@@ -1439,6 +1455,13 @@ Increasingly it doesn't hand you the thing. It just does it.
 And this trap isn't about whether it's smart enough.
 
 It's about what it's **allowed** to do.
+
+
+# Supporting Notes
+
+- **TITLE STILL PROVISIONAL (Q-04)** — alternatives: *AI Can Scale Faster Than Your Ability To Supervise It* · *Who Gave The AI Permission To Do That?*
+- Current pick is the least clever and the most useful: it states the actual question and sets up closing question #5 verbatim.
+- **The concept: this is about AUTHORITY, not correctness.**
 -->
 
 ---
@@ -1461,21 +1484,6 @@ class: canvas-slide
 <!--
 ~2:30 across the reveals. Go slowly. Let each one land.
 
-- Same product. Same model. Same prompt, more or less.
-- **[1] [2] [3] [4]** — click one at a time, read each aloud, don't rush.
-
-- **Don't ask "where should the human enter the loop."** That's the governance answer and it's the wrong question.
-> Ask: at what point did the architecture fundamentally change?
-- The model is doing roughly the same inference the whole way down. Same capability, same error rate.
-> What changed is AUTHORITY.
-
-- **Concede this properly:** an organization may legitimately decide AI should autonomously do every one of these. Maybe it's measurably better than the humans doing it now — faster, more consistent, fewer bad days. Real possibility, and I won't argue against it from human dignity.
-> I'm not making an argument about intelligence at all. I'm making one about consequences.
-
-→ Before we ask what it should be allowed to do — one more thing about that first rung.
-
-
-# Jim's Draft Script
 
 Same product. Same model. Same prompt, more or less.
 
@@ -1508,6 +1516,22 @@ And let me concede this properly. An organization might legitimately decide AI s
 That's a real possibility, and I'm not going to argue against it from human dignity.
 
 I'm not making an argument about intelligence at all. I'm making one about consequences.
+
+
+# Supporting Notes
+
+- Same product. Same model. Same prompt, more or less.
+- **[1] [2] [3] [4]** — click one at a time, read each aloud, don't rush.
+
+- **Don't ask "where should the human enter the loop."** That's the governance answer and it's the wrong question.
+> Ask: at what point did the architecture fundamentally change?
+- The model is doing roughly the same inference the whole way down. Same capability, same error rate.
+> What changed is AUTHORITY.
+
+- **Concede this properly:** an organization may legitimately decide AI should autonomously do every one of these. Maybe it's measurably better than the humans doing it now — faster, more consistent, fewer bad days. Real possibility, and I won't argue against it from human dignity.
+> I'm not making an argument about intelligence at all. I'm making one about consequences.
+
+→ Before we ask what it should be allowed to do — one more thing about that first rung.
 -->
 
 ---
@@ -1537,30 +1561,6 @@ Interpreting instructions written in English is the entire job.
 <!--
 ~2:00 — NOT a security tutorial. The room will try to make it one.
 
-- Point back at the ladder: *"Rung one was — read the customer's email."*
-- That ladder was about what AI is allowed to **do**. This is the other half: **who gets to talk to it.**
-- SQL injection taught us something structural: you don't defend by getting better at spotting malicious strings. You separate the instruction channel from the data channel — parameterized queries — so data physically cannot become code.
-- Prompt injection has a *related* trust-boundary problem. **It is NOT the same vulnerability.** Be careful here.
-
-**[1]** No equivalent separation exists. The email is supposed to be data. But interpreting instructions written in English is precisely what the model does. Not a bug we're going to parameterize away.
-
-**[2]** Notice what the obvious question does.
-- *"How do we stop the model from being tricked"* already decided the defense lives inside the model — the one place we can't fully enforce it.
-> That's Trap 2. Turning up again, at the worst possible moment, in a security review.
-
-**BE HONEST IF ASKED — someone will; this is the security engineer's slide:**
-- Authorization does not solve prompt injection. Real mitigations exist and people are making real progress.
-- What authorization does is decide **how much a successful injection is worth**. That's a blast-radius argument, not a fix. **A prompt is not a security boundary.**
-- Don't get drawn further in: *"grab me afterwards, I'd enjoy that conversation and it's a different talk."*
-
-**PUT THE HALVES TOGETHER — slow down:**
-> "Rung one is an input we do not control. Rung five is issuing a refund."
-- The question was never whether it can be tricked. Something, someday, will trick it.
-
-→ **No pause.** The question is what it can do when that happens.
-
-
-# Jim's Draft Script
 
 Go back to rung one for a second. "Read the customer's email."
 
@@ -1605,6 +1605,31 @@ Rung one is an input we do not control.
 Rung five is issuing a refund.
 
 The question was never whether it can be tricked. Something, someday, will trick it.
+
+
+# Supporting Notes
+
+- Point back at the ladder: *"Rung one was — read the customer's email."*
+- That ladder was about what AI is allowed to **do**. This is the other half: **who gets to talk to it.**
+- SQL injection taught us something structural: you don't defend by getting better at spotting malicious strings. You separate the instruction channel from the data channel — parameterized queries — so data physically cannot become code.
+- Prompt injection has a *related* trust-boundary problem. **It is NOT the same vulnerability.** Be careful here.
+
+**[1]** No equivalent separation exists. The email is supposed to be data. But interpreting instructions written in English is precisely what the model does. Not a bug we're going to parameterize away.
+
+**[2]** Notice what the obvious question does.
+- *"How do we stop the model from being tricked"* already decided the defense lives inside the model — the one place we can't fully enforce it.
+> That's Trap 2. Turning up again, at the worst possible moment, in a security review.
+
+**BE HONEST IF ASKED — someone will; this is the security engineer's slide:**
+- Authorization does not solve prompt injection. Real mitigations exist and people are making real progress.
+- What authorization does is decide **how much a successful injection is worth**. That's a blast-radius argument, not a fix. **A prompt is not a security boundary.**
+- Don't get drawn further in: *"grab me afterwards, I'd enjoy that conversation and it's a different talk."*
+
+**PUT THE HALVES TOGETHER — slow down:**
+> "Rung one is an input we do not control. Rung five is issuing a refund."
+- The question was never whether it can be tricked. Something, someday, will trick it.
+
+→ **No pause.** The question is what it can do when that happens.
 -->
 
 ---
@@ -1627,27 +1652,6 @@ class: fact-slide
 <!--
 ~1:30
 
-- Here's the arithmetic nobody does.
-
-**[1]** Ten thousand and one hundred are deliberately round. The point is the orders-of-magnitude gap: genuinely careful human review will cover only a small fraction of the decisions AI can produce.
-
-**[2]** So: **which hundred?**
-- *"Keep a human in the loop"* is not an answer to that question.
-> A person clicking Approve two thousand times is not supervision — it's a signature.
-- Many of us know what that feels like. Let the room recognize it without accusing them.
-- **Oversight does not scale just because action scaled.**
-
-**BRIEFLY — say these, don't put them on a slide:**
-- Enforceable authorization and least privilege, so blast radius is bounded whether or not anyone is watching. Automated checks. Sampling. Anomaly detection. Outcome monitoring rather than execution monitoring. Traceability. A stop button that actually stops things.
-- **AI can do a lot of this work itself.** The point is not humans supervising machines — that framing loses eventually.
-> The point is designing accountability that scales with authority.
-
-- **If you take one thing from Trap 5:** authority and oversight should grow together. Right now we are very good at scaling one of them.
-
-→ Oversight cannot scale by asking people to stare at more decisions. So end on the authority question.
-
-
-# Jim's Draft Script
 
 Here's the arithmetic nobody does.
 
@@ -1684,6 +1688,28 @@ The point is designing accountability that scales with authority.
 If you take one thing out of this trap: authority and oversight should grow together.
 
 Right now we are very, very good at scaling one of them.
+
+
+# Supporting Notes
+
+- Here's the arithmetic nobody does.
+
+**[1]** Ten thousand and one hundred are deliberately round. The point is the orders-of-magnitude gap: genuinely careful human review will cover only a small fraction of the decisions AI can produce.
+
+**[2]** So: **which hundred?**
+- *"Keep a human in the loop"* is not an answer to that question.
+> A person clicking Approve two thousand times is not supervision — it's a signature.
+- Many of us know what that feels like. Let the room recognize it without accusing them.
+- **Oversight does not scale just because action scaled.**
+
+**BRIEFLY — say these, don't put them on a slide:**
+- Enforceable authorization and least privilege, so blast radius is bounded whether or not anyone is watching. Automated checks. Sampling. Anomaly detection. Outcome monitoring rather than execution monitoring. Traceability. A stop button that actually stops things.
+- **AI can do a lot of this work itself.** The point is not humans supervising machines — that framing loses eventually.
+> The point is designing accountability that scales with authority.
+
+- **If you take one thing from Trap 5:** authority and oversight should grow together. Right now we are very good at scaling one of them.
+
+→ Oversight cannot scale by asking people to stare at more decisions. So end on the authority question.
 -->
 
 ---
@@ -1698,28 +1724,6 @@ class: q-slide
 <!--
 ~2:00
 
-- **Pause. This is the conclusion of Trap 5.**
-> What can it do when it's wrong?
-
-- Not "can AI be wrong." Everything is wrong sometimes. Humans are wrong.
-- **Better models don't retire this question — they sharpen it**, because we'll grant more authority.
-
-**Three follow-ups, the ones you already use for everything else:**
-- **How bad is it?** A wrong draft in a queue is not a wrong wire transfer.
-- **Will we notice?** — dwell here. Our entire monitoring tradition is built on things that break *loudly*. Exception, crash, timeout, p99.
-> AI failure looks like: the operation completed successfully, and what it did was wrong. Nothing threw. Every dashboard is green.
-- For AI systems, "nothing threw an exception" is an especially weak definition of success.
-- **Can we undo it?** Reversibility buys you more than almost any control does.
-
-**DO NOT GOLD-PLATE:**
-- Controls aren't free either — latency, flexibility, engineering time, customer experience.
-- If the consequence is small and reversible, let the system move. *"Yeah, that might break, and we're fine with that"* is a legitimate engineering conclusion. **Deliberately accepting risk is engineering.**
-> I don't want to replace AI maximalism with governance maximalism.
-
-→ Five traps. Five questions.
-
-
-# Jim's Draft Script
 
 Monday.
 
@@ -1748,6 +1752,29 @@ If the consequence is small and reversible, let the system move. "Yeah, that mig
 Deliberately accepting risk **is** engineering.
 
 I don't want to replace AI maximalism with governance maximalism.
+
+
+# Supporting Notes
+
+- **Pause. This is the conclusion of Trap 5.**
+> What can it do when it's wrong?
+
+- Not "can AI be wrong." Everything is wrong sometimes. Humans are wrong.
+- **Better models don't retire this question — they sharpen it**, because we'll grant more authority.
+
+**Three follow-ups, the ones you already use for everything else:**
+- **How bad is it?** A wrong draft in a queue is not a wrong wire transfer.
+- **Will we notice?** — dwell here. Our entire monitoring tradition is built on things that break *loudly*. Exception, crash, timeout, p99.
+> AI failure looks like: the operation completed successfully, and what it did was wrong. Nothing threw. Every dashboard is green.
+- For AI systems, "nothing threw an exception" is an especially weak definition of success.
+- **Can we undo it?** Reversibility buys you more than almost any control does.
+
+**DO NOT GOLD-PLATE:**
+- Controls aren't free either — latency, flexibility, engineering time, customer experience.
+- If the consequence is small and reversible, let the system move. *"Yeah, that might break, and we're fine with that"* is a legitimate engineering conclusion. **Deliberately accepting risk is engineering.**
+> I don't want to replace AI maximalism with governance maximalism.
+
+→ Five traps. Five questions.
 -->
 
 ---
@@ -1773,20 +1800,6 @@ clicks: 5
 <!--
 ~2:30
 
-- *"That's it. That's the talk."*
-- The traps were the **not that**. These five questions are the **do this**.
-- Reveal one at a time. Say each, with a brief callback to its trap. **Do not re-explain the traps.**
-
-**[1]** *What do we actually know?* — a great answer isn't evidence.
-**[2]** *What did our question already decide?* — the wording can choose before we do.
-**[3]** *Am I understanding faster — or avoiding understanding?* — offload the work, not the evidence.
-**[4]** *What got faster — and where should that capacity go?* — capacity is not a plan.
-**[5]** *What can it do when it's wrong?* — authority is the thing that changed, not intelligence.
-
-> If one of these makes you stop and ask a better question a month from now, this was worth your evening.
-
-
-# Jim's Draft Script
 
 That's it. That's the talk.
 
@@ -1807,6 +1820,21 @@ The traps were the "not that." These five are the "do this."
 I don't expect anybody to remember five things.
 
 If one of them makes you stop and ask a better question a month from now, this was worth your evening.
+
+
+# Supporting Notes
+
+- *"That's it. That's the talk."*
+- The traps were the **not that**. These five questions are the **do this**.
+- Reveal one at a time. Say each, with a brief callback to its trap. **Do not re-explain the traps.**
+
+**[1]** *What do we actually know?* — a great answer isn't evidence.
+**[2]** *What did our question already decide?* — the wording can choose before we do.
+**[3]** *Am I understanding faster — or avoiding understanding?* — offload the work, not the evidence.
+**[4]** *What got faster — and where should that capacity go?* — capacity is not a plan.
+**[5]** *What can it do when it's wrong?* — authority is the thing that changed, not intelligence.
+
+> If one of these makes you stop and ask a better question a month from now, this was worth your evening.
 -->
 
 ---
@@ -1827,28 +1855,6 @@ class: pull-quote dark-slide
 <!--
 ~1:45
 
-[Sources]
-- Portrait source: Thomas Sowell Portrait (3x4 cropped), Internet Archive Book Images via Wikimedia Commons, 1964. Public domain in the United States. https://commons.wikimedia.org/wiki/File:Thomas_Sowell_Portrait_(3x4_cropped).jpg
-- Editorial treatment created with OpenAI ImageGen from the public-domain source portrait.
-[/Sources]
-
-- Back to where we started.
-- AI did not give us a world without trade-offs. It **moved** them, faster than any shift I've worked through — internet, distributed systems, Agile, cloud, DevOps, microservices, and a couple of reorganizations I'd rather not relive.
-- **The lesson I actually carry from those:** people were profoundly correct that the internet would change everything, and profoundly wrong about exactly how.
-> I'd assume the same is true of everything I've said tonight.
-
-**PAY OFF THE FRAME from the opening — this is what the quote was doing all along:**
-- Sowell was never writing about software. That's exactly why it holds.
-- Every one of tonight's five traps was the same seam: a technical thing got faster, and ran into a **human** system nobody had written down. What finance meant. Why the approvals were in that order. How people actually build judgment. What we're staffed to produce. Who is allowed to decide.
-> "They are not two systems. They never were."
-
-- Things that were scarce aren't anymore: implementation · knowledge access · alternatives · experiments · critique.
-- **So stop organizing your systems and your teams as if those things still cost what they used to.**
-- But go look for what *didn't* disappear. Where did the attention go? Where did the work go? Where did the risk go? Which assumption quietly stopped being true?
-- And keep doing it — this is going to move again next year.
-
-
-# Jim's Draft Script
 
 Back where we started.
 
@@ -1877,6 +1883,29 @@ So stop organizing your systems and your teams as if those things still cost wha
 Then go look for what didn't disappear. Where did the attention go? Where did the work go? Where did the risk go? Which assumption quietly stopped being true?
 
 And keep doing that. Because this is going to move again next year.
+
+
+# Supporting Notes
+
+[Sources]
+- Portrait source: Thomas Sowell Portrait (3x4 cropped), Internet Archive Book Images via Wikimedia Commons, 1964. Public domain in the United States. https://commons.wikimedia.org/wiki/File:Thomas_Sowell_Portrait_(3x4_cropped).jpg
+- Editorial treatment created with OpenAI ImageGen from the public-domain source portrait.
+[/Sources]
+
+- Back to where we started.
+- AI did not give us a world without trade-offs. It **moved** them, faster than any shift I've worked through — internet, distributed systems, Agile, cloud, DevOps, microservices, and a couple of reorganizations I'd rather not relive.
+- **The lesson I actually carry from those:** people were profoundly correct that the internet would change everything, and profoundly wrong about exactly how.
+> I'd assume the same is true of everything I've said tonight.
+
+**PAY OFF THE FRAME from the opening — this is what the quote was doing all along:**
+- Sowell was never writing about software. That's exactly why it holds.
+- Every one of tonight's five traps was the same seam: a technical thing got faster, and ran into a **human** system nobody had written down. What finance meant. Why the approvals were in that order. How people actually build judgment. What we're staffed to produce. Who is allowed to decide.
+> "They are not two systems. They never were."
+
+- Things that were scarce aren't anymore: implementation · knowledge access · alternatives · experiments · critique.
+- **So stop organizing your systems and your teams as if those things still cost what they used to.**
+- But go look for what *didn't* disappear. Where did the attention go? Where did the work go? Where did the risk go? Which assumption quietly stopped being true?
+- And keep doing it — this is going to move again next year.
 -->
 
 ---
@@ -1889,6 +1918,17 @@ class: statement-slide
 # The goal is **better systems**.
 
 <!--
+The goal isn't maximum AI.
+
+The goal is better systems.
+
+[Pause. Don't summarize. Don't thank anybody yet.]
+
+I'd love to argue about any of this.
+
+
+# Supporting Notes
+
 **Stop here.**
 
 - **Do NOT re-summarize.** No thank-you slide, no Twitter handle.
@@ -1921,15 +1961,4 @@ class: statement-slide
 - Test-first was always partly a *don't-fool-yourself* mechanism: a test written before the implementation can't have been derived from it. AI makes that ordering **more** valuable, because derived-check contamination is now fast, fluent and voluminous. It also kills the oldest objection — that tests are expensive to write.
 - **The honest limit:** TDD gives independence from the *implementation*, nothing against a misread *requirement*. Write a test-first test encoding the misunderstanding and you're exactly as wrong. That's where the refund example lives.
 - **The concrete technique:** "write the implementation" then "now write the tests" in the same context is maximum contamination. Generating tests from the requirement in a **fresh context**, before the implementation exists, is meaningfully better evidence for the same effort.
-
-
-# Jim's Draft Script
-
-The goal isn't maximum AI.
-
-The goal is better systems.
-
-[Pause. Don't summarize. Don't thank anybody yet.]
-
-I'd love to argue about any of this.
 -->
