@@ -1266,6 +1266,31 @@ and what the close asks them to remember.
 
 ---
 
+### D-62 · Independent evidence means different provenance, not obvious truth
+**Decided** 2026-09-01 · **Status** Active
+
+Trap 1's first evidence example is now *"A check derived from a different source,"* using
+a ledger's separately established refundable balance. The speaker explicitly says that
+people still had to interpret and establish that ledger rule, and that it can still be
+wrong. Its value is narrower: it did not inherit the implementation's reading of
+*"prorated,"* so it has a chance to contradict that reading.
+
+**Why:** *"An invariant nobody had to interpret"* could mean either an obvious fact any
+reasonable reader knows or a universally pre-encoded refund rule. Neither is the point,
+and neither is reliably true. Independence comes from provenance, not self-evidence. The
+check also does not prove the whole refund policy; it catches only the failures that
+violate its independently established constraint.
+
+The replay note now also preserves the speaker's useful positive-AI point: a quick script
+or appropriately controlled tool access makes historical comparison dramatically easier,
+while ease of access remains distinct from permission.
+
+**Rejected:** defending the original wording by explaining *invariant* more carefully.
+The technical term was not the problem; the unsupported claim that nobody interpreted it
+was.
+
+---
+
 ## G. Rejected — do not reopen without new information
 
 | Idea | Why it was rejected |

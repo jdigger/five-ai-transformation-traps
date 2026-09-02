@@ -152,11 +152,13 @@ Independence used to arrive as a by-product of friction — different people, di
 ```
 ~2:00
 
-None of these are exotic. Notice what they have in common: none of them come from anybody's reading of the requirement.
+None of these are exotic. Notice what they have in common: none of them come from the implementation's reading of this requirement.
 
-[click 1] The invariant is free and it is not a matter of opinion. You cannot refund more than someone paid. That is not "does this seem reasonable" — that's a line of code that is either true or it isn't.
+[click 1] Suppose the ledger already carries a separately established refundable balance. Checking that the refund does not exceed that balance is a cheap boolean comparison once the rule exists.
 
-[click 2] The replay is the strongest one and it is now trivially cheap, which is itself a thing AI changed. Ninety days of real cancellations, run them through the new code, diff against what finance actually paid out. Reality already ran the experiment. We just have to go read the results.
+But do not hear "obvious" or "nobody had to interpret it." People still had to decide what counts as refundable, and that rule can still be wrong. The independence comes from provenance: the implementation came from this sentence; the ledger constraint came from somewhere else. It does not prove the whole policy is right. It gives one independently sourced fact a chance to contradict the implementation.
+
+[click 2] The replay is the strongest one and it is now trivially cheap, which is itself a thing AI changed. Ninety days of real cancellations, run them through the new code, diff against what finance actually paid out. A quick script or appropriately controlled tool access can do work that once required a specialist and a long queue. Access controls still apply; ease of access is not permission. Reality already ran the experiment. We just have to go read the results.
 
 [click 3] And the cheapest one is still a human being. Ten examples, thirty minutes, the person who owns the policy. No framework required.
 

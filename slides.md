@@ -29,6 +29,15 @@ Jim Moore
 - Not about today's model, assistant, agent framework, or prompt technique — all wrong by the time you get home.
 - Mistakes I'm watching us make, and have made, as AI changes how we build and how we run technology organizations.
 - Five of them. A question for each you can use Monday.
+
+
+
+
+# Jim's rough script
+
+This isn't prompt or context engineering, RAG pipelines, some framework, or any of that. I'm sure you've noticed that the latest best practices - and what's available - for those changes almost every week.
+
+This is how to approach what has become increasingly useful as all of these things get more powerful, but we don't know how to properly make use of that.
 -->
 
 ---
@@ -53,6 +62,11 @@ class: pull-quote dark-slide
 **PLANT THE FRAME — one sentence, then move on. Do NOT explain it. It gets paid off at the end.**
 - Sowell isn't a technologist. He's a systems thinker about **human** systems — incentives, institutions, second-order consequences. We're technologists, and we think in technical systems.
 > "The parts we wrote down are the technical system. The parts we didn't are still running."
+
+
+# Jim's rough script
+
+Thomas Sowell isn't a tech guy. He's a famous systems thinker - about **human** systems. Incentives, institutions, second-order consequences. We're computer geeks, and we think in technical systems...
 -->
 
 ---
@@ -94,6 +108,21 @@ What just got dramatically easier?<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ...and what
 > "What just got dramatically easier, and what should we do differently because of that?"
 
 → One of the first things it made easy was getting a really good answer.
+
+
+# Jim's rough script:
+
+We've all been seeing how truly useful AI is proving to be.
+
+In this room, we tend to focus on code.
+
+But that's been getting easier for my entire 30+ year career. Assemblers. Compilers. Managed memory. Virtual machines. Sophisticated frameworks. Cloud...
+
+And on and on... That's been a very good thing.
+
+But the rest also got a whole lot easier - including things that we **thought** weren't going to get automated.
+
+AI continues to make getting a REALLY good answer much faster and easier.
 -->
 
 ---
@@ -111,6 +140,12 @@ class: trap-slide dark-slide
 - Let it sit for a second.
 - Everyone knows AI hallucinates. That's the boring version, and we're getting better at catching it — obvious nonsense is obvious.
 - I'm interested in the other one: sophisticated, well-reasoned, completely coherent — raising our confidence in something we never established.
+
+# Jim's draft script
+
+For our purposes, let's throw hallucinations out the window.
+
+I'm interested in it giving truly sophisticated, well-reasoned, completely coherent answers.
 -->
 
 ---
@@ -180,6 +215,33 @@ Finance meant: unused <em>whole days</em> only —<br>and the setup fee is never
 - **That's the qualitative change.** Not that AI is wrong more often. That the *amount* of evidence went up while the *independence* of it went to zero — and every artifact in front of you still says "verified."
 
 → So what would count as evidence that didn't come from that sentence?
+
+# Jim's Rough Script
+
+Here we go: Standard story card. {read}
+
+Let's take advantage of AI's amazing abilities...
+{impl}
+{tests}
+{green}
+
+Sweet! I'm not going to unnecessarily go back to writing code when the code it generates is generally better - especially as the models get better - than I could anyway.
+
+Or, OMG, all those tedious tests.
+
+However, you must be thinking, "There MUST be something wrong here..." Yep. What is it?
+
+I'll give you a clue: It's NOT that the AI wrote the code and tests, or that the story card was wrong...
+
+{when the 47 passing turns red}
+
+Ok, fine. So we were testing all the right things. With 47 tests, no less. But it was for what we knew. We can't "blame" the AI for that. And a human - especially one that doesn't know rules finance hadn't stated - would likely make the same mistake.
+
+And that's what makes this interesting. Humans are slower and more unreliable, while AI is much faster and more precise — and it happily does work we don't want to do.
+
+That's wonderful. It also changes the trade-offs. We'll get back to that...
+
+Until then, let's look at how we can identify and fix the issues.
 -->
 
 ---
@@ -193,7 +255,7 @@ class: canvas-slide
 
 <div class="reveal-list">
 
-<div class="item" v-click="1"><span class="mark">→</span><span>An invariant nobody had to interpret<span class="note"><code>refundAmount &lt;= amountPaid</code> — always true, regardless of who read what</span></span></div>
+<div class="item" v-click="1"><span class="mark">→</span><span>A check derived from a different source<span class="note"><code>refundAmount &lt;= refundableBalance</code> — a ledger rule established independently of “prorated”</span></span></div>
 
 <div class="item" v-click="2"><span class="mark">→</span><span>Replay ninety days of real cancellations<span class="note">Compare what the code would pay against what finance actually paid</span></span></div>
 
@@ -211,13 +273,18 @@ Use AI to challenge your thinking —<br>then use evidence to challenge both of 
 ~2:00
 
 - **Frame these as one thing:** three ways to buy back the independence we just lost. Not a checklist of good practices.
-- What they share: **none of them come from anybody's reading of the requirement.**
+- What they share: **none of them come from the implementation's reading of this requirement.**
 
-**[1] Invariant** — free, and not a matter of opinion. You cannot refund more than someone paid. Not "does this seem reasonable" — a line of code that's either true or it isn't.
-- Independence here comes from the claim being *narrower* than the requirement. Nobody had to interpret it.
+**[1] A check from a different source**
+- Suppose the ledger already carries a separately established `refundableBalance`. Checking `refundAmount <= refundableBalance` is just a cheap boolean comparison once that rule exists.
+- **Do not call it obvious or interpretation-free.** People still had to decide what counts as refundable, and that rule can still be wrong.
+> The independence comes from provenance: the implementation came from this sentence; the constraint came from somewhere else.
+- It does not prove the whole policy is right. It gives one independently sourced fact a chance to contradict the implementation.
 
 **[2] Replay** — the strongest, and now trivially cheap, which is itself a thing AI changed. Ninety days of real cancellations, diffed against what finance actually paid.
 - Independence comes from **history**. It was generated before anyone wrote this prompt, by a system that didn't read our sentence.
+- AI makes obtaining and comparing that history much easier: a quick script or appropriately controlled access through a tool can do work that once required a specialist and a long queue.
+- **Keep the parenthetical short:** access controls still apply. Ease of access is not permission.
 > Reality already ran the experiment. We just have to go read the results.
 
 **[3]** The cheapest one is still a human being. Ten examples, thirty minutes, the person who owns the policy.
@@ -232,7 +299,7 @@ Use AI to challenge your thinking —<br>then use evidence to challenge both of 
 - Don't do all three for a throwaway prototype. Budget is set by *how sure do we need to be?* and *how bad is it if we're wrong?*
 - A refund calculator earns the replay. A spike you're deleting Friday does not. Spending ten dollars to verify a ten-cent experiment is also an engineering failure.
 
-→ These techniques differ, but they force the same question.
+- → These techniques differ, but they force the same question.
 -->
 
 ---
