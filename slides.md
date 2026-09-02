@@ -385,9 +385,9 @@ class: q-slide
 
 To restate all of that
 
-- how important is it that this is right?
-- does it matter if we have 47 tests all just checking the same potentially flawed understanding?
-- as always, make sure when you've confirmed, it had better have persistent validations (aka tests)
+- how important is it that this is **right**?
+- does it matter if we have 47 tests all checking the same potentially flawed understanding?
+- as always, make sure when you've confirmed, it had better have **persistent** validations
 -->
 
 ---
@@ -439,11 +439,11 @@ They should get a correct resolution in under five minutes,<br>any time of day.
 
 </div>
 
+<img class="support-growth-art" src="/illustrations/support-growth-gauges.png" alt="Two upward gauges showing sales growth and slightly faster support-volume growth">
+
 <!--
 ~1:30
 
-- Start with a problem any reasonable business would want fixed.
-- **Do not say AI yet.** “Technology” may enter only at the end, as the hoped-for rescue.
 - Eighteen hours is not a technology problem to the customer. It is simply a long time to be stuck.
 - Let the room agree with the seriousness of the problem before allowing the tone to lift.
 
@@ -456,27 +456,18 @@ They should get a correct resolution in under five minutes,<br>any time of day.
 **[1]**
 - The desired outcome is legitimate: correct resolution, in minutes, whenever the customer needs it.
 
-**DELIVERY NOTE — ROBOT SUPERHERO:**
-- Give “What if technology could swoop in and rescue us?” the lightly theatrical robot-superhero delivery.
-- **Do not say “robot superhero” or “cue the robot superhero.”** That is the tone direction, not the line.
-- Keep the joke aimed at our recurring hope for a technological rescue—not at the support team or the seriousness of the business problem.
-
-- This setup deliberately avoids “How can AI…?” AI should enter on the next slide as a credible answer, not be smuggled into the original problem statement.
-
 
 # Jim's Draft Script
 
 The refund may be straightforward with our spiffy new service, but getting help is not.
 
-Sales are up. o Support volume is up too. That's less good.
+Sales are up. Support volume is up too.
 
 The same team of representatives is handling more incidents than it can absorb. People get overwhelmed. Each incident starts taking longer, which grows the queue, which makes the overload worse. The problem begins feeding itself.
 
 Support management has the obvious answer: we need more people.
 
-And this is where somebody says: “What if technology could swoop in and rescue us?”
-
-[Deliver that line with the lightly theatrical robot-superhero tone. Do not name the bit.]
+But what if technology could swoop in and rescue us?
 
 [click]
 
@@ -490,7 +481,7 @@ class: statement-slide
 
 <div class="diagram">
 
-<div class="caption">THE SYSTEM WE BUILT</div>
+<div class="caption">THE SYSTEM WE BUILD</div>
 
 <div class="flow-h mt-10">
 <div class="node">Read the request</div>
@@ -557,28 +548,19 @@ class: canvas-slide
 344 describe the same checkout failure.
 </div>
 
-<div class="qmark mt-12" v-click="2">
-We thought we had 344 support cases.<br>
-We had <mark class="mark-hot">one product problem</mark>, reported 344 times.
-</div>
-
 </div>
 
 <!--
-~2:00
+~1:15
 
 - Start with the first meaning of the number: workload successfully cleared.
 - Eight hundred tickets resolved. The support metric is green.
 
 **[1]**
 - Then reveal the repeated pattern: 344 customers describe the same checkout failure.
-- Pause. Give the room time to reclassify what it is seeing.
 - **The system found this cluster.** Do not make the AI implausibly blind; a good support system should detect repeated language and shared context.
-
-**[2] — long pause after the second sentence**
-> “We thought we had 344 support cases. We had one product problem, reported 344 times.”
-
-- That is the turn. The work looked like hundreds of independent conversations only because we named the queue “support.”
+- Pause. Give the room time to register the repetition, but **do not interpret it yet.**
+- Advance to the next slide for the reclassification.
 
 
 # Jim's Draft Script
@@ -587,11 +569,42 @@ At the end of the week the number says: eight hundred tickets resolved. The supp
 
 But the system also clusters what it saw. Three hundred and forty-four of those customers were describing the same checkout failure.
 
-[Pause.]
+[Pause. Then advance without explaining it.]
+-->
+
+---
+layout: default
+class: statement-slide
+---
+
+# We thought we had 344 support cases.
+
+<h1 v-click="1">We had <strong>one product problem</strong>, reported 344 times.</h1>
+
+<!--
+~0:45
+
+- This slide exists to let the reclassification occupy the whole room.
+- Read the first sentence, then pause.
+
+**[1]**
+> “We had one product problem, reported 344 times.”
+
+- Give **one product problem** its full weight.
+- Long pause. Do not explain the mechanism yet.
+- The work looked like hundreds of independent conversations only because we named the queue “support.”
+- Advance only after the room has completed the turn for itself.
+
+
+# Jim's Draft Script
 
 We thought we had 344 support cases.
 
+[Click.]
+
 We had one product problem, reported 344 times.
+
+[Long pause. Let the room complete the reclassification before advancing.]
 -->
 
 ---
@@ -601,33 +614,41 @@ class: statement-slide
 
 # The system found the pattern.
 
-# The framing decided whether it was **the job**.
+# Speed removed the pressure to **notice.**
 
 <!--
 ~1:30
 
 - Preempt the obvious objection: yes, a sophisticated support system should identify the cluster. Ours did.
-- The failure is not that AI missed the root cause.
-- The project was chartered, funded, measured, and owned as **support automation**. Its job was to resolve contacts quickly.
-- The repeated checkout defect appeared in a trend report, while the organization celebrated lower wait time and the product defect stayed in somebody else's backlog.
-> “The AI found the evidence. The framing decided what counted as the job.”
+- The failure is not that AI missed or buried the evidence.
+- Before automation, 344 reports created visible organizational pain: a growing queue, long waits, overwhelmed representatives, and a demand for more people.
+- Now those same reports are resolved in minutes. The support dashboard is green. The cluster still appears in a trend report—but the crisis no longer forces anyone to pay attention.
+> “The system didn't hide the evidence. It removed the pain that made the evidence impossible to ignore.”
 
-- The hidden decision was not “use AI.” It was: **the product is fixed; support is where this problem lives.**
-- This is not mainly a capacity or metric trap. It is a framing trap: we mistook a stream of evidence about the product for a queue of independent work to complete.
-- The support system remains valuable. The question is whether resolving each contact also makes the recurring reason for contact impossible to ignore.
+- **Distinguish noticing from tolerating.** Once the business clearly sees the product defect, it can consciously decide whether the cost of fixing it exceeds the harm it causes. That may be an uncomfortable decision—especially because customers still bear the failure—but at least it is a decision.
+- The trap is that faster support lets the issue fall below organizational attention **before anyone makes that decision.**
+- We silenced the alarm without fixing the checkout failure.
+- By defining success as faster incident resolution, the original question treated repeated contacts as work to complete rather than a signal that had to become impossible to ignore.
+- The support system remains genuinely valuable. That is exactly why this is dangerous: its success can conceal the need for a conscious product decision.
 
 
 # Jim's Draft Script
 
-And yes: a good system should notice that pattern. This one did.
+This would show in the reports when asked.
 
-But we had chartered it as a support-automation project. We funded it, measured it, and assigned ownership around one job: resolve support contacts quickly.
+The failure is not that AI buried the evidence. It is what happened to the pressure to notice it.
 
-So the trend appeared in a report. Support celebrated the wait-time improvement. The checkout defect stayed in somebody else's backlog.
+Before, 344 reports meant a growing queue, long waits, overwhelmed representatives, and support management asking for more people. The organization could feel the checkout problem even if it called that pain “support volume.”
 
-The AI found the evidence. The framing decided what counted as the job.
+Now those same reports are resolved in minutes. The dashboard is green. The pattern still appears in a report — but resolving the crisis the business metrics focused on no longer forces anyone to pay attention to the underlying issue.
 
-The question had already decided that the product was fixed, and support was where the problem lived.
+The system didn't hide the evidence. It removed the pain that made the evidence impossible to ignore.
+
+Once the business notices the defect, it can consciously decide to tolerate it. Maybe fixing it costs more than the harm it causes the business — though the customers are clearly still paying a price. That may be an uncomfortable decision, but at least it is a decision.
+
+The trap is that nobody made that decision. Faster support let the problem fall below organizational attention before it could demand one.
+
+We silenced the alarm without fixing the failure.
 -->
 
 ---

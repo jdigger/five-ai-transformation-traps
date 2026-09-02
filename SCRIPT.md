@@ -281,7 +281,7 @@ is one.
 ## Slide 11 · One week of support
 
 ```
-~2:00
+~1:15
 
 At the end of the week the number says: eight hundred tickets resolved. The
 support metric is green.
@@ -291,49 +291,63 @@ support metric is green.
 But the system also clusters what it saw. Three hundred and forty-four of those
 customers were describing the same checkout failure.
 
-[Pause. Give the room time to reclassify what it is seeing.]
-
-[click 2]
-
-We thought we had 344 support cases.
-
-We had one product problem, reported 344 times.
-
-[Long pause.]
-
-The system found the cluster. Do not make the AI implausibly blind; a good
-support system should detect repeated language and shared context. The turn is
-that the work looked like hundreds of independent conversations because we
-named the queue “support.”
+[Pause. Let the repetition register, but do not interpret it yet. Then advance.]
 ```
 
 
-## Slide 12 · The framing decided whether it was the job
+## Slide 12 · One product problem
+
+```
+~0:45
+
+We thought we had 344 support cases.
+
+[click]
+
+We had one product problem, reported 344 times.
+
+[Long pause. Let the room complete the reclassification before advancing.]
+
+The work looked like hundreds of independent conversations only because we
+named the queue “support.” Do not explain the mechanism yet; the next slide does
+that work.
+```
+
+
+## Slide 13 · Speed removed the pressure to notice
 
 ```
 ~1:30
 
 And yes: a good system should notice that pattern. This one did.
 
-But we had chartered it as a support-automation project. We funded it, measured
-it, and assigned ownership around one job: resolve support contacts quickly.
+The failure is not that AI buried the evidence. It is what happened to the
+pressure to notice it.
 
-So the trend appeared in a report. Support celebrated the wait-time
-improvement. The checkout defect stayed in somebody else's backlog.
+Before, 344 reports meant a growing queue, long waits, overwhelmed
+representatives, and support management asking for more people. The organization
+could feel the checkout problem even if it called that pain “support volume.”
 
-The AI found the evidence. The framing decided what counted as the job.
+Now those same reports are resolved in minutes. The dashboard is green. The
+pattern still appears in a report—but the crisis no longer forces anyone to pay
+attention.
 
-The question had already decided that the product was fixed, and support was
-where the problem lived.
+The system didn't hide the evidence. It removed the pain that made the evidence
+impossible to ignore.
 
-This is not mainly a capacity or metric trap. We mistook a stream of evidence
-about the product for a queue of independent work to complete. The support
-system is still valuable; the question is whether resolving each contact also
-makes the recurring reason for contact impossible to ignore.
+Once the business notices the defect, it can consciously decide to tolerate it.
+Maybe fixing it costs more than the harm it causes the business—though the
+customers are clearly still paying a price. That may be an uncomfortable
+decision, but at least it is a decision.
+
+The trap is that nobody made that decision. Faster support let the problem fall
+below organizational attention before it could demand one.
+
+We silenced the alarm without fixing the checkout failure.
 ```
 
 
-## Slide 13 · Ask it to attack your framing
+## Slide 14 · Ask it to attack your framing
 
 ```
 ~1:00
@@ -361,7 +375,7 @@ All three prompts are ways of forcing one question.
 ```
 
 
-## Slide 14 · Q: What did our question already decide?
+## Slide 15 · Q: What did our question already decide?
 
 ```
 ~0:30
@@ -381,7 +395,7 @@ Now something more personal. If AI can explain unfamiliar systems, generate the 
 ```
 
 
-## Slide 15 · TRAP 03 intro
+## Slide 16 · TRAP 03 intro
 
 ```
 ~0:30
@@ -396,7 +410,7 @@ passing through "now I understand this."
 ```
 
 
-## Slide 16 · Cognitive offloading is a feature
+## Slide 17 · Cognitive offloading is a feature
 
 ```
 ~2:00
@@ -421,7 +435,7 @@ That's what you keep.
 ```
 
 
-## Slide 17 · Help me / Challenge me
+## Slide 18 · Help me / Challenge me
 
 ```
 ~2:30
@@ -450,7 +464,7 @@ What I'd say instead: offload implementation effort without disconnecting from i
 ```
 
 
-## Slide 18 · How can we find out?
+## Slide 19 · How can we find out?
 
 ```
 ~2:15
@@ -481,7 +495,7 @@ The loop only works if I stay connected to its evidence.
 ```
 
 
-## Slide 19 · Q: Am I understanding faster — or avoiding understanding?
+## Slide 20 · Q: Am I understanding faster — or avoiding understanding?
 
 ```
 ~0:30
@@ -497,7 +511,7 @@ Suppose all of this works and we really are dramatically faster. Now what?
 ```
 
 
-## Slide 20 · TRAP 04 intro
+## Slide 21 · TRAP 04 intro
 
 ```
 ~0:30
@@ -510,7 +524,7 @@ Otherwise this reads as anti-productivity and half the room stops listening.
 ```
 
 
-## Slide 21 · AI gave you capacity
+## Slide 22 · AI gave you capacity
 
 ```
 ~2:00
@@ -532,7 +546,7 @@ I'm not going to dodge that last one.
 ```
 
 
-## Slide 22 · If developers are 2x as productive
+## Slide 23 · If developers are 2x as productive
 
 ```
 ~2:30
@@ -560,7 +574,7 @@ What I do know is that being wrong about where the work went is bad for everybod
 ```
 
 
-## Slide 23 · What got faster? (pipeline + metrics)
+## Slide 24 · What got faster? (pipeline + metrics)
 
 ```
 ~2:00
@@ -591,7 +605,7 @@ Before we decide what to do with the new capacity, name the decision.
 ```
 
 
-## Slide 24 · Q: What got faster — and where should that capacity go?
+## Slide 25 · Q: What got faster — and where should that capacity go?
 
 ```
 ~0:30
@@ -607,7 +621,7 @@ So far AI has mostly been handing us things: answers, code, designs. Increasingl
 ```
 
 
-## Slide 25 · TRAP 05 intro
+## Slide 26 · TRAP 05 intro
 
 ```
 ~0:30
@@ -624,7 +638,7 @@ The concept: this is about AUTHORITY, not correctness.
 ```
 
 
-## Slide 26 · Authority ladder
+## Slide 27 · Authority ladder
 
 ```
 ~2:30 across the reveals. Go slowly. Let each one land.
@@ -650,7 +664,7 @@ And before we ask what it should be allowed to do — one more thing about that 
 ```
 
 
-## Slide 27 · Prompt injection
+## Slide 28 · Prompt injection
 
 ```
 ~2:00 — keep this tight. This is NOT a security tutorial, and the room will try to make it one.
@@ -689,7 +703,7 @@ And that authority can now act much faster than careful human oversight.
 ```
 
 
-## Slide 28 · 10,000 decisions / which 100?
+## Slide 29 · 10,000 decisions / which 100?
 
 ```
 ~1:30
@@ -715,7 +729,7 @@ Oversight cannot scale by asking people to stare at more decisions. So end on th
 ```
 
 
-## Slide 29 · Q: What can it do when it's wrong?
+## Slide 30 · Q: What can it do when it's wrong?
 
 ```
 ~2:00
@@ -745,7 +759,7 @@ Five traps. Five questions.
 ```
 
 
-## Slide 30 · Five questions for Monday
+## Slide 31 · Five questions for Monday
 
 ```
 ~2:30
@@ -767,7 +781,7 @@ was worth your evening.
 ```
 
 
-## Slide 31 · Sowell callback
+## Slide 32 · Sowell callback
 
 ```
 ~1:30
@@ -788,7 +802,7 @@ And keep doing it, because this is going to move again next year.
 ```
 
 
-## Slide 32 · The goal isn't maximum AI
+## Slide 33 · The goal isn't maximum AI
 
 ```
 Stop here.

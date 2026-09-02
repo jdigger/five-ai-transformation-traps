@@ -99,17 +99,18 @@ prevents narrative whiplash without requiring every trap to reuse the same proce
 
 - **Trap 1, slide 5** — the green build flips orange as the real rule lands; *"one check,
   forty-seven times"* delivered pointing at `47 passing` (D-58).
-- **Trap 2, slides 10–12** — the support system must first feel unequivocally successful;
-  slide 11 then reclassifies `344 support cases` as **one product problem reported 344
-  times**; slide 12 makes explicit that the AI found the pattern and the framing decided
-  whether it was the job (D-64).
+- **Trap 2, slides 10–13** — the support system must first feel unequivocally successful;
+  slide 11 establishes the repeated pattern; slide 12 gives the reclassification from
+  `344 support cases` to **one product problem reported 344 times** the whole frame; slide
+  13 makes explicit that the AI found the pattern while faster resolution
+  removed the organizational pressure to notice its cause (D-64, D-67).
 - **Trap 5, slide 26** — the authority ladder escalating one rung per click, cold.
 - **The close** — five questions on slide 30 → Sowell callback → *"The goal isn't maximum AI."* **No
   re-summary after it** (D-16).
 
 ### Current state
 
-32 slides · ~48:45 planned. Every trap ends on its exact Monday question (D-61).
+33 slides · ~48:45 planned. Every trap ends on its exact Monday question (D-61).
 Opening through Trap 2 is presentation-quality.
 Traps 3–5 have had a structural pass but not a full narrative one. Nothing has been
 rehearsed against a clock (R-09) — **every timing number in this deck is a guess.**
@@ -1397,6 +1398,61 @@ reuse. The quote remains the primary read; the image occupies the right side and
 the dark ground rather than becoming a biography slide.
 
 The source and ImageGen treatment are recorded in both slides' `[Sources]` notes.
+
+---
+
+### D-67 · Trap 2 loses the pressure to notice, not access to the pattern
+**Decided** 2026-09-02 · **Status** Active · **Refines:** D-64
+
+Slide 12 no longer says *“The framing decided whether it was the job.”* That wording is
+abstract and awkward, and it leaves the causal cost of the successful support system
+unstated.
+
+The slide now lands on:
+
+> The system found the pattern. Speed removed the pressure to notice.
+
+Before automation, hundreds of repeated reports create a queue, long waits, overwhelmed
+representatives, and a headcount request. The organization feels the product defect as
+support pain. When the system resolves those reports in minutes, the evidence remains in a
+trend report but the operational crisis disappears. The memorable spoken distinction is:
+
+> The system didn't hide the evidence. It removed the pain that made the evidence
+> impossible to ignore.
+
+Once the business notices the defect, it may consciously decide to tolerate it because the
+cost to the organization is lower—even though customers still bear the failure. That is a
+business decision. The trap is allowing faster support to push the issue below attention
+before anyone makes that decision.
+
+**Why:** the disadvantage of getting dramatically faster is not merely that another team
+owns the checkout defect. The speed silences an organizational alarm. That more directly
+embodies the talk's underlying engine: a cost was doing a job; removing the cost stopped
+the job from being done.
+
+---
+
+### D-68 · “One product problem” gets its own reveal slide
+**Decided** 2026-09-02 · **Status** Active · **Refines:** D-64, D-67
+
+The `344 cases → one product problem` reclassification is split out of the weekly-support
+slide and given a dedicated statement slide. Slide 11 now stops after establishing that
+344 resolved tickets describe the same checkout failure. Slide 12 begins with:
+
+> We thought we had 344 support cases.
+
+On click, it completes the turn:
+
+> We had one product problem, reported 344 times.
+
+The total Trap 2 budget remains ~9:00: the original two-minute slide becomes 1:15 plus a
+0:45 reveal slide. The deck grows to 33 slides and 32 timed slides without adding planned
+runtime.
+
+**Why:** the reclassification is the conceptual hinge of the example. Sharing a slide with
+the weekly metrics made it compete with its own setup. Giving it the full frame creates a
+clean pause and lets the audience complete the inference before the next slide explains
+how speed removed the pressure to notice.
 
 ---
 

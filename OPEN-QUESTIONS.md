@@ -16,7 +16,7 @@ Everything still in flux for **The Five Biggest AI Transformation Traps**.
 ## Needs a decision
 
 ### Q-01 🟡 The talk is over budget: 48:45 planned against a 45–47 min target
-The speaker-note tally sums to **48:45** across 31 timed slides, and note-time is
+The speaker-note tally sums to **48:45** across 32 timed slides, and note-time is
 systematically optimistic — a live room, a laugh, and pauses on the three money slides
 will push the delivery longer.
 
@@ -27,14 +27,14 @@ slack exist. That halves the cut and changes where it comes from.
 |---|---|---|
 | Opening | 1–3 | 4:15 |
 | Trap 1 | 4–7 | 7:30 |
-| Trap 2 | 8–14 | 9:00 |
-| Trap 3 | 15–19 | 7:45 |
-| Trap 4 | 20–24 | 7:30 |
-| Trap 5 | 25–29 | 8:30 |
-| Close | 30–32 | 4:15 |
+| Trap 2 | 8–15 | 9:00 |
+| Trap 3 | 16–20 | 7:45 |
+| Trap 4 | 21–25 | 7:30 |
+| Trap 5 | 26–30 | 8:30 |
+| Close | 31–33 | 4:15 |
 
-*Recomputed from the note markers 2026-09-02 after D-64. Slide 32 is deliberately
-untimed, so 31 slides carry markers.*
+*Recomputed from the note markers 2026-09-02 after D-68. Slide 33 is deliberately
+untimed, so 32 slides carry markers.*
 
 **Current plan — rehearse before choosing the remaining cut.** D-60 removed two minutes
 from Trap 2 on quality grounds, and D-64's cleaner example removed another 1:45. The deck

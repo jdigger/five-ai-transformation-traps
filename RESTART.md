@@ -146,7 +146,7 @@ npm run dev
 ```
 
 Then open `http://localhost:3030`. Useful URL forms while building:
-`http://localhost:3030/11?clicks=2` jumps to slide 11 with two reveals fired —
+`http://localhost:3030/12?clicks=1` jumps to slide 12 with its reveal fired —
 **always check reveal states this way rather than assuming**, and screenshot the slide.
 **For notes, use `http://localhost:3030/notes`, not `/presenter/`** — presenter view
 gives notes a small corner; `/notes` is full-width with a click-progress bar and font-size
