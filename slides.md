@@ -468,7 +468,7 @@ They should get a correct resolution in under five minutes,<br>any time of day.
 
 The refund may be straightforward with our spiffy new service, but getting help is not.
 
-Sales are up. That's good. Support volume is up too. That's less good.
+Sales are up. o Support volume is up too. That's less good.
 
 The same team of representatives is handling more incidents than it can absorb. People get overwhelmed. Each incident starts taking longer, which grows the queue, which makes the overload worse. The problem begins feeding itself.
 
