@@ -187,6 +187,39 @@
 .slidev-layout.statement-slide h1 + h1 { color: var(--ink-soft); }
 .slidev-layout.statement-slide strong { color: var(--trap); font-weight: 650; }
 
+/* Slide 13: the cheerful dashboard is deliberately large enough to visually
+   subordinate the still-active alarm behind it. */
+.slidev-layout.statement-slide:has(.support-alarm-dashboard) h1 {
+  position: relative;
+  z-index: 1;
+  max-width: 12ch;
+}
+.slidev-layout.statement-slide .support-alarm-dashboard {
+  position: absolute;
+  right: 0%;
+  bottom: -2%;
+  width: 45%;
+  max-width: none;
+  z-index: 0;
+  filter: drop-shadow(0 20px 22px rgba(13, 83, 67, 0.16));
+}
+
+/* Slide 10: reveal the benefit with the before/after support-time result,
+   while the system flow remains legible as the mechanism that produced it. */
+.slidev-layout.statement-slide:has(.system-dashboard) .diagram {
+  position: relative;
+  z-index: 1;
+  width: 66%;
+}
+.slidev-layout.statement-slide .system-dashboard {
+  position: absolute;
+  right: -1%;
+  bottom: -3%;
+  width: 38%;
+  max-width: none;
+  filter: drop-shadow(0 18px 20px rgba(13, 83, 67, 0.14));
+}
+
 /* =========================================================== QUESTION ==== */
 /* The recurring "ask this on Monday" surface. Teal rule, left aligned.
    Deliberately the same every time so the room learns to recognize it. */

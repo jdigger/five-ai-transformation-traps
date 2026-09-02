@@ -329,8 +329,8 @@ representatives, and support management asking for more people. The organization
 could feel the checkout problem even if it called that pain “support volume.”
 
 Now those same reports are resolved in minutes. The dashboard is green. The
-pattern still appears in a report—but the crisis no longer forces anyone to pay
-attention.
+pattern still appears in a report — but resolving the crisis the business metrics
+focused on no longer forces anyone to pay attention to the underlying issue.
 
 The system didn't hide the evidence. It removed the pain that made the evidence
 impossible to ignore.
@@ -343,7 +343,7 @@ decision, but at least it is a decision.
 The trap is that nobody made that decision. Faster support let the problem fall
 below organizational attention before it could demand one.
 
-We silenced the alarm without fixing the checkout failure.
+We silenced the alarm without fixing the failure.
 ```
 
 

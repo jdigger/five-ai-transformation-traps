@@ -503,6 +503,8 @@ class: statement-slide
 
 </div>
 
+<img v-click="1" class="system-dashboard" src="/illustrations/support-time-dashboard.png" alt="A bright green glass support dashboard showing support time down 96 percent">
+
 <!--
 ~2:00
 
@@ -524,13 +526,17 @@ class: statement-slide
 
 # Jim's Draft Script
 
-So we build the system people are hoping AI can become.
-
 It reads what the customer wrote, pulls the account and order context, applies the policy, takes the action it is allowed to take, and explains what happened. If it is genuinely uncertain, it escalates.
 
 And it works. Correct answers. Personalized. Available around the clock.
 
-The wait drops from eighteen hours to under five minutes. If someone brought me that result, I would say yes.
+It follows all the processes correctly in a reliable way. You couldn't ask for a better win.
+
+We can even throw in some Kafka messaging, lots of AI agents, and all that kind of cool stuff that helps it go faster and more reliably.
+
+All the kinds of things that get architects like me all hot and bothered.
+
+The wait drops from eighteen hours to under five minutes.
 -->
 
 ---
@@ -615,6 +621,8 @@ class: statement-slide
 # The system found the pattern.
 
 # Speed removed the pressure to **notice.**
+
+<img class="support-alarm-dashboard" src="/illustrations/support-time-resolved-alarm.png" alt="A happy green glass support dashboard showing a 96 percent reduction in support time, with a ringing red alarm obscured behind it">
 
 <!--
 ~1:30
