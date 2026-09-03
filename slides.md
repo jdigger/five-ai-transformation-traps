@@ -1635,7 +1635,7 @@ class: fact-slide
 
 Here's the arithmetic nobody does.
 
-Ten thousand AI decisions this week.
+Ten thousand AI decisions this week. The kind of thing that used to cross somebody's desk — a PR, a refund approval, an escalation, whatever it was for you.
 
 [click]
 
@@ -1675,6 +1675,9 @@ Right now we are very, very good at scaling one of them.
 # Supporting Notes
 
 - Here's the arithmetic nobody does.
+- **Anchor "decisions" to a unit the room owns, spoken only** (D-05 — the slide stays three bare numbers). *The kind of thing that used to cross somebody's desk.* Name a couple of shapes — a PR, a refund approval, an escalation — then let them fill in their own.
+- **Keep the examples spanning code *and* operations.** The ladder two slides back ends at *issue the refund*, which never had a PR. A code-only anchor drags the room back to Traps 1 and 3 at the wrong moment.
+- This also sets up **meaningful** in the next number: a desk-crossing decision takes real minutes to review, which is why a hundred is generous.
 
 **[1]** Ten thousand and one hundred are deliberately round. The point is the orders-of-magnitude gap: genuinely careful human review will cover only a small fraction of the decisions AI can produce.
 
