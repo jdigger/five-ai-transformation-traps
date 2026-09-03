@@ -29,7 +29,7 @@ jobs:
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
       - name: Build slides
-        run: pnpm run build -- --base /five-ai-transformation-traps/
+        run: pnpm exec slidev build slides.md --base /five-ai-transformation-traps/ --router-mode hash
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3
         with:
