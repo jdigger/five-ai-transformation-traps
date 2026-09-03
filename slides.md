@@ -805,6 +805,8 @@ Move on to the next set of problems - there's always plenty of those!
 
 AI is the next one, and a really big one.
 
+Every one of those was a trade I made on purpose — a layer I stopped understanding, for problems I could finally reach. And every one of them was worth it.
+
 [click]
 
 "I don't need to do this myself" is true.
@@ -827,11 +829,14 @@ That's the part you keep.
 # Supporting Notes
 
 - **Kill the wrong version first.** I am *not* saying you must understand everything AI produces. That's nonsense and it destroys the value of abstraction.
-- Engineering **is** cognitive offloading. I don't want my team implementing B-trees. I don't read the bytecode javac emits. I've never implemented a TCP stack and would like to keep it that way.
-- Every arrow on that line is somebody deciding to stop understanding a layer. Every one was correct. AI is another enormous step and I'm in favor of it.
+
+- **The trade framing must not undercut WONDERFUL.** Each rung was a *good* trade, made
+  knowingly. The point is that they were deliberate — which is what makes the next one land.
+- **The Sowell thread surfaces here. Do not name it** (D-09, D-14, D-17).
 
 **[1] the quiet slide**
 - From a true statement to a different statement. Nobody announces it. It just happens on a Tuesday.
+- **The contrast is the whole beat:** every trade on that ladder was made on purpose. This one is being made without anyone deciding.
 - **The honest version of what you need:** enough to recognize where the seams are — and which ones matter.
 - Transaction boundary meets service boundary · retry meets idempotency · cache meets stale data · generated code meets an undocumented convention · "executed successfully" meets "did the wrong thing."
 > That's what you keep.
