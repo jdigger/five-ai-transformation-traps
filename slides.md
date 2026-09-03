@@ -819,11 +819,13 @@ Nobody stands up in a meeting and declares the switch. It just quietly happens o
 
 So what do you actually keep? The seams.
 
-Not the inside of any layer — I still don't know what the compiler is doing in there. The seam is where one layer's promises run out and the next one's begin, and nobody owns the gap in between.
+Not the inside of any layer — I still don't know what the compiler is doing in there. The seam is where a layer's promise runs out, and nobody owns what's on the other side.
 
-Where the transaction boundary meets the service boundary. Where retry meets idempotency. Where the cache meets stale data. Where generated code meets a convention nobody wrote down.
+Look back at that line. "It compiled." Cool. The compiler promised me it's well-formed. It never promised me it's the thing you asked for.
 
-And my favorite — where "executed successfully" meets "did entirely the wrong thing."
+"It deployed." Cool. The cloud promised me it's running. It never promised the services agree about what they're sending each other.
+
+And my favorite — "executed successfully," meeting "did entirely the wrong thing."
 
 That's the part you keep.
 
@@ -840,7 +842,10 @@ That's the part you keep.
 - From a true statement to a different statement. Nobody announces it. It just happens on a Tuesday.
 - **The contrast is the whole beat:** every trade on that ladder was made on purpose. This one is being made without anyone deciding.
 - **The honest version of what you need:** enough to recognize where the seams are — and which ones matter.
-- **Define "seam" before listing them.** It is where one layer's guarantees end and the next one's begin, with nobody responsible for the gap. Every example is an instance of that; without the definition they are just a list of war stories.
+- **Define "seam" before listing them.** It is where a layer's promise runs out, with nobody responsible for what is on the other side. Without the definition the examples are just war stories.
+- **The examples are anchored to nodes on the diagram — this is the point, not a coincidence.** "It compiled" is the *Compiler* rung; "It deployed" is the *Cloud* rung. The ladder gets walked twice: first as what you stopped needing to know, then as where each promise ends. Do not swap in generic examples; the callback is what holds the slide together.
+- **Phrase them as what the layer guaranteed, never as "is it correct?"** *Promised well-formed, never promised right* is a seam. *Is the code right?* is Trap 1, and re-running that beat here muddies both.
+- Backup examples if one lands flat: retry meets idempotency · cache meets stale data · generated code meets a convention nobody wrote down.
 - **"Seam" is a thread word.** The close names the human/technical seam as the shape of all five traps (D-59). Same word, deliberately — do not swap in "boundary" or "interface" here.
 - Transaction boundary meets service boundary · retry meets idempotency · cache meets stale data · generated code meets an undocumented convention · "executed successfully" meets "did the wrong thing."
 > That's what you keep.
