@@ -817,9 +817,9 @@ But why? The seams.
 
 Not the inside of any layer, but where that layer's promise runs out.
 
-Look back at that line. "It compiled." Cool. The compiler checked my grammar. It never read the sentence.
+{pointing at Compiler} "It compiled." Cool. The compiler checked my grammar. It never read the sentence.
 
-"It deployed." Cool. The cloud promised me it's running. It never promised the services agree about what they're sending each other.
+{pointing at Cloud} "It deployed." Cool. It never promised the services agree about what they're sending each other.
 
 I still don't know what the compiler is doing in there. The seam is where a layer's promise runs out, and nobody owns what's on the other side.
 
@@ -1647,6 +1647,8 @@ Both numbers are round on purpose. The point is the gap in orders of magnitude.
 
 So — which hundred?
 
+Because reviewing all ten thousand was never on the table. That isn't a failure of discipline. It's arithmetic.
+
 "Keep a human in the loop" is not an answer to that question.
 
 A person clicking Approve two thousand times is not supervision. It's a signature.
@@ -1677,7 +1679,9 @@ Right now we are very, very good at scaling one of them.
 **[1]** Ten thousand and one hundred are deliberately round. The point is the orders-of-magnitude gap: genuinely careful human review will cover only a small fraction of the decisions AI can produce.
 
 **[2]** So: **which hundred?**
-- *"Keep a human in the loop"* is not an answer to that question.
+- **Reviewing all ten thousand was never available.** Say it plainly — the room needs to hear that this is arithmetic, not a discipline problem they should feel guilty about.
+- **The Sowell thread surfaces here. Do not name it** (D-09, D-14, D-17). Trap 5 carries no other trade-off vocabulary, and it should not start now: keep this in Trap 5's own register — scale, consequence, arithmetic — and leave the economics language to Traps 1 and 3.
+- *"Keep a human in the loop"* is not an answer to that question — it answers *whether*, when the only question left is *which*.
 > A person clicking Approve two thousand times is not supervision — it's a signature.
 - Many of us know what that feels like. Let the room recognize it without accusing them.
 - **Oversight does not scale just because action scaled.**
