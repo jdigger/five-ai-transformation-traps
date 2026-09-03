@@ -1163,7 +1163,7 @@ The automatic response is fifty percent more stories. More PRs. More features.
 
 And maybe! Maybe that's exactly where the value is. I'm not ruling it out.
 
-But notice that nobody put the other options on the table.
+But notice that nobody put the other options on the table. Every one of these spends the same capacity — so choosing one is choosing against the rest.
 
 We could build three prototypes before committing to one.
 
@@ -1193,6 +1193,10 @@ I'm not going to dodge that last one.
 - Or: the same business outcome now genuinely needs fewer people.
 
 - **I'm not going to dodge that last one.**
+
+- **The Sowell thread surfaces here. Do not name it.** These options are competing claims on
+  one resource — say that they compete, and move. Never say "trade-off" on this slide, never
+  reach for the quote, and do not explain the engine (D-09, D-14, D-17).
 -->
 
 ---
