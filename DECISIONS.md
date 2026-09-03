@@ -1657,7 +1657,7 @@ compiler's guarantees, service boundaries — do not need translating or apologi
 The concrete version is usually the stronger version, and hedging it costs more than it
 buys.
 
-**What it does not permit.** This is not licence for jargon as shorthand or for the banned
+**What it does not permit.** This is not license for jargon as shorthand or for the banned
 vocabulary in D-07, which is banned for being *abstract theory-speak*, not for being
 technical. *"Causal independence of validation"* stays out; *"retry meets idempotency"* is
 fine. The test is whether the phrase names a thing an engineer has debugged, or names a

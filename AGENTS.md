@@ -44,7 +44,7 @@ phrase-by-phrase against `slides.md` — the wording in `slides.md` always wins.
 The room is mixed technical and management, but the non-engineers were largely developers
 once or work closely with them (D-74). Technical specifics — `@Transactional`, idempotency,
 a compiler's guarantees — need no translation or apology, and diluting them for
-accessibility usually makes the deck worse. This is not licence for the abstract
+accessibility usually makes the deck worse. This is not license for the abstract
 theory-speak banned in D-07: *"retry meets idempotency"* is fine, *"causal independence of
 validation"* is not.
 
