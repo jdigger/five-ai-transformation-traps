@@ -810,7 +810,7 @@ class: canvas-slide
 
 <div class="kicker" v-click="1">
 Not junior and senior. Unfamiliar and familiar.<br>
-<span class="fine">Most of us are both, in the same week.</span>
+<span class="fine">Most of us are both, in the same day.</span>
 </div>
 
 </div>
@@ -818,31 +818,21 @@ Not junior and senior. Unfamiliar and familiar.<br>
 <!--
 ~2:00
 
-Two modes. Both enormous. And notice it's not "junior" or "senior."
-
 "What is this @Transactional doing?" "Hmm. And that applies across services?"
 
 "I've never done Rust before, but this is failing when calling this other service. What could be the problem?"
 
-Or for the things we seniors have seen a hundred times before, our experience is compressed pattern recognition. It is the most valuable thing you have.
+Or for the things we seniors have seen a hundred times before, our experience is compressed pattern recognition. It is one of the most valuable things you have.
 
 It is also the exact mechanism by which you decide this problem is the one you solved in 2014, and quietly stop reevaluating because it's worked.
 
-Now you can hand your design to something that will argue with you at eleven at night. For free, never tire, and doesn't care about office politics.
+Now you can hand your design to something that will argue with you at eleven at night. For free, never tires, and doesn't care about office politics.
 
 [click]
 
 On juniors, honestly: some traditional junior work really is getting less valuable. Boilerplate, routine implementation and maintenance, basic debugging...
 
 But there is a difference between juniors producing junior artifacts and engineers developing judgment. "Ask, generate, tests pass, merge" does not produce the second one.
-
-{side note: I've noticed that while developing the talk. The more powerful model, Opus, has made a lot more decisions for me than Sonnet is willing to. Often, they're great decisions. But I've also had to constantly pull it back to lived reality.}
-
-# Supporting Notes
-
-**[1]** Not junior and senior — unfamiliar and familiar. Most of us are both in the same week.
-
-**The operative instruction gets its own slide next** — *offload the effort, don't disconnect from the evidence*, plus the ivory-tower line. Do not pre-empt it here.
 -->
 
 ---
@@ -850,7 +840,7 @@ layout: default
 class: anchor-slide
 ---
 
-<div class="line">Offload the implementation effort. Don't disconnect from the implementation evidence.</div>
+<div class="line">Offload the implementation effort.<p/>Don't disconnect from the implementation evidence.</div>
 
 <div class="fine">Stop touching real code, real incidents, real production, and your judgment stops being calibrated.</div>
 
@@ -860,8 +850,6 @@ class: anchor-slide
 We can't simply say "AI writes the code, and we provide the judgment." As we've talked about repeatedly, AI participates in judgment too.
 
 What we *can* do is offload the implementation **effort** without disconnecting from the implementation **evidence**.
-
-Because the moment you stop touching real code, real incidents, real production — your judgment stops being calibrated with reality.
 
 And we already have a name for that role: the ivory tower architect. 🤮
 

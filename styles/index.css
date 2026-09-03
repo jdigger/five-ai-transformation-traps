@@ -356,7 +356,7 @@
 /* a spoken-line callout at the foot of a slide --------------------------- */
 .kicker {
   margin-top: 2.4rem; font-size: 1.35rem; font-weight: 550; color: var(--good);
-  border-top: 2px solid var(--rule); padding-top: 1.2rem; max-width: 44ch; line-height: 1.4;
+  border-top: 2px solid var(--rule); padding-top: 1.2rem; max-width: 58ch; line-height: 1.4;
 }
 .kicker.hot { color: var(--trap); }
 .kicker .fine {
@@ -521,13 +521,13 @@
   border-top: 2px solid var(--rule);
   font-size: 1.6rem; font-weight: 600; line-height: 1.3;
   letter-spacing: -0.018em; color: var(--ink);
-  max-width: 40ch; text-wrap: balance;
+  max-width: 64ch; text-wrap: balance;
 }
 .anchor.good { color: var(--good); border-top-color: var(--good-soft); }
 
 /* A two-sentence anchor needs room to break at the period rather than inside
-   the first clause. Opt in; the 40ch default is right for a single sentence. */
-.anchor.wide { max-width: 48ch; }
+   the first clause. Opt in; the default is right for a single sentence. */
+.anchor.wide { max-width: 74ch; }
 
 /* Bold inside an anchor has to actually read as bold at this weight. */
 .anchor strong { font-weight: 800; }
@@ -537,7 +537,7 @@
 .anchor .fine {
   display: block; margin-top: 0.5rem;
   font-size: 1.02rem; font-weight: 400; line-height: 1.45;
-  color: var(--ink-soft); letter-spacing: 0;
+  color: var(--ink-soft); letter-spacing: 0; max-width: 96ch;
 }
 .anchor.good .fine,
 .anchor.trap .fine { color: var(--ink-soft); }
@@ -552,16 +552,16 @@
    in the copy column and must not stretch toward the illustration. */
 .slidev-layout.trap-slide .anchor {
   margin-top: 1.4rem; padding-top: 1rem;
-  font-size: 1.24rem; font-weight: 550; max-width: 28ch;
+  font-size: 1.24rem; font-weight: 550; max-width: 34ch;
 }
 
 /* Statement slides run 3.4rem headlines; an anchor there is a footnote to a
    billboard, so it steps down rather than competing. */
-.slidev-layout.statement-slide .anchor { font-size: 1.45rem; max-width: 46ch; }
+.slidev-layout.statement-slide .anchor { font-size: 1.45rem; max-width: 68ch; }
 
 /* The question slides already close with an h2 subtitle. An anchor after it
    is the third element and stays deliberately small. */
-.slidev-layout.q-slide .anchor { font-size: 1.3rem; max-width: 50ch; }
+.slidev-layout.q-slide .anchor { font-size: 1.3rem; max-width: 74ch; }
 
 /* Two ruled blocks stacked read as a stack of rules, not two thoughts. When an
    anchor lands under a kicker (or another anchor), it drops its own rule and
@@ -569,6 +569,15 @@
 .kicker + .anchor,
 .anchor + .anchor { border-top: none; margin-top: 1.3rem; padding-top: 0; }
 
+
+/* MEASURE, and why these numbers look large (D-84).
+   `ch` is the width of the ZERO glyph, and in Inter that is materially wider
+   than average lowercase prose — roughly 1.25x. A cap of 40ch therefore lets a
+   sentence run only about 56% of the frame, which reads as text stopping half
+   way across the screen. Every max-width here is set from the measured width of
+   this deck's actual frame (868px of usable width inside 56px padding), not
+   from a readability rule of thumb meant for body copy. If you add a component,
+   measure it; do not copy a ch value from a book about paragraphs. */
 
 /* ========================================================= ANCHOR SLIDE === */
 /* An anchor that gets its own frame instead of riding on a slide that is
@@ -589,7 +598,7 @@
 .slidev-layout.anchor-slide .line {
   font-size: 3.1rem; font-weight: 650; line-height: 1.14;
   letter-spacing: -0.024em; color: var(--ink);
-  max-width: 21ch; text-wrap: balance;
+  max-width: 34ch; text-wrap: balance;
 }
 .slidev-layout.anchor-slide.good .line { color: var(--good); }
 .slidev-layout.anchor-slide.trap .line { color: var(--trap); }
@@ -599,10 +608,27 @@
   margin-top: 1.5rem; padding-top: 1.1rem;
   border-top: 2px solid var(--rule);
   font-size: 1.4rem; font-weight: 400; line-height: 1.45;
-  color: var(--ink-soft); max-width: 46ch;
+  color: var(--ink-soft); max-width: 72ch;
+}
+
+/* The second sentence, when it deserves to stay a sentence rather than shrink
+   to a footnote. Authored as a plain `## ...` under the .line, so writing one
+   needs no class. Subordinate in weight and color, the way a statement slide's
+   second headline is, but still display type. */
+.slidev-layout.anchor-slide h2 {
+  font-size: 2rem; font-weight: 550; line-height: 1.22;
+  letter-spacing: -0.02em; color: var(--ink-soft);
+  max-width: 52ch; margin: 0.7rem 0 0; text-wrap: balance;
+}
+.slidev-layout.anchor-slide.trap h2,
+.slidev-layout.anchor-slide.good h2 { color: var(--ink-soft); }
+
+/* Two .fine lines in a row are two thoughts, not two rules across the slide. */
+.slidev-layout.anchor-slide .fine + .fine {
+  border-top: none; margin-top: 0.5rem; padding-top: 0;
 }
 
 /* A shorter sentence can afford to be bigger; a longer one must not wrap to
    four lines. Set with .sm / .lg rather than one-off inline styles. */
-.slidev-layout.anchor-slide .line.sm { font-size: 2.5rem; max-width: 26ch; }
-.slidev-layout.anchor-slide .line.lg { font-size: 3.8rem; max-width: 16ch; }
+.slidev-layout.anchor-slide .line.sm { font-size: 2.5rem; max-width: 42ch; }
+.slidev-layout.anchor-slide .line.lg { font-size: 3.8rem; max-width: 28ch; }

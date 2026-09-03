@@ -2039,6 +2039,36 @@ discomfort in this deck point at us, never at them).
 
 ---
 
+### D-84 · Measure the frame; `ch` lies about display type in Inter
+**Decided** 2026-09-03 · **Status** Active
+
+Anchor text was stopping around 56% of the frame width, leaving the right half of the slide
+empty. The cause was not a layout bug: the `.anchor` and `.anchor-slide` components were
+capped in `ch`, and **`ch` is the width of the zero glyph**, which in Inter is roughly 1.25×
+the average width of lowercase prose. A 40ch cap therefore lets a real sentence run only
+about three quarters of 40 characters' worth of space.
+
+**The frame, measured, once, so nobody has to guess again:** the design frame is 980 × 552,
+with 56px side padding, so **868px of usable width**. At that width one line fits about
+**28ch at 3.1rem · 34ch at 2.5rem · 23ch at 3.8rem · 54ch at 1.6rem · 61ch at 1.4rem ·
+64ch at 1.35rem · 84ch at 1.02rem** — those are zero-glyph counts, and prose fills them at
+roughly 0.8×.
+
+Every anchor cap is now set from those measurements. `.kicker` went 44ch → 58ch for the same
+reason: it sits directly above an anchor on several slides, and leaving it short made the
+corrected anchor look wrong beside it.
+
+**The rule for anything added later:** measure the component in the real frame. Do not carry
+over a `ch` value from typographic advice about body copy — 45–75 characters is a rule for
+paragraphs a reader scans at arm's length, not for one display sentence on a projector.
+
+**Also fixed, as part of supporting how the deck is actually being authored:** an
+`anchor-slide` now styles a plain `## …` second sentence (subordinate weight and color, still
+display type) and stops drawing a second rule when two `.fine` lines stack. Both appeared
+from hand-authoring; the component should absorb them rather than require classes.
+
+---
+
 ## G. Rejected — do not reopen without new information
 
 | Idea | Why it was rejected |
@@ -2072,3 +2102,4 @@ discomfort in this deck point at us, never at them).
 | Labeling them with the eyebrow name alone | The eyebrow was small and incidental; the claim is what the room saw and heard (D-82) |
 | "Nobody owns the other side" as the seam definition | A complaint about the org chart; it implies someone else should have filled the gap and leaves the trap toothless (D-83) |
 | "And you own the other side" | Second person instructs the room where the speaker should be implicating himself (D-83, D-54) |
+| Setting slide measures from the 45–75 character readability rule | That rule is for scanned paragraphs, not one display sentence on a projector; it wastes half the frame (D-84) |
