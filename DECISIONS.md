@@ -2069,6 +2069,38 @@ from hand-authoring; the component should absorb them rather than require classe
 
 ---
 
+### D-85 · The throughput trap's Monday line is *"Faster" isn't a decision*
+**Decided** 2026-09-03 · **Status** Active · **Supersedes** the *"Capacity is not a plan"*
+wording from the deck's original build
+
+The subtitle on the throughput trap's question slide was *"Capacity is not a plan."* It is
+now *"Faster" isn't a decision.* The second half — *measure where the constraint moved before
+deciding how to spend it* — is unchanged, and the callback on the five-questions slide was
+updated to match.
+
+**Why.** The old line needed the argument explained before it made sense, which is the wrong
+direction for a line whose job is to compress an argument the room just watched. "Capacity"
+is also a word the room has to translate: it means *the extra hours AI handed you*, and that
+is one step removed from what anybody felt. **"Faster" is the word the room actually uses**,
+which makes the sentence land without a gloss and makes it repeatable in a staffing
+conversation on Monday.
+
+**The claim underneath, unchanged:** getting faster is an input, not a conclusion. It feels
+like progress on its own, so nobody goes looking for the decision it made necessary. The
+evidence is already on screen two slides earlier — coding down 60%, idea to production down
+8% — and in the five competing uses that nobody wrote down (D-?, the capacity slide).
+
+**The note this slide lost has been restored,** in the speaker's voice, following the pattern
+of the other four Monday slides: *Monday.* · the three questions as bullets · the line · why
+it gets skipped · both callbacks in one breath · then the instruction. It had been reduced to
+a bare `~0:30` marker, which made it the only question slide with nothing at the lectern.
+
+**Rejected:** dropping the aphorism and leading with the measure-the-constraint instruction
+alone. The instruction is what happens Monday, but the line is what makes somebody want to do
+it; a bare instruction closes the trap on a chore.
+
+---
+
 ## G. Rejected — do not reopen without new information
 
 | Idea | Why it was rejected |
@@ -2103,3 +2135,5 @@ from hand-authoring; the component should absorb them rather than require classe
 | "Nobody owns the other side" as the seam definition | A complaint about the org chart; it implies someone else should have filled the gap and leaves the trap toothless (D-83) |
 | "And you own the other side" | Second person instructs the room where the speaker should be implicating himself (D-83, D-54) |
 | Setting slide measures from the 45–75 character readability rule | That rule is for scanned paragraphs, not one display sentence on a projector; it wastes half the frame (D-84) |
+| "Capacity is not a plan" as the throughput trap's Monday line | Needs the argument explained first, and "capacity" is a word the room has to translate (D-85) |
+| Closing the throughput trap on the measure-the-constraint instruction alone | The instruction is the Monday action, but a bare instruction ends the trap on a chore (D-85) |

@@ -1066,13 +1066,11 @@ Say implementation capacity goes up fifty percent.
 
 The automatic response is fifty percent more stories. More PRs. More features.
 
-And that may well be right. I'm not ruling it out.
-
 But that fifty percent is one pool of hours, and it gets spent once. So before we spend it, let me say some of the other things out loud.
 
 We could build three prototypes before committing to one.
 
-Review was already the bottleneck, and we just made it dramatically worse.
+Review was already a major bottleneck, and we just made it dramatically worse.
 
 Maybe integration is the actual problem.
 
@@ -1089,26 +1087,6 @@ Every one of those is drawing on the same fifty percent. There's one pool and mo
 So the uncomfortable part isn't that we chose more features. That might be exactly right.
 
 It's that we never actually chose. Nobody wrote this list down. "More stories" didn't win an argument — it won by default, because it was the only option anybody said out loud.
-
-# Supporting Notes
-
-**WHY THE LIST COMES BEFORE THE CLAIM.** *"Choosing one is choosing against the rest"* used to
-be said up front, and it landed as abstract — the room had nothing concrete for *"the rest"*
-to point at yet. Say the options first, then the claim about them. The sentence only has
-teeth once there are five real things sitting on the table.
-
-**Land the closing move, it is the whole slide:** the failure is not the choice, it is that
-no choice was made. An unmade decision wearing the costume of an obvious one.
-
-- **Say "one pool of hours, spent once."** Concrete and countable. Do not reach for
-  "allocation," "opportunity cost," or "zero-sum" — wrong register for this room (D-07).
-- **The Sowell thread surfaces here. Do not name it** (D-09, D-14, D-17). These options are
-  competing claims on one resource — show that they compete and move on. **Never say
-  "trade-off" on this slide, and never reach for the quote.** It gets paid at the close.
-- **Do not dodge the last option.** Fewer people is on the list because it belongs on the
-  list. Say it plainly and let it sit; the next slide is where it gets answered.
-- Keep the pace brisk through the five. They are a list, not five arguments — the room should
-  feel the pile growing, not evaluate each one.
 -->
 
 ---
@@ -1122,17 +1100,17 @@ class: statement-slide
 ~2:30
 
 
-Somebody in your organization is already saying this, in a meeting you weren't invited to.
+Somebody in your organization is already saying this in a meeting you weren't invited to.
 
 **This is a legitimate question.**
 
-You're a CFO. Engineering is your largest line item. The engineers are telling you they're twice as fast because of this really, really cool. You would be negligent not to ask.
+You're a CFO. Engineering is your largest line item. The engineers are telling you they're twice as fast because of this really, really cool tool. (And don't lie - for those of us geeks in here, it's at least as much a shiny new toy as it is a tool.) You would be negligent not to ask.
 
 --
 
-Now — please do not answer this with "well, somebody has to check the AI."
+"Well, somebody has to check the AI. I spend a lot of time babysitting the AI."
 
-It's weak, it's defensive, and it gets less true every six months. Do not build your career on that sentence.
+That's weak, and it's defensive. And it gets less true every six months. Do not build your career on that sentence.
 
 --
 
@@ -1148,22 +1126,7 @@ And if the evidence says the same outcome genuinely takes substantially less eng
 
 I'm not going to stand up here and promise you that everybody moves up the value chain. Historical transformations don't work that neatly. Some skills become less scarce. Some roles shrink. I don't know which ones, and neither does anybody selling you a certainty.
 
-What I do know is that being wrong about where the work went is bad for everyone in the argument.
-
-
-# Supporting Notes
-
-- Put it on the screen. Somebody in your org is already saying it in a meeting you weren't invited to.
-- **This is a legitimate question. It is not hostile.** CFO, engineering is the largest line item, engineers say they're twice as fast — they'd be negligent not to ask.
-- **DO NOT ANSWER "because somebody has to check the AI."** Weak, defensive, increasingly false. Don't build your career on it.
-
-**What a credible conversation sounds like —**
-- *Engineer → manager:* "Implementation got dramatically faster. The extra work is piling up in review — cycle time barely moved. Let me measure that before we generate more."
-- *Manager → VP:* "We're not assuming current staffing is automatically correct. But code production isn't the outcome we're staffed to produce. Let's look at what work disappeared, where work moved, and what happened to delivery."
-
-- If the evidence says the same outcome genuinely takes substantially less engineering labor — that's real, and I'd rather find out from the data than from a spreadsheet somebody else built.
-- **No promises:** I'm not going to stand here and promise everyone moves up the value chain. Historical transformations don't work that neatly. Some skills become less scarce. Some roles shrink. I don't know which, and neither does anyone selling you a certainty.
-> What I do know is that being wrong about where the work went is bad for everybody in the argument.
+There are trade-offs being made. Make them consciously.
 -->
 
 ---
@@ -1173,7 +1136,7 @@ class: canvas-slide
 
 <div class="diagram">
 
-<div class="caption">WHAT GOT FASTER?<span class="qualifier">illustrative figures, not measured</span></div>
+<div class="caption">WHAT GOT FASTER?</div>
 
 <div class="flow-h">
 <div class="node ghost">Idea</div><span class="arrow">→</span>
@@ -1205,13 +1168,13 @@ Here's the pipeline. AI hit exactly one box in it, very hard.
 
 [click]
 
-Before anybody writes these down: **I made these numbers up.** It says so on the slide, and I'm saying it out loud anyway. The shape is what I keep seeing. The digits are not a study.
+Before anybody writes these down: **I made these numbers up.** The shape is what I keep seeing.
 
-Coding time, down sixty percent. Real, measurable, everyone's thrilled.
+Coding time is down sixty percent. Real, measurable, everyone's thrilled.
 
-PRs opened, up eighty percent.
+PRs opened are up eighty percent.
 
-Time waiting on review, up a hundred and ten percent.
+Time waiting on review is up a hundred and ten percent.
 
 [click]
 
@@ -1224,41 +1187,6 @@ There is not enough information in "coding got sixty percent faster" to answer t
 [click]
 
 Coding throughput is not delivery.
-
---
-
-This is not a Theory of Constraints lecture. You all know constraints move.
-
-The AI-specific part is the speed and the disguise. We can change implementation capacity enormously, almost overnight — and the output looks like finished intellectual work.
-
-# Supporting Notes
-
-- Here's the pipeline. AI hit one box in it, hard.
-
-**[1] the three metrics**
-- **Say it out loud: these are illustrative, I made them up** — it's on the slide too, but say it anyway. The *shape* is what I keep seeing.
-- Coding time down 60%. Real, measurable, everyone's happy.
-- PRs up 80%. Time waiting on review up 110%.
-
-**[2] −8% idea to production**
-> So — how much more productive are we?
-- There is not enough information in "coding got sixty percent faster" to answer that. **The constraint moved and we celebrated the wrong number.**
-
-**[3] Coding throughput is not delivery.**
-- **NOT a Theory of Constraints lecture** — you all know constraints move. The AI-specific part is the **speed and the disguise**.
-- We can change implementation capacity enormously, almost overnight, and the outputs *look* like finished intellectual work.
-
-**The *photographs identically* line and the positive use both move to the next slide.** Land *coding throughput is not delivery* here and go.
-
-**IF ASKED "WHY DIDN'T REVIEW GET FASTER? AI CAN REVIEW CODE." — somebody will, and it is the best question in this trap:**
-- **Concede it instantly.** It can review, it does review, and it is good at it. Nothing here claims otherwise — we said as much when we talked about it arguing with your design at eleven at night.
-- The point is what review is *for*. It was never only labor. It is the guardrail at that handoff, and what it actually supplies is **independence** — a second reading that did not come from the thing being reviewed.
-- AI reviewing its own output, in the same session, inherits the same framing, the same words, the same assumptions. That is the identical limit we already admitted about pairing. Faster review of that kind is not more evidence; it is the same evidence, arriving sooner.
-- **So AI can absorb the labor half and leave the guardrail half exactly where it was** — which is precisely why coding time falls while the waiting grows.
-- What buys it back is what always bought it back: a fresh context, a different model, a check sourced from somewhere else. *The same question we asked about those forty-seven passing tests.*
-- **Do not build this into a model on stage** (D-17, D-76). Answer the question, then move.
-
-→ Before we decide what to do with the new capacity, name the decision.
 -->
 
 ---
@@ -1268,28 +1196,14 @@ class: anchor-slide trap
 
 <div class="line">200 PRs of plausible code is not 200 PRs of progress.</div>
 
-<div class="fine">But it photographs identically.</div>
+<div class="fine">Let AI do the hard work of showing exactly what is happening.</div>
 
 <!--
 ~0:25
 
-Two hundred PRs of plausible code is not two hundred PRs of progress.
+AI is genuinely good at finding where the time went. Point it at tickets, PR history, CI runs, deploys, incidents, support tickets.
 
-[beat]
-
-But it photographs identically.
-
-# Supporting Notes
-
-- **The pause before *photographs identically* is the whole line.** That is the part that sticks; do not run the two sentences together.
-- This is the AI-specific part of the previous slide: not that constraints move — everyone here knows constraints move — but the **speed and the disguise**. Implementation capacity changes enormously, almost overnight, and the output looks like finished intellectual work.
-
-**THE POSITIVE USE — don't skip it, it belongs on this beat:**
-- AI is genuinely good at finding where the time went. Point it at tickets, PR history, CI runs, deploys, incidents, support tickets.
-- You'll get: *"implementation time dropped, but review wait increased, concentrated in changes touching these three components."*
-- **That is a hypothesis, not a finding.** Go check it with telemetry — *the same question we asked about those forty-seven passing tests* (D-75: never the trap number out loud).
-
-→ Before we decide what to do with the new capacity, name the decision.
+You'll get something like: *"Implementation time dropped, but review wait increased, concentrated in changes touching these three components."**
 -->
 
 ---
@@ -1299,11 +1213,10 @@ class: q-slide
 
 # What got faster — and where should that capacity go?
 
-## Capacity is not a plan.<br/>Measure where the constraint moved before deciding how to spend it.
+## "Faster" isn't a decision.<br/>Measure where the constraint moved before deciding how to spend it.
 
 <!--
 ~0:30
-
 
 Monday.
 
@@ -1313,18 +1226,28 @@ Monday.
 
 Those are two separate questions, and "coding got faster" doesn't answer either one for the whole organization.
 
-Capacity is not a plan.
+"Faster" isn't a decision. It's the thing that makes a decision necessary.
 
+And that's the part that's easy to skip, because being faster already feels like progress. It feels like the answer, so nobody goes looking for the question.
+
+We just watched both halves of that. Coding down sixty percent, idea to production down eight — the speed was real and it went somewhere that didn't matter. And a list of five things we could have done with those hours that nobody ever said out loud.
+
+So go find out where the constraint actually moved. Then choose.
 
 # Supporting Notes
 
-- **Pause. This is the conclusion of Trap 4.**
+- **Pause. This is the conclusion of the throughput trap.**
 > What got faster — and where should that capacity go?
 
-- Those are two separate questions.
-- "Coding got faster" does not answer either one for the whole organization.
+- Those are **two separate questions.** "Coding got faster" answers neither one for the organization.
+- **The line is a hinge, not a summary:** *"faster" isn't a decision — it's the thing that makes a decision necessary.* It hands the room something to do rather than something to feel bad about.
+- **Say why it gets skipped, because that is the honest part.** Speed feels like progress on its own. Nobody skips the decision out of laziness; they skip it because the win already looks complete.
+- **Both callbacks in one breath, then stop.** The −8% and the five unnamed options are the evidence for the line — reference them, do not re-run them.
+- **The instruction is the second half of the slide.** Go measure. That is the thing that actually happens Monday; the aphorism is just what makes someone want to.
+- **Never say "trade-off" here, and don't reach for the quote** (D-09, D-14, D-17). This trap stays in its own register — hours, constraints, where the work went — and the frame gets paid at the close.
+- Do not re-open the fewer-people option here. It was named where it belonged; this slide is about how to decide, not what to decide.
 
-→ So far AI has mostly been *handing* us things: answers, code, designs. Increasingly, it doesn't hand you the thing. It just does it.
+→ So far AI has mostly been *handing* us things: answers, code, designs. Increasingly it doesn't hand you the thing. It just does it.
 -->
 
 ---
@@ -1350,20 +1273,11 @@ class: trap-slide trap-05
 
 Last one.
 
-Up to now, AI has mostly been **handing** us things. Answers. Code. Designs. There's still a person in the middle taking delivery.
-
-Increasingly it doesn't hand you the thing. It just does it.
+Increasingly, all this "agentic" stuff doesn't hand you the thing. It just does it.
 
 And this trap isn't about whether it's smart enough.
 
 It's about what it's **allowed** to do.
-
-
-# Supporting Notes
-
-- **TITLE STILL PROVISIONAL (Q-04)** — alternatives: *AI Can Scale Faster Than Your Ability To Supervise It* · *Who Gave The AI Permission To Do That?*
-- Current pick is the least clever and the most useful: it states the actual question and sets up closing question #5 verbatim.
-- **The concept: this is about AUTHORITY, not correctness.**
 -->
 
 ---
@@ -1768,7 +1682,7 @@ The traps were the "not that." These five are the "do this."
 
 [click] Am I understanding faster, or avoiding understanding? — offload the work, not the evidence.
 
-[click] What got faster, and where should that capacity go? — capacity is not a plan.
+[click] What got faster, and where should that capacity go? — "faster" isn't a decision.
 
 [click] What can it do when it's wrong? — authority is the thing that changed. Not intelligence.
 
@@ -1787,7 +1701,7 @@ If one of them makes you stop and ask a better question a month from now, this w
 **[1]** *What do we actually know?* — a great answer isn't evidence.
 **[2]** *What did our question already decide?* — the wording can choose before we do.
 **[3]** *Am I understanding faster — or avoiding understanding?* — offload the work, not the evidence.
-**[4]** *What got faster — and where should that capacity go?* — capacity is not a plan.
+**[4]** *What got faster — and where should that capacity go?* — "faster" isn't a decision.
 **[5]** *What can it do when it's wrong?* — authority is the thing that changed, not intelligence.
 
 **THE ORANGE FOOTPRINT UNDER EACH QUESTION** (D-82)
