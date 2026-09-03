@@ -1659,9 +1659,11 @@ Oversight does not scale just because action scaled.
 
 --
 
-So it has to be built in, not watched. Authorization that actually enforces. Sampling. Outcome monitoring. A stop button that works.
+So it has to be built in, not watched.
 
-And AI can do much of that itself. This was never humans supervising machines.
+We did this once already. At internet scale, checking each transaction by hand stopped being possible — so we moved the control into the system. Authorization that holds whether or not anyone is looking.
+
+Same move now. What's different is what we're placing it on: not who can call an endpoint, but what an agent is allowed to do when it's wrong.
 
 Authority and oversight should grow together. Right now we are very, very good at scaling one of them.
 
@@ -1683,6 +1685,10 @@ Authority and oversight should grow together. Right now we are very, very good a
 - Many of us know what that feels like. Let the room recognize it without accusing them.
 - **Oversight does not scale just because action scaled.**
 
+- **The internet-scale callback argues from the room's own experience — it is not a history lesson.** Nobody there thinks a human should approve each HTTP request; the scale settled it, exactly as the arithmetic just did. Two sentences, then move.
+- **Name what is actually different, because it is the sharp part:** at internet scale we authorized *who may do what* — static, checkable, and the actor's intent was irrelevant to the control. Now we authorize *what an actor may do when it turns out to be wrong*, and its reasoning is not inspectable. Same move, new surface.
+- **Do not expand into a distributed-systems retrospective** (D-17). The analogy earns "built in, not watched" and nothing else.
+
 **KEEP THIS SLIDE SHORT.** It is a mic drop: three numbers, one punch, one constructive beat, out. The
 spoken track was cut from four consecutive restatements of the thesis to one — do not let it
 grow back. *Authority and oversight should grow together* already carries *accountability that
@@ -1695,7 +1701,7 @@ scales with authority*, in fewer words and with the wry landing.
 
 - **If you take one thing from Trap 5:** authority and oversight should grow together. Right now we are very good at scaling one of them.
 
-→ Oversight cannot scale by asking people to stare at more decisions. So end on the authority question.
+→ Authorization decides how far a failure can reach. It does not undo what happened inside that bound — which is the last question.
 -->
 
 ---
@@ -1712,6 +1718,8 @@ class: q-slide
 
 
 Monday.
+
+Authorization decides how far a failure can reach. These three decide what it costs you when it reaches anyway.
 
 And notice this is not "can AI be wrong." Everything is wrong sometimes. People are wrong constantly.
 
