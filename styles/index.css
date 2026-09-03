@@ -381,6 +381,19 @@
 .qlist .q .n { font-size: 1.1rem; font-weight: 700; color: var(--good); flex: none; width: 1.6rem; }
 .qlist .q .t { font-size: 1.85rem; font-weight: 550; line-height: 1.25; }
 
+/* The trap each question came out of, under the question (D-82).
+   The room has no numbered index in front of it and cannot dereference "Trap 2"
+   mid-talk (D-75) — but on the one slide that gathers all five, naming the path
+   is what makes the set recallable rather than five loose questions. Orange
+   because the trap is the thing that bites you; the question above it is the
+   answer. Small and light: this is a footprint, not a second headline, and the
+   speaker still says the callbacks out loud. */
+.qlist .q .from {
+  display: block; margin-top: 0.3rem;
+  font-size: 0.88rem; font-weight: 450; line-height: 1.35;
+  letter-spacing: 0.005em; color: var(--trap);
+}
+
 /* presenter-only: keep click-hidden items from reflowing the layout ------ */
 .slidev-vclick-hidden { visibility: hidden; opacity: 0; }
 

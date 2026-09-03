@@ -1571,7 +1571,7 @@ Capacity is not a plan.
 - Those are two separate questions.
 - "Coding got faster" does not answer either one for the whole organization.
 
-→ So far AI has mostly been *handing* us things: answers, code, designs. Increasingly it doesn't hand you the thing. It just does it.
+→ So far AI has mostly been *handing* us things: answers, code, designs. Increasingly, it doesn't hand you the thing. It just does it.
 -->
 
 ---
@@ -1986,7 +1986,6 @@ Deliberately accepting risk **is** engineering.
 ---
 layout: default
 class: canvas-slide
-clicks: 5
 ---
 
 <div class="diagram">
@@ -1994,18 +1993,17 @@ clicks: 5
 <div class="caption">FIVE QUESTIONS FOR MONDAY</div>
 
 <div class="qlist">
-<div class="q" v-click="1"><span class="n">1</span><span class="t">What do we actually know?</span></div>
-<div class="q" v-click="2"><span class="n">2</span><span class="t">What did our question already decide?</span></div>
-<div class="q" v-click="3"><span class="n">3</span><span class="t">Am I understanding faster — or avoiding understanding?</span></div>
-<div class="q" v-click="4"><span class="n">4</span><span class="t">What got faster — and where should that capacity go?</span></div>
-<div class="q" v-click="5"><span class="n">5</span><span class="t">What can it do when it's wrong?</span></div>
+<div class="q" v-click="1"><span class="n">1</span><span class="t">What do we actually know?<span class="from">The Confidence Trap · a great answer doesn't mean you're right</span></span></div>
+<div class="q" v-click="2"><span class="n">2</span><span class="t">What did our question already decide?<span class="from">The Framing Trap · AI can solve the wrong problem really well</span></span></div>
+<div class="q" v-click="3"><span class="n">3</span><span class="t">Am I understanding faster — or avoiding understanding?<span class="from">The Understanding Trap · working code without ever understanding</span></span></div>
+<div class="q" v-click="4"><span class="n">4</span><span class="t">What got faster — and where should that capacity go?<span class="from">The Throughput Trap · faster doesn't mean you should do more</span></span></div>
+<div class="q" v-click="5"><span class="n">5</span><span class="t">What can it do when it's wrong?<span class="from">The Authority Trap · what it's allowed to do, not how smart it is</span></span></div>
 </div>
 
 </div>
 
 <!--
 ~2:30
-
 
 That's it. That's the talk.
 
@@ -2027,7 +2025,6 @@ I don't expect anybody to remember five things.
 
 If one of them makes you stop and ask a better question a month from now, this was worth your evening.
 
-
 # Supporting Notes
 
 - *"That's it. That's the talk."*
@@ -2039,6 +2036,18 @@ If one of them makes you stop and ask a better question a month from now, this w
 **[3]** *Am I understanding faster — or avoiding understanding?* — offload the work, not the evidence.
 **[4]** *What got faster — and where should that capacity go?* — capacity is not a plan.
 **[5]** *What can it do when it's wrong?* — authority is the thing that changed, not intelligence.
+
+**THE ORANGE FOOTPRINT UNDER EACH QUESTION** (D-82)
+- It names the trap the question came out of, so the set reads as a path rather than five
+  loose questions — and so it still reads that way to somebody following the link a week later.
+- **This is the one slide where the traps are labeled on screen.** It is the summary; the
+  room can see all five at once and does not have to hold a pointer in its head.
+- **It changes nothing about what you say.** Still never a trap number out loud (D-75) — the
+  spoken callback is the claim, not "Trap 2." The numerals on the left are an enumeration of
+  the questions, not an index you should ever reference verbally.
+- **Do not read the footprints aloud.** They are there so the room's eyes can retrace the
+  evening while you deliver the question. Reading them turns a two-second glance into a
+  re-summary, which is exactly what the close must not become (D-16).
 
 > If one of these makes you stop and ask a better question a month from now, this was worth your evening.
 -->
@@ -2069,10 +2078,6 @@ I built this talk with AI. Extensively. It challenged my blind spots and made ex
 [click]
 
 I offloaded a lot of work. I did not offload responsibility. I made pass after pass until this became something I understand, believe, and am willing to defend.
-
-That was a reasonable trade-off here: every change is version controlled, mistakes are easy to undo, and the blast radius is a worse slide — not a wire transfer.
-
-Apparently this talk needed one more late-breaking example.
 
 But now, back to where we started...
 

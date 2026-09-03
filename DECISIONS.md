@@ -84,7 +84,8 @@ prevents narrative whiplash without requiring every trap to reuse the same proce
 
 - **Every trap carries an explicit positive use of AI.** Not an AI-skeptical talk (D-30, R-03).
 - **The title is a contract:** each trap is the *not that*; its exact Monday question is
-  the *do this*. The opening promises that structure and the close names it (D-63).
+  the *do this*. The opening promises that structure and the close names it (D-63), and the
+  closing slide now shows both halves side by side (D-82).
 - **No new frameworks, taxonomies, matrices or maturity models** (D-17). The deck is at its
   conceptual load limit. XP is a *lineage*, not a practice checklist (D-59).
 - **Three layers stay separate:** what is on screen · what is said · what the speaker
@@ -1964,6 +1965,38 @@ the deck stand alone, and it improves the live talk instead of taxing it.
 
 ---
 
+### D-82 · The closing questions slide labels its traps on screen
+**Decided** 2026-09-03 · **Status** Active · **Narrows D-75** (on one slide only)
+
+Each of the five questions on the closing slide now carries a small orange line beneath it
+naming the trap it came out of — *The Confidence Trap · a great answer doesn't mean you're
+right*, and so on. `clicks: 5` was also dropped from that slide's frontmatter (D-52); it
+matched the element count, so nothing about the reveal changes.
+
+**Why.** D-75 is right that the room cannot dereference "Trap 2" mid-flow — but this is the
+one slide where all five are on screen at once, so nothing has to be held in the head. The
+footprint turns five loose questions into the visible path the evening actually took, which
+is what makes the set recallable, and it keeps working for somebody reading the deck through
+the shared link a week later.
+
+**What D-75 still forbids, unchanged:** saying a trap number out loud, anywhere, including
+here. The spoken callback stays the claim. The numerals on the left of this slide enumerate
+the questions; they are not an index to reference verbally.
+
+**Also do not read the footprints aloud.** They exist so the room's eyes can retrace the
+evening while the speaker delivers the question. Reading them converts a two-second glance
+into a re-summary, which is precisely what the close must not become (D-16).
+
+**Rejected:** using the trap eyebrow names alone (*The Confidence Trap*), without the claim.
+Short and uniform, but the eyebrow was small and incidental on each title slide; the claim is
+the headline the room actually saw and heard. Both are carried, claim second.
+
+**Rejected:** printing the claim alone. The understanding trap's claim is word-for-word its
+own Monday question, so that column would have repeated one line twice and looked like a bug.
+Leading with the trap name solves it without a special case.
+
+---
+
 ## G. Rejected — do not reopen without new information
 
 | Idea | Why it was rejected |
@@ -1993,3 +2026,5 @@ the deck stand alone, and it improves the live talk instead of taxing it.
 | A separate handout build rendered from the same source | Doubles the maintenance surface on a deck that has never been rehearsed (D-80, again D-81) |
 | Promoting the seam definition to its own slide | Its examples are delivered pointing at the Compiler and Cloud rungs; the definition must be on screen while that happens (D-81) |
 | Shrinking a slide's type to make room for an inline anchor | If the anchor doesn't fit, it wanted its own slide (D-81) |
+| Labeling the closing questions with the trap claim alone | The understanding trap's claim is verbatim its own question; the line would repeat twice (D-82) |
+| Labeling them with the eyebrow name alone | The eyebrow was small and incidental; the claim is what the room saw and heard (D-82) |
