@@ -88,7 +88,9 @@ prevents narrative whiplash without requiring every trap to reuse the same proce
 - **No new frameworks, taxonomies, matrices or maturity models** (D-17). The deck is at its
   conceptual load limit. XP is a *lineage*, not a practice checklist (D-59).
 - **Three layers stay separate:** what is on screen · what is said · what the speaker
-  understands and never explains.
+  understands and never explains. **But the deck gets shared as a link**, so the
+  qualifications that keep a provocative title from reading as anti-AI now live on screen
+  as short *anchors* — quotable click beats, never prose (D-80).
 - **Notes lead with the spoken script; structured cues sit behind it** (D-69, amending
   D-57). `SCRIPT.md` is reference only and is not spoken from.
 - **Humor: three planned laughs, self-implicating, target our own appetite for complexity —
@@ -112,6 +114,8 @@ prevents narrative whiplash without requiring every trap to reuse the same proce
 ### Current state
 
 36 slides · ~50:45 planned. Every trap ends on its exact Monday question (D-61).
+Seventeen slides carry an on-screen **anchor** so the deck survives being shared as a link
+(D-80); the timing tally is unchanged because the anchors were already in the spoken track.
 Opening through Trap 2 is presentation-quality.
 Traps 3–5 have had a structural pass but not a full narrative one. Nothing has been
 rehearsed against a clock (R-09) — **every timing number in this deck is a guess.**
@@ -1841,6 +1845,65 @@ slide 31 its hinge. Slide 31 remains the short mic-drop slide (existing guardrai
 generated-tests-you-never-read and green-dashboard failures are the same idea, but slide 32
 already carries the support-dashboard callback and a second one there is one too many.
 
+### D-80 · The deck now carries its own qualifications, because the link gets shared
+**Decided** 2026-09-03 · **Status** Active · **Amends** D-05 · **Resolves** part of Q-06
+
+The deck link goes to the audience afterward. Seventeen slides gain a short, quotable
+**anchor** — a terminal click beat, one or two lines, in a new `.anchor` component. Five of
+them are qualifications that previously existed **only in the speaker's mouth**; twelve are
+load-bearing claims that were spoken-only.
+
+The five qualifications:
+
+| Slide | Anchor |
+|---|---|
+| 3 | *Sometimes the answer is more AI, much more aggressively.* |
+| 8 | *Assume the answer is completely, verifiably right.* |
+| 20 | *A human pair brings different priors. AI inherits yours.* |
+| 23 | *And sometimes more is exactly what you should do.* |
+| 32 | *Deliberately accepting risk is engineering.* |
+
+**Why.** Q-06 already recorded that a slides-only artifact is *actively bad*: R-03 flags
+three trap titles that read as anti-AI out of context, and every one of them was defused
+verbally only. Shipping the link without those qualifications ships the provocations
+without the argument. That is a defect, not a stylistic preference.
+
+**Why anchors and not prose.** The retention argument for putting notes on slides does not
+survive contact with the redundancy effect — on-screen text duplicating the spoken track
+makes the room read ahead and remember *less*. What raises retention is a short visual
+anchor plus spoken color. So: quotable lines as click beats, never paragraphs. The speaker
+explicitly prefers slides moving at pace with him filling the gaps, which this serves.
+
+**Click budget is explicitly not a constraint** (speaker's direction, 2026-09-03). D-52
+still holds — no `clicks:` in frontmatter; the stale `clicks: 5` on slide 5 was removed as
+part of this change.
+
+**What stays off screen, and why the list matters more than the additions:**
+- The compiler/grammar line on slide 17 — a planned laugh; on screen the room reads ahead
+  and it dies (D-54).
+- The engine under all five traps (D-14). Slide 35 now names the *seam*; it still does not
+  explain the cost-that-was-doing-a-job mechanism.
+- XP practice names (D-77) · trap numbers (D-75) · the controls menu on slide 31.
+
+**Rejected:** an anchor on slide 25. The bare CFO quote filling the frame is a strong stage
+image and the qualification (*"this is a legitimate question, it isn't hostile"*) is more
+persuasive delivered by a person than printed under it. Slide 25 is now the only slide in
+the deck whose defusing qualification remains spoken-only — a deliberate exception, taken
+with the sharing cost understood.
+
+**Rejected:** thickening the deck generally, or maintaining a separate handout build. The
+first breaks D-05; the second doubles the maintenance surface on a deck that has never been
+rehearsed.
+
+**Consequential layout changes** (silent overflow is this deck's standing hazard):
+- Slide 13's headlines go 12ch → 15ch at 3rem. At 12ch they wrapped to three lines each and
+  the anchor fell off the bottom of the frame.
+- Slide 31's numbers step 4.6rem → 3.5rem when the slide carries an anchor. Side benefit:
+  *100 meaningful human reviews* now fits on one line.
+- Slide 30's nodes go 46ch → 62ch, putting each on one line and reclaiming the height.
+
+---
+
 ## G. Rejected — do not reopen without new information
 
 | Idea | Why it was rejected |
@@ -1865,3 +1928,6 @@ already carries the support-dashboard callback and a second one there is one too
 | Inference vs enforcement as a standalone slide | Useful material, but a passenger after Trap 2 had already completed its argument (D-60) |
 | Extending the independence callback into slide 32's "Will we notice?" | Slide 32 already carries the support-dashboard callback; a second one there is one too many (D-79) |
 | "How do we remove people safely" as Trap 5's frame | Reads as advocacy and recolors slide 20 into an anti-automation lament (D-79) |
+| An anchor on slide 25's CFO quote | The bare quote is a stronger stage image; the qualification persuades better spoken than printed (D-80) |
+| Moving speaker-note prose onto slides for retention | Redundancy effect — duplicated on-screen text makes the room read ahead and remember less (D-80) |
+| A separate handout build rendered from the same source | Doubles the maintenance surface on a deck that has never been rehearsed (D-80) |

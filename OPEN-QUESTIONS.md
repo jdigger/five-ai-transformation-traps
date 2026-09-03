@@ -92,35 +92,28 @@ Still unresolved, and each one changes something:
   "Jim Moore".
 
 ### Q-06 🟡 What gets shared afterward — slides, slides + notes, or a rollup?
-Speaker is undecided between three forms. Raised in priority: the deck deliberately does
-**not** stand alone (D-05 — the rigor is in the notes), so this choice materially changes
-what a reader gets.
+**Partly resolved by D-80.** The speaker will hand out the link, so the deck no longer
+depends on being in the room for its qualifications: seventeen slides now carry an on-screen
+anchor, and five of those are the defusers R-03 flagged. **Option (a) is no longer actively
+bad** — it is merely incomplete.
 
-**a · Presentation slides only — actively bad, and I'd argue against it.**
-R-03 already flags that *"A Great Answer Doesn't Mean You're Right"*, *"Faster Doesn't Mean
-You Should Do More"* and *"Are You Understanding Faster — or Avoiding Understanding?"* each
-read as anti-AI when seen out of context, and all three are defused **verbally only**. A
-slides-only artifact ships the provocations without any of the qualifications. D-56 fixed
-the worst instance (the Trap 4 metrics) but not the general problem.
+**Still open: what accompanies the slides.**
 
-**b · Slides + speaker notes — honest, complete, nearly free.**
-The notes are written as stage directions, not prose — *"[beat]"*, *"do NOT point at the
-numbers"*, *"take the laugh"*. A reader gets a shooting script rather than an essay, which
-is charming to some and strange to others, and it does expose the performance mechanics to
-anyone who was in the room. Zero additional work; Slidev exports it directly.
+**b · Slides + speaker notes.** The built SPA exposes `/notes`, so this may already be live
+at the shared URL — **verify against the deployed Pages build, not the dev server.** A reader
+gets a shooting script rather than an essay: charming to some, strange to others, and it
+exposes the performance mechanics to anyone who was in the room. Zero additional work.
 
-**c · A rollup — most useful, some work.**
-The highest-value version is small, not a document: **the five Monday questions, one page,
-two or three sentences each.** That is the artifact most likely to end up pinned to a wall,
-and it maps exactly onto the success criterion (D-03 — a better question a month later).
-Slide 30 already *is* this in skeleton form, and the notes already contain the prose.
+**c · A rollup.** The five Monday questions, one page, two or three sentences each. Maps
+exactly onto the success criterion (D-03 — a better question a month later). Slide 33 is this
+in skeleton; the notes hold the prose.
 
-**Recommendation: (c), scoped to one page, optionally alongside (b) for anyone who wants
-the full argument.** Explicitly not (a) on its own. Do not thicken the live deck to make
-it stand alone — that trade was settled in D-05 and remains right.
+**Recommendation: (c), one page, alongside the deck.** Generate it after the deck is
+finalized. Decide (b) once someone has checked whether `/notes` is reachable on the deployed
+build — if it already is, the choice has been made by the deployment rather than by anyone.
 
-**Decide after the deck is finalized**, since the rollup is generated *from* the notes and
-would need regenerating after any content change.
+**Residual:** slide 25 is now the only slide whose defusing qualification is still
+spoken-only. Deliberate (D-80), and the thing most likely to be misread by a link-follower.
 
 ### Q-07 ⚪ Is the 10–15 minutes open Q&A or facilitated discussion?
 An Agile meetup often prefers discussion over interrogation. If discussion is wanted, two
