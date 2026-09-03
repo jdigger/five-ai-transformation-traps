@@ -283,12 +283,12 @@ is one.
 ```
 ~1:15
 
-At the end of the week the number says: eight hundred tickets resolved. The
+At the end of the week the number says: twelve hundred tickets resolved. The
 support metric is green.
 
 [click 1]
 
-But the system also clusters what it saw. Three hundred and forty-four of those
+But the system also clusters what it saw. Five hundred and sixteen of those
 customers were describing the same checkout failure.
 
 [Pause. Let the repetition register, but do not interpret it yet. Then advance.]
@@ -300,11 +300,11 @@ customers were describing the same checkout failure.
 ```
 ~0:45
 
-We thought we had 344 support cases.
+We thought we had 516 support cases.
 
 [click]
 
-We had one product problem, reported 344 times.
+We had one product problem, reported 516 times.
 
 [Long pause. Let the room complete the reclassification before advancing.]
 
@@ -314,7 +314,7 @@ that work.
 ```
 
 
-## Slide 13 · Speed removed the pressure to notice
+## Slide 13 · We never asked what it meant for the product
 
 ```
 ~1:30
@@ -324,7 +324,7 @@ This would show in the reports when asked.
 The failure is not that AI buried the evidence. It is what happened to the
 pressure to notice it.
 
-Before, 344 reports meant a growing queue, long waits, overwhelmed
+Before, 516 reports meant a growing queue, long waits, overwhelmed
 representatives, and support management asking for more people. The organization
 could feel the checkout problem even if it called that pain “support volume.”
 
@@ -343,7 +343,7 @@ decision, but at least it is a decision.
 The trap is that nobody made that decision. Faster support let the problem fall
 below organizational attention before it could demand one.
 
-We silenced the alarm without fixing the failure.
+The alarm is still ringing. We're just looking at the dashboard.
 ```
 
 
@@ -385,10 +385,10 @@ Pause. This is the conclusion of Trap 2.
 What did our question already decide?
 
 The support system may be exactly right. The five-minute target may be right.
-The trap was letting “support queue” decide that 344 reports were 344 pieces of
+The trap was letting “support queue” decide that 516 reports were 516 pieces of
 support work instead of one product problem.
 
-Make the framing win the argument instead of letting it skip the argument.
+An assumed constraint never has to defend itself. Name it, and make it earn its place.
 
 TRANSITION:
 Now something more personal. If AI can explain unfamiliar systems, generate the code, and challenge the architecture this fast — what does that do to how WE learn?
@@ -495,7 +495,23 @@ The loop only works if I stay connected to its evidence.
 ```
 
 
-## Slide 20 · Q: Am I understanding faster — or avoiding understanding?
+## Slide 20 · We used to get independence by accident
+
+```
+See slides.md. This slide was split out of the old slide 19 (D-72); its script and
+supporting notes live in the deck and have no separate long-form section here.
+```
+
+
+## Slide 21 · Two kinds of question
+
+```
+See slides.md. Split out of the old slide 19 (D-72). Carries the callback from judgment
+back to "Challenge my understanding" on slide 18.
+```
+
+
+## Slide 22 · Q: Am I understanding faster — or avoiding understanding?
 
 ```
 ~0:30
@@ -511,7 +527,7 @@ Suppose all of this works and we really are dramatically faster. Now what?
 ```
 
 
-## Slide 21 · TRAP 04 intro
+## Slide 23 · TRAP 04 intro
 
 ```
 ~0:30
@@ -524,7 +540,7 @@ Otherwise this reads as anti-productivity and half the room stops listening.
 ```
 
 
-## Slide 22 · AI gave you capacity
+## Slide 24 · AI gave you capacity
 
 ```
 ~2:00
@@ -546,7 +562,7 @@ I'm not going to dodge that last one.
 ```
 
 
-## Slide 23 · If developers are 2x as productive
+## Slide 25 · If developers are 2x as productive
 
 ```
 ~2:30
@@ -574,7 +590,7 @@ What I do know is that being wrong about where the work went is bad for everybod
 ```
 
 
-## Slide 24 · What got faster? (pipeline + metrics)
+## Slide 26 · What got faster? (pipeline + metrics)
 
 ```
 ~2:00
@@ -605,7 +621,7 @@ Before we decide what to do with the new capacity, name the decision.
 ```
 
 
-## Slide 25 · Q: What got faster — and where should that capacity go?
+## Slide 27 · Q: What got faster — and where should that capacity go?
 
 ```
 ~0:30
@@ -621,7 +637,7 @@ So far AI has mostly been handing us things: answers, code, designs. Increasingl
 ```
 
 
-## Slide 26 · TRAP 05 intro
+## Slide 28 · TRAP 05 intro
 
 ```
 ~0:30
@@ -638,7 +654,7 @@ The concept: this is about AUTHORITY, not correctness.
 ```
 
 
-## Slide 27 · Authority ladder
+## Slide 29 · Authority ladder
 
 ```
 ~2:30 across the reveals. Go slowly. Let each one land.
@@ -664,7 +680,7 @@ And before we ask what it should be allowed to do — one more thing about that 
 ```
 
 
-## Slide 28 · Prompt injection
+## Slide 30 · Prompt injection
 
 ```
 ~2:00 — keep this tight. This is NOT a security tutorial, and the room will try to make it one.
@@ -703,7 +719,7 @@ And that authority can now act much faster than careful human oversight.
 ```
 
 
-## Slide 29 · 10,000 decisions / which 100?
+## Slide 31 · 10,000 decisions / which 100?
 
 ```
 ~1:30
@@ -729,7 +745,7 @@ Oversight cannot scale by asking people to stare at more decisions. So end on th
 ```
 
 
-## Slide 30 · Q: What can it do when it's wrong?
+## Slide 32 · Q: What can it do when it's wrong?
 
 ```
 ~2:00
@@ -759,7 +775,7 @@ Five traps. Five questions.
 ```
 
 
-## Slide 31 · Five questions for Monday
+## Slide 33 · Five questions for Monday
 
 ```
 ~2:30
@@ -781,7 +797,7 @@ was worth your evening.
 ```
 
 
-## Slide 32 · Sowell callback
+## Slide 34 · Sowell callback
 
 ```
 ~1:30
@@ -802,7 +818,7 @@ And keep doing it, because this is going to move again next year.
 ```
 
 
-## Slide 33 · The goal isn't maximum AI
+## Slide 35 · The goal isn't maximum AI
 
 ```
 Stop here.

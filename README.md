@@ -7,6 +7,7 @@ Slides for the talk *"The Five Biggest AI Transformation Traps"*, built with
 
 | File | What it holds |
 |---|---|
+| [AGENTS.md](./AGENTS.md) | How agents should work in this repo (`CLAUDE.md` symlinks to it). |
 | [slides.md](./slides.md) | The deck. Speaker notes carry the argument; slides stay sparse. |
 | [DECISIONS.md](./DECISIONS.md) | Settled decisions and why, including what was rejected. |
 | [OPEN-QUESTIONS.md](./OPEN-QUESTIONS.md) | Open questions, risks, and what only rehearsal can settle. |

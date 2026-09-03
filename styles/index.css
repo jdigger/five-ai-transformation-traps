@@ -246,6 +246,17 @@
 .slidev-layout.fact-slide .big.hot { color: var(--trap); }
 .slidev-layout.fact-slide .sub { font-size: 1.35rem; color: var(--ink-soft); margin-top: 0.15rem; }
 
+/* Slide 11's weekly total. `.fact` had no rule at all and fell back to body
+   text, which made the setup read as a caption. It borrows the .big size above
+   so a headline number looks like one wherever it appears. */
+.slidev-layout.canvas-slide .fact {
+  font-size: 1.5rem; color: var(--ink-soft); line-height: 1.15; margin-top: 0.4rem;
+}
+.slidev-layout.canvas-slide .fact strong {
+  display: block; font-size: 4.6rem; font-weight: 700;
+  letter-spacing: -0.03em; color: var(--ink);
+}
+
 /* ============================================================ DIAGRAMS === */
 /* Boxes and rules, not clip art. Everything below is deliberately plain. */
 

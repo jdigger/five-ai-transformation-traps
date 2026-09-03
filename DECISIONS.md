@@ -59,7 +59,7 @@ mention AI** — they were always questions about the human system.
 | # | Claim | Example | Question for Monday |
 |---|---|---|---|
 | 1 | A great answer doesn't mean you're right | Prorated refund requirement → impl + tests → green → wrong | *What do we actually know?* |
-| 2 | AI can solve the wrong problem really well | Excellent support automation; 344 “cases” reveal one checkout defect | *What did our question already decide?* |
+| 2 | AI can solve the wrong problem really well | Excellent support automation; 516 “cases” reveal one checkout defect | *What did our question already decide?* |
 | 3 | Are you understanding faster, or avoiding understanding? | *Help me understand* / *Challenge my understanding* | *Am I understanding faster — or avoiding understanding?* |
 | 4 | Faster doesn't mean you should do more | The pipeline: one box got faster, end-to-end didn't | *What got faster — and where should that capacity go?* |
 | 5 | When AI gets it wrong, what is it allowed to do? | The authority ladder, ending at *issue the refund* | *What can it do when it's wrong?* |
@@ -89,7 +89,8 @@ prevents narrative whiplash without requiring every trap to reuse the same proce
   conceptual load limit. XP is a *lineage*, not a practice checklist (D-59).
 - **Three layers stay separate:** what is on screen · what is said · what the speaker
   understands and never explains.
-- **Notes are lectern cues; `SCRIPT.md` holds the prose** (D-57).
+- **Notes lead with the spoken script; structured cues sit behind it** (D-69, amending
+  D-57). `SCRIPT.md` is reference only and is not spoken from.
 - **Humor: three planned laughs, self-implicating, target our own appetite for complexity —
   never a person or a role** (D-54). Trap 5's ladder stays cold.
 - **Coherency before cutting** (D-51). Timing is reported, not obeyed, until the deck settles.
@@ -101,16 +102,16 @@ prevents narrative whiplash without requiring every trap to reuse the same proce
   forty-seven times"* delivered pointing at `47 passing` (D-58).
 - **Trap 2, slides 10–13** — the support system must first feel unequivocally successful;
   slide 11 establishes the repeated pattern; slide 12 gives the reclassification from
-  `344 support cases` to **one product problem reported 344 times** the whole frame; slide
+  `516 support cases` to **one product problem reported 516 times** the whole frame; slide
   13 makes explicit that the AI found the pattern while faster resolution
   removed the organizational pressure to notice its cause (D-64, D-67).
-- **Trap 5, slide 26** — the authority ladder escalating one rung per click, cold.
+- **Trap 5, slide 28** — the authority ladder escalating one rung per click, cold.
 - **The close** — five questions on slide 30 → Sowell callback → *"The goal isn't maximum AI."* **No
   re-summary after it** (D-16).
 
 ### Current state
 
-33 slides · ~48:45 planned. Every trap ends on its exact Monday question (D-61).
+35 slides · ~50:00 planned. Every trap ends on its exact Monday question (D-61).
 Opening through Trap 2 is presentation-quality.
 Traps 3–5 have had a structural pass but not a full narrative one. Nothing has been
 rehearsed against a clock (R-09) — **every timing number in this deck is a guess.**
@@ -1127,6 +1128,12 @@ That is the honest form of "speed and volume changed things." Speed did not mere
 more of the same evidence; it **removed the accidental mechanism that used to produce
 independent evidence**, and nobody decided to remove it.
 
+**Phrasing superseded 2026-09-02 (D-73). The reasoning stands; "free" does not.**
+Independence was never free — it arrived as a **byproduct** of friction, delay and other
+people's involvement, all of which cost something. "Free" also contradicts this deck's own
+engine, which begins *"a cost was quietly doing a job."* On-stage wording is now
+*"We used to get independence by accident. Now you have to build it on purpose."*
+
 **Consequence for slide 7 — it stops being a checklist.** Its caption was already
 *"evidence that didn't come from that sentence"*, which is a definition of independence
 that was never said aloud. The three items are now framed as **three ways to buy back
@@ -1330,9 +1337,9 @@ time. AI then enters as a credible solution and succeeds completely. It reads th
 retrieves context, applies policy, takes permitted action, explains the result, and cuts the
 wait to minutes.
 
-The reveal is that 344 of 800 resolved contacts describe the same checkout failure:
+The reveal is that 516 of 1,200 resolved contacts describe the same checkout failure:
 
-> We thought we had 344 support cases. We had one product problem, reported 344 times.
+> We thought we had 516 support cases. We had one product problem, reported 516 times.
 
 The system **does identify the cluster**. The failure is not model blindness. The project
 was chartered, owned, and measured as support automation, so the product signal lands in a
@@ -1408,7 +1415,7 @@ Slide 12 no longer says *“The framing decided whether it was the job.”* That
 abstract and awkward, and it leaves the causal cost of the successful support system
 unstated.
 
-The slide now lands on:
+The slide landed on (headline superseded by D-71):
 
 > The system found the pattern. Speed removed the pressure to notice.
 
@@ -1430,20 +1437,26 @@ owns the checkout defect. The speed silences an organizational alarm. That more 
 embodies the talk's underlying engine: a cost was doing a job; removing the cost stopped
 the job from being done.
 
+**Superseded in part by D-71 (2026-09-02).** The reasoning above still describes what
+happens, but it is *speaker-only* understanding. Putting it on the slide as "Speed removed
+the pressure to notice" made speed the agent of the loss, which reads as an argument
+against the automation. The engine stays in the speaker's head where D-14 requires; the
+slide now names the unasked product question instead.
+
 ---
 
 ### D-68 · “One product problem” gets its own reveal slide
 **Decided** 2026-09-02 · **Status** Active · **Refines:** D-64, D-67
 
-The `344 cases → one product problem` reclassification is split out of the weekly-support
+The `516 cases → one product problem` reclassification is split out of the weekly-support
 slide and given a dedicated statement slide. Slide 11 now stops after establishing that
-344 resolved tickets describe the same checkout failure. Slide 12 begins with:
+516 resolved tickets describe the same checkout failure. Slide 12 begins with:
 
-> We thought we had 344 support cases.
+> We thought we had 516 support cases.
 
 On click, it completes the turn:
 
-> We had one product problem, reported 344 times.
+> We had one product problem, reported 516 times.
 
 The total Trap 2 budget remains ~9:00: the original two-minute slide becomes 1:15 plus a
 0:45 reveal slide. The deck grows to 33 slides and 32 timed slides without adding planned
@@ -1455,6 +1468,177 @@ clean pause and lets the audience complete the inference before the next slide e
 how speed removed the pressure to notice.
 
 ---
+
+### D-69 · Speaker notes lead with the spoken script; cues move behind it
+**Decided** 2026-09-02 · **Status** Active
+**Amends:** D-57, which moved prose out of the notes entirely. That went one step too far.
+
+**The problem.** D-57 was right that a wall of prose is unusable at a lectern, and wrong
+about where the prose should live. Splitting it into `SCRIPT.md` meant the words actually
+being spoken were in a file the speaker does not open while presenting. The confidence
+monitor showed cues *about* the argument, but never the argument.
+
+**What changed.** The presenter and `/notes` views render a note top-down, so whatever
+leads is what gets read while talking. Each note is now:
+
+1. `~M:SS` timing cue — one line, kept on top so it stays glanceable.
+2. **The draft spoken script** — prose, no heading, straight into the words.
+3. `# Supporting Notes` — the D-57 cue notation, unchanged, behind the script.
+
+**What survives from D-57.** The cue notation itself (`**[n]**`, `-`, `>`,
+`**BOLD LEAD:**`, `→`), the markdown constraint that every cue be a list item, heading or
+blockquote, and the `/notes` over `/presenter/` recommendation. All still correct. Only
+the *ordering* and the claim that prose does not belong in `slides.md` are superseded.
+
+**`SCRIPT.md` is demoted to reference.** Jim will not rehearse or speak from it. It stays
+for timing rollups, the full arguments, and the red-team answers. It is explicitly **not**
+kept in phrase-level sync with `slides.md`; drift is expected and `slides.md` wins.
+
+**Coverage.** All 33 slides carry a draft script.
+
+### D-70 · Trap 1's Monday question gains a positive AI use, without touching framing
+**Decided** 2026-09-02 · **Status** Active
+**Amends:** the slide 7 subtitle set in D-64's cluster. The headline question is unchanged.
+
+**The problem.** Slide 7's subtitle was *"Could this check catch the original mistake — is
+there any path where it goes red?"* Three faults: it was the only q-slide subtitle that
+posed a second *question* rather than a principle plus an imperative, it was the longest of
+the five, and it carried **no positive use of AI** — which D-15 requires of every trap.
+
+**The new subtitle.**
+> Agreement isn't evidence. Use AI to attack your understanding, then find one check that
+> could actually go red.
+
+*"Agreement isn't evidence"* is the compressed form of the whole trap: forty-seven tests
+agreeing means nothing when they all inherited one misunderstanding. The imperative then
+gives AI an **active** job rather than a cautionary one.
+
+**What was considered and rejected: reframing slide 7 as "are we solving the right
+problem?"** That phrasing is Trap 2's, and adopting it would collapse R-02 and leave slide
+15 with nothing to reveal. The guardrail in D-57's neighbor still stands — *do not let Trap
+1 start talking about framing.*
+
+The distinction that makes both readings survivable: Trap 1's refund story is not about
+choosing the wrong problem, it is about **understanding the requirement wrong while every
+check inherits the misunderstanding**. "Right problem" in the sense of *correct
+understanding*, never *correct choice*. Restated:
+
+> A missing rule makes the answer wrong. A missing rationale makes the question
+> unchallengeable.
+
+**Unchanged:** the headline *What do we actually know?*, so slide 31's question list and
+the D-16 mapping need no edit. The operational cue *could this check catch the original
+mistake?* survives in the supporting notes, where slide 26 still calls back to it.
+
+### D-71 · Trap 2 blames the unasked question, not the speed
+**Decided** 2026-09-02 · **Status** Active · **Amends:** D-67 · **Refines:** D-64
+
+**The position.** The faster support answering is an **absolute good**. It is not hedged,
+not undercut, and not the villain of this trap. The failure is that the organization's
+primary focus should have been on identifying the unasked questions about the product
+itself, and never was.
+
+**Slide 13's headline changes** from *"Speed removed the pressure to notice"* to:
+
+> The system found the pattern. We never asked what it meant for the **product.**
+
+**Why the old line had to go — three reasons, in order of weight.**
+
+1. **It put the engine on stage.** "A cost was quietly doing a job; we removed the cost;
+   the job stopped being done" is declared speaker-only understanding, never explained on
+   stage (D-14). "Speed removed the pressure to notice" is that sentence, said out loud.
+   It was the only place in the deck that broke the rule.
+2. **It made speed the grammatical agent of the loss**, which is precisely the anti-AI
+   misreading R-03 warns about, on a slide that is one photograph from being quoted alone.
+3. **It aimed Trap 2 away from its own question.** The Monday question is *what did our
+   question already decide?* The failure belongs in the question, not in the clock.
+
+**The spoken punchline changes** from *"We silenced the alarm without fixing the failure"*
+to *"The alarm is still ringing. We're just looking at the dashboard."* The illustration
+shows the alarm **obscured** behind the dashboard, not switched off — it had been fighting
+the silencing metaphor all along. Obscured is an attention picture, which is the argument.
+
+**Slide 15's subtitle is clarified** from *"A constraint may be right. Make it win the
+argument instead of letting it skip the argument"* to:
+
+> An assumed constraint never has to defend itself. Name it, and make it earn its place.
+
+Same idea, without the win/skip wordplay that made the room decode a metaphor instead of
+hearing the instruction.
+
+**What is unchanged.** The engine itself, the D-64 support-queue-as-sensor mechanism, the
+noticing-versus-tolerating distinction, and slide 13's opening line preempting *"a good
+system should have caught it."* The system did catch it. Nobody asked what it meant.
+
+### D-72 · Trap 3's Agile material splits into three slides, landing on judgment
+**Decided** 2026-09-02 · **Status** Active · **Extends:** D-58, D-59
+
+**The problem.** The old slide 19 carried ~490 spoken words against a ~2:15 budget —
+realistically 3:30–4:00, before the two audience-interaction pauses. It was three
+arguments wearing one slide, and two of them had no visual support at all. The speaker's
+own draft script had already marked the seam with `{topic change}`.
+
+**The split.**
+
+| Slide | Beat | Job |
+|---|---|---|
+| 19 · *How can we find out?* | the feedback loop | Name the Agile debt, take the hit, land *go ask reality*. |
+| 20 · *We used to get independence by accident* | XP as independence machinery | Why those practices existed, what they cost, why shops stopped — and the honest limit that AI does not supply independence. |
+| 21 · *Two kinds of question* | judgment | What reality can cheaply settle, what it can't, and what to do with the remainder. |
+
+**Why slide 21 is the one that matters.** Without it, 19–20 read as an Agile interlude
+parked inside Trap 3. Slide 21 brings the argument home: everything reality cannot cheaply
+settle is judgment, and judgment is exactly where slide 18's **"Challenge my
+understanding"** is the tool. The phrase is repeated verbatim on screen and named out loud,
+so the callback is explicit. That is what earns the XP material its place in this trap
+rather than making it a digression.
+
+**The four XP practices stay off screen, deliberately.** They are spoken on slide 20 only.
+Putting them in a reveal-list would produce exactly the practice checklist D-59 forbids;
+slide 20 carries the *claim* (D-58's byproduct argument, phrased per D-73) instead, which
+is the argument the practices illustrate.
+
+**Also fixed:** the four practices were being walked through **twice** in the old script —
+once as description, once as what they were really doing. Collapsed to one pass.
+
+**Timing.** Deck goes 48:45 → 50:00 across 34 timed slides. This is a **correction, not an
+addition**: the time was already being spent under a budget that understated it. Q-01
+updated.
+
+**Numbering.** Slides after 19 shift by +2 (old 20–33 → new 22–35). SCRIPT.md headings
+renumbered; two live references updated (the Trap 5 ladder, and D-70's callback pointer).
+Historical slide numbers inside older decision entries were **left alone** — they describe
+the deck as it stood when those decisions were made, and rewriting them would falsify the
+record.
+
+### D-73 · Independence was a byproduct, never free
+**Decided** 2026-09-02 · **Status** Active · **Amends the phrasing of:** D-58
+
+Slide 20's headline was *"Independence used to be free. Now you have to build it on
+purpose."* It now reads:
+
+> We used to get independence **by accident.** Now you have to build it **on purpose.**
+
+**Three reasons "free" had to go.**
+
+1. **It contradicts the deck's own engine.** [The engine](#the-engine-underneath-all-five-traps)
+   opens *"a **cost** was quietly doing a job."* If independence were free, there was no
+   cost, and the engine has nothing to describe. The engine is right; the slogan was wrong.
+2. **It contradicts the same slide, thirty seconds later.** The spoken track says pairing
+   cost two salaries at one keyboard, TDD cost time up front, and an on-site customer cost
+   a specialist's calendar — and that this expense is why shops stopped. A headline saying
+   *free* over a script saying *expensive* reads as sloppiness.
+3. **An Agile room will not accept it.** Everyone who actually ran XP had to defend its
+   cost to management. The speaker's own story says exactly that.
+
+**What the accurate claim is.** Independence arrived as a **byproduct** — of friction,
+delay, handoffs, and other people's involvement. It was paid for, just never itemized, so
+nobody noticed when it stopped arriving. That is strictly stronger than "free": it explains
+why the loss went unobserved, which "free" cannot.
+
+**Also corrected:** the D-58 pull-quote wherever it appears in speaker notes (slides 6 and
+20), and the spoken line about what AI removed. `SCRIPT.md` already had the correct
+byproduct phrasing at its Trap 1 addendum; the slides were the outlier.
 
 ## G. Rejected — do not reopen without new information
 
@@ -1476,4 +1660,5 @@ how speed removed the pressure to notice.
 | The `$12` question anywhere in Trap 2, on screen or spoken | Self-contradicting: click 1 routes by amount, so the slide already answers it (D-50) |
 | "Why does a $12 refund need three approvals?" as Trap 2's on-screen reveal | The room already knows; a sequential chain is notorious, not hidden, so the reveal inverts (D-49) |
 | Outbox/Kafka architecture as Trap 2's on-screen example | Outside the experience of much of a mixed audience; the reveal only works if the room can be impressed by the answer first (D-44) |
+| Reframing Trap 1's Monday question as "are we solving the right problem?" | That is Trap 2's question; it collapses R-02 and leaves slide 15 with nothing to reveal (D-70) |
 | Inference vs enforcement as a standalone slide | Useful material, but a passenger after Trap 2 had already completed its argument (D-60) |

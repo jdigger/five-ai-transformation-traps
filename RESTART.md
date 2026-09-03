@@ -38,12 +38,17 @@ conceptually does not work when presented, say so and change it.
 
 ## Working method
 
-**Speaker notes are lectern cues, not prose (D-57).** `slides.md` notes are scannable
-delivery cues for a live room; `SCRIPT.md` holds the long-form prose. Notation: `~M:SS`
-first line · `**[n]**` a click beat · `-` a cue said in your own words · `>` an engineered
+**Speaker notes lead with the spoken script (D-69, amending D-57).** Each note is:
+`~M:SS` on the first line · then the draft script, as prose, no heading · then
+`# Supporting Notes` holding the structured cues. The presenter view renders top-down, so
+whatever leads is what gets read while talking. Cue notation inside the supporting section
+is unchanged: `**[n]**` a click beat · `-` a cue said in your own words · `>` an engineered
 line said close to verbatim · `**BOLD LEAD:**` a guardrail · `→` a transition.
 **Every cue must be a list item, heading, or blockquote** — adjacent bare lines collapse
-into a paragraph when rendered and silently rebuild the script.
+into a paragraph when rendered.
+
+**`SCRIPT.md` is reference only.** Not rehearsed, not spoken from. Do not sync it
+phrase-by-phrase against `slides.md`; drift is expected and `slides.md` wins.
 
 **American English throughout.** Slides, speaker notes, tracking files, and CSS comments:
 *humor*, *organization*, *gray*, *defense*, *behavior*, *centered*. The speaker is American
@@ -150,7 +155,7 @@ Then open `http://localhost:3030`. Useful URL forms while building:
 **always check reveal states this way rather than assuming**, and screenshot the slide.
 **For notes, use `http://localhost:3030/notes`, not `/presenter/`** — presenter view
 gives notes a small corner; `/notes` is full-width with a click-progress bar and font-size
-controls, and stays in sync (D-57). `/presenter/` is still right for checking slide + next
+controls, and stays in sync (D-57, D-69). `/presenter/` is still right for checking slide + next
 + timer together.
 
 **Five traps in the tooling itself, all of which have already cost time:**

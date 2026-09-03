@@ -15,10 +15,15 @@ Everything still in flux for **The Five Biggest AI Transformation Traps**.
 
 ## Needs a decision
 
-### Q-01 🟡 The talk is over budget: 48:45 planned against a 45–47 min target
-The speaker-note tally sums to **48:45** across 32 timed slides, and note-time is
+### Q-01 🟡 The talk is over budget: 50:00 planned against a 45–47 min target
+The speaker-note tally sums to **50:00** across 34 timed slides, and note-time is
 systematically optimistic — a live room, a laugh, and pauses on the three money slides
 will push the delivery longer.
+
+**Updated 2026-09-02 (D-72).** The old slide 19 was budgeted 2:15 while carrying ~490
+spoken words — realistically 3:30–4:00. Splitting it into three slides did not add
+content; it made the tally honest. The +1:15 here is a correction, not new material, and
+the real delivery time did not change.
 
 **The sub-question is settled: this is a target, not a hard cap (D-47).** ~10 minutes of
 slack exist. That halves the cut and changes where it comes from.
@@ -46,7 +51,7 @@ warns against treating it as the automatic source of every remaining minute.
 "ask it to attack your framing" prompt slide, and Trap 4's capacity/2× pair. If any of
 them goes, it goes because it isn't earning its place — not to buy minutes.
 
-**Do not cut:** the Trap 1 refund loop, Trap 2's `344 cases → one product problem` reveal, the Trap 5
+**Do not cut:** the Trap 1 refund loop, Trap 2's `516 cases → one product problem` reveal, the Trap 5
 ladder. Those are the three slides the talk is built on.
 
 **Blocked on rehearsal.** Every number in the table above is a guess made while writing
@@ -246,6 +251,11 @@ Fixed on screen this session by giving Trap 1 its own example (D-19). The distin
 **T1 = is the answer actually right? · T2 = why are we solving this problem at all?**
 Any new Trap 1 content that touches framing will collapse them again.
 
+**Tested 2026-09-02 and held.** Reframing slide 7 around "solving the right problem" was
+proposed and declined for exactly this reason; the subtitle was rewritten to stay on
+*understanding* instead (D-70). Trap 1 may say the requirement was misunderstood. It may
+not ask whether the problem was worth solving.
+
 ### R-03 🟡 Several slides read as anti-AI when photographed out of context
 *"A Great Answer Doesn't Mean You're Right"*, *"Faster Doesn't Mean You Should Do More"*,
 and *"Are You Understanding Faster — or Avoiding Understanding?"* are each one click from
@@ -310,7 +320,7 @@ even with D-47's slack.
 ## Only a rehearsal will resolve these
 
 - Whether the Trap 1 refund loop needs six clicks or is too slow
-- Whether Trap 2's `344 cases → one product problem` pause gives the room enough time to reclassify the work
+- Whether Trap 2's `516 cases → one product problem` pause gives the room enough time to reclassify the work
 - Whether the Trap 5 ladder earns 2:30 of silence-and-clicking
 - Whether the five closing questions land as a callback or a summary (D-16 forbids summary)
 - Whether Trap 3's two-column *Help me / Challenge me* slide is self-evident or needs setup
@@ -322,7 +332,7 @@ even with D-47's slack.
 
 | Was | Now | Resolved |
 |---|---|---|
-| Trap 2's refund-approval optimization looked irrational before its reveal | D-64 — excellent support automation wins first; 344 contacts then reveal one product defect | 2026-09-02 |
+| Trap 2's refund-approval optimization looked irrational before its reveal | D-64 — excellent support automation wins first; 516 contacts then reveal one product defect | 2026-09-02 |
 | R-05 — Trap 2's gray-out needed projector verification | D-64 — the gray-out and approval-chain slide were removed | 2026-09-02 |
 | R-10/R-15/R-17 — duplicated customer-service examples and approval-chain callbacks created cross-trap tension | D-64 — Trap 2 now stays adjacent to refunds without reusing their approval mechanism | 2026-09-02 |
 | Q-03 — three invented anecdote placeholders remained in the spoken track | D-63 — removed them; future personal stories must be true | 2026-09-01 |

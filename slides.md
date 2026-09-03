@@ -32,15 +32,15 @@ Jim Moore
 <!--
 ~0:30
 
-- Not about today's model, assistant, agent framework, or prompt technique — all wrong by the time you get home.
-- Mistakes I'm watching us make, and have made, as AI changes how we build and how we run technology organizations.
-- Five of them. In each: a tempting default to stop, a better use of AI, and one question you can use Monday.
-
-# Jim's rough script
-
 This isn't prompt or context engineering, RAG pipelines, some framework, or any of that. I'm sure you've noticed that the latest best practices - and what's available - for those changes almost every week.
 
 This is how to approach what has become increasingly useful as all of these things get more powerful, but we don't know how to properly make use of that.
+
+# Supporting Notes
+
+- Not about today's model, assistant, agent framework, or prompt technique — all wrong by the time you get home.
+- Mistakes I'm watching us make, and have made, as AI changes how we build and how we run technology organizations.
+- Five of them. In each: a tempting default to stop, a better use of AI, and one question you can use Monday.
 -->
 
 ---
@@ -61,10 +61,14 @@ class: pull-quote dark-slide
 <!--
 ~1:45
 
+Thomas Sowell isn't a tech guy. He's a famous systems thinker - about **human** systems. Incentives, institutions, second-order consequences. We're computer geeks, and we think in technical systems...
+
+# Supporting Notes
+
 [Sources]
 - Portrait source: Thomas Sowell Portrait (3x4 cropped), Internet Archive Book Images via Wikimedia Commons, 1964. Public domain in the United States. https://commons.wikimedia.org/wiki/File:Thomas_Sowell_Portrait_(3x4_cropped).jpg
 - Editorial treatment created with OpenAI ImageGen from the public-domain source portrait.
-[/Sources]
+  [/Sources]
 
 - The lens for the whole talk. Not a decorative quote.
 - Everything is trade-offs: consistency/availability · flexibility/control · speed/certainty · build/buy · generality/simplicity.
@@ -77,10 +81,6 @@ class: pull-quote dark-slide
 - Sowell isn't a technologist. He's a systems thinker about **human** systems — incentives, institutions, second-order consequences. We're technologists, and we think in technical systems.
 > "The parts we wrote down are the technical system. The parts we didn't are still running."
 
-
-# Jim's rough script
-
-Thomas Sowell isn't a tech guy. He's a famous systems thinker - about **human** systems. Incentives, institutions, second-order consequences. We're computer geeks, and we think in technical systems...
 -->
 
 ---
@@ -111,6 +111,26 @@ What just got dramatically easier?<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ...and what
 <!--
 ~2:00
 
+We've all been seeing how truly useful AI is proving to be.
+
+[click]
+
+In this room, we *tend* to focus on code from Claude.
+
+[click]
+
+But that's been getting easier for my entire 30+ year career. Assemblers. Compilers. Managed memory. Virtual machines. Sophisticated frameworks. Cloud...
+
+And on and on... That's been a very good thing.
+
+But the rest also got a whole lot easier - including things that we **thought** weren't going to get automated.
+
+AI continues to make getting a REALLY good answer much faster and easier.
+
+
+
+# Supporting Notes
+
 - Hours or days → minutes. Genuinely fantastic.
 - **Say this up front:** easy ≠ bad, cheap ≠ low quality. Sometimes the right answer at the end of a trap is *use much more AI, much more aggressively.*
 
@@ -122,21 +142,6 @@ What just got dramatically easier?<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ...and what
 > "What just got dramatically easier, and what should we do differently because of that?"
 
 → One of the first things it made easy was getting a really good answer.
-
-
-# Jim's rough script:
-
-We've all been seeing how truly useful AI is proving to be.
-
-In this room, we tend to focus on code.
-
-But that's been getting easier for my entire 30+ year career. Assemblers. Compilers. Managed memory. Virtual machines. Sophisticated frameworks. Cloud...
-
-And on and on... That's been a very good thing.
-
-But the rest also got a whole lot easier - including things that we **thought** weren't going to get automated.
-
-AI continues to make getting a REALLY good answer much faster and easier.
 -->
 
 ---
@@ -159,15 +164,14 @@ class: trap-slide trap-01
 <!--
 ~0:30
 
-- Let it sit for a second.
-- Everyone knows AI hallucinates. That's the boring version, and we're getting better at catching it — obvious nonsense is obvious.
-- I'm interested in the other one: sophisticated, well-reasoned, completely coherent — raising our confidence in something we never established.
-
-# Jim's draft script
-
 For our purposes, let's throw hallucinations out the window.
 
-I'm interested in it giving truly sophisticated, well-reasoned, completely coherent answers.
+I'm interested in when it is giving truly sophisticated, well-reasoned, completely coherent answers.
+
+# Supporting Notes
+
+- Let it sit for a second.
+
 -->
 
 ---
@@ -221,19 +225,29 @@ Let's take advantage of AI's amazing abilities...
 
 Sweet! I'm not going to unnecessarily go back to writing code when the code it generates is generally better - especially as the models get better - than I could anyway.
 
-Or, OMG, all those tedious tests.
+Or, OMG, all those *tedious* tests.
 
 However, you must be thinking, "There MUST be something wrong here..." Yep. What is it?
 
 I'll give you a clue: It's NOT that the AI wrote the code and tests, or that the story card was wrong...
 
+[click]
+
+Hmmm....
+
+[click]
+
 {when the 47 passing turns red}
 
-Ok, fine. So we were testing all the right things. With 47 tests, no less. But it was for what we knew. We can't "blame" the AI for that. And a human - especially one that doesn't know rules finance hadn't stated - would likely make the same mistake.
+Ok, fine. So we were testing all the right things. With 47 tests, no less. But it was for what we "knew."
 
-And that's what makes this interesting. Humans are slower and more unreliable, while AI is much faster and more precise — and it happily does work we don't want to do.
+We can't "blame" the AI for that. And a human - especially one that doesn't know rules finance hadn't stated - would likely make the same mistake.
 
-That's wonderful. It also changes the trade-offs. We'll get back to that...
+And that's what makes this interesting. Humans are slower and can be more unreliable, while AI is much faster and more precise — and it happily does work we don't want to do.
+
+That's wonderful.
+
+It also changes the trade-offs. We'll get back to that...
 
 Until then, let's look at how we can identify and fix the issues.
 
@@ -262,7 +276,7 @@ Until then, let's look at how we can identify and fix the issues.
 - **Point at the 47:**
 > "You didn't get forty-seven checks. You got one check, forty-seven times."
 - The mistake and the thing that was supposed to catch it are no longer independent events.
-> "Independence used to be free. We got it from friction — different people, different days, the time it took. Now you have to build it on purpose."
+> "Independence used to arrive as a byproduct — different people, different days, the time it took. Nobody budgeted for it, so nobody noticed when it stopped arriving."
 - **That's the qualitative change.** Not that AI is wrong more often. That the *amount* of evidence went up while the *independence* of it went to zero — and every artifact in front of you still says "verified."
 
 → So what would count as evidence that didn't come from that sentence?
@@ -288,7 +302,7 @@ class: canvas-slide
 </div>
 
 <div class="kicker" v-click="4">
-Use AI to challenge your thinking —<br>then use evidence to challenge both of you.
+Use AI to challenge your thinking —<br>&nbsp;&nbsp;&nbsp;&nbsp;then use evidence to challenge <u>both</u> of you.
 </div>
 
 </div>
@@ -301,17 +315,17 @@ There are going to be rules that don't need to be included because they've alrea
 
 Just pointing out that not EVERYTHING needs to be stated or understood for the story to implement. Bounded contexts and the like are all still vital.
 
---
+[click]
 
-The 90 days is where AI becomes really useful. Letting it create a quick script or run through appropriate tooling for audit data. Whether the process the calculator is replacing is manual, or an old service, or a SaaS, whatever - you have that audit data of payouts.
+The 90 days is where AI becomes really useful. Let it create a quick script or run through appropriate tooling for audit data. Whether the process the calculator is replacing is manual, an old service, a SaaS, whatever - you have that audit data of payouts.
 
 Test your logic against reality.
 
---
+[click]
 
 Showing a few samples to the owner - nothing to overwhelm, but just to confirm you're on the right track
 
---
+[click]
 
 One hugely valuable thing AI is excellent at is challenging you.
 
@@ -365,7 +379,7 @@ class: q-slide
 
 # What do we actually know?
 
-## Could this check catch the original mistake — is there any path where it goes red?
+## Agreement isn't evidence. Use AI to attack your understanding, then find one check that could actually go red.
 
 <!--
 ~1:30
@@ -384,6 +398,8 @@ To restate all of that
 > What do we actually know?
 
 - The operational version for a code review or architecture review is: *could this check catch the original mistake?*
+- **"Agreement isn't evidence" is the compressed form of the whole trap** — 47 tests agreeing means nothing if they all inherited one misunderstanding.
+- **Give AI the active job, not the cautionary one.** Attacking your understanding is the positive use here (D-15); the check that can go red is the evidence.
 - **Notice what it is NOT.** Not "was a human involved." Not "did AI write this." Those are bad proxies — a human writing a test from the same misunderstanding is exactly as useless.
 - It's about causation. Could this thing have gone red?
 
@@ -417,7 +433,7 @@ class: trap-slide trap-02
 
 If you've used any of the frontier models like Claude and ChatGPT, you've seen they're amazingly good. Scarily good.
 
-Here we're going to assume — especially as they get even better — that the answer is completely and verifiably right.
+Here we're going to assume — especially as they get even better — that the answer is completely and verifiably *right*.
 
 
 # Supporting Notes
@@ -454,7 +470,7 @@ The refund may be straightforward with our spiffy new service, but getting help 
 
 Sales are up. Support volume is up too.
 
-The same team of representatives is handling more incidents than it can absorb. People get overwhelmed. Each incident starts taking longer, which grows the queue, which makes the overload worse. The problem begins feeding itself.
+The support team is handling more incidents than it can absorb. People get overwhelmed. Each incident starts taking longer, which grows the queue, which makes the overload worse. The problem begins feeding itself.
 
 Support management has the obvious answer: we need more people.
 
@@ -462,7 +478,7 @@ But what if technology could swoop in and rescue us?
 
 [click]
 
-That is a serious business goal: get the customer a correct resolution in under five minutes, any time of day.
+Granted, this is ambitious, but let's run with it.
 
 
 # Supporting Notes
@@ -505,7 +521,7 @@ class: statement-slide
 18 hours &nbsp;&rarr;&nbsp; under 5 minutes
 </div>
 
-<div class="caption mt-8" v-click="2">CORRECT · PERSONALIZED · AVAILABLE AROUND THE CLOCK</div>
+<div class="caption mt-8" v-click="1">CORRECT · PERSONALIZED · AVAILABLE AROUND THE CLOCK</div>
 
 </div>
 
@@ -517,15 +533,14 @@ class: statement-slide
 
 It reads what the customer wrote, pulls the account and order context, applies the policy, takes the action it is allowed to take, and explains what happened. If it is genuinely uncertain, it escalates.
 
-And it works. Correct answers. Personalized. Available around the clock.
+[click]
+
+And it works!
 
 It follows all the processes correctly in a reliable way. You couldn't ask for a better win.
 
-We can even throw in some Kafka messaging, lots of AI agents, and all that kind of cool stuff that helps it go faster and more reliably.
+We can even throw in some Kafka messaging, lots of AI agents, and all that kind of cool stuff. All the kinds of things that get architects like me all hot and bothered.
 
-All the kinds of things that get architects like me all hot and bothered.
-
-The wait drops from eighteen hours to under five minutes.
 
 
 # Supporting Notes
@@ -553,12 +568,12 @@ class: canvas-slide
 
 <div class="diagram">
 
-<div class="caption">ONE WEEK OF SUPPORT</div>
+## ONE WEEK OF SUPPORT
 
-<div class="fact">800 tickets resolved</div>
+<div class="fact"><strong>1,200</strong> tickets resolved</div>
 
 <div class="kicker mt-12" v-click="1">
-344 describe the same checkout failure.
+516 describe the same checkout failure.
 </div>
 
 </div>
@@ -567,20 +582,18 @@ class: canvas-slide
 ~1:15
 
 
-At the end of the week the number says: eight hundred tickets resolved. The support metric is green.
+At the end of the week, the number says: twelve hundred tickets resolved. The support metric is green.
 
-But the system also clusters what it saw. Three hundred and forty-four of those customers were describing the same checkout failure.
 
-[Pause. Then advance without explaining it.]
 
 
 # Supporting Notes
 
 - Start with the first meaning of the number: workload successfully cleared.
-- Eight hundred tickets resolved. The support metric is green.
+- Twelve hundred tickets resolved. The support metric is green.
 
 **[1]**
-- Then reveal the repeated pattern: 344 customers describe the same checkout failure.
+- Then reveal the repeated pattern: 516 customers describe the same checkout failure.
 - **The system found this cluster.** Do not make the AI implausibly blind; a good support system should detect repeated language and shared context.
 - Pause. Give the room time to register the repetition, but **do not interpret it yet.**
 - Advance to the next slide for the reclassification.
@@ -591,21 +604,19 @@ layout: default
 class: statement-slide
 ---
 
-# We thought we had 344 support cases.
+# We thought those were 516 support cases.
 
-<h1 v-click="1">We had <strong>one product problem</strong>, reported 344 times.</h1>
+# We really had <strong>one product problem</strong>, reported 516 times.
 
 <!--
 ~0:45
 
 
-We thought we had 344 support cases.
+*Another thing AIs are particularly good at is seeing those patterns.*
 
-[Click.]
+Five hundred and sixteen of those customers were describing the same checkout failure.
 
-We had one product problem, reported 344 times.
-
-[Long pause. Let the room complete the reclassification before advancing.]
+That could be a code bug, process or documentation problem - whatever.
 
 
 # Supporting Notes
@@ -614,7 +625,7 @@ We had one product problem, reported 344 times.
 - Read the first sentence, then pause.
 
 **[1]**
-> “We had one product problem, reported 344 times.”
+> “We had one product problem, reported 516 times.”
 
 - Give **one product problem** its full weight.
 - Long pause. Do not explain the mechanism yet.
@@ -629,7 +640,7 @@ class: statement-slide
 
 # The system found the pattern.
 
-# Speed removed the pressure to **notice.**
+# We never asked what it meant for the **product.**
 
 <img class="support-alarm-dashboard" src="/illustrations/support-time-resolved-alarm.png" alt="A happy green glass support dashboard showing a 96 percent reduction in support time, with a ringing red alarm obscured behind it">
 
@@ -641,7 +652,7 @@ This would show in the reports when asked.
 
 The failure is not that AI buried the evidence. It is what happened to the pressure to notice it.
 
-Before, 344 reports meant a growing queue, long waits, overwhelmed representatives, and support management asking for more people. The organization could feel the checkout problem even if it called that pain “support volume.”
+Before, 516 reports meant a growing queue, long waits, overwhelmed representatives, and support management asking for more people. The organization could feel the checkout problem even if it called that pain “support volume.”
 
 Now those same reports are resolved in minutes. The dashboard is green. The pattern still appears in a report — but resolving the crisis the business metrics focused on no longer forces anyone to pay attention to the underlying issue.
 
@@ -651,20 +662,22 @@ Once the business notices the defect, it can consciously decide to tolerate it. 
 
 The trap is that nobody made that decision. Faster support let the problem fall below organizational attention before it could demand one.
 
-We silenced the alarm without fixing the failure.
+The alarm is still ringing. We're just looking at the dashboard.
 
 
 # Supporting Notes
 
 - Preempt the obvious objection: yes, a sophisticated support system should identify the cluster. Ours did.
 - The failure is not that AI missed or buried the evidence.
-- Before automation, 344 reports created visible organizational pain: a growing queue, long waits, overwhelmed representatives, and a demand for more people.
+- Before automation, 516 reports created visible organizational pain: a growing queue, long waits, overwhelmed representatives, and a demand for more people.
 - Now those same reports are resolved in minutes. The support dashboard is green. The cluster still appears in a trend report—but the crisis no longer forces anyone to pay attention.
 > “The system didn't hide the evidence. It removed the pain that made the evidence impossible to ignore.”
 
 - **Distinguish noticing from tolerating.** Once the business clearly sees the product defect, it can consciously decide whether the cost of fixing it exceeds the harm it causes. That may be an uncomfortable decision—especially because customers still bear the failure—but at least it is a decision.
 - The trap is that faster support lets the issue fall below organizational attention **before anyone makes that decision.**
-- We silenced the alarm without fixing the checkout failure.
+- **The faster support is an absolute good. Say so, and do not hedge it.** The automation is not the villain of this trap; it did its job extremely well.
+- The miss is that nobody asked what the pattern meant for the **product**.
+- The alarm is still ringing. We're just looking at the dashboard.
 - By defining success as faster incident resolution, the original question treated repeated contacts as work to complete rather than a signal that had to become impossible to ignore.
 - The support system remains genuinely valuable. That is exactly why this is dangerous: its success can conceal the need for a conscious product decision.
 -->
@@ -676,15 +689,16 @@ class: canvas-slide
 
 <div class="diagram">
 
-<div class="caption">ASK IT TO ATTACK YOUR FRAMING</div>
-
+# ASK IT TO ATTACK YOUR FRAMING
+<p/>
+<p/>
 <div class="reveal-list">
-<div class="item" v-click="1"><span class="mark">"</span><span>What assumptions did I bake into that question?</span></div>
-<div class="item" v-click="2"><span class="mark">"</span><span>What am I treating as a constraint that's actually a choice?</span></div>
-<div class="item" v-click="3"><span class="mark">"</span><span>Reframe this problem without assuming my solution.</span></div>
+<div class="item"><span class="mark">"</span><span>What assumptions did I bake into that question?<span class="note">“Resolve support tickets faster” already decided the product was fine and the queue was the problem.</span></span></div>
+<div class="item"><span class="mark">"</span><span>What am I treating as a constraint that's actually a choice?<span class="note">We treated the checkout flow as fixed. Nobody decided that — it just wasn't in the question.</span></span></div>
+<div class="item"><span class="mark">"</span><span>Reframe this problem without assuming my solution.<span class="note">Without that assumption, the goal is fixing checkout — not answering faster.</span></span></div>
 </div>
 
-<div class="kicker" v-click="4">
+<div class="kicker">
 It's very good at this. It just never volunteers.
 </div>
 
@@ -693,49 +707,13 @@ It's very good at this. It just never volunteers.
 <!--
 ~1:00
 
+Before you ask the AI for a design, ask it to challenge the question.
 
-This is the good news part, and it costs you about ninety seconds.
+Here's the thing you need to know about this. It is genuinely better than a lot of design reviews I've sat through and done.
 
-Before you ask the AI for a design, ask it to come after the question.
-
-[1] What did I already assume when I wrote that?
-
-Point it at our own story. "Resolve support tickets faster" had already decided the product was fine and the queue was the problem.
-
-[2] What am I calling a constraint that's really a choice?
-
-We treated the checkout flow as fixed. Nobody actually decided that. It just wasn't in the question.
-
-[3] Reframe this without assuming my solution.
-
---
-
-Here's the thing you need to know about this. It is genuinely great at it. Better than a lot of design review I've sat through.
-
-But it will never bring it up on its own.
-
-Ask a leading question, get a led answer. It is the most agreeable colleague you have ever had, and that is exactly the problem.
+The value **is** the friction. Which is the opposite of what we often assume we want from AI — more speed.
 
 If everything it says back agrees with you, you haven't challenged the framing yet. You've just been flattered very efficiently.
-
-
-# Supporting Notes
-
-- A Monday-morning thing, and a **positive** use of AI, not a warning about it.
-- Before you ask AI for the design, spend ninety seconds asking it to attack the question.
-- Apply the prompts directly to the support story:
-  - What did “resolve support tickets” already assume?
-  - What if the current product is not a fixed constraint?
-  - Reframe the goal so repeated contact becomes evidence to remove the cause, not merely work to complete.
-
-**[1] [2] [3]** — read the three prompts
-
-- The value is the friction: if every answer confirms the framing, you have not challenged it yet.
-
-**[4]** The tool will not do this on its own. Ask a leading question, get a led answer.
-> “It is extremely agreeable, and that is the failure mode.”
-
-→ All three prompts are ways of forcing one question.
 -->
 
 ---
@@ -745,31 +723,13 @@ class: q-slide
 
 # What did our question already decide?
 
-## A constraint may be right. Make it win the argument instead of letting it skip the argument.
+## What your question assumes never has to defend itself.<br/>Name it, and make it earn its place.
 
 <!--
 ~0:30
 
 
-So the question for Monday.
-
-The support system might be exactly right. Five minutes might be exactly right. I'm not taking that away from anybody.
-
-- what did the way we asked already settle for us?
-- is that constraint a decision somebody made — or just the shape of the sentence?
-- if it's real, fine. Make it **win** the argument. Don't let it skip the argument.
-
-
-# Supporting Notes
-
-- **Pause. This is the conclusion of Trap 2.**
-> What did our question already decide?
-
-- The support system may be exactly right. The five-minute target may be right.
-- The trap was letting “support queue” decide that 344 reports were 344 pieces of support work instead of one product problem.
-- Make the framing win the argument instead of letting it skip the argument.
-
-→ Now something more personal. If AI can explain unfamiliar systems, generate the code, and challenge the architecture this fast — what does that do to how *we* learn?
+{this is self-standing}
 -->
 
 ---
@@ -793,15 +753,7 @@ class: trap-slide trap-03
 ~0:30
 
 
-This one is more personal, and it's the one I'm least comfortable with.
-
-Everything so far has been about systems and questions. This one is about us.
-
-AI can take you from "I have no idea what this does" to "working code, tests pass, shipped" without ever stopping at "now I understand this."
-
-Both of those paths produce working software.
-
-Only one of them leaves you able to judge the next thing.
+This one is more personal, and far too easy to far into.
 
 
 # Supporting Notes
@@ -819,12 +771,12 @@ class: canvas-slide
 
 <div class="diagram">
 
-# Cognitive offloading is a feature.
+# Cognitive offloading is WONDERFUL
 
 <div class="flow-h mt-12">
 <div class="node ghost">Machine code</div><span class="arrow">→</span>
 <div class="node ghost">Compiler</div><span class="arrow">→</span>
-<div class="node ghost">Framework</div><span class="arrow">→</span>
+<div class="node ghost">Frameworks</div><span class="arrow">→</span>
 <div class="node ghost">Cloud</div><span class="arrow">→</span>
 <div class="node">AI</div>
 </div>
@@ -839,25 +791,25 @@ class: canvas-slide
 ~2:00
 
 
-Let me kill the dumb version of this argument before anyone thinks I'm making it.
-
 I am **not** saying you have to understand everything the AI writes. That's nonsense, and it throws away the entire point of abstraction.
 
 Engineering **is** cognitive offloading. That's the job.
 
-I don't want my team implementing B-trees. I've never read the bytecode javac emits. I have never implemented a TCP stack and I intend to keep that streak alive.
+I learned B-trees in college. Even did some assembly on my Commodore 64.
 
-Every arrow up there is a generation of engineers deciding to stop understanding a layer. Every one of them was right.
+But soon compilers, libraries and databases removed the need for me to have to do any of that myself.
 
-AI is the next one. It's a big one. And I'm in favor of it.
+I have never implemented a TCP stack, and I intend to keep that streak alive.
+
+Move on to the next set of problems - there's always plenty of those!
+
+AI is the next one, and a really big one.
 
 [click]
 
-Here's the move, though. And nobody announces it.
-
 "I don't need to do this myself" is true.
 
-"I don't need to understand this" is a different sentence.
+"I don't need to understand this" is very different.
 
 Nobody stands up in a meeting and declares the switch. It just quietly happens on a Tuesday.
 
@@ -900,7 +852,7 @@ class: canvas-slide
 <div class="note">Walk me through what happens if the process crashes at each step. Why does idempotency matter here? How would I prove that in <em>my</em> system?</div>
 </div>
 
-<div class="col right" v-click="1">
+<div class="col right">
 <h4>When you think you know</h4>
 <div class="lede">"Challenge my understanding."</div>
 <div class="note">Here's my design — tell me why I'm wrong. What's the strongest case for the option I rejected? What am I treating as obvious?</div>
@@ -908,7 +860,7 @@ class: canvas-slide
 
 </div>
 
-<div class="kicker" v-click="2">
+<div class="kicker" v-click="1">
 Not junior and senior. Unfamiliar and familiar.<br>
 <span class="fine">Most of us are both, in the same week.</span>
 </div>
@@ -919,74 +871,31 @@ Not junior and senior. Unfamiliar and familiar.<br>
 ~2:30
 
 
-Two modes. Both enormous. And the split isn't the one people expect.
+Two modes. Both enormous. And notice it's not "junior" or "senior."
 
-**When you don't know something** — "help me understand this."
+"What is this @Transactional doing?" "Hmm. And that applies across services?"
 
-Everybody already uses this one and it's fantastic. It collapses the distance between "no clue what's happening here" and "I have a mental model I can go test."
+"I've never done Rust before, but this is failing when calling this other service. What could be the problem?"
 
-Not an answer. A model I can go check.
+Or for the things we seniors have seen a hundred times before, our experience is compressed pattern recognition. It is the most valuable thing you have.
 
-That's a new grad learning Spring transactions. It's also me, last month, dropped into a Rust codebase.
+It is also the exact mechanism by which you decide this problem is the one you solved in 2014, and quietly stop reevaluating because it's worked.
 
-[click]
-
-**When you think you do know** — "challenge my understanding."
-
-This is the underrated one, and it's most valuable to the most experienced people in this room.
-
-Your experience is compressed pattern recognition. It is the most valuable thing you have.
-
-It is also the exact mechanism by which you decide this problem is the one you solved in 2014, and quietly stop looking.
-
-Now you can hand your design to something that will argue with you at eleven at night. For free. Never tired. No stake in the org chart.
+Now you can hand your design to something that will argue with you at eleven at night. For free, never tire, and doesn't care about office politics.
 
 [click]
 
-Not junior and senior. **Unfamiliar and familiar.** Most of us are both in the same week.
-
---
-
-On juniors, honestly: some traditional junior work really is getting less valuable. Boilerplate, routine implementation, easy debugging. I'm not going to pretend otherwise, and I'm not going to argue we should preserve obsolete work because that's how my generation happened to learn.
+On juniors, honestly: some traditional junior work really is getting less valuable. Boilerplate, routine implementation and maintenance, basic debugging...
 
 But there is a difference between juniors producing junior artifacts and engineers developing judgment. "Ask, generate, tests pass, merge" does not produce the second one.
 
---
-
-And on seniors — the half I like less.
-
-There's no comfortable version of this where AI writes the code and we provide the judgment. AI participates in judgment too. It already reviews, critiques, designs, weighs evidence.
+For us older folks, we can't simply say "AI writes the code, and we provide the judgment." As we've talked about repeatedly, AI participates in judgment too.
 
 What we can do is offload the implementation **effort** without disconnecting from the implementation **evidence**.
 
-Because the moment you stop touching real code, real incidents, real production, your judgment stops being calibrated.
+But remember that the moment you stop touching real code, real incidents, real production - your judgment stops being calibrated with reality.
 
-And we already have a name for that role. We called it the ivory tower architect, and nobody liked it. Including us.
-
-
-# Supporting Notes
-
-- Two modes. Both enormous. The split is not what people assume.
-
-**LEFT · When you don't know**
-- Collapses the distance between "no idea what's happening" and "a testable mental model." Not an answer — a model I can go check.
-- Applies to a new grad learning Spring transactions *and* to me landing in a Rust codebase.
-
-**[1] RIGHT · When you think you know** — the underrated one, most valuable to the most experienced people here
-- Experience is compressed pattern recognition. Most valuable thing you have.
-- Also exactly the mechanism by which you decide this problem is the one you solved in 2014, and stop looking.
-- Now you can hand your design to something that argues with you at 11pm, free, never tired, never political.
-
-**[2]** Not seniority — familiarity. Most of us are in both states in the same week.
-
-**ON JUNIORS — say some version of this:**
-- Some traditional junior work really is getting less valuable. Boilerplate, routine implementation, simple debugging. I won't pretend otherwise, and I won't argue we should preserve obsolete work because that's how my generation learned.
-- But there's a difference between juniors producing junior artifacts and engineers developing judgment. *"Ask, generate, tests pass, merge"* does not produce the second one.
-
-**ON SENIORS — the uncomfortable half:**
-- No comforting version where AI writes the code and seniors provide the judgment. **AI participates in judgment too** — it already reviews, critiques, designs, analyzes evidence.
-- Instead: offload implementation *effort* without disconnecting from implementation *evidence*.
-> The moment you stop touching real code, real incidents, real production, your judgment stops being calibrated — and we already know what that role looks like. We called it the ivory tower architect and we didn't like it.
+And we already have a name for that role: the ivory tower architect. 🤮
 -->
 
 ---
@@ -1003,111 +912,169 @@ class: canvas-slide
 <div class="node good">Try</div><span class="arrow">→</span>
 <div class="node good">Evidence</div><span class="arrow">→</span>
 <div class="node good">Learn</div><span class="arrow">→</span>
-<div class="node ghost">again</div>
+<div class="node ghost">rinse and repeat</div>
 </div>
 
 <div class="kicker mt-14" v-click="1">
 When reality can answer the question cheaply, stop arguing and ask reality.<br>
-<span class="fine">Test what reality can cheaply answer. Use judgment for what it can't.</span>
+Use judgment for what it can't.
 </div>
 
 </div>
 
 <!--
-~2:15
+~1:00
 
 
-Somebody here is thinking "you've rediscovered Agile."
-
-Yes. Correct. Guilty.
+We're at an Agile Meetup — does anybody recognize this?
 
 Twenty-five years of: we don't know everything up front, so build feedback loops, ship working systems, let them produce evidence, learn, adapt.
 
-AI makes that argument stronger, not weaker.
+AI makes that argument a whole lot stronger.
 
 [click]
 
-When reality can answer the question cheaply, stop arguing and go ask reality.
-
-Every objection to running the experiment used to be about cost. Another implementation. Another prototype. Another architecture to evaluate. Another serious critique.
+Every objection to running the experiment used to be about cost. Another implementation. Another prototype. Another architecture to evaluate.
 
 None of those are expensive anymore.
 
 The two-hour spike always beat the two-hour meeting. Now it's a twenty-minute spike.
 
---
+When reality can answer the question cheaply, stop arguing and go ask reality.
+-->
 
-Let me go further than the concession, because this is the real answer.
+---
+layout: default
+class: statement-slide
+---
+
+# We used to get independence **by accident.**
+
+# Now you have to build it **on purpose.**
+
+<!--
+~1:15
+
 
 Look at what XP actually was. It was **independence machinery**, installed along the whole path.
 
-Pair programming — two readers, two sets of priors. TDD — a check written before the implementation, so it can't be derived from it. On-site customer — the person who owns the meaning, in the room. Collective ownership and CI — continuous independent verification.
+How many of you have done XP?
 
-Every one of those was expensive. Pairing costs two people. TDD costs time up front. An on-site customer costs somebody's entire calendar.
+As a developer, I LOVED it. Sometimes it was annoying, but worth the trade-offs. My management was good with it because we crushed it on results — but they had to constantly defend it to their management.
 
-That expense is why most shops quietly stopped.
+- Pair programming: two readers, two sets of priors. TDD: a check written before the implementation, so it can't just rubber-stamp what you built. On-site customer: the person who owns the meaning, right there. Collective ownership and CI: continuous independent verification before it ever touches production.
+
+Every one of those was expensive. Pairing costs two salaries at one keyboard. TDD costs time up front. An on-site customer costs a specialist devoting their time to us.
+
+That's why most shops quietly stopped.
 
 We didn't abandon those practices because they didn't work. We abandoned them because we couldn't afford them.
 
-And two things just changed at once, and they push the same direction. AI cut the price of that machinery. AI also removed the accidental independence we used to get for free, out of friction.
+--
+
+Now two things have changed at once, and they push in the same direction.
+
+AI cut the price of that machinery. And AI removed the accidental independence friction used to hand us — different people, different days, the time things took. Nobody was paying for that on purpose, which is exactly why nobody noticed it stop.
 
 More affordable and more necessary. At the same time.
 
 --
 
-Now the honest limits, because I'm not selling anything.
+But there are trade-offs, as always.
 
 AI as a pair partner is not a second person. A human pair brings genuinely different priors. AI in your session inherits your framing, your words, your assumptions. That's the independence problem again, wearing a friendly face.
 
 It is superb for attention, for momentum, for unfamiliar territory. It is a **partial** substitute. Not a replacement.
 
-Same with generated tests. Excellent — and completely ignorable, or wildly overusable. A thousand tests you never read is not evidence.
-
-And this is not me telling you to go do XP. It's that the trade-off that made skipping it rational has moved. Which practices, how much, and where — that's judgment, and it always was.
-
---
-
-One more qualification, because a good architect will nail me on this otherwise.
-
-Not every question is experimentally answerable. No prototype tells you what maintaining six services across four teams for eight years is going to feel like. That stays a judgment call.
-
-Test what reality can answer cheaply. Use judgment for what it can't. And know which one you're doing.
-
-And — AI made bad questions cheap too. And irrelevant critiques. And prototypes nobody needed.
-
-The scarce thing now isn't answers. It's deciding which questions deserve your attention at all.
+Same with generated tests. Excellent — and a thousand tests you never read is not evidence.
 
 
 # Supporting Notes
 
-- The Agile center of the talk. Name it directly.
-- *"Somebody here is thinking: you've rediscovered Agile. Yes. Correct. Guilty."*
-- Twenty-five years of: we don't know everything up front, build feedback loops, working systems produce evidence, learn and adapt.
-- **AI makes that argument stronger, not weaker.** Every objection to running the experiment used to be about cost — another implementation, another prototype, another architecture, another serious critique. They're not expensive anymore.
+- **This is not "go do XP."** XP is a lineage here, not a practice checklist (D-59). The room should leave understanding *why* those practices existed, not with an adoption list.
+- The four practices stay **spoken**, deliberately. Putting them on screen turns the argument into a checklist.
+- **The claim that makes this qualitative, not quantitative** (D-58):
+> "Independence used to arrive as a byproduct — different people, different days, the time it took. Nobody budgeted for it, so nobody noticed when it stopped arriving."
 
-**[1]**
-> When reality can answer the question cheaply, stop arguing and go ask reality.
-- The two-hour spike beats the two-hour meeting — and now it's a twenty-minute spike.
+- Speed did not merely produce more of the same evidence. It **removed the accidental mechanism that used to produce independent evidence**, and nobody decided to remove it.
+- **Do not skip the honest limit.** It is what stops this becoming evangelism. AI inherits your framing, so it is a partial substitute for independence, never a replacement.
 
-**XP — go further than the concession. ~45s. This is the real answer to "you rediscovered Agile":**
-- Look at what XP actually was. **Independence machinery**, installed along the whole path.
-- Pair programming — two readers, two sets of priors. TDD — a check written *before* the implementation, so it can't be derived from it. On-site customer — the person who owns the meaning, in the room. Collective ownership and CI — continuous independent verification.
-- **Every one of those was expensive.** Pairing costs two people. TDD costs time up front. An on-site customer costs somebody's calendar. That expense is why most shops quietly stopped.
-> "We didn't abandon those practices because they didn't work. We abandoned them because we couldn't afford them."
-- **Two things changed at once, and they push the same way:** AI cut the price of that machinery — *and* it removed the accidental independence we were getting for free from friction. **More affordable and more necessary, simultaneously.**
+→ So which questions can reality settle, and which ones are left?
+-->
 
-**THE HONEST LIMIT — do not skip this, it is what stops it being evangelism:**
-- **AI as a pair partner is not a second person.** A human pair brings genuinely different priors. AI in your session inherits *your* framing, *your* words, *your* assumptions — which is the independence problem again, wearing a helpful face. It's superb for attention, momentum, and unfamiliar territory. It is a **partial** substitute for independence, not a replacement.
-- Same for generated tests: excellent, and *ignorable or overusable*. A thousand tests you didn't read is not evidence.
-- **This is not "do XP."** It's that the trade that made skipping it rational has moved. Which practices, how much, where — that's judgment and context, and it always was.
+---
+layout: default
+class: canvas-slide
+---
 
-**THE QUALIFICATION — a senior architect will nail you on this:**
-- Not every question is experimentally answerable. No prototype tells you what maintaining six services across four teams for eight years will feel like. That stays a judgment call.
-- Test what reality can cheaply answer. Use judgment for what it can't. **And know which one you're doing.**
-- AI made bad questions cheap too. And irrelevant critiques. And prototypes nobody needed.
-> The scarce thing now is deciding which questions deserve your attention at all.
+<div class="diagram">
 
-→ The loop only works if I stay connected to its evidence.
+<div class="caption">TWO KINDS OF QUESTION</div>
+
+<div class="compare">
+
+<div class="col left">
+<h4>Reality can settle it</h4>
+<div class="lede">Go ask reality.</div>
+<div class="note">A twenty-minute spike beats a two-hour meeting. Ninety days of real payouts beat everyone's opinion about the payouts.</div>
+</div>
+
+<div class="col right" v-click="1">
+<h4>Reality can't</h4>
+<div class="lede">"Challenge my understanding."</div>
+<div class="note">No prototype tells you how six services across four teams will feel in eight years. That's judgment — so go attack it on purpose.</div>
+</div>
+
+</div>
+
+<div class="kicker hot" v-click="2">
+The scarce thing isn't answers anymore.<br>
+<span class="fine">It's knowing which questions deserve your attention at all.</span>
+</div>
+
+</div>
+
+<!--
+~1:15
+
+
+So: let reality and independent reasoning inform the approach. But know which one you're in.
+
+**Reality can settle it.** Do you have ninety days of records? Then stop arguing and go read them. That's cheap now in a way it simply wasn't.
+
+[click]
+
+**Reality can't.** How will four teams maintaining twenty services feel in a few years? No prototype answers that. Neither does a spike.
+
+That's judgment. And this is exactly where "challenge my understanding" earns its keep — the second mode from earlier. When you can't go get evidence, the next best thing is something that will argue with you.
+
+Not to confirm the plan. To attack it.
+
+[click]
+
+And notice what AI did to the other side of this. It made asking **bad** questions cheap too. Irrelevant critiques. Prototypes nobody needed.
+
+Old assumptions about what's cheap and what's expensive have moved.
+
+The scarce thing now often isn't answers. It's deciding which questions deserve your attention at all.
+
+Which practices, how much, and where — that's judgment, and it always was.
+
+
+# Supporting Notes
+
+- **This slide is what earns Trap 3's place** around the XP material. Without it, slides 19–20 read as an Agile interlude. Here the argument comes home: everything reality can't cheaply settle is judgment, and judgment is where slide 18's **"Challenge my understanding"** is the tool.
+- **Say the callback out loud.** The room saw that phrase on the two-modes slide; name it again here so the connection is explicit rather than implied.
+
+**[1]** The right column is the one to slow down on. The left is already intuitive to this room.
+- **The qualification a senior architect will nail you on:** not every question is experimentally answerable. Concede it before they raise it.
+
+**[2]** AI made bad questions cheap too.
+> The scarce thing now isn't answers. It's deciding which questions deserve your attention at all.
+
+- **Do not turn this into a framework.** Two lanes, named once, then move (D-17).
+
+→ So the Monday question for this trap.
 -->
 
 ---
