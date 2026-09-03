@@ -805,7 +805,7 @@ Move on to the next set of problems - there's always plenty of those!
 
 AI is the next one, and a really big one.
 
-Every one of those was a trade I made on purpose — a layer I stopped understanding, for problems I could finally reach. And every one of them was worth it.
+Every one of those was a trade I made on purpose. And every one was worth it.
 
 [click]
 
