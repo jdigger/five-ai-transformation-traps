@@ -1799,6 +1799,48 @@ from the authority question into the five-question rollup and make an all-five c
 sound like merely another authority example. Also rejected: *"Both are true"* on screen;
 the contradiction is already evident and stating it is too on the nose.
 
+### D-79 · Slide 20 poses the independence hole; slide 31 fills it
+**Decided** 2026-09-03 · **Status** Active · **Amends:** D-77 (closing line only)
+
+**The problem, raised by the speaker.** Slides 19-20 make an economic argument — putting
+different people into the process was valuable *and* expensive — and slide 20 then answered
+itself: *"'on purpose' means deliberately designing new ways to put independence back into a
+process that has fewer people in it."* Trap 5 makes the same structural move a second time,
+in a different vocabulary (authority, blast radius, arithmetic), and the two never touch. The
+room that felt slide 20 has no reason to recognize slide 31 as its answer.
+
+**The fix, in two edits.**
+
+Slide 20 ends on a **forward-lean instead of a resolution**: name the hole, leave it open.
+*"So the process has fewer people in it than it used to, and we haven't said what goes in
+their place. Hold on to that one."* No promise that an answer is scheduled.
+
+Slide 31 pays it, spoken, immediately before *"built in, not watched"*: the second reader,
+the check written before the code, the person who owned the meaning in the room — we couldn't
+afford those, we're not getting them back, **and the arithmetic just proved another pair of
+eyes was never the replacement** at ten thousand decisions a week. *This was never humans
+supervising machines* is promoted from a mid-paragraph aside to the beat that callback lands
+on, and is removed from its old position so it is said once.
+
+**Trap 5's frame does not change.** It stays *what is it allowed to do*, with the removal of
+people as setup, not as recommendation. Slide 28's title and Q-04 are untouched.
+
+**Why not the stronger frame.** "How do we remove people safely" reads as advocacy and
+retroactively recolors slide 20 into an anti-automation lament, which it explicitly is not.
+The narrower claim — *we already removed them, nobody decided to, and the question is what
+replaces what they were doing* — preserves slide 20's "nobody decided that" and makes Trap 5
+the consequence rather than the advice.
+
+**Hard limits.** The callback names the practices by **story, never by number and never by
+"XP"** (D-75, D-77). Two sentences, then move — it is a hinge, not a reprise, and it must not
+grow into re-explaining pairing, TDD or the on-site customer, or into relitigating whether we
+should have kept them. Slide 20's resolution must not be restored; paying the debt twice costs
+slide 31 its hinge. Slide 31 remains the short mic-drop slide (existing guardrail).
+
+**Rejected:** extending the independence callback into slide 32's *"Will we notice?"* — the
+generated-tests-you-never-read and green-dashboard failures are the same idea, but slide 32
+already carries the support-dashboard callback and a second one there is one too many.
+
 ## G. Rejected — do not reopen without new information
 
 | Idea | Why it was rejected |
@@ -1821,3 +1863,5 @@ the contradiction is already evident and stating it is too on the nose.
 | Outbox/Kafka architecture as Trap 2's on-screen example | Outside the experience of much of a mixed audience; the reveal only works if the room can be impressed by the answer first (D-44) |
 | Reframing Trap 1's Monday question as "are we solving the right problem?" | That is Trap 2's question; it collapses R-02 and leaves slide 15 with nothing to reveal (D-70) |
 | Inference vs enforcement as a standalone slide | Useful material, but a passenger after Trap 2 had already completed its argument (D-60) |
+| Extending the independence callback into slide 32's "Will we notice?" | Slide 32 already carries the support-dashboard callback; a second one there is one too many (D-79) |
+| "How do we remove people safely" as Trap 5's frame | Reads as advocacy and recolors slide 20 into an anti-automation lament (D-79) |

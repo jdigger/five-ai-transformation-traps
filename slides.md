@@ -997,9 +997,7 @@ AI as a pair partner is not a second person. A human pair brings genuinely diffe
 
 It is superb for attention, for momentum, for unfamiliar territory. It is a **partial** substitute. Not a replacement.
 
-Same with generated tests. Excellent — and a thousand tests you never read is not evidence.
-
-So "on purpose" doesn't mean reviving the old practices now that they're cheap again. It means deliberately designing new ways to put independence back into a process that has fewer people in it than it used to.
+So the process has fewer people in it than it used to, and we haven't said what goes in their place. Hold on to that one.
 
 
 # Supporting Notes
@@ -1011,6 +1009,15 @@ So "on purpose" doesn't mean reviving the old practices now that they're cheap a
 
 - Speed did not merely produce more of the same evidence. It **removed the accidental friction that used to produce independent evidence, and it's starting to remove the people too** — and nobody decided to do either.
 - **Do not skip the honest limit.** It is what stops this becoming evangelism. AI inherits your framing, so it is a partial substitute for independence, never a replacement.
+
+**END ON A FORWARD-LEAN, NOT A RESOLUTION.** This slide used to close by answering itself —
+*"'on purpose' means deliberately designing new ways to put independence back into a process
+that has fewer people in it."* That answer now belongs to Trap 5, where the ten-thousand /
+one-hundred arithmetic proves *why* another pair of eyes was never the replacement. Here, just
+name the hole and leave it open: fewer people in the loop, nothing said yet about what goes in
+their place. **Do not restore the resolution** — paying it twice costs Trap 5 its hinge.
+- Resist the urge to soften *"hold on to that one"* into a promise about what's coming. The room
+  should feel the gap, not be told there's an answer scheduled.
 
 → So which questions can reality settle, and which ones are left?
 -->
@@ -1194,18 +1201,6 @@ I'm not going to dodge that last one.
 
 
 # Supporting Notes
-
-- Say implementation capacity goes up fifty percent. The automatic response: fifty percent more stories, more PRs, more features.
-- And maybe! Maybe that's exactly where the value is.
-- **But nobody put the other options on the table:**
-- Three prototypes before we commit to one.
-- Review was already the bottleneck and we just made it worse.
-- Integration is the actual problem.
-- Customers don't want more features, they want the three we have to work.
-- We can finally fix the operational thing we've ignored for two years.
-- Or: the same business outcome now genuinely needs fewer people.
-
-- **I'm not going to dodge that last one.**
 
 - **The Sowell thread surfaces here. Do not name it.** These options are competing claims on
   one resource — say that they compete, and move. Never say "trade-off" on this slide, never
@@ -1663,13 +1658,17 @@ Oversight does not scale just because action scaled.
 
 --
 
+The second reader. The check written before the code. The person who owned the meaning, sitting in the room. We couldn't afford those, and we're not getting them back — and the arithmetic just told us why another pair of eyes was never going to be the answer at this volume.
+
+This was never humans supervising machines.
+
 So it has to be built in, not watched.
 
 We did this once already. At internet scale, checking each transaction by hand stopped being possible — so we moved the control into the system. Authorization that holds whether or not anyone is looking.
 
 Same move now. What's different is what we're placing it on: not who can call an endpoint, but what an agent is allowed to do when it's wrong.
 
-And AI can build much of that side itself — the checks, the monitoring, the detection. This was never humans supervising machines.
+And AI can build much of that side itself — the checks, the monitoring, the detection.
 
 Authority and oversight should grow together. Right now we are very, very good at scaling one of them.
 
@@ -1690,6 +1689,12 @@ Authority and oversight should grow together. Right now we are very, very good a
 > A person clicking Approve two thousand times is not supervision — it's a signature.
 - Many of us know what that feels like. Let the room recognize it without accusing them.
 - **Oversight does not scale just because action scaled.**
+
+**THE INDEPENDENCE CALLBACK — this slide is where Trap 3's forward-lean gets paid.**
+- Name the practices by **story, never by number and never by "XP"** (D-75, D-77): the second reader, the check written before the code, the person who owned the meaning in the room.
+- The claim is not that losing them was bad. It is that **the arithmetic just proved another pair of eyes was never the replacement** — not at ten thousand decisions a week. Trap 3 said the process has fewer people in it and we hadn't said what goes in their place. This is what goes in their place.
+- **Two sentences, then move.** This is a hinge, not a reprise — do not re-explain pairing, TDD, or the on-site customer, and do not let the room relitigate whether we should have kept them.
+- *This was never humans supervising machines* is now the beat the callback lands on. It used to sit mid-paragraph as an aside; keep it on its own line and let it carry the turn into *built in, not watched*.
 
 - **The internet-scale callback argues from the room's own experience — it is not a history lesson.** Nobody there thinks a human should approve each HTTP request; the scale settled it, exactly as the arithmetic just did. Two sentences, then move.
 - **Name what is actually different, because it is the sharp part:** at internet scale we authorized *who may do what* — static, checkable, and the actor's intent was irrelevant to the control. Now we authorize *what an actor may do when it turns out to be wrong*, and its reasoning is not inspectable. Same move, new surface.
