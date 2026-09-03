@@ -1659,17 +1659,11 @@ Oversight does not scale just because action scaled.
 
 --
 
-There's real work here, and I'll name it quickly rather than putting it on a slide.
+So it has to be built in, not watched. Authorization that actually enforces. Sampling. Outcome monitoring. A stop button that works.
 
-Enforceable authorization and least privilege, so the blast radius is bounded whether or not anybody is watching. Automated checks. Sampling. Anomaly detection. Monitoring outcomes instead of executions. Traceability. A stop button that actually stops things.
+And AI can do much of that itself. This was never humans supervising machines.
 
-And AI can do a great deal of that work itself. The point is not humans supervising machines — that framing loses eventually.
-
-The point is designing accountability that scales with authority.
-
-If you take one thing out of this trap: authority and oversight should grow together.
-
-Right now we are very, very good at scaling one of them.
+Authority and oversight should grow together. Right now we are very, very good at scaling one of them.
 
 
 # Supporting Notes
@@ -1689,7 +1683,12 @@ Right now we are very, very good at scaling one of them.
 - Many of us know what that feels like. Let the room recognize it without accusing them.
 - **Oversight does not scale just because action scaled.**
 
-**BRIEFLY — say these, don't put them on a slide:**
+**KEEP THIS SLIDE SHORT.** It is a mic drop: three numbers, one punch, one constructive beat, out. The
+spoken track was cut from four consecutive restatements of the thesis to one — do not let it
+grow back. *Authority and oversight should grow together* already carries *accountability that
+scales with authority*, in fewer words and with the wry landing.
+
+**The full menu, if you have room or get asked — say four at most, never put them on a slide:**
 - Enforceable authorization and least privilege, so blast radius is bounded whether or not anyone is watching. Automated checks. Sampling. Anomaly detection. Outcome monitoring rather than execution monitoring. Traceability. A stop button that actually stops things.
 - **AI can do a lot of this work itself.** The point is not humans supervising machines — that framing loses eventually.
 > The point is designing accountability that scales with authority.
