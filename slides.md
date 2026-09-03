@@ -973,7 +973,7 @@ As a developer, I LOVED it. Sometimes it was annoying, but worth the trade-offs.
 
 - Pair programming: two readers, two sets of priors. TDD: a check written before the implementation, so it can't just rubber-stamp what you built. On-site customer: the person who owns the meaning, right there. Collective ownership and CI: continuous independent verification before it ever touches production.
 
-Every one of those was expensive. Pairing costs two salaries at one keyboard. TDD costs time up front. An on-site customer costs a specialist devoting their time to us.
+But all of that was expensive. Pairing costs two salaries at one keyboard. TDD costs time up front. An on-site customer costs a specialist devoting their time to us.
 
 That's why most shops quietly stopped.
 
@@ -1647,7 +1647,7 @@ Both numbers are round on purpose. The point is the gap in orders of magnitude.
 
 So — which hundred?
 
-Because reviewing all ten thousand was never on the table. That isn't a failure of discipline. It's arithmetic.
+Because nobody was ever going to review ten thousand. That isn't a failure of discipline. It's arithmetic.
 
 "Keep a human in the loop" is not an answer to that question.
 
@@ -1682,7 +1682,7 @@ Right now we are very, very good at scaling one of them.
 **[1]** Ten thousand and one hundred are deliberately round. The point is the orders-of-magnitude gap: genuinely careful human review will cover only a small fraction of the decisions AI can produce.
 
 **[2]** So: **which hundred?**
-- **Reviewing all ten thousand was never available.** Say it plainly — the room needs to hear that this is arithmetic, not a discipline problem they should feel guilty about.
+- **Nobody was ever going to review ten thousand.** Say it plainly — the room needs to hear that this is arithmetic, not a discipline problem they should feel guilty about.
 - **The Sowell thread surfaces here. Do not name it** (D-09, D-14, D-17). Trap 5 carries no other trade-off vocabulary, and it should not start now: keep this in Trap 5's own register — scale, consequence, arithmetic — and leave the economics language to Traps 1 and 3.
 - *"Keep a human in the loop"* is not an answer to that question — it answers *whether*, when the only question left is *which*.
 > A person clicking Approve two thousand times is not supervision — it's a signature.
