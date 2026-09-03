@@ -815,9 +815,9 @@ Every one of those was a trade I made on purpose. And every one was worth it.
 
 But why? The seams.
 
-Not the inside of any layer, but where that layer's contract runs out.
+Not the inside of any layer, but where that layer's promise runs out.
 
-Look back at that line. "It compiled." Cool. The compiler promised me it's well-formed. It never promised it does what I meant.
+Look back at that line. "It compiled." Cool. The compiler checked my grammar. It never read the sentence.
 
 "It deployed." Cool. The cloud promised me it's running. It never promised the services agree about what they're sending each other.
 
@@ -838,7 +838,8 @@ I still don't know what the compiler is doing in there. The seam is where a laye
 - **The honest version of what you need:** enough to recognize where the seams are — and which ones matter.
 - **Define "seam" before listing them.** It is where a layer's promise runs out, with nobody responsible for what is on the other side. Without the definition the examples are just war stories.
 - **The examples are anchored to nodes on the diagram — this is the point, not a coincidence.** "It compiled" is the *Compiler* rung; "It deployed" is the *Cloud* rung. The ladder gets walked twice: first as what you stopped needing to know, then as where each promise ends. Do not swap in generic examples; the callback is what holds the slide together.
-- **Phrase them as what the layer guaranteed, never as "is it correct?"** *Promised well-formed, never promised right* is a seam. *Is the code right?* is Trap 1, and re-running that beat here muddies both.
+- **Phrase them as what the layer did and did not cover, never as "is it correct?"** *Checked the grammar, never read the sentence* is a seam. *Is the code right?* is Trap 1, and re-running that beat here muddies both.
+- **The grammar line is literal, not a metaphor.** A compiler parses formal grammar and does not evaluate meaning. Deliver it flat and let the room notice it is true — explaining the joke kills it.
 - Backup examples if one lands flat: retry meets idempotency · cache meets stale data · generated code meets a convention nobody wrote down.
 - **"Seam" is a thread word.** The close names the human/technical seam as the shape of all five traps (D-59). Same word, deliberately — do not swap in "boundary" or "interface" here.
 - Transaction boundary meets service boundary · retry meets idempotency · cache meets stale data · generated code meets an undocumented convention · "executed successfully" meets "did the wrong thing."
