@@ -819,6 +819,8 @@ Nobody stands up in a meeting and declares the switch. It just quietly happens o
 
 So what do you actually keep? The seams.
 
+Not the inside of any layer — I still don't know what the compiler is doing in there. The seam is where one layer's promises run out and the next one's begin, and nobody owns the gap in between.
+
 Where the transaction boundary meets the service boundary. Where retry meets idempotency. Where the cache meets stale data. Where generated code meets a convention nobody wrote down.
 
 And my favorite — where "executed successfully" meets "did entirely the wrong thing."
@@ -838,6 +840,8 @@ That's the part you keep.
 - From a true statement to a different statement. Nobody announces it. It just happens on a Tuesday.
 - **The contrast is the whole beat:** every trade on that ladder was made on purpose. This one is being made without anyone deciding.
 - **The honest version of what you need:** enough to recognize where the seams are — and which ones matter.
+- **Define "seam" before listing them.** It is where one layer's guarantees end and the next one's begin, with nobody responsible for the gap. Every example is an instance of that; without the definition they are just a list of war stories.
+- **"Seam" is a thread word.** The close names the human/technical seam as the shape of all five traps (D-59). Same word, deliberately — do not swap in "boundary" or "interface" here.
 - Transaction boundary meets service boundary · retry meets idempotency · cache meets stale data · generated code meets an undocumented convention · "executed successfully" meets "did the wrong thing."
 > That's what you keep.
 -->
