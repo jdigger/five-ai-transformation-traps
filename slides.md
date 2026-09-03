@@ -32,7 +32,7 @@ Jim Moore
 <!--
 ~0:30
 
-This isn't prompt or context engineering, RAG pipelines, some framework, or any of that. I'm sure you've noticed that the latest best practices - and what's available - for those changes almost every week.
+This isn't prompt or context engineering, RAG pipelines, some framework, or any of that. I'm sure you've noticed that the latest best practices - and what's available - for those change almost every week.
 
 This is how to approach what has become increasingly useful as all of these things get more powerful, but we don't know how to properly make use of that.
 
@@ -79,8 +79,6 @@ Thomas Sowell isn't a tech guy. He's a famous systems thinker - about **human** 
 
 **PLANT THE FRAME — one sentence, then move on. Do NOT explain it. It gets paid off at the end.**
 - Sowell isn't a technologist. He's a systems thinker about **human** systems — incentives, institutions, second-order consequences. We're technologists, and we think in technical systems.
-> "The parts we wrote down are the technical system. The parts we didn't are still running."
-
 -->
 
 ---
@@ -115,7 +113,7 @@ We've all been seeing how truly useful AI is proving to be.
 
 [click]
 
-In this room, we *tend* to focus on code from Claude.
+It isn't just implementation. Critique got cheap. Alternatives. Analysis. Explanation.
 
 [click]
 
@@ -130,9 +128,6 @@ AI continues to make getting a REALLY good answer much faster and easier.
 # Supporting Notes
 
 - Hours or days → minutes. Genuinely fantastic.
-
-**[1] cluster**
-- It isn't just implementation. Critique got cheap. Alternatives. Analysis. Explanation.
 
 **[2] kicker — the question under all five traps**
 > Not "how much can AI do?" — that's a demo question.
@@ -151,24 +146,12 @@ class: anchor-slide good
 <div class="line">Sometimes the answer is<br>more AI, much more aggressively.</div>
 
 <div class="fine">Easy isn't bad. Cheap isn't low quality. Nothing in the next hour is an argument for using less of this.</div>
+<div class="fine">It's understanding what the tradeoffs are.</div>
 
 <!--
 ~0:20
 
-And before we go any further.
-
-Easy isn't bad. Cheap isn't low quality.
-
-Nothing in the next hour is an argument for using less of this. Sometimes the right answer at the end of one of these traps is to use much more AI, much more aggressively.
-
-# Supporting Notes
-
-- **This slide exists because the deck gets shared as a link** (D-80). Three of the five trap titles read as anti-AI to anyone who wasn't in the room, and every qualification that defused them used to be spoken-only.
-- **Say it anyway.** The slide carrying it does not mean the room heard it.
-- **Do not hedge or expand.** One beat, plainly stated, then move. Arguing the point makes it sound defensive and invites the room to suspect the opposite.
-- This is the promise the five traps are then allowed to complicate.
-
-→ One of the first things it made easy was getting a really good answer.
+Ok, NOW let's do the fun stuff - Complicating things!
 -->
 
 ---
@@ -193,12 +176,7 @@ class: trap-slide trap-01
 
 For our purposes, let's throw hallucinations out the window.
 
-I'm interested in when it is giving truly sophisticated, well-reasoned, completely coherent answers.
-
-# Supporting Notes
-
-- Let it sit for a second.
-
+I'm interested in when it gives truly sophisticated, well-reasoned, completely coherent answers.
 -->
 
 ---
@@ -243,18 +221,27 @@ You didn't get 47 checks.<br>You got one check, 47 times.
 </div>
 
 <!--
-~3:30 — the money slide of Trap 1. Do not rush the clicks.
+~3:30
 
 Here we go: Standard story card. {read}
 
 Let's take advantage of AI's amazing abilities...
-{impl}
-{tests}
-{green}
+
+[click]
+
+good, correct code
+
+[click]
+
+good tests that put a strong fence around drift and edge conditions
+
+[click]
 
 Sweet! I'm not going to unnecessarily go back to writing code when the code it generates is generally better - especially as the models get better - than I could anyway.
 
 Or, OMG, all those *tedious* tests.
+
+47 tests for a really basic story means 47 tests I didn't have to type.
 
 However, you must be thinking, "There MUST be something wrong here..." Yep. What is it?
 
@@ -266,57 +253,21 @@ Hmmm....
 
 [click]
 
-{when the 47 passing turns red}
+We can't "blame" the AI for that. And a human - especially one who doesn't know rules Finance hadn't stated - would likely make the same mistake.
 
-Ok, fine. So we were testing all the right things. With 47 tests, no less. But it was for what we "knew."
-
-We can't "blame" the AI for that. And a human - especially one that doesn't know rules finance hadn't stated - would likely make the same mistake.
-
-And that's what makes this interesting. Humans are slower and can be more unreliable, while AI is much faster and more precise — and it happily does work we don't want to do.
-
-That's wonderful.
-
-It also changes the trade-offs. We'll get back to that...
+And that's what makes this interesting. Humans are slower and can be more unreliable, while AI is much faster and more precise — and it happily does work we didn't mean.
 
 [click]
 
-{point at the 47}
+But even then, it took care of a ton of code that's mostly pretty boilerplate anyway.
 
-You didn't get forty-seven checks. You got one check, forty-seven times.
+That's wonderful.
 
-Until then, let's look at how we can identify and fix the issues.
+It also changes the trade-offs.
 
-# Supporting Notes
+Let's look at some ways we can identify and fix the issues.
 
-- Read the requirement out loud. Ask the room: does anybody see a problem with that sentence?
-- They won't. It's a perfectly normal requirement. **That's the point.**
-
-**[1]** AI writes the implementation. Say it's good code.
-**[2]** AI writes the tests. Good tests — edge cases, boundaries, day one and day thirty.
-**[3]** Green. All the way green.
-- What do we know at this moment? The implementation matches the tests. Nothing at all about whether either matches what the business meant.
-
-**[4]** Both came out of the same reading of that sentence.
-- **The problem is NOT "AI wrote the tests."** I want AI writing tests. It's very good at it and I'm not going back.
-> The problem is that the check repeated the mistake.
-
-**[5]** Finance meant unused *whole days*. And they never refund the setup fee — everybody in billing knows, nobody wrote it down.
-- We shipped a refund calculator that overpays. Quietly. Correctly, according to every test we have.
-
-**[6] the anchor — the line of this trap, now on screen (D-80)**
-- **Still point at the `47 passing` node while you say it.** The node is orange by now and the anchor is orange with it; the gesture ties the sentence to the number. On screen it is insurance for the reader who wasn't here, not a substitute for the delivery.
-- **Say it before you click, then click.** The line lands spoken; the slide confirms it. Clicking first lets the room read ahead and the beat dies.
-- Deliver it flat. It is not a joke and it is not a gotcha — it is arithmetic.
-
-**THE OBJECTION — this is the core of Trap 1. Lead with it, do NOT wait to be challenged.**
-- *"Somebody in here is thinking: a human would have made exactly the same mistake."*
-- **Yes. Absolutely.** A human reading that sentence makes the identical error. That is not the interesting part.
-- But one human makes it **once**. And a second human, reading that sentence separately, probably makes a *different* mistake — **which is the entire reason code review has ever worked.**
-- The mistake and the thing that was supposed to catch it are no longer independent events.
-> "Independence used to arrive as a byproduct — different people, different days, the time it took. Nobody budgeted for it, so nobody noticed when it stopped arriving."
-- **That's the qualitative change.** Not that AI is wrong more often. That the *amount* of evidence went up while the *independence* of it went to zero — and every artifact in front of you still says "verified."
-
-→ So what would count as evidence that didn't come from that sentence?
+It also means, practically speaking, that we're going to need to rethink how we approach that problem...
 -->
 
 ---
@@ -339,7 +290,7 @@ class: canvas-slide
 </div>
 
 <div class="kicker" v-click="4">
-Use AI to challenge your thinking —<br>&nbsp;&nbsp;&nbsp;&nbsp;then use evidence to challenge <u>both</u> of you.
+Use AI to <u>challenge</u> your thinking —<br>&nbsp;&nbsp;&nbsp;&nbsp;then use evidence to challenge <u>both</u> of you.
 </div>
 
 </div>
@@ -347,13 +298,23 @@ Use AI to challenge your thinking —<br>&nbsp;&nbsp;&nbsp;&nbsp;then use eviden
 <!--
 ~1:35
 
+[click]
+
 There are going to be rules that don't need to be included because they've already been established and enforced with normal system design approaches.
 
-Just pointing out that not EVERYTHING needs to be stated or understood for the story to implement. Bounded contexts and the like are all still vital.
+And that acts as yet another validation that your changes are correct.
+
+Bounded contexts and the like are all still vital.
 
 [click]
 
-The 90 days is where AI becomes really useful. Let it create a quick script or run through appropriate tooling for audit data. Whether the process the calculator is replacing is manual, an old service, a SaaS, whatever - you have that audit data of payouts.
+The 90 days is where AI becomes really useful.
+
+Let it create a quick script or run through appropriate tooling - MCP server, DB access, API calls, whatever - for audit data. (With appropriate access controls, of course.)
+
+Whether this calculator is replacing a spreadsheet, an old service, a SaaS, whatever - you have that audit data of payouts.
+
+This is actual, honest-to-goodness EVIDENCE.
 
 Test your logic against reality.
 
@@ -365,40 +326,15 @@ Showing a few samples to the owner - nothing to overwhelm, but just to confirm y
 
 One hugely valuable thing AI is excellent at is challenging you.
 
-Have it identify edge cases. Make it red-team the approaches.
+Have it identify edge cases. TDD is a great way of helping make sure the tests aren't just rubber-stamping the implementation.
+
+You'll start noticing that rediscovering XP's approaches at a moment when it got cheaper AND more necessary.
+
+Make it red-team the approaches.
 
 Ideally from another session or - better yet - another model altogether.
 
 Doing that would also help identify the best samples for your domain expert.
-
-# Supporting Notes
-
-- **Frame these as one thing:** three ways to buy back the independence we just lost. Not a checklist of good practices.
-- What they share: **none of them come from the implementation's reading of this requirement.**
-
-**[1] A check from a different source**
-- Suppose the ledger already carries a separately established `refundableBalance`. Checking `refundAmount <= refundableBalance` is just a cheap boolean comparison once that rule exists.
-- **Do not call it obvious or interpretation-free.** People still had to decide what counts as refundable, and that rule can still be wrong.
-> The independence comes from provenance: the implementation came from this sentence; the constraint came from somewhere else.
-- It does not prove the whole policy is right. It gives one independently sourced fact a chance to contradict the implementation.
-
-**[2] Replay** — the strongest, and now trivially cheap, which is itself a thing AI changed. Ninety days of real cancellations, diffed against what finance actually paid.
-- Independence comes from **history**. It was generated before anyone wrote this prompt, by a system that didn't read our sentence.
-- AI makes obtaining and comparing that history much easier: a quick script or appropriately controlled access through a tool can do work that once required a specialist and a long queue.
-- **Keep the parenthetical short:** access controls still apply. Ease of access is not permission.
-> Reality already ran the experiment. We just have to go read the results.
-
-**[3]** The cheapest one is still a human being. Ten examples, thirty minutes, the person who owns the policy.
-- Independence comes from a **different reader** — the one whose understanding is the one that counts.
-
-**[4]** Use AI to challenge your thinking — attack the design, generate tests, find edge cases. Then use evidence to challenge both of you.
-- **Fresh context matters** (the cheap version of TDD's ordering): "write the implementation, now write the tests" in one session is maximum contamination. Generating tests from the requirement in a *new* context, before the implementation exists, is meaningfully better evidence for the same effort.
-
-- **Lineage, one sentence — do not expand here, the understanding trap carries it:** none of this is new. Pairing, test-first, an on-site customer — XP built all of it to manufacture exactly this independence. We're rediscovering why, at a moment when it got cheaper and more necessary at the same time.
-
-**PROPORTIONALITY gets its own slide next.** Do not deliver it here — the next slide is where "overkill for a spike, right for money going out the door" lands.
-
-- → These techniques differ, but they force the same question.
 -->
 
 ---
@@ -406,9 +342,9 @@ layout: default
 class: anchor-slide
 ---
 
-<div class="line sm">Overkill for a spike.<br>Right for money going out the door.</div>
+<div class="line sm">Overkill for most things.<br>Right for money going out the door.</div>
 
-<div class="fine">Spending ten dollars to verify a ten-cent experiment is also an engineering failure.</div>
+<div class="fine">Spending a thousand dollars to verify a ten-buck problem is also an engineering failure.</div>
 
 <!--
 ~0:25
@@ -416,17 +352,6 @@ class: anchor-slide
 This is obviously overkill for most things. But when you're talking about something like money going out the door, you really want to be sure.
 
 It's our job as product owners and engineers to know when "vibe coding" is perfect — low stakes, just get it out — and when true design, process and data validation are needed.
-
-Spending ten dollars to verify a ten-cent experiment is also an engineering failure.
-
-# Supporting Notes
-
-- **Say this out loud, it matters.** Without it the three techniques read as a mandatory checklist, and anyone reading the deck later has no way to know they aren't.
-- Budget is set by two questions: *how sure do we need to be?* and *how bad is it if we're wrong?*
-- A refund calculator earns the replay. A spike you're deleting Friday does not.
-- **Do not turn this into a decision framework** (D-17). Two questions, named once, then move.
-
-→ These techniques differ, but they force the same question.
 -->
 
 ---
@@ -436,7 +361,7 @@ class: q-slide
 
 # What do we actually know?
 
-## Agreement isn't evidence. Use AI to attack your understanding, then find one check that could actually go red.
+## Agreement isn't evidence.<br/>Use AI to help attack your understanding, then find one check that could actually go red.
 
 <!--
 ~1:30
@@ -448,23 +373,7 @@ To restate all of that
 - does it matter if we have 47 tests all checking the same potentially flawed understanding?
 - as always, make sure when you've confirmed, it had better have **persistent** validations
 
-
-# Supporting Notes
-
-- **Pause. This is the conclusion of Trap 1.**
-> What do we actually know?
-
-- The operational version for a code review or architecture review is: *could this check catch the original mistake?*
-- **"Agreement isn't evidence" is the compressed form of the whole trap** — 47 tests agreeing means nothing if they all inherited one misunderstanding.
-- **Give AI the active job, not the cautionary one.** Attacking your understanding is the positive use here (D-15); the check that can go red is the evidence.
-- **Notice what it is NOT.** Not "was a human involved." Not "did AI write this." Those are bad proxies — a human writing a test from the same misunderstanding is exactly as useless.
-- It's about causation. Could this thing have gone red?
-
-> If it is structurally impossible for this check to fail when we've misunderstood the problem — then it isn't a check. It's a restatement.
-
-- **Name the recurring surface, once:** the teal bar means *here's a question for Monday.* Every trap will now end here.
-
-→ Suppose the answer really is right. We can still have a much bigger problem.
+Suppose the answer really is right. We can still have a much bigger problem...
 -->
 
 ---
@@ -497,15 +406,7 @@ If you've used any of the frontier models like Claude and ChatGPT, you've seen t
 
 Here we're going to assume — especially as they get even better — that the answer is completely and verifiably *right*.
 
-# Supporting Notes
-
-- Stay in the same customer-service world as the refund example, but move one step outward: from one refund decision to the support queue around the product.
-- The last trap was: the answer might be wrong. **Here, assume the answer is completely, verifiably right.** Excellent, even.
-- The system does exactly what we asked. That is what makes the trap possible.
-
-**[1] anchor — the stipulation, now on screen (D-80)**
-- This trap does not work unless the room grants the stipulation, and a reader who only sees slides has no other way to be given it.
-- Say it as a stipulation, not a concession: we are *choosing* to hand the system a win.
+Hallucinations and the like are completely off the table.
 -->
 
 ---
@@ -543,22 +444,7 @@ But what if technology could swoop in and rescue us?
 
 [click]
 
-Granted, this is ambitious, but let's run with it.
-
-
-# Supporting Notes
-
-- Eighteen hours is not a technology problem to the customer. It is simply a long time to be stuck.
-- Let the room agree with the seriousness of the problem before allowing the tone to lift.
-
-**The business dynamic to make clear:**
-- Sales growth is good news, but it has brought support growth with it.
-- The existing team now has more incidents than it can absorb.
-- Overload makes each incident take longer; longer incidents grow the queue; the larger queue creates more overload.
-- Support management's request for more people is entirely reasonable.
-
-**[1]**
-- The desired outcome is legitimate: correct resolution, in minutes, whenever the customer needs it.
+Granted, this is **really** ambitious, but let's run with it.
 -->
 
 ---

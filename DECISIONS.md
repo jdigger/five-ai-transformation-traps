@@ -1997,6 +1997,16 @@ Leading with the trap name solves it without a special case.
 
 ---
 
+### D-83 · The opening illustration depicts an engineer around 60
+**Decided** 2026-09-03 · **Status** Active
+
+At Jim's request, the opening-slide engineer has silver-gray hair and beard and a
+more mature face, while retaining his energetic posture, laptop, clothing, and five-trap
+obstacle course. This is an opening-art edit only; the other trap illustrations are unchanged.
+The replacement was edited with ImageGen and retains a real transparent background.
+
+---
+
 ## G. Rejected — do not reopen without new information
 
 | Idea | Why it was rejected |
