@@ -39,6 +39,15 @@ click beat · `-` a cue said in your own words · `>` a line said close to verba
 phrase-by-phrase against `slides.md` — the wording in `slides.md` always wins. Update
 `SCRIPT.md` only when the underlying reasoning changes.
 
+## Write to developers
+
+The room is mixed technical and management, but the non-engineers were largely developers
+once or work closely with them (D-74). Technical specifics — `@Transactional`, idempotency,
+a compiler's guarantees — need no translation or apology, and diluting them for
+accessibility usually makes the deck worse. This is not licence for the abstract
+theory-speak banned in D-07: *"retry meets idempotency"* is fine, *"causal independence of
+validation"* is not.
+
 ## American English throughout
 
 Slides, speaker notes, tracking files, CSS comments, and commit messages: *humor*,

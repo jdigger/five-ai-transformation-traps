@@ -813,21 +813,15 @@ Every one of those was a trade I made on purpose. And every one was worth it.
 
 "I don't need to understand this" is very different.
 
-Nobody stands up in a meeting and declares the switch. It just quietly happens on a Tuesday.
+But why? The seams.
 
---
+Not the inside of any layer, but where that layer's contract runs out.
 
-So what do you actually keep? The seams.
-
-Not the inside of any layer — I still don't know what the compiler is doing in there. The seam is where a layer's promise runs out, and nobody owns what's on the other side.
-
-Look back at that line. "It compiled." Cool. The compiler promised me it's well-formed. It never promised me it's the thing you asked for.
+Look back at that line. "It compiled." Cool. The compiler promised me it's well-formed. It never promised it does what I meant.
 
 "It deployed." Cool. The cloud promised me it's running. It never promised the services agree about what they're sending each other.
 
-And my favorite — "executed successfully," meeting "did entirely the wrong thing."
-
-That's the part you keep.
+I still don't know what the compiler is doing in there. The seam is where a layer's promise runs out, and nobody owns what's on the other side.
 
 
 # Supporting Notes

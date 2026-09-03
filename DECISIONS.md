@@ -132,6 +132,10 @@ business/technology managers. At a local Agile meetup.
 **Why:** the traps only work if they cash out in both a code review *and* a staffing
 conversation. Writing for engineers alone would gut Trap 4.
 
+**Refined again 2026-09-02 (D-74): lean dev.** See that decision — the non-engineering
+half of the room used to write code or works closely with people who do, so technical
+specificity is affordable and dilution is the bigger risk.
+
 ### D-02 · 45–50 min presentation, 10–15 min discussion
 **Decided** pre-2026-08-23 · **Status** Active · **See** Q-01 (currently over budget)
 
@@ -1639,6 +1643,34 @@ why the loss went unobserved, which "free" cannot.
 **Also corrected:** the D-58 pull-quote wherever it appears in speaker notes (slides 6 and
 20), and the spoken line about what AI removed. `SCRIPT.md` already had the correct
 byproduct phrasing at its Trap 1 addendum; the slides were the outlier.
+
+### D-74 · Lean to the dev side; the non-engineers are ex-devs or work beside them
+**Decided** 2026-09-02 · **Status** Active · **Refines:** D-01, D-54
+
+**The correction.** D-01 says the audience is mixed technical and management, which has
+been read as *write to the least technical person in the room*. That is wrong for this
+room. The managers and product people here were largely developers at some point, or work
+closely enough with developers to follow the vocabulary.
+
+**What this permits.** Named technical specifics — `@Transactional`, idempotency, a
+compiler's guarantees, service boundaries — do not need translating or apologizing for.
+The concrete version is usually the stronger version, and hedging it costs more than it
+buys.
+
+**What it does not permit.** This is not licence for jargon as shorthand or for the banned
+vocabulary in D-07, which is banned for being *abstract theory-speak*, not for being
+technical. *"Causal independence of validation"* stays out; *"retry meets idempotency"* is
+fine. The test is whether the phrase names a thing an engineer has debugged, or names a
+concept only this talk uses.
+
+**Consequence for Trap 4.** D-01's warning still holds in the other direction — Trap 4 has
+to cash out in a staffing conversation, and that argument is not a technical one. Lean dev
+in the *examples*; keep the *stakes* legible to anyone who owns a budget.
+
+**Reversal of an argument used earlier this session.** Slide 17's abstract seam pairs were
+partly cut on the grounds that they excluded non-engineers. That reasoning is now void. The
+cut still stands, on the other and better ground: the replacements are anchored to nodes on
+the ladder already on screen, which the abstract pairs were not.
 
 ## G. Rejected — do not reopen without new information
 
