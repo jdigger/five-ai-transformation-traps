@@ -1396,18 +1396,6 @@ Because nobody was ever going to review ten thousand. It's simply arithmetic.
 A person clicking Approve two thousand times is not supervision.
 
 [Let that sit. A lot of us know exactly what that feels like.]
-
---
-
-We did this once already, not that long ago.
-
-At internet scale, we HAD to move the control into the system. Authorization that holds whether or not anyone is looking.
-
-Same move now. What's different is what we're placing it on: not who can call an endpoint, but what an agent is allowed to do when it's wrong.
-
-And AI can build much of that side itself — the checks, the monitoring, the detection.
-
-Authority and oversight should grow together. Right now we are very, very good at scaling one of them.
 -->
 
 ---
@@ -1422,18 +1410,15 @@ class: anchor-slide good
 <!--
 ~0:20
 
-So it has to be built in, not watched.
+We did this once already, not that long ago.
 
-Oversight does not scale just because action scaled.
+At internet scale, we HAD to move the control into the system. Authorization that holds whether or not anyone is looking.
 
-# Supporting Notes
+Same move now. What's different is what we're placing it on: not who can call an endpoint, but what an agent is allowed to do when it's wrong.
 
-- **This is what goes in the place of the people who left the loop.** The earlier slide named the hole — fewer people in the process, nothing said about what replaces them — and deliberately left it open. This fills it.
-- **Land it, then move.** The arithmetic slide before it did the work; this is the conclusion, not a new argument. Do not re-explain the second reader, the check written before the code, or the person who owned the meaning.
-- The internet-scale callback belongs to the spoken track here if you want it: we already moved control into the system once, when checking each transaction by hand stopped being possible. Two sentences at most.
-- **Never say "XP" and never say a trap number** (D-75, D-77).
+And AI can build much of that side itself — the checks, the monitoring, the detection.
 
-→ Authorization decides how far a failure can reach. It does not undo what happened inside that bound.
+Authority and oversight should grow together. Right now we are very good at scaling one of them.
 -->
 
 ---
@@ -1453,11 +1438,7 @@ Deliberately accepting risk is engineering.
 <!--
 ~2:00
 
-Monday.
-
-Authorization decides how far a failure can reach. These three decide what it costs you when it reaches anyway.
-
-And notice this is not "can AI be wrong." Everything is wrong sometimes. People are wrong constantly.
+This is past mere authorization and blast-radius - though that's vital too. But what happens when it IS, legitimately, authorized to do something?
 
 Better models don't retire this question. They sharpen it, because we'll hand over more authority.
 
@@ -1465,7 +1446,7 @@ Three follow-ups — the same ones you already use for everything else.
 
 **How bad is it?** A wrong draft sitting in a queue is not a wrong wire transfer.
 
-**Will we notice?** Sit here a moment. Our entire monitoring tradition is built around things that break loudly. Exceptions. Crashes. Timeouts. p99.
+**Will we notice?** Most of our tradition is built around things that break loudly. Exceptions. Crashes. Timeouts. p99.
 
 AI failure looks like this: the operation completed successfully, and what it did was wrong. Nothing threw. Every dashboard is green.
 
@@ -1475,41 +1456,9 @@ For these systems, "nothing threw an exception" is an especially weak definition
 
 **Can we undo it?** Reversibility buys you more than almost any control you can build.
 
---
-
-And do not gold-plate this. Controls aren't free either — latency, flexibility, engineering time, customer experience.
-
 [click]
 
 If the consequence is small and reversible, let the system move. "Yeah, that might break, and we're fine with that" is a completely legitimate engineering conclusion.
-
-Deliberately accepting risk **is** engineering.
-
-# Supporting Notes
-
-- **Pause. This is the conclusion of Trap 5.**
-> What can it do when it's wrong?
-
-- Not "can AI be wrong." Everything is wrong sometimes. Humans are wrong.
-- **Better models don't retire this question — they sharpen it**, because we'll grant more authority.
-
-**Three follow-ups, the ones you already use for everything else:**
-- **How bad is it?** A wrong draft in a queue is not a wrong wire transfer.
-- **Will we notice?** — dwell here. Our entire monitoring tradition is built on things that break *loudly*. Exception, crash, timeout, p99.
-> AI failure looks like: the operation completed successfully, and what it did was wrong. Nothing threw. Every dashboard is green.
-- **Name the callback** (D-75): *the support dashboard was green too.* Same image as the checkout defect, deliberately — this is where the wrong-problem story compounds into this one. Say it once and move; do not re-explain the support story.
-- For AI systems, "nothing threw an exception" is an especially weak definition of success.
-- **Can we undo it?** Reversibility buys you more than almost any control does.
-
-**[1] anchor — DO NOT GOLD-PLATE, now on screen (D-80)**
-- Controls aren't free either — latency, flexibility, engineering time, customer experience.
-- If the consequence is small and reversible, let the system move. *"Yeah, that might break, and we're fine with that"* is a legitimate engineering conclusion.
-- **This is the anchor that stops the whole trap reading as governance maximalism** to anyone who only ever sees the slides.
-> I don't want to replace AI maximalism with governance maximalism.
-- **Still end the spoken beat on *deliberately accepting risk is engineering*.** The maximalism line stays in reserve for Q&A — closing on the guard ends the trap defensively.
-- **This is the only question slide carrying an anchor.** The teal bar and the big question still read as the recurring Monday surface; the anchor is deliberately the smallest thing on the slide.
-
-→ Five traps. Five questions.
 -->
 
 ---
@@ -1547,38 +1496,6 @@ The traps were the "not that." These five are the "do this."
 [click] What got faster, and where should that capacity go? — "faster" isn't a decision.
 
 [click] What can it do when it's wrong? — authority is the thing that changed. Not intelligence.
-
---
-
-I don't expect anybody to remember five things.
-
-If one of them makes you stop and ask a better question a month from now, this was worth your evening.
-
-# Supporting Notes
-
-- *"That's it. That's the talk."*
-- The traps were the **not that**. These five questions are the **do this**.
-- Reveal one at a time. Say each, with a brief callback to its trap. **Do not re-explain the traps.**
-
-**[1]** *What do we actually know?* — a great answer isn't evidence.
-**[2]** *What did our question already decide?* — the wording can choose before we do.
-**[3]** *Am I understanding faster — or avoiding understanding?* — offload the work, not the evidence.
-**[4]** *What got faster — and where should that capacity go?* — "faster" isn't a decision.
-**[5]** *What can it do when it's wrong?* — authority is the thing that changed, not intelligence.
-
-**THE ORANGE FOOTPRINT UNDER EACH QUESTION** (D-82)
-- It names the trap the question came out of, so the set reads as a path rather than five
-  loose questions — and so it still reads that way to somebody following the link a week later.
-- **This is the one slide where the traps are labeled on screen.** It is the summary; the
-  room can see all five at once and does not have to hold a pointer in its head.
-- **It changes nothing about what you say.** Still never a trap number out loud (D-75) — the
-  spoken callback is the claim, not "Trap 2." The numerals on the left are an enumeration of
-  the questions, not an index you should ever reference verbally.
-- **Do not read the footprints aloud.** They are there so the room's eyes can retrace the
-  evening while you deliver the question. Reading them turns a two-second glance into a
-  re-summary, which is exactly what the close must not become (D-16).
-
-> If one of these makes you stop and ask a better question a month from now, this was worth your evening.
 -->
 
 ---
@@ -1609,14 +1526,6 @@ I built this talk with AI. Extensively. It challenged my blind spots and made ex
 I offloaded a lot of work. I did not offload responsibility. I made pass after pass until this became something I understand, believe, and am willing to defend.
 
 But now, back to where we started...
-
-# Supporting Notes
-
-**[1] anchor — the self-implicating line, now on screen (D-80)**
-> I offloaded a lot of work. I did not offload responsibility.
-- This is the whole talk applied to itself, and it is the sentence that keeps the deck from being evidence that its own framing was correct.
-- The fine print is the *how bad is it / will we notice / can we undo it* test run on this deck, in public. Say it without hedging — it's the honest answer, and it happens to be favorable.
-- **Do not turn this into a tools discussion.** No model names, no workflow. One beat, then the quote.
 -->
 
 ---
@@ -1630,11 +1539,6 @@ class: pull-quote dark-slide
 
 <div class="attrib">Thomas Sowell</div>
 
-<div class="anchor" v-click="1">
-They are not two systems. They never were.
-<span class="fine">Every trap tonight was the same seam — a technical thing got faster, and ran into a human system nobody had written down.</span>
-</div>
-
 </div>
 
 <img class="quote-portrait" src="/portraits/thomas-sowell-editorial.png" alt="Editorial portrait of Thomas Sowell">
@@ -1644,25 +1548,11 @@ They are not two systems. They never were.
 
 Back where we started.
 
-AI did not give us a world without trade-offs. It **moved** them, faster than any shift I've worked through. And I've been through the internet, distributed systems, Agile, cloud, DevOps, microservices, and a couple of reorganizations I'd rather not relive.
+AI did not give us a world without trade-offs. It **moved** them faster than any shift I've worked through. And I've been through the internet, distributed systems, Agile, cloud, DevOps, microservices, and a couple of reorganizations I'd rather not relive.
 
-Here's the lesson I actually carry out of all of those. People were profoundly correct that the internet would change everything, and profoundly wrong about exactly how.
+People were profoundly correct that the internet would change everything, and profoundly wrong about exactly how.
 
-I'd assume the same is true of everything I've said tonight.
-
---
-
-Sowell was never writing about software. That's exactly why it holds.
-
-Every one of tonight's five traps was the same seam. A technical thing got faster, and ran straight into a human system nobody had written down.
-
-What finance actually meant. Why the approvals were in that order. How people really build judgment. What we're staffed to produce. Who is allowed to decide.
-
-[click]
-
-They are not two systems. They never were.
-
---
+But HOW systems work, as Sowell pointed out, is true regardless.
 
 Things that used to be scarce aren't anymore. Implementation. Access to knowledge. Alternatives. Experiments. Critique.
 
@@ -1672,85 +1562,8 @@ Then go look for what didn't disappear. Where did the attention go? Where did th
 
 And keep doing that. Because this is going to move again next year.
 
-# Supporting Notes
-
 [Sources]
 - Portrait source: Thomas Sowell Portrait (3x4 cropped), Internet Archive Book Images via Wikimedia Commons, 1964. Public domain in the United States. https://commons.wikimedia.org/wiki/File:Thomas_Sowell_Portrait_(3x4_cropped).jpg
 - Editorial treatment created with OpenAI ImageGen from the public-domain source portrait.
 [/Sources]
-
-- Back to where we started.
-- AI did not give us a world without trade-offs. It **moved** them, faster than any shift I've worked through — internet, distributed systems, Agile, cloud, DevOps, microservices, and a couple of reorganizations I'd rather not relive.
-- **The lesson I actually carry from those:** people were profoundly correct that the internet would change everything, and profoundly wrong about exactly how.
-> I'd assume the same is true of everything I've said tonight.
-
-**PAY OFF THE FRAME from the opening — this is what the quote was doing all along:**
-- Sowell was never writing about software. That's exactly why it holds.
-- Every one of tonight's five traps was the same seam: a technical thing got faster, and ran into a **human** system nobody had written down. What finance meant. Why the approvals were in that order. How people actually build judgment. What we're staffed to produce. Who is allowed to decide.
-
-**[1] anchor — the thesis, now on screen (D-80)**
-> "They are not two systems. They never were."
-- **The only place the deck's actual thesis appears on a slide.** Say the five seams first, click, then let it sit.
-- **This is the payoff, not the engine.** It names the seam; it does not explain the cost-that-was-doing-a-job mechanism (D-14). Do not be tempted to add that here because the slide now has room.
-- Note the callback word: *seam*, the same word defined in the cognitive-offloading slide. Deliberate (D-59).
-
-- Things that were scarce aren't anymore: implementation · knowledge access · alternatives · experiments · critique.
-- **So stop organizing your systems and your teams as if those things still cost what they used to.**
-- But go look for what *didn't* disappear. Where did the attention go? Where did the work go? Where did the risk go? Which assumption quietly stopped being true?
-- And keep doing it — this is going to move again next year.
--->
-
----
-layout: default
-class: statement-slide
----
-
-# The goal isn't maximum AI.
-
-# The goal is **better systems**.
-
-<!--
-The goal isn't maximum AI.
-
-The goal is better systems.
-
-[Pause. Don't summarize. Don't thank anybody yet.]
-
-I'd love to argue about any of this.
-
-
-# Supporting Notes
-
-**Stop here.**
-
-- **Do NOT re-summarize.** No thank-you slide, no Twitter handle.
-- Say the line. Pause. Then: *"I'd love to argue about any of this."*
-- Q&A — 10–15 minutes.
-
----
-
-**PREPARED ANSWERS**
-
-**"Doesn't this all assume today's AI stays unreliable?"**
-- No. Every question here gets *more* important with better models, because we'll grant more authority. "What can it do when it's wrong" is not a question about capability.
-
-**"Isn't this just engineers protecting their jobs?"**
-- Trap 4 explicitly says the same outcome may genuinely need fewer people, and that we should go measure it. I'd rather find that out honestly.
-
-**"So AI writes everything AND I have to understand everything?"**
-- No — offload aggressively. Keep understanding where the **seams** are and where the **consequences** are. Much smaller sets than "everything."
-
-**"Authorization doesn't solve prompt injection."**
-- Correct, and I said so. It bounds what a successful injection is worth.
-
-**"Evidence doesn't decide — organizational power does."**
-- Fair. Evidence should arbitrate factual claims. Decisions also involve objectives, risk appetite, commitments. But seniority shouldn't make a factual claim unfalsifiable — and a junior with AI can still be spectacularly wrong.
-
-**"I'm a small business — I need to survive 18 months, not build a talent pipeline."**
-- Completely legitimate. Then Trap 4 is your trap: figure out what actually got faster in *your* pipeline before you staff to it.
-
-**"Does any of this change TDD?" (Q-08 — likely, it's an Agile room)**
-- Test-first was always partly a *don't-fool-yourself* mechanism: a test written before the implementation can't have been derived from it. AI makes that ordering **more** valuable, because derived-check contamination is now fast, fluent and voluminous. It also kills the oldest objection — that tests are expensive to write.
-- **The honest limit:** TDD gives independence from the *implementation*, nothing against a misread *requirement*. Write a test-first test encoding the misunderstanding and you're exactly as wrong. That's where the refund example lives.
-- **The concrete technique:** "write the implementation" then "now write the tests" in the same context is maximum contamination. Generating tests from the requirement in a **fresh context**, before the implementation exists, is meaningfully better evidence for the same effort.
 -->
