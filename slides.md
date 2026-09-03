@@ -1341,7 +1341,7 @@ You'll get something like: implementation time dropped, but review wait went up,
 
 That is a **hypothesis.** Not a finding. Go check it with telemetry.
 
-Same rule as Trap 1 — could that check catch the mistake?
+Same question we asked about those forty-seven passing tests — could that check catch the mistake?
 
 
 # Supporting Notes
@@ -1365,7 +1365,7 @@ Same rule as Trap 1 — could that check catch the mistake?
 **THE POSITIVE USE — don't skip it:**
 - AI is genuinely good at finding this. Point it at tickets, PR history, CI runs, deploys, incidents, support tickets. Ask where the time actually went.
 - You'll get: *"implementation time dropped, but review wait increased, concentrated in changes touching these three components."*
-- **That is a hypothesis, not a finding.** Go check it with telemetry. Same rule as Trap 1 — could that check catch the mistake?
+- **That is a hypothesis, not a finding.** Go check it with telemetry. Same rule as Trap 1 — but say it as *the same question we asked about those forty-seven passing tests* (D-75: never the trap number out loud).
 
 → Before we decide what to do with the new capacity, name the decision.
 -->
@@ -1558,7 +1558,7 @@ Because no equivalent separation exists.
 
 The email is supposed to be data. But interpreting instructions written in English is precisely the entire job of the model.
 
-That is not a bug we're going to parameterize away.
+That is not a bug we're going to parameterize away. A prompt is not a security boundary.
 
 [click]
 
@@ -1566,13 +1566,11 @@ And now look at what the obvious question does to us.
 
 "How do we stop the model from being tricked?" has already decided the defense lives inside the model — the one place we can't fully enforce it.
 
-That's Trap 2. Turning up again. At the worst possible moment. In a security review.
+That's the solving-the-wrong-problem issue again. Turning up at the worst possible moment. In a security review.
 
 --
 
 [If asked, and somebody will:] Authorization does not solve prompt injection. Real mitigations exist and people are making real progress. What authorization does is decide how much a successful injection is **worth**. That's a blast radius argument, not a fix.
-
-A prompt is not a security boundary.
 
 [Then get out — "grab me afterwards, I'd genuinely enjoy that conversation, and it's a different talk."]
 
@@ -1598,7 +1596,8 @@ The question was never whether it can be tricked. Something, someday, will trick
 
 **[2]** Notice what the obvious question does.
 - *"How do we stop the model from being tricked"* already decided the defense lives inside the model — the one place we can't fully enforce it.
-> That's Trap 2. Turning up again, at the worst possible moment, in a security review.
+- **This is the Trap 2 callback** — but never say "Trap 2" out loud (D-75). Trap numbers are speaker vocabulary; the room cannot map a number to an idea mid-flow.
+> That's the solving-the-wrong-problem issue again. Turning up at the worst possible moment. In a security review.
 
 **BE HONEST IF ASKED — someone will; this is the security engineer's slide:**
 - Authorization does not solve prompt injection. Real mitigations exist and people are making real progress.
@@ -1609,7 +1608,7 @@ The question was never whether it can be tricked. Something, someday, will trick
 > "Rung one is an input we do not control. Rung five is issuing a refund."
 - The question was never whether it can be tricked. Something, someday, will trick it.
 
-→ **No pause.** The question is what it can do when that happens.
+→ **No pause.** And before anybody reaches for "we'll catch it in review" — go straight at the arithmetic.
 -->
 
 ---
@@ -1622,7 +1621,7 @@ class: fact-slide
 
 <div class="mt-10" v-click="1">
 <div class="big">100 meaningful human reviews</div>
-<div class="sub">realistically, at most</div>
+<div class="sub">at most</div>
 </div>
 
 <div class="mt-12" v-click="2">
@@ -1632,26 +1631,19 @@ class: fact-slide
 <!--
 ~1:30
 
-
-Here's the arithmetic nobody does.
-
 Ten thousand AI decisions this week. The kind of thing that used to be in someone's face — a PR, a refund approval, an escalation, whatever it was for you.
 
 [click]
 
 A hundred meaningful human reviews. Realistically. At most. And I'm being generous.
 
-Both numbers are round on purpose. The point is the gap in orders of magnitude.
-
 [click]
 
 So — which hundred?
 
-Because nobody was ever going to review ten thousand. That isn't a failure of discipline. It's arithmetic.
+Because nobody was ever going to review ten thousand. It's simply arithmetic.
 
-"Keep a human in the loop" is not an answer to that question.
-
-A person clicking Approve two thousand times is not supervision. It's a signature.
+A person clicking Approve two thousand times is not supervision.
 
 [Let that sit. A lot of us know exactly what that feels like.]
 
@@ -1675,9 +1667,9 @@ Right now we are very, very good at scaling one of them.
 # Supporting Notes
 
 - Here's the arithmetic nobody does.
-- **Anchor "decisions" to a unit the room owns, spoken only** (D-05 — the slide stays three bare numbers). *The kind of thing that used to be in someone's face.* Name a couple of shapes — a PR, a refund approval, an escalation — then let them fill in their own.
+- **Anchor "decisions" to a unit the room owns, spoken only** (D-05 — the slide stays three bare numbers). *The kind of thing that used to cross somebody's desk.* Name a couple of shapes — a PR, a refund approval, an escalation — then let them fill in their own.
 - **Keep the examples spanning code *and* operations.** The ladder two slides back ends at *issue the refund*, which never had a PR. A code-only anchor drags the room back to Traps 1 and 3 at the wrong moment.
-- This also sets up **meaningful** in the next number: a decision somebody could not look past takes real minutes to review, which is why a hundred is generous.
+- This also sets up **meaningful** in the next number: a desk-crossing decision takes real minutes to review, which is why a hundred is generous.
 
 **[1]** Ten thousand and one hundred are deliberately round. The point is the orders-of-magnitude gap: genuinely careful human review will cover only a small fraction of the decisions AI can produce.
 

@@ -1672,6 +1672,32 @@ partly cut on the grounds that they excluded non-engineers. That reasoning is no
 cut still stands, on the other and better ground: the replacements are anchored to nodes on
 the ladder already on screen, which the abstract pairs were not.
 
+### D-75 · Trap numbers are speaker vocabulary; callbacks name the idea or the story
+**Decided** 2026-09-02 · **Status** Active · **Extends:** D-07
+
+**Never say "that's Trap 2" on stage.** The enumerated traps and their titles are not in
+front of the audience, and nobody is holding a numbered index in their head an hour into a
+fast-moving talk. The speaker — who has lived with this deck for weeks — can barely track
+it either. A trap number is a pointer the room cannot dereference.
+
+**Call back to the idea, or better, to the story.** Both survive without an index:
+
+| Instead of | Say |
+|---|---|
+| "That's Trap 2." | "That's the solving-the-wrong-problem issue again." |
+| "Same rule as Trap 1." | "Same question we asked about those forty-seven passing tests." |
+
+The story version is stronger where one exists. The refund calculator with forty-seven
+green tests is a picture the room already owns; *Trap 1* is a label they never learned.
+
+**Numbers stay in the speaker notes**, where they help the speaker navigate. This is a rule
+about the spoken track only, and it does not apply to the `~M:SS` timing cues.
+
+**Why this matters more as the deck compounds.** The traps are designed to build on each
+other, so the callbacks are load-bearing — the prompt-injection slide re-running Trap 2's
+mechanism inside a security review is the moment the five stop being a list. A callback
+nobody can decode wastes the payoff of the structure.
+
 ## G. Rejected — do not reopen without new information
 
 | Idea | Why it was rejected |

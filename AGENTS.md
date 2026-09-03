@@ -48,6 +48,14 @@ accessibility usually makes the deck worse. This is not license for the abstract
 theory-speak banned in D-07: *"retry meets idempotency"* is fine, *"causal independence of
 validation"* is not.
 
+## Never say a trap number on stage
+
+Callbacks name the idea or the story, never the number (D-75) — *"that's the
+solving-the-wrong-problem issue again"*, not *"that's Trap 2"*; *"the same question we asked
+about those forty-seven passing tests"*, not *"same rule as Trap 1"*. The audience has no
+numbered index in front of them and cannot dereference a pointer mid-talk. Numbers belong
+in the speaker notes, where they aid navigation.
+
 ## American English throughout
 
 Slides, speaker notes, tracking files, CSS comments, and commit messages: *humor*,
