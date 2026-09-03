@@ -106,15 +106,10 @@ class: canvas-slide
 What just got dramatically easier?<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ...and what should we do differently because of that?
 </div>
 
-<div class="anchor good" v-click="3">
-Sometimes the answer is more AI, much more aggressively.
-<span class="fine">Easy isn't bad. Cheap isn't low quality.</span>
-</div>
-
 </div>
 
 <!--
-~2:00
+~1:40
 
 We've all been seeing how truly useful AI is proving to be.
 
@@ -132,10 +127,6 @@ But the rest also got a whole lot easier - including things that we **thought** 
 
 AI continues to make getting a REALLY good answer much faster and easier.
 
-[click]
-
-And before we go any further: nothing in the next hour is an argument for using less of this. Easy isn't bad. Cheap isn't low quality. Sometimes the right answer at the end of one of these traps is to use much more AI, much more aggressively.
-
 # Supporting Notes
 
 - Hours or days → minutes. Genuinely fantastic.
@@ -147,9 +138,35 @@ And before we go any further: nothing in the next hour is an argument for using 
 > Not "how much can AI do?" — that's a demo question.
 > "What just got dramatically easier, and what should we do differently because of that?"
 
-**[3] anchor — the defuser, now on screen (D-79)**
-- This used to be a spoken-only aside. It is on the slide because the deck gets shared as a link, and three of the five trap titles read as anti-AI to anyone who wasn't in the room.
-- **Still say it out loud.** The slide carrying it does not mean the room heard it.
+→ The defuser gets its own slide next — do not deliver it here.
+
+→ One of the first things it made easy was getting a really good answer.
+-->
+
+---
+layout: default
+class: anchor-slide good
+---
+
+<div class="line">Sometimes the answer is<br>more AI, much more aggressively.</div>
+
+<div class="fine">Easy isn't bad. Cheap isn't low quality. Nothing in the next hour is an argument for using less of this.</div>
+
+<!--
+~0:20
+
+And before we go any further.
+
+Easy isn't bad. Cheap isn't low quality.
+
+Nothing in the next hour is an argument for using less of this. Sometimes the right answer at the end of one of these traps is to use much more AI, much more aggressively.
+
+# Supporting Notes
+
+- **This slide exists because the deck gets shared as a link** (D-80). Three of the five trap titles read as anti-AI to anyone who wasn't in the room, and every qualification that defused them used to be spoken-only.
+- **Say it anyway.** The slide carrying it does not mean the room heard it.
+- **Do not hedge or expand.** One beat, plainly stated, then move. Arguing the point makes it sound defensive and invites the room to suspect the opposite.
+- This is the promise the five traps are then allowed to complicate.
 
 → One of the first things it made easy was getting a really good answer.
 -->
@@ -286,7 +303,7 @@ Until then, let's look at how we can identify and fix the issues.
 **[5]** Finance meant unused *whole days*. And they never refund the setup fee — everybody in billing knows, nobody wrote it down.
 - We shipped a refund calculator that overpays. Quietly. Correctly, according to every test we have.
 
-**[6] the anchor — the line of this trap, now on screen (D-79)**
+**[6] the anchor — the line of this trap, now on screen (D-80)**
 - **Still point at the `47 passing` node while you say it.** The node is orange by now and the anchor is orange with it; the gesture ties the sentence to the number. On screen it is insurance for the reader who wasn't here, not a substitute for the delivery.
 - **Say it before you click, then click.** The line lands spoken; the slide confirms it. Clicking first lets the room read ahead and the beat dies.
 - Deliver it flat. It is not a joke and it is not a gotcha — it is arithmetic.
@@ -325,15 +342,10 @@ class: canvas-slide
 Use AI to challenge your thinking —<br>&nbsp;&nbsp;&nbsp;&nbsp;then use evidence to challenge <u>both</u> of you.
 </div>
 
-<div class="anchor" v-click="5">
-Overkill for a spike. Right for money going out the door.
-<span class="fine">Spending ten dollars to verify a ten-cent experiment is also an engineering failure.</span>
-</div>
-
 </div>
 
 <!--
-~2:00
+~1:35
 
 There are going to be rules that don't need to be included because they've already been established and enforced with normal system design approaches.
 
@@ -358,12 +370,6 @@ Have it identify edge cases. Make it red-team the approaches.
 Ideally from another session or - better yet - another model altogether.
 
 Doing that would also help identify the best samples for your domain expert.
-
-[click]
-
-**This is obviously overkill for most things.** But when you're talking about something like money going out the door, you really want to be sure.
-
-It's our job as product owners and engineers to know when "vibe coding" is perfect - low stakes, just get it out. Or true design, process, and data validation are needed.
 
 # Supporting Notes
 
@@ -390,12 +396,37 @@ It's our job as product owners and engineers to know when "vibe coding" is perfe
 
 - **Lineage, one sentence — do not expand here, the understanding trap carries it:** none of this is new. Pairing, test-first, an on-site customer — XP built all of it to manufacture exactly this independence. We're rediscovering why, at a moment when it got cheaper and more necessary at the same time.
 
-**[5] anchor — PROPORTIONALITY, now on screen (D-79)**
-- **Say it out loud, it matters.** Without it the previous four beats read as a mandatory checklist, and a link-follower has no way to know they aren't.
-- Don't do all three for a throwaway prototype. Budget is set by *how sure do we need to be?* and *how bad is it if we're wrong?*
-- A refund calculator earns the replay. A spike you're deleting Friday does not.
+**PROPORTIONALITY gets its own slide next.** Do not deliver it here — the next slide is where "overkill for a spike, right for money going out the door" lands.
 
 - → These techniques differ, but they force the same question.
+-->
+
+---
+layout: default
+class: anchor-slide
+---
+
+<div class="line sm">Overkill for a spike.<br>Right for money going out the door.</div>
+
+<div class="fine">Spending ten dollars to verify a ten-cent experiment is also an engineering failure.</div>
+
+<!--
+~0:25
+
+This is obviously overkill for most things. But when you're talking about something like money going out the door, you really want to be sure.
+
+It's our job as product owners and engineers to know when "vibe coding" is perfect — low stakes, just get it out — and when true design, process and data validation are needed.
+
+Spending ten dollars to verify a ten-cent experiment is also an engineering failure.
+
+# Supporting Notes
+
+- **Say this out loud, it matters.** Without it the three techniques read as a mandatory checklist, and anyone reading the deck later has no way to know they aren't.
+- Budget is set by two questions: *how sure do we need to be?* and *how bad is it if we're wrong?*
+- A refund calculator earns the replay. A spike you're deleting Friday does not.
+- **Do not turn this into a decision framework** (D-17). Two questions, named once, then move.
+
+→ These techniques differ, but they force the same question.
 -->
 
 ---
@@ -472,7 +503,7 @@ Here we're going to assume — especially as they get even better — that the a
 - The last trap was: the answer might be wrong. **Here, assume the answer is completely, verifiably right.** Excellent, even.
 - The system does exactly what we asked. That is what makes the trap possible.
 
-**[1] anchor — the stipulation, now on screen (D-79)**
+**[1] anchor — the stipulation, now on screen (D-80)**
 - This trap does not work unless the room grants the stipulation, and a reader who only sees slides has no other way to be given it.
 - Say it as a stipulation, not a concession: we are *choosing* to hand the system a win.
 -->
@@ -676,14 +707,10 @@ class: statement-slide
 
 # We never asked what it meant for the **product.**
 
-<div class="anchor trap" v-click="1">
-It didn't hide the evidence. It removed the pain that made the evidence impossible to ignore.
-</div>
-
 <img class="support-alarm-dashboard" src="/illustrations/support-time-resolved-alarm.png" alt="A happy green glass support dashboard showing a 96 percent reduction in support time, with a ringing red alarm obscured behind it">
 
 <!--
-~1:30
+~0:55
 
 This would show in the reports when asked.
 
@@ -692,10 +719,6 @@ The failure is not that AI buried the evidence. It is what happened to the press
 Before, 516 reports meant a growing queue, long waits, overwhelmed representatives, and support management asking for more people. The organization could feel the checkout problem even if it called that pain “support volume.”
 
 Now those same reports are resolved in minutes. The dashboard is green. The pattern still appears in a report — but resolving the crisis the business metrics focused on no longer forces anyone to pay attention to the underlying issue.
-
-[click]
-
-The system didn't hide the evidence. It removed the pain that made the evidence impossible to ignore.
 
 Once the business notices the defect, it can consciously decide to tolerate it. Maybe fixing it costs more than the harm it causes the business — though the customers are clearly still paying a price. That may be an uncomfortable decision, but at least it is a decision.
 
@@ -710,10 +733,7 @@ The alarm is still ringing. We're just looking at the dashboard.
 - Before automation, 516 reports created visible organizational pain: a growing queue, long waits, overwhelmed representatives, and a demand for more people.
 - Now those same reports are resolved in minutes. The support dashboard is green. The cluster still appears in a trend report—but the crisis no longer forces anyone to pay attention.
 
-**[1] anchor — the line of this trap, now on screen (D-79)**
-> “The system didn't hide the evidence. It removed the pain that made the evidence impossible to ignore.”
-- **Say it, then click.** It is the sentence the whole trap exists to earn; let it land in the room before the slide confirms it.
-- Orange, deliberately: this is the thing that bites you, not the better question.
+**The line this trap exists to earn gets its own slide next** — *it didn't hide the evidence, it removed the pain*. Set it up here; deliver it there.
 
 - **Distinguish noticing from tolerating.** Once the business clearly sees the product defect, it can consciously decide whether the cost of fixing it exceeds the harm it causes. That may be an uncomfortable decision—especially because customers still bear the failure—but at least it is a decision.
 - The trap is that faster support lets the issue fall below organizational attention **before anyone makes that decision.**
@@ -722,6 +742,33 @@ The alarm is still ringing. We're just looking at the dashboard.
 - The alarm is still ringing. We're just looking at the dashboard.
 - By defining success as faster incident resolution, the original question treated repeated contacts as work to complete rather than a signal that had to become impossible to ignore.
 - The support system remains genuinely valuable. That is exactly why this is dangerous: its success can conceal the need for a conscious product decision.
+-->
+
+---
+layout: default
+class: anchor-slide trap
+---
+
+<div class="line">It didn't hide the evidence. It removed the pain that made the evidence impossible to ignore.</div>
+
+<div class="fine">The alarm is still ringing. We're just looking at the dashboard.</div>
+
+<!--
+~0:35
+
+The system didn't hide the evidence. It removed the pain that made the evidence impossible to ignore.
+
+The alarm is still ringing. We're just looking at the dashboard.
+
+# Supporting Notes
+
+- **Say it, then click through to this slide.** It is the sentence the whole trap exists to earn.
+- **Distinguish noticing from tolerating.** Once the business clearly sees the product defect, it can consciously decide whether the cost of fixing it exceeds the harm it causes. That may be an uncomfortable decision — especially because customers still bear the failure — but at least it is a decision.
+- **The trap is that nobody made that decision.** Faster support let the problem fall below organizational attention before it could demand one.
+- **The faster support is an absolute good. Say so, and do not hedge it.** The automation is not the villain here; it did its job extremely well. That is exactly why this is dangerous.
+- The green dashboard image comes back at the end of the authority trap — *the support dashboard was green too*. Same picture, deliberately (D-75). Do not foreshadow it.
+
+→ So how do you get at the question the question already answered?
 -->
 
 ---
@@ -810,7 +857,7 @@ AI can take you from "I don't understand this" to working code without ever pass
 - Deliberately uncomfortable.
 - Both behaviors can produce working code. Only one keeps your judgment calibrated.
 
-**[1] anchor — the shape of the trap, now on screen (D-79)**
+**[1] anchor — the shape of the trap, now on screen (D-80)**
 > AI can take you from "I don't understand this" to "working code" without ever passing through "now I understand this."
 - **This is the whole trap in one sentence**, and it was spoken-only. It is the line most likely to make somebody recognize themselves.
 - Let it sit. Do not explain it — the next slide does that work.
@@ -893,7 +940,7 @@ I still don't know what the compiler is doing in there. The seam is where a laye
 - From a true statement to a different statement. Nobody announces it. It just happens on a Tuesday.
 - **The contrast is the whole beat:** every trade on that ladder was made on purpose. This one is being made without anyone deciding.
 
-**[2] anchor — the definition of "seam", now on screen (D-79)**
+**[2] anchor — the definition of "seam", now on screen (D-80)**
 - **The definition is load-bearing.** Without it the examples are just war stories, and a reader who wasn't here gets only the war stories.
 - **The honest version of what you need:** enough to recognize where the seams are — and which ones matter. That's the fine print, and it is the answer to *"so AI writes everything AND I have to understand everything?"*
 - **The examples stay spoken. Do NOT put them on the slide.** *"It compiled — the compiler checked my grammar, it never read the sentence"* is one of the three planned laughs; on screen the room reads ahead and it dies.
@@ -934,14 +981,10 @@ Not junior and senior. Unfamiliar and familiar.<br>
 <span class="fine">Most of us are both, in the same week.</span>
 </div>
 
-<div class="anchor" v-click="2">
-Offload the implementation effort. Don't disconnect from the implementation evidence.
-</div>
-
 </div>
 
 <!--
-~2:30
+~2:00
 
 Two modes. Both enormous. And notice it's not "junior" or "senior."
 
@@ -961,25 +1004,42 @@ On juniors, honestly: some traditional junior work really is getting less valuab
 
 But there is a difference between juniors producing junior artifacts and engineers developing judgment. "Ask, generate, tests pass, merge" does not produce the second one.
 
-For us older folks, we can't simply say "AI writes the code, and we provide the judgment." As we've talked about repeatedly, AI participates in judgment too.
-
-[click]
-
-What we can do is offload the implementation **effort** without disconnecting from the implementation **evidence**.
-
-But remember that the moment you stop touching real code, real incidents, real production - your judgment stops being calibrated with reality.
-
-And we already have a name for that role: the ivory tower architect. 🤮
-
 {side note: I've noticed that while developing the talk. The more powerful model, Opus, has made a lot more decisions for me than Sonnet is willing to. Often, they're great decisions. But I've also had to constantly pull it back to lived reality.}
 
 # Supporting Notes
 
 **[1]** Not junior and senior — unfamiliar and familiar. Most of us are both in the same week.
 
-**[2] anchor — the operative instruction, now on screen (D-79)**
+**The operative instruction gets its own slide next** — *offload the effort, don't disconnect from the evidence*, plus the ivory-tower line. Do not pre-empt it here.
+-->
+
+---
+layout: default
+class: anchor-slide
+---
+
+<div class="line">Offload the implementation effort. Don't disconnect from the implementation evidence.</div>
+
+<div class="fine">Stop touching real code, real incidents, real production, and your judgment stops being calibrated.</div>
+
+<!--
+~0:30
+
+We can't simply say "AI writes the code, and we provide the judgment." As we've talked about repeatedly, AI participates in judgment too.
+
+What we *can* do is offload the implementation **effort** without disconnecting from the implementation **evidence**.
+
+Because the moment you stop touching real code, real incidents, real production — your judgment stops being calibrated with reality.
+
+And we already have a name for that role: the ivory tower architect. 🤮
+
+# Supporting Notes
+
 - **This is the answer to the working developer's objection**: *"so AI writes everything AND I have to understand everything?"* No. Offload the effort aggressively; stay attached to the evidence.
-- The ivory-tower-architect line stays spoken — it's a laugh, and it belongs to the room, not the slide.
+- **The ivory-tower line is spoken, not on the slide.** It's a laugh and it belongs to the room.
+- On juniors, if you want it here: some traditional junior work really is getting less valuable — boilerplate, routine implementation, basic debugging. But there is a difference between juniors producing junior artifacts and engineers developing judgment. *"Ask, generate, tests pass, merge"* does not produce the second one.
+
+→ So which questions can reality settle, and which ones are left?
 -->
 
 ---
@@ -1087,7 +1147,7 @@ So the process has fewer people in it than it used to, and we haven't said what 
 
 - Speed did not merely produce more of the same evidence. It **removed the accidental friction that used to produce independent evidence, and it's starting to remove the people too** — and nobody decided to do either.
 
-**[1] anchor — the honest limit, now on screen (D-79)**
+**[1] anchor — the honest limit, now on screen (D-80)**
 - **Do not skip it.** It is what stops this slide becoming evangelism, and it is the one line a link-follower needs to see the trade-off rather than a complaint.
 - The anchor states the limit only. **It does not resolve the slide** — see below.
 
@@ -1249,7 +1309,7 @@ But "we got faster" and "we should therefore do more of the same thing" is a lea
 - **QUALIFY IMMEDIATELY AND OUT LOUD:** *"And sometimes more is exactly what you should do."*
 - Otherwise this reads as anti-productivity and half the room stops listening.
 
-**[1] anchor — the qualification, now on screen (D-79)**
+**[1] anchor — the qualification, now on screen (D-80)**
 - This title is the most misreadable in the deck out of context, and the deck gets shared. The qualification no longer depends on being in the room.
 - **Click it early — right after the title lands, before the objection forms.** It is not a terminal beat here; it is the second half of the title.
 - Say it anyway. The slide carrying it is insurance, not delivery.
@@ -1383,15 +1443,10 @@ class: canvas-slide
 Coding throughput is not delivery.
 </div>
 
-<div class="anchor trap" v-click="4">
-200 PRs of plausible code is not 200 PRs of progress.
-<span class="fine">But it photographs identically.</span>
-</div>
-
 </div>
 
 <!--
-~2:00
+~1:35
 
 Here's the pipeline. AI hit exactly one box in it, very hard.
 
@@ -1423,22 +1478,6 @@ This is not a Theory of Constraints lecture. You all know constraints move.
 
 The AI-specific part is the speed and the disguise. We can change implementation capacity enormously, almost overnight — and the output looks like finished intellectual work.
 
-[click]
-
-Two hundred PRs of plausible code is not two hundred PRs of progress. But it photographs identically.
-
---
-
-And here's the genuinely good news, because AI is excellent at finding this.
-
-Point it at your tickets, PR history, CI runs, deploys, incidents, support tickets. Ask where the time actually went.
-
-You'll get something like: implementation time dropped, but review wait went up, concentrated in changes touching these three components.
-
-That is a **hypothesis.** Not a finding. Go check it with telemetry.
-
-Same question we asked about those forty-seven passing tests — could that check catch the mistake?
-
 # Supporting Notes
 
 - Here's the pipeline. AI hit one box in it, hard.
@@ -1456,14 +1495,7 @@ Same question we asked about those forty-seven passing tests — could that chec
 - **NOT a Theory of Constraints lecture** — you all know constraints move. The AI-specific part is the **speed and the disguise**.
 - We can change implementation capacity enormously, almost overnight, and the outputs *look* like finished intellectual work.
 
-**[4] anchor — the image of this trap, now on screen (D-79)**
-> Two hundred PRs of plausible code is not two hundred PRs of progress, but it photographs identically.
-- **Say it, then click.** *Photographs identically* is the part that sticks; give it the pause.
-
-**THE POSITIVE USE — don't skip it:**
-- AI is genuinely good at finding this. Point it at tickets, PR history, CI runs, deploys, incidents, support tickets. Ask where the time actually went.
-- You'll get: *"implementation time dropped, but review wait increased, concentrated in changes touching these three components."*
-- **That is a hypothesis, not a finding.** Go check it with telemetry. Same rule as the refund calculator — but say it as *the same question we asked about those forty-seven passing tests* (D-75: never the trap number out loud).
+**The *photographs identically* line and the positive use both move to the next slide.** Land *coding throughput is not delivery* here and go.
 
 **IF ASKED "WHY DIDN'T REVIEW GET FASTER? AI CAN REVIEW CODE." — somebody will, and it is the best question in this trap:**
 - **Concede it instantly.** It can review, it does review, and it is good at it. Nothing here claims otherwise — we said as much when we talked about it arguing with your design at eleven at night.
@@ -1472,6 +1504,37 @@ Same question we asked about those forty-seven passing tests — could that chec
 - **So AI can absorb the labor half and leave the guardrail half exactly where it was** — which is precisely why coding time falls while the waiting grows.
 - What buys it back is what always bought it back: a fresh context, a different model, a check sourced from somewhere else. *The same question we asked about those forty-seven passing tests.*
 - **Do not build this into a model on stage** (D-17, D-76). Answer the question, then move.
+
+→ Before we decide what to do with the new capacity, name the decision.
+-->
+
+---
+layout: default
+class: anchor-slide trap
+---
+
+<div class="line">200 PRs of plausible code is not 200 PRs of progress.</div>
+
+<div class="fine">But it photographs identically.</div>
+
+<!--
+~0:25
+
+Two hundred PRs of plausible code is not two hundred PRs of progress.
+
+[beat]
+
+But it photographs identically.
+
+# Supporting Notes
+
+- **The pause before *photographs identically* is the whole line.** That is the part that sticks; do not run the two sentences together.
+- This is the AI-specific part of the previous slide: not that constraints move — everyone here knows constraints move — but the **speed and the disguise**. Implementation capacity changes enormously, almost overnight, and the output looks like finished intellectual work.
+
+**THE POSITIVE USE — don't skip it, it belongs on this beat:**
+- AI is genuinely good at finding where the time went. Point it at tickets, PR history, CI runs, deploys, incidents, support tickets.
+- You'll get: *"implementation time dropped, but review wait increased, concentrated in changes touching these three components."*
+- **That is a hypothesis, not a finding.** Go check it with telemetry — *the same question we asked about those forty-seven passing tests* (D-75: never the trap number out loud).
 
 → Before we decide what to do with the new capacity, name the decision.
 -->
@@ -1618,7 +1681,7 @@ I'm not making an argument about intelligence at all. I'm making one about conse
 > Ask: at what point did the architecture fundamentally change?
 - The model is doing roughly the same inference the whole way down. Same capability, same error rate.
 
-**[5] anchor — the turn, now on screen (D-79)**
+**[5] anchor — the turn, now on screen (D-80)**
 > What changed is AUTHORITY.
 - **Do not click it early.** The five rungs must stand alone first; the anchor is the answer to a question the room has already started asking itself.
 - Say the reasoning, then click, then let the word sit.
@@ -1651,14 +1714,10 @@ Interpreting instructions written in English is the entire job.
 "How do we stop it being tricked?"<br>already put the defense inside the model.
 </div>
 
-<div class="anchor trap" v-click="3">
-A prompt is not a security boundary.
-</div>
-
 </div>
 
 <!--
-~2:00 — NOT a security tutorial. The room will try to make it one.
+~1:40 — NOT a security tutorial. The room will try to make it one.
 
 Go back to rung one for a second. "Read the customer's email."
 
@@ -1686,26 +1745,6 @@ And now look at what the obvious question does to us.
 
 That's the solving-the-wrong-problem issue again. Turning up at the worst possible moment. In a security review.
 
-[click]
-
-A prompt is not a security boundary.
-
---
-
-[If asked, and somebody will:] Authorization does not solve prompt injection. Real mitigations exist and people are making real progress. What authorization does is decide how much a successful injection is **worth**. That's a blast radius argument, not a fix.
-
-[Then get out — "grab me afterwards, I'd genuinely enjoy that conversation, and it's a different talk."]
-
---
-
-So put the two halves together.
-
-Rung one is an input we do not control.
-
-Rung five is issuing a refund.
-
-The question was never whether it can be tricked. Something, someday, will trick it.
-
 # Supporting Notes
 
 - Point back at the ladder: *"Rung one was — read the customer's email."*
@@ -1720,21 +1759,34 @@ The question was never whether it can be tricked. Something, someday, will trick
 - **This is the framing-trap callback** — but never say the trap number out loud (D-75). Trap numbers are speaker vocabulary; the room cannot map a number to an idea mid-flow.
 > That's the solving-the-wrong-problem issue again. Turning up at the worst possible moment. In a security review.
 
-**[3] anchor — the sentence to be quoted on, now on screen (D-79)**
-> A prompt is not a security boundary.
-- The most quotable line in the deck and it was spoken-only. It is also the line that keeps a security engineer from concluding this slide is naive.
-- **One beat, then move.** Do not let the anchor open the floor to a security discussion.
+**"A prompt is not a security boundary" gets its own slide next**, and it carries the security Q&A guardrails and the rung-one/rung-five transition. Do not deliver any of that here.
 
-**BE HONEST IF ASKED — someone will; this is the security engineer's slide:**
-- Authorization does not solve prompt injection. Real mitigations exist and people are making real progress.
-- What authorization does is decide **how much a successful injection is worth**. That's a blast-radius argument, not a fix.
-- Don't get drawn further in: *"grab me afterwards, I'd enjoy that conversation and it's a different talk."*
+→ Straight through, no pause.
+-->
 
-**PUT THE HALVES TOGETHER — slow down:**
+---
+layout: default
+class: anchor-slide trap
+---
+
+<div class="line lg">A prompt is not a security boundary.</div>
+
+<!--
+~0:20
+
+A prompt is not a security boundary.
+
+# Supporting Notes
+
+- **One beat. Do not open the floor.** This is the most quotable line in the deck and it is also the line that stops a security engineer concluding the previous slide was naive.
+- **If asked — and someone will:** authorization does not solve prompt injection. Real mitigations exist and people are making real progress. What authorization does is decide **how much a successful injection is worth**. That is a blast-radius argument, not a fix.
+- Then get out: *"grab me afterwards, I'd genuinely enjoy that conversation, and it's a different talk."*
+
+**PUT THE HALVES TOGETHER — slow down here, this is the transition:**
 > "Rung one is an input we do not control. Rung five is issuing a refund."
 - The question was never whether it can be tricked. Something, someday, will trick it.
 
-→ **No pause.** And before anybody reaches for "we'll catch it in review" — go straight at the arithmetic.
+→ **No pause.** Before anybody reaches for "we'll catch it in review" — go straight at the arithmetic.
 -->
 
 ---
@@ -1745,22 +1797,17 @@ class: fact-slide
 <div class="big">10,000 AI decisions</div>
 <div class="sub">this week</div>
 
-<div class="mt-8" v-click="1">
+<div class="mt-10" v-click="1">
 <div class="big">100 meaningful human reviews</div>
 <div class="sub">at most</div>
 </div>
 
-<div class="mt-8" v-click="2">
+<div class="mt-12" v-click="2">
 <div class="big hot">Which 100?</div>
 </div>
 
-<div class="anchor good" v-click="3">
-It has to be built in, not watched.
-<span class="fine">Oversight does not scale just because action scaled.</span>
-</div>
-
 <!--
-~1:30
+~1:10
 
 Ten thousand AI decisions this week. The kind of thing that used to be in someone's face — a PR, a refund approval, an escalation, whatever it was for you.
 
@@ -1783,10 +1830,6 @@ A person clicking Approve two thousand times is not supervision.
 The second reader. The check written before the code. The person who owned the meaning, sitting in the room. We couldn't afford those, and we're not getting them back — and the arithmetic just told us why another pair of eyes was never going to be the answer at this volume.
 
 This was never humans supervising machines.
-
-[click]
-
-So it has to be built in, not watched. Oversight does not scale just because action scaled.
 
 We did this once already. At internet scale, checking each transaction by hand stopped being possible — so we moved the control into the system. Authorization that holds whether or not anyone is looking.
 
@@ -1818,10 +1861,7 @@ Authority and oversight should grow together. Right now we are very, very good a
 - **Two sentences, then move.** This is a hinge, not a reprise — do not re-explain pairing, TDD, or the on-site customer, and do not let the room relitigate whether we should have kept them.
 - *This was never humans supervising machines* is the beat the callback lands on. Keep it on its own line and let it carry the turn.
 
-**[3] anchor — the constructive turn, now on screen (D-79)**
-> It has to be built in, not watched.
-- **This is the only addition to this slide, deliberately.** It is a mic drop: three numbers, one punch, one constructive beat, out.
-- It is also the answer to the hole left open earlier — fewer people in the loop, nothing said about what replaces them. This replaces them.
+**"Built in, not watched" gets its own slide next.** This one stays what it always was: three numbers and a punch, out.
 
 - **The internet-scale callback argues from the room's own experience — it is not a history lesson.** Nobody there thinks a human should approve each HTTP request; the scale settled it, exactly as the arithmetic just did. Two sentences, then move.
 - **Name what is actually different, because it is the sharp part:** at internet scale we authorized *who may do what* — static, checkable, and the actor's intent was irrelevant to the control. Now we authorize *what an actor may do when it turns out to be wrong*, and its reasoning is not inspectable. Same move, new surface.
@@ -1839,6 +1879,32 @@ carries *accountability that scales with authority*, in fewer words and with the
 - **If you take one thing from this trap:** authority and oversight should grow together. Right now we are very good at scaling one of them.
 
 → Authorization decides how far a failure can reach. It does not undo what happened inside that bound — which is the last question.
+-->
+
+---
+layout: default
+class: anchor-slide good
+---
+
+<div class="line">It has to be built in,<br>not watched.</div>
+
+<div class="fine">Oversight does not scale just because action scaled.</div>
+
+<!--
+~0:20
+
+So it has to be built in, not watched.
+
+Oversight does not scale just because action scaled.
+
+# Supporting Notes
+
+- **This is what goes in the place of the people who left the loop.** The earlier slide named the hole — fewer people in the process, nothing said about what replaces them — and deliberately left it open. This fills it.
+- **Land it, then move.** The arithmetic slide before it did the work; this is the conclusion, not a new argument. Do not re-explain the second reader, the check written before the code, or the person who owned the meaning.
+- The internet-scale callback belongs to the spoken track here if you want it: we already moved control into the system once, when checking each transaction by hand stopped being possible. Two sentences at most.
+- **Never say "XP" and never say a trap number** (D-75, D-77).
+
+→ Authorization decides how far a failure can reach. It does not undo what happened inside that bound.
 -->
 
 ---
@@ -1906,7 +1972,7 @@ Deliberately accepting risk **is** engineering.
 - For AI systems, "nothing threw an exception" is an especially weak definition of success.
 - **Can we undo it?** Reversibility buys you more than almost any control does.
 
-**[1] anchor — DO NOT GOLD-PLATE, now on screen (D-79)**
+**[1] anchor — DO NOT GOLD-PLATE, now on screen (D-80)**
 - Controls aren't free either — latency, flexibility, engineering time, customer experience.
 - If the consequence is small and reversible, let the system move. *"Yeah, that might break, and we're fine with that"* is a legitimate engineering conclusion.
 - **This is the anchor that stops the whole trap reading as governance maximalism** to anyone who only ever sees the slides.
@@ -2012,7 +2078,7 @@ But now, back to where we started...
 
 # Supporting Notes
 
-**[1] anchor — the self-implicating line, now on screen (D-79)**
+**[1] anchor — the self-implicating line, now on screen (D-80)**
 > I offloaded a lot of work. I did not offload responsibility.
 - This is the whole talk applied to itself, and it is the sentence that keeps the deck from being evidence that its own framing was correct.
 - The fine print is the *how bad is it / will we notice / can we undo it* test run on this deck, in public. Say it without hedging — it's the honest answer, and it happens to be favorable.
@@ -2088,7 +2154,7 @@ And keep doing that. Because this is going to move again next year.
 - Sowell was never writing about software. That's exactly why it holds.
 - Every one of tonight's five traps was the same seam: a technical thing got faster, and ran into a **human** system nobody had written down. What finance meant. Why the approvals were in that order. How people actually build judgment. What we're staffed to produce. Who is allowed to decide.
 
-**[1] anchor — the thesis, now on screen (D-79)**
+**[1] anchor — the thesis, now on screen (D-80)**
 > "They are not two systems. They never were."
 - **The only place the deck's actual thesis appears on a slide.** Say the five seams first, click, then let it sit.
 - **This is the payoff, not the engine.** It names the seam; it does not explain the cost-that-was-doing-a-job mechanism (D-14). Do not be tempted to add that here because the slide now has room.

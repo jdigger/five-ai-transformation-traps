@@ -113,9 +113,10 @@ prevents narrative whiplash without requiring every trap to reuse the same proce
 
 ### Current state
 
-36 slides · ~50:45 planned. Every trap ends on its exact Monday question (D-61).
-Seventeen slides carry an on-screen **anchor** so the deck survives being shared as a link
-(D-80); the timing tally is unchanged because the anchors were already in the spoken track.
+43 slides · ~50:45 planned. Every trap ends on its exact Monday question (D-61).
+Seventeen **anchors** put the deck's spoken qualifications and load-bearing lines on screen
+so it survives being shared as a link (D-80): ten inline, seven on slides of their own
+(D-81). The timing tally is unchanged — the anchors were always in the spoken track.
 Opening through Trap 2 is presentation-quality.
 Traps 3–5 have had a structural pass but not a full narrative one. Nothing has been
 rehearsed against a clock (R-09) — **every timing number in this deck is a guess.**
@@ -1847,6 +1848,7 @@ already carries the support-dashboard callback and a second one there is one too
 
 ### D-80 · The deck now carries its own qualifications, because the link gets shared
 **Decided** 2026-09-03 · **Status** Active · **Amends** D-05 · **Resolves** part of Q-06
+· **Amended by D-81** (placement: seven of these anchors became slides of their own)
 
 The deck link goes to the audience afterward. Seventeen slides gain a short, quotable
 **anchor** — a terminal click beat, one or two lines, in a new `.anchor` component. Five of
@@ -1904,6 +1906,64 @@ rehearsed.
 
 ---
 
+### D-81 · An anchor that crowds its slide becomes a slide
+**Decided** 2026-09-03 · **Status** Active · **Amends D-80** (placement only; the content
+decision and the list of what stays off screen are unchanged)
+
+D-80 put seventeen anchors on screen. Seven of them landed on slides that were already
+carrying a diagram, a list, or three large numbers, and three of those only fit after the
+host slide's type was shrunk. Those seven now have **their own slide** — a new
+`anchor-slide` layout: one sentence at 3.1rem, an optional quieter second line, nothing
+else. The deck goes 36 → 43 slides.
+
+| Now its own slide | Was riding on |
+|---|---|
+| *Sometimes the answer is more AI, much more aggressively.* | AI is making hard things easy |
+| *Overkill for a spike. Right for money going out the door.* | the three evidence techniques |
+| *It didn't hide the evidence. It removed the pain…* | the system found the pattern |
+| *Offload the effort. Don't disconnect from the evidence.* | the two modes |
+| *200 PRs of plausible code is not 200 PRs of progress.* | the pipeline metrics |
+| *A prompt is not a security boundary.* | the injection diagram |
+| *It has to be built in, not watched.* | the 10,000 / 100 arithmetic |
+
+**Why.** Adding a line to a full slide makes the slide worse in two ways at once: it
+crowds the frame, and it forces the anchor to compete with whatever is above it for the
+same two seconds of attention. A one-line slide is not wasted — it is the beat where a
+single sentence gets the whole screen. The speaker's delivery is fast slides with him
+filling the gaps, and **click count is explicitly not a constraint** (his direction,
+2026-09-03), so the cost of an extra slide is close to zero and the benefit is that the
+sentence actually lands.
+
+**Consequences.**
+- The three type retunes D-80 introduced are **reverted**: slide 15's headlines are back to
+  12ch, and the arithmetic slide's numbers are back to 4.6rem. Both slides are restored to
+  the scale they were designed at, and the arithmetic slide is a three-numbers-and-a-punch
+  mic drop again, as its own guardrail requires.
+- The injection slide keeps D-80's 46ch → 62ch node widening. That change was an
+  improvement in its own right — each example now sits on one line — not scaffolding.
+- **Timing is unchanged at ~50:45.** Each parent slide gave up the seconds its anchor beat
+  took with it; no new words were added to the talk.
+- Parent speaker notes now carry an explicit *do not deliver this here* line pointing at the
+  slide that follows, so the beat is not paid twice.
+
+**Ten anchors stay inline**, because the slide is sparse and the anchor belongs to the same
+frame: the *one check, forty-seven times* line (it is delivered pointing at the now-orange
+test count, and sits in an otherwise empty column) · *what changed is authority* (needs the
+ladder visible) · the seam definition (its examples are anchored to nodes on the diagram
+beside it, D-76) · the three trap-title qualifications · *a human pair brings different
+priors* · *deliberately accepting risk is engineering* · *I did not offload responsibility*
+· *they are not two systems*.
+
+**Rejected:** promoting the seam definition to its own slide. Its examples — *it compiled,
+the compiler checked my grammar* — are delivered pointing at the Compiler and Cloud rungs,
+and the definition has to be on screen while that happens. Splitting them would either put
+the examples before the definition or strand them from the diagram they refer to.
+
+**Rejected:** a shared handout build, again. Seven extra slides is the cheaper way to make
+the deck stand alone, and it improves the live talk instead of taxing it.
+
+---
+
 ## G. Rejected — do not reopen without new information
 
 | Idea | Why it was rejected |
@@ -1930,4 +1990,6 @@ rehearsed.
 | "How do we remove people safely" as Trap 5's frame | Reads as advocacy and recolors slide 20 into an anti-automation lament (D-79) |
 | An anchor on slide 25's CFO quote | The bare quote is a stronger stage image; the qualification persuades better spoken than printed (D-80) |
 | Moving speaker-note prose onto slides for retention | Redundancy effect — duplicated on-screen text makes the room read ahead and remember less (D-80) |
-| A separate handout build rendered from the same source | Doubles the maintenance surface on a deck that has never been rehearsed (D-80) |
+| A separate handout build rendered from the same source | Doubles the maintenance surface on a deck that has never been rehearsed (D-80, again D-81) |
+| Promoting the seam definition to its own slide | Its examples are delivered pointing at the Compiler and Cloud rungs; the definition must be on screen while that happens (D-81) |
+| Shrinking a slide's type to make room for an inline anchor | If the anchor doesn't fit, it wanted its own slide (D-81) |

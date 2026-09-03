@@ -93,8 +93,9 @@ Still unresolved, and each one changes something:
 
 ### Q-06 🟡 What gets shared afterward — slides, slides + notes, or a rollup?
 **Partly resolved by D-80.** The speaker will hand out the link, so the deck no longer
-depends on being in the room for its qualifications: seventeen slides now carry an on-screen
-anchor, and five of those are the defusers R-03 flagged. **Option (a) is no longer actively
+depends on being in the room for its qualifications: seventeen anchors are now on screen —
+ten inline, seven on slides of their own (D-81) — and five of those are the defusers R-03
+flagged. **Option (a) is no longer actively
 bad** — it is merely incomplete.
 
 **Still open: what accompanies the slides.**
