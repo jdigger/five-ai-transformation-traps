@@ -482,7 +482,9 @@ class: statement-slide
 ~2:00
 
 
-It reads what the customer wrote, pulls the account and order context, applies the policy, takes the action it is allowed to take, and explains what happened. If it is genuinely uncertain, it escalates.
+It reads what the customer wrote, pulls the account and order context - maybe even that this account has asked for refunds 20 times -, then applies the policy, takes the action it is allowed to take, and explains what happened.
+
+If it is genuinely uncertain, it escalates.
 
 [click]
 
@@ -491,30 +493,11 @@ And it works!
 It follows all the processes correctly in a reliable way. You couldn't ask for a better win.
 
 We can even throw in some Kafka messaging, lots of AI agents, and all that kind of cool stuff. All the kinds of things that get architects like me all hot and bothered.
-
-
-
-# Supporting Notes
-
-- Now introduce AI as the answer, and make it an answer the room should want.
-- Give it the support history, current account and order context, the policies, and the same permitted actions a good support agent has.
-- It reads the request, retrieves the relevant context, applies policy, takes the permitted action, and explains the result.
-- It escalates genuinely uncertain or exceptional cases. **Trap 1 does not apply here.** Stipulate that its answers and actions are correct.
-
-**[1]**
-- The wait falls from eighteen hours to under five minutes.
-- Let this feel like a win, because it is one.
-
-**[2]**
-- Correct, personalized, always available.
-> “If someone brought me this result, I would say yes.”
-
-- Do not foreshadow a hidden model failure. The system is doing excellent support work.
 -->
 
 ---
 layout: default
-class: canvas-slide
+class: statement-slide
 ---
 
 <div class="diagram">
@@ -527,27 +510,15 @@ class: canvas-slide
 516 describe the same checkout failure.
 </div>
 
+
 </div>
+<img class="system-dashboard" src="/illustrations/support-time-dashboard.png" alt="A bright green glass support dashboard showing support time down 96 percent">
 
 <!--
 ~1:15
 
 
 At the end of the week, the number says: twelve hundred tickets resolved. The support metric is green.
-
-
-
-
-# Supporting Notes
-
-- Start with the first meaning of the number: workload successfully cleared.
-- Twelve hundred tickets resolved. The support metric is green.
-
-**[1]**
-- Then reveal the repeated pattern: 516 customers describe the same checkout failure.
-- **The system found this cluster.** Do not make the AI implausibly blind; a good support system should detect repeated language and shared context.
-- Pause. Give the room time to register the repetition, but **do not interpret it yet.**
-- Advance to the next slide for the reclassification.
 -->
 
 ---
@@ -606,7 +577,9 @@ Before, 516 reports meant a growing queue, long waits, overwhelmed representativ
 
 Now those same reports are resolved in minutes. The dashboard is green. The pattern still appears in a report — but resolving the crisis the business metrics focused on no longer forces anyone to pay attention to the underlying issue.
 
-Once the business notices the defect, it can consciously decide to tolerate it. Maybe fixing it costs more than the harm it causes the business — though the customers are clearly still paying a price. That may be an uncomfortable decision, but at least it is a decision.
+Once the business notices the defect, it can consciously decide to tolerate it. Maybe fixing it costs more than the harm it causes the business — though the customers are clearly still paying a price.
+
+That may be an uncomfortable decision, but at least it is a decision.
 
 The trap is that nobody made that decision. Faster support let the problem fall below organizational attention before it could demand one.
 
@@ -635,9 +608,9 @@ layout: default
 class: anchor-slide trap
 ---
 
-<div class="line">It didn't hide the evidence. It removed the pain that made the evidence impossible to ignore.</div>
+<div class="line">It didn't hide the evidence.</div>
 
-<div class="fine">The alarm is still ringing. We're just looking at the dashboard.</div>
+## It removed the pain that made the evidence impossible to ignore.
 
 <!--
 ~0:35
@@ -674,7 +647,7 @@ class: canvas-slide
 </div>
 
 <div class="kicker">
-It's very good at this. It just never volunteers.
+It's very good at this.<br/>But don't expect it to simply tell you, "You're being an idiot."
 </div>
 
 </div>
@@ -686,7 +659,9 @@ Before you ask the AI for a design, ask it to challenge the question.
 
 Here's the thing you need to know about this. It is genuinely better than a lot of design reviews I've sat through and done.
 
-The value **is** the friction. Which is the opposite of what we often assume we want from AI — more speed.
+The value **is** the friction. To slow you down.
+
+Which is the opposite of what we often assume we want from AI — more speed.
 
 If everything it says back agrees with you, you haven't challenged the framing yet. You've just been flattered very efficiently.
 -->
@@ -698,7 +673,7 @@ class: q-slide
 
 # What did our question already decide?
 
-## What your question assumes never has to defend itself.<br/>Name it, and make it earn its place.
+## What your question assumes never has to defend itself.<p/>Name it, and make it earn its place.
 
 <!--
 ~0:30
@@ -721,7 +696,7 @@ class: trap-slide trap-03
 <div class="trap-promise">Spot it. Then choose differently.</div>
 
 <div class="anchor trap" v-click="1">
-From “I don't understand this” to working code — without passing through “now I understand this.”
+“I don't understand this” &rarr; working code.<br/>But no “Now I understand this.”
 </div>
 
 </div>
@@ -731,22 +706,11 @@ From “I don't understand this” to working code — without passing through �
 <!--
 ~0:30
 
-This one is more personal, and far too easy to fall into.
+This one is more personal and far too easy to fall into.
 
 [click]
 
-AI can take you from "I don't understand this" to working code without ever passing through "now I understand this."
-
-# Supporting Notes
-
-- Give this room.
-- Deliberately uncomfortable.
-- Both behaviors can produce working code. Only one keeps your judgment calibrated.
-
-**[1] anchor — the shape of the trap, now on screen (D-80)**
-> AI can take you from "I don't understand this" to "working code" without ever passing through "now I understand this."
-- **This is the whole trap in one sentence**, and it was spoken-only. It is the line most likely to make somebody recognize themselves.
-- Let it sit. Do not explain it — the next slide does that work.
+{shrug} But does it really matter?
 -->
 
 ---
@@ -767,12 +731,12 @@ class: canvas-slide
 </div>
 
 <div class="kicker hot mt-14" v-click="1">
-"I don't need to do this myself" &nbsp;→&nbsp; "I don't need to understand this"
+"I don't need to do this myself" &nbsp;&ne;&nbsp; "I don't need to understand this"
 </div>
 
-<div class="anchor" v-click="2">
-A seam is where a layer's promise runs out — and nobody owns the other side.
-<span class="fine">Not the inside of any layer. Keep enough to know where the seams are, and which ones matter.</span>
+<div class="anchor wide" v-click="2">
+A seam is where a layer's promise stops.<br>Everything past it is <strong>mine</strong>.
+<span class="fine">Not the inside of any layer — I still don't know what the compiler does in there. Just where its promise stops, and which of those matter.</span>
 </div>
 
 </div>
@@ -794,49 +758,31 @@ Move on to the next set of problems - there's always plenty of those!
 
 AI is the next one, and a really big one.
 
-Every one of those was a trade I made on purpose. And every one was worth it.
+[click]
+
+Why does it matter? The seams.
 
 [click]
 
-"I don't need to do this myself" is true.
-
-"I don't need to understand this" is very different.
-
-But why? The seams.
-
-[click]
-
-Not the inside of any layer, but where that layer's promise runs out.
+Not the inside of any layer, but where that layer's promise stops.
 
 {pointing at Compiler} "It compiled." Cool. The compiler checked my grammar. It never read the sentence.
 
 {pointing at Cloud} "It deployed." Cool. It never promised the services agree about what they're sending each other.
 
-I still don't know what the compiler is doing in there. The seam is where a layer's promise runs out, and nobody owns what's on the other side.
+I still don't know what the compiler is doing in there, and I don't need to. But the moment its promise stops, that's mine. Nobody is coming to own that for me.
 
 # Supporting Notes
 
-- **Kill the wrong version first.** I am *not* saying you must understand everything AI produces. That's nonsense and it destroys the value of abstraction.
-
-- **The trade framing must not undercut WONDERFUL.** Each rung was a *good* trade, made
-  knowingly. The point is that they were deliberate — which is what makes the next one land.
-- **The Sowell thread surfaces here. Do not name it** (D-09, D-14, D-17).
-
-**[1] the quiet slide**
-- From a true statement to a different statement. Nobody announces it. It just happens on a Tuesday.
-- **The contrast is the whole beat:** every trade on that ladder was made on purpose. This one is being made without anyone deciding.
-
-**[2] anchor — the definition of "seam", now on screen (D-80)**
+**[2] anchor — the definition of "seam" (D-80, corrected by D-83)**
 - **The definition is load-bearing.** Without it the examples are just war stories, and a reader who wasn't here gets only the war stories.
-- **The honest version of what you need:** enough to recognize where the seams are — and which ones matter. That's the fine print, and it is the answer to *"so AI writes everything AND I have to understand everything?"*
-- **The examples stay spoken. Do NOT put them on the slide.** *"It compiled — the compiler checked my grammar, it never read the sentence"* is one of the three planned laughs; on screen the room reads ahead and it dies.
-- **The examples are anchored to nodes on the diagram — this is the point, not a coincidence.** "It compiled" is the *Compiler* rung; "It deployed" is the *Cloud* rung. The ladder gets walked twice: first as what you stopped needing to know, then as where each promise ends. Do not swap in generic examples; the callback is what holds the slide together.
-- **Phrase them as what the layer did and did not cover, never as "is it correct?"** *Checked the grammar, never read the sentence* is a seam. *Is the code right?* is the confidence trap, and re-running that beat here muddies both.
-- **The grammar line is literal, not a metaphor.** A compiler parses formal grammar and does not evaluate meaning. Deliver it flat and let the room notice it is true — explaining the joke kills it.
-- Backup examples if one lands flat: retry meets idempotency · cache meets stale data · generated code meets a convention nobody wrote down.
-- **"Seam" is a thread word.** The close names the human/technical seam as the shape of all five traps (D-59). Same word, deliberately — do not swap in "boundary" or "interface" here.
-- Transaction boundary meets service boundary · retry meets idempotency · cache meets stale data · generated code meets an undocumented convention · "executed successfully" meets "did the wrong thing."
-> That's what you keep.
+- **"Everything past it is MINE" is the point — do not soften it back to "nobody owns it."**
+  Nobody-owns-it is a complaint about the org chart, and it lets the room off. The honest
+  version is that the responsibility on the far side of the seam is *yours*, and always was.
+  That is what earns the whole trap: you cannot offload the understanding of a thing you own.
+- Say *mine*, in the first person, about your own work. Not *"someone needs to own that"* —
+  the shift to third person is exactly the ivory-tower move this trap is about.
+- **The honest version of what you need:** enough to recognize where the seams are — and which ones matter. That's the fine print, and it is the answer to *"so AI writes everything AND I have to understand everything?"* No: the inside of the layer is still not your problem.
 -->
 
 ---

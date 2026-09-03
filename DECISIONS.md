@@ -1710,7 +1710,8 @@ nobody can decode wastes the payoff of the structure.
 
 **The connection.** Three things the deck teaches separately are the same shape:
 
-- A **seam** is where one thing's promise runs out and nobody owns what is past it (slide 17).
+- A **seam** is where one thing's promise stops, and what is past it belongs to you
+  (the cognitive-offloading slide; corrected from "nobody owns it" by D-83).
 - A **guardrail** is what we put at a seam to bound what crosses it. Code review is one.
   Blast radius is one. Authorization is one.
 - What a guardrail is actually worth is usually **independence** — a reading, a check or an
@@ -2007,6 +2008,37 @@ The replacement was edited with ImageGen and retains a real transparent backgrou
 
 ---
 
+### D-83 · The seam's far side is *mine*, not nobody's
+**Decided** 2026-09-03 · **Status** Active · **Corrects** the wording introduced in D-80,
+and the restatement inside D-76
+
+The seam definition read: *"A seam is where a layer's promise runs out — and nobody owns the
+other side."* It now reads:
+
+> **A seam is where a layer's promise stops. Everything past it is mine.**
+
+**Why the old wording was wrong, not just weaker.** *"Nobody owns the other side"* is a
+complaint about the org chart. It describes a gap and quietly implies somebody else should
+have filled it — which is the precise posture this trap exists to attack. The trap's claim is
+that offloading the *work* is good and offloading the *understanding* is not, and that only
+holds if the responsibility past the seam is **yours**. If it's nobody's, there is nothing to
+stay calibrated to and the trap has no teeth.
+
+**It also has to be first person.** *"Someone needs to own that"* is the same sentence in
+third person and it is the ivory-tower move by another name. The speaker says *mine*, about
+his own work, on a slide whose whole subject is his own judgment going stale.
+
+**What is unchanged:** the concession that makes the trap survivable. You still do not need
+to know the inside of any layer — the fine print now says so more plainly, and keeps the
+compiler line (*I still don't know what the compiler does in there*) as the proof that the
+demand is bounded. The examples stay spoken and stay pointed at the diagram's rungs (D-81).
+
+**Rejected:** *"and you own the other side."* Second person makes it an instruction to the
+room at the exact moment the speaker should be implicating himself (D-54 — the humor and the
+discomfort in this deck point at us, never at them).
+
+---
+
 ## G. Rejected — do not reopen without new information
 
 | Idea | Why it was rejected |
@@ -2038,3 +2070,5 @@ The replacement was edited with ImageGen and retains a real transparent backgrou
 | Shrinking a slide's type to make room for an inline anchor | If the anchor doesn't fit, it wanted its own slide (D-81) |
 | Labeling the closing questions with the trap claim alone | The understanding trap's claim is verbatim its own question; the line would repeat twice (D-82) |
 | Labeling them with the eyebrow name alone | The eyebrow was small and incidental; the claim is what the room saw and heard (D-82) |
+| "Nobody owns the other side" as the seam definition | A complaint about the org chart; it implies someone else should have filled the gap and leaves the trap toothless (D-83) |
+| "And you own the other side" | Second person instructs the room where the speaker should be implicating himself (D-83, D-54) |

@@ -524,6 +524,13 @@
   max-width: 40ch; text-wrap: balance;
 }
 .anchor.good { color: var(--good); border-top-color: var(--good-soft); }
+
+/* A two-sentence anchor needs room to break at the period rather than inside
+   the first clause. Opt in; the 40ch default is right for a single sentence. */
+.anchor.wide { max-width: 48ch; }
+
+/* Bold inside an anchor has to actually read as bold at this weight. */
+.anchor strong { font-weight: 800; }
 .anchor.trap { color: var(--trap); border-top-color: var(--trap-soft); }
 
 /* the second, quieter half of an anchor — the concession or the aside */
