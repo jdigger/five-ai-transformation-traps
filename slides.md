@@ -146,7 +146,7 @@ class: anchor-slide good
 <div class="line">Sometimes the answer is<br>more AI, much more aggressively.</div>
 
 <div class="fine">Easy isn't bad. Cheap isn't low quality. Nothing in the next hour is an argument for using less of this.</div>
-<div class="fine">It's understanding what the tradeoffs are.</div>
+<div class="fine">It's understanding what the trade-offs are.</div>
 
 <!--
 ~0:20
@@ -281,7 +281,7 @@ class: canvas-slide
 
 <div class="reveal-list">
 
-<div class="item" v-click="1"><span class="mark">→</span><span>A check derived from a different source<span class="note"><code>refundAmount &lt;= refundableBalance</code> — a ledger rule established independently of “prorated”</span></span></div>
+<div class="item" v-click="1"><span class="mark">→</span><span>A check derived from a different source<span class="note"><code>refundAmount &lt;= refundableBalance</code> — a ledger rule established independently of "prorated"</span></span></div>
 
 <div class="item" v-click="2"><span class="mark">→</span><span>Replay ninety days of real cancellations<span class="note">Compare what the code would pay against what finance actually paid</span></span></div>
 
@@ -547,11 +547,11 @@ That could be a code bug, process or documentation problem - whatever.
 - Read the first sentence, then pause.
 
 **[1]**
-> “We had one product problem, reported 516 times.”
+> "We had one product problem, reported 516 times."
 
 - Give **one product problem** its full weight.
 - Long pause. Do not explain the mechanism yet.
-- The work looked like hundreds of independent conversations only because we named the queue “support.”
+- The work looked like hundreds of independent conversations only because we named the queue "support."
 - Advance only after the room has completed the turn for itself.
 -->
 
@@ -573,7 +573,7 @@ This would show in the reports when asked.
 
 The failure is not that AI buried the evidence. It is what happened to the pressure to notice it.
 
-Before, 516 reports meant a growing queue, long waits, overwhelmed representatives, and support management asking for more people. The organization could feel the checkout problem even if it called that pain “support volume.”
+Before, 516 reports meant a growing queue, long waits, overwhelmed representatives, and support management asking for more people. The organization could feel the checkout problem even if it called that pain "support volume."
 
 Now those same reports are resolved in minutes. The dashboard is green. The pattern still appears in a report — but resolving the crisis the business metrics focused on no longer forces anyone to pay attention to the underlying issue.
 
@@ -641,7 +641,7 @@ class: canvas-slide
 <p/>
 <p/>
 <div class="reveal-list">
-<div class="item"><span class="mark">"</span><span>What assumptions did I bake into that question?<span class="note">“Resolve support tickets faster” already decided the product was fine and the queue was the problem.</span></span></div>
+<div class="item"><span class="mark">"</span><span>What assumptions did I bake into that question?<span class="note">"Resolve support tickets faster" already decided the product was fine and the queue was the problem.</span></span></div>
 <div class="item"><span class="mark">"</span><span>What am I treating as a constraint that's actually a choice?<span class="note">We treated the checkout flow as fixed. Nobody decided that — it just wasn't in the question.</span></span></div>
 <div class="item"><span class="mark">"</span><span>Reframe this problem without assuming my solution.<span class="note">Without that assumption, the goal is fixing checkout — not answering faster.</span></span></div>
 </div>
@@ -696,7 +696,7 @@ class: trap-slide trap-03
 <div class="trap-promise">Spot it. Then decide on purpose.</div>
 
 <div class="anchor trap" v-click="1">
-“I don't understand this” &rarr; working code.<br/>But no “Now I understand this.”
+"I don't understand this" &rarr; working code.<br/>But no "Now I understand this."
 </div>
 
 </div>
@@ -1566,4 +1566,35 @@ And keep doing that. Because this is going to move again next year.
 - Portrait source: Thomas Sowell Portrait (3x4 cropped), Internet Archive Book Images via Wikimedia Commons, 1964. Public domain in the United States. https://commons.wikimedia.org/wiki/File:Thomas_Sowell_Portrait_(3x4_cropped).jpg
 - Editorial treatment created with OpenAI ImageGen from the public-domain source portrait.
 [/Sources]
+
+# Supporting Notes
+
+**PREPARED ANSWERS** — parked here because the slide that used to hold them was cut (Q-10).
+Move them if a new final slide arrives.
+
+**"Doesn't this all assume today's AI stays unreliable?"**
+- No. Every question here gets *more* important with better models, because we'll grant more authority. "What can it do when it's wrong" is not a question about capability.
+
+**"Isn't this just engineers protecting their jobs?"**
+- The throughput trap explicitly says the same outcome may genuinely need fewer people, and that we should go measure it. I'd rather find that out honestly.
+
+**"So AI writes everything AND I have to understand everything?"**
+- No — offload aggressively. Keep understanding where the **seams** are and where the **consequences** are. Much smaller sets than "everything."
+
+**"Authorization doesn't solve prompt injection."**
+- **Completely correct.** Concede it immediately and without hedging — real mitigations exist and people are making real progress on them.
+- What authorization does is decide **how much a successful injection is worth**. That's a blast-radius argument, not a fix. **A prompt is not a security boundary.**
+- Note the shape: *"how do we stop the model being tricked?"* has already put the defense inside the model, which is the one place we can't fully enforce it. That's the solving-the-wrong-problem issue turning up in a security review.
+- Then get out: *"grab me afterwards, I'd genuinely enjoy that conversation, and it's a different talk."*
+
+**"Evidence doesn't decide — organizational power does."**
+- Fair. Evidence should arbitrate factual claims. Decisions also involve objectives, risk appetite, commitments. But seniority shouldn't make a factual claim unfalsifiable — and a junior with AI can still be spectacularly wrong.
+
+**"I'm a small business — I need to survive 18 months, not build a talent pipeline."**
+- Completely legitimate. Then the throughput trap is your trap: figure out what actually got faster in *your* pipeline before you staff to it.
+
+**"Does any of this change TDD?" (Q-08 — likely, it's an Agile room)**
+- Test-first was always partly a *don't-fool-yourself* mechanism: a test written before the implementation can't have been derived from it. AI makes that ordering **more** valuable, because derived-check contamination is now fast, fluent and voluminous. It also kills the oldest objection — that tests are expensive to write.
+- **The honest limit:** TDD gives independence from the *implementation*, nothing against a misread *requirement*. Write a test-first test encoding the misunderstanding and you're exactly as wrong. That's where the refund example lives.
+- **The concrete technique:** "write the implementation" then "now write the tests" in the same context is maximum contamination. Generating tests from the requirement in a **fresh context**, before the implementation exists, is meaningfully better evidence for the same effort.
 -->

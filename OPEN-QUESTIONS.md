@@ -295,6 +295,27 @@ screen invites a manager in the room to press it. The prepared answer refuses th
 defense and asks to measure instead (D-31) — which is honest but will not satisfy someone
 who wants reassurance.
 
+### Q-10 🔴 The deck no longer has a closing line, and the prepared answers are gone
+**Raised 2026-09-03.** The *"The goal isn't maximum AI. The goal is better systems."* slide
+was deleted, and it carried the entire **PREPARED ANSWERS** block with it — including the
+prompt-injection concession that had been moved there hours earlier when D-87 cut the
+security slides.
+
+**Two separate things went missing, and only one of them is a judgment call.**
+
+**a · The closing line.** The deck now ends on the Sowell quote. That may well be the better
+ending — it is the bookend, and the frame pays off there. But D-16 and D-78 describe the
+close as *quote → the goal isn't maximum AI → stop*, and the removed line was the one place
+the deck said what it was **for** rather than what to avoid. **Speaker's call.** Either
+restore it, or record the new ending and amend D-16/D-78 so the tracking files stop
+describing a slide that does not exist.
+
+**b · The prepared answers.** Not a judgment call — the deck has red-team positions
+(RESTART.md lists nine) and no longer has written answers to any of them. This is speaker
+reference material with no rhetorical cost, and it needs to live somewhere regardless of how
+(a) is resolved. **Restored to the Sowell slide's notes 2026-09-03**, under the sources
+block, and to be moved if a new final slide arrives.
+
 ### R-08 🟡 A security engineer will raise prompt injection, and the deck no longer pre-empts it
 **Raised in likelihood by D-87.** The slides that conceded this before it could be asked are
 cut, so the concession is now reactive and lives only in the prepared answers.

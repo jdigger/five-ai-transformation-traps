@@ -101,23 +101,28 @@ prevents narrative whiplash without requiring every trap to reuse the same proce
 
 ### Load-bearing — do not flatten
 
-- **Trap 1, slide 5** — the green build flips orange as the real rule lands; *"one check,
-  forty-seven times"* delivered pointing at `47 passing` (D-58).
-- **Trap 2, slides 10–13** — the support system must first feel unequivocally successful;
-  slide 11 establishes the repeated pattern; slide 12 gives the reclassification from
-  `516 support cases` to **one product problem reported 516 times** the whole frame; slide
-  13 makes explicit that the AI found the pattern while faster resolution
-  removed the organizational pressure to notice its cause (D-64, D-67).
-- **Trap 5, slide 28** — the authority ladder escalating one rung per click, cold.
-- **The close** — five questions on slide 33 → the talk itself as a brief case study →
-  Sowell callback → *"The goal isn't maximum AI."* **No re-summary after it** (D-16, D-78).
+**Referred to by name, not number.** Slide numbers in this file went stale three times in
+one day as slides were added and cut; anything that has to survive a reorder is named.
+
+- **The refund requirement slide** — the green build flips orange as the real rule lands;
+  *"one check, forty-seven times"* delivered pointing at `47 passing` (D-58).
+- **The support-automation run** — the system must first feel unequivocally successful; the
+  weekly total establishes the repeated pattern; the reclassification from `516 support
+  cases` to **one product problem reported 516 times** gets the whole frame; and the last of
+  them makes explicit that the AI found the pattern while faster resolution removed the
+  organizational pressure to notice its cause (D-64, D-67).
+- **The authority ladder** — escalating one rung per click, cold.
+- **The close** — the five questions → the talk itself as a brief case study → the Sowell
+  callback, which is now the last slide. **No re-summary after it** (D-16, D-78). The
+  *"The goal isn't maximum AI"* slide was removed 2026-09-03; see the open question about
+  what, if anything, the deck lands on after the quote (Q-10).
 
 ### Current state
 
-41 slides · ~48:45 planned. Every trap ends on its exact Monday question (D-61).
-Seventeen **anchors** put the deck's spoken qualifications and load-bearing lines on screen
-so it survives being shared as a link (D-80): ten inline, seven on slides of their own
-(D-81). The timing tally is unchanged — the anchors were always in the spoken track.
+40 slides · ~48:45 planned. Every trap ends on its exact Monday question (D-61).
+**Anchors** put the deck's spoken qualifications and load-bearing lines on screen so it
+survives being shared as a link (D-80): currently **nine inline and six on slides of their
+own** (D-81). Two were removed by the speaker on 2026-09-03 along with the closing slide.
 Opening through Trap 2 is presentation-quality.
 Traps 3–5 have had a structural pass but not a full narrative one. Nothing has been
 rehearsed against a clock (R-09) — **every timing number in this deck is a guess.**
