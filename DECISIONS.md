@@ -114,7 +114,7 @@ prevents narrative whiplash without requiring every trap to reuse the same proce
 
 ### Current state
 
-43 slides · ~50:45 planned. Every trap ends on its exact Monday question (D-61).
+41 slides · ~48:45 planned. Every trap ends on its exact Monday question (D-61).
 Seventeen **anchors** put the deck's spoken qualifications and load-bearing lines on screen
 so it survives being shared as a link (D-80): ten inline, seven on slides of their own
 (D-81). The timing tally is unchanged — the anchors were always in the spoken track.
@@ -453,6 +453,8 @@ rigidity, false rejections, maintenance, slower experimentation.
 thing that would metastasize into a framework (D-17) if given room.
 
 ### D-24 · Prompt injection lives inside Trap 2, one slide, as a *framing* problem
+**Status update 2026-09-03: Superseded by D-87** — the slide is cut; this material is now a
+prepared Q&A answer only. The guardrails below still govern how it is answered if raised.
 **Decided** pre-2026-08-23, implemented 2026-08-23 · **Status** Active
 
 The payoff is: *"How do we stop it being tricked?" already put the defense inside the
@@ -964,6 +966,7 @@ not necessarily a change, but a deliberate decision rather than a default.
 
 
 ### D-55 · The prompt-injection slide moves into Trap 5, between the ladder and its question
+**Status update 2026-09-03: Superseded by D-87** — the slide is cut entirely.
 **Decided** 2026-08-25 · **Status** Active
 **Resolves:** R-13. **Partially resolves:** R-12, R-16.
 
@@ -1701,8 +1704,9 @@ green tests is a picture the room already owns; *Trap 1* is a label they never l
 about the spoken track only, and it does not apply to the `~M:SS` timing cues.
 
 **Why this matters more as the deck compounds.** The traps are designed to build on each
-other, so the callbacks are load-bearing — the prompt-injection slide re-running Trap 2's
-mechanism inside a security review is the moment the five stop being a list. A callback
+other, so the callbacks are load-bearing. The strongest instance used to be the
+prompt-injection slide re-running the framing trap's mechanism inside a security review;
+D-87 cut that slide, and **the deck now has no on-stage cross-trap callback of that force.** A callback
 nobody can decode wastes the payoff of the structure.
 
 ### D-76 · Seams, guardrails and independence are one idea — speaker-only, never taught
@@ -1718,8 +1722,9 @@ nobody can decode wastes the payoff of the structure.
 - What a guardrail is actually worth is usually **independence** — a reading, a check or an
   enforcement that did not come from the thing being checked (slides 6, 7, 20).
 
-The pipeline arrows on slide 26 are seams. *"A prompt is not a security boundary"* is a seam
-sentence wearing Trap 5's clothes: it looks like a guardrail, and its promise does not hold.
+The pipeline arrows are seams. *"A prompt is not a security boundary"* is a seam sentence
+wearing the authority trap's clothes: it looks like a guardrail, and its promise does not
+hold. (That sentence is now a prepared answer rather than a slide — D-87.)
 And the engine explains why they fail quietly — the guardrail was often a **byproduct** of
 friction rather than a thing anyone budgeted for (D-73), so when the friction went, nothing
 announced that the guardrail had gone with it.
@@ -1739,7 +1744,7 @@ limit. Its job is to make individual lines sharper, not to become a slide.
 |---|---|
 | 17 | defines the seam, and the compiler and cloud rungs are two of them |
 | 26 | answers *"why didn't review get faster?"* — review is the guardrail, and independence is what it sells |
-| 30 | *"a prompt is not a security boundary"* |
+| — | *"a prompt is not a security boundary"* — kept as a Q&A answer after D-87 cut its slide |
 | 31–32 | blast radius, reversibility, accountability that scales with authority |
 
 **Open, and worth deciding before rehearsal:** if *accountability that scales with authority*
@@ -2146,6 +2151,50 @@ oversight on the one slide the room is most alert to.
 
 ---
 
+### D-87 · The prompt-injection slides are cut
+**Decided** 2026-09-03 · **Status** Active · **Supersedes D-24 and D-55**
+
+The two-slide prompt-injection sequence in the authority trap — the trusted/untrusted
+diagram and the *"A prompt is not a security boundary"* anchor — is removed. The ladder now
+hands off directly to the ten-thousand / one-hundred arithmetic. **41 slides · ~48:45.**
+
+**Why.** The material is a distraction from the core of the talk (speaker's call). The
+evidence was already in its own speaker notes, which opened *"NOT a security tutorial. The
+room will try to make it one"* and ended by telling the speaker to escape the topic —
+*"grab me afterwards, it's a different talk."* A slide that has to be defended against its
+own audience for two minutes is spending the deck's scarcest resource on an argument the
+deck is not making. The authority trap's claim is about **what a failure is allowed to
+reach**, and that claim does not need a specific attack to stand up.
+
+**What was genuinely lost, recorded so it is not rediscovered as a surprise:**
+- **The deck's strongest cross-trap callback.** *"How do we stop it being tricked?"* already
+  put the defense inside the model — the framing trap's mechanism, arriving in a security
+  review. D-76 called that kind of moment the point where the five stop being a list. There
+  is no on-stage replacement, and the remaining callbacks (the green dashboard, the
+  forty-seven tests) are weaker.
+- **The pre-emptive answer to the security engineer** (R-08). It is now reactive: the deck no
+  longer concedes the point before it is raised, so the concession has to be made well and
+  fast if it comes.
+- One of the deck's most quotable lines.
+
+**What replaces them:**
+- The ladder's note gains the handoff: *rung one is an email somebody else wrote, rung five
+  is money leaving the company.* This keeps the ladder's two ends in tension **without
+  needing an attacker** — the claim is inevitability, not malice, which is the honest version
+  anyway.
+- The full concession moves to the prepared answers on the closing slide, including *a prompt
+  is not a security boundary*, the blast-radius framing, and the escape line.
+
+**Rejected:** keeping the anchor slide alone, without the diagram. The line only means
+something after the trusted/untrusted setup; alone it is an assertion the room cannot check,
+and it would still invite the security discussion the cut exists to avoid.
+
+**Rejected:** moving the material earlier, into the framing trap where D-24 originally put it.
+D-55 already moved it out for a good reason — it spoiled the authority trap's question
+fifteen minutes early — and moving it back would trade one problem for the one before it.
+
+---
+
 ## G. Rejected — do not reopen without new information
 
 | Idea | Why it was rejected |
@@ -2184,3 +2233,5 @@ oversight on the one slide the room is most alert to.
 | Closing the throughput trap on the measure-the-constraint instruction alone | The instruction is the Monday action, but a bare instruction ends the trap on a chore (D-85) |
 | "Spot it. Then choose differently." as the trap promise | Misdescribes the authority trap, whose failure is silent and whose decision is made in advance (D-86) |
 | Five tailored trap promises, one per trap | Loses the recurring navigation surface D-65 exists to create (D-86) |
+| The prompt-injection slides | A distraction from the core; the slide's own notes warned the room would turn it into a security tutorial (D-87) |
+| Keeping "a prompt is not a security boundary" as a standalone slide | Without the trusted/untrusted setup it is an unverifiable assertion, and still invites the discussion (D-87) |

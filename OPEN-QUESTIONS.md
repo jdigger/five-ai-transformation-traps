@@ -295,10 +295,22 @@ screen invites a manager in the room to press it. The prepared answer refuses th
 defense and asks to measure instead (D-31) — which is honest but will not satisfy someone
 who wants reassurance.
 
-### R-08 ⚪ A security engineer will challenge the prompt-injection slide
-Most likely: *"authorization doesn't solve prompt injection."* Correct, and the deck says
-so. The answer is the blast-radius framing (D-24). The risk is being drawn into a security
-tutorial that costs five minutes the talk does not have.
+### R-08 🟡 A security engineer will raise prompt injection, and the deck no longer pre-empts it
+**Raised in likelihood by D-87.** The slides that conceded this before it could be asked are
+cut, so the concession is now reactive and lives only in the prepared answers.
+
+Most likely: *"authorization doesn't solve prompt injection."* Correct. The answer is the
+blast-radius framing (D-24's guardrails still govern how to give it), then the escape line.
+
+**Two risks, not one.** The old one stands — being drawn into a security tutorial that costs
+five minutes the talk does not have. The new one is that a challenge the deck used to answer
+in advance now arrives unanswered, in front of the room, and has to be conceded fast and
+without hedging or it reads as a gap the speaker had not considered.
+
+**Rehearse the concession.** It is short and it has to be fluent: authorization does not solve
+it · real mitigations exist and are improving · what authorization decides is how much a
+successful injection is *worth* · a prompt is not a security boundary · *"grab me
+afterwards, it's a different talk."*
 
 ### R-09 🔴 No timing estimate has ever been rehearsed
 Every number in Q-01's table is a guess made while writing. The whole timing model is
