@@ -1698,6 +1698,46 @@ other, so the callbacks are load-bearing — the prompt-injection slide re-runni
 mechanism inside a security review is the moment the five stop being a list. A callback
 nobody can decode wastes the payoff of the structure.
 
+### D-76 · Seams, guardrails and independence are one idea — speaker-only, never taught
+**Decided** 2026-09-02 · **Status** Active · **Sits beside:** the engine (speaker-only, D-14)
+**Constrained by:** D-17 (hard cap on frameworks)
+
+**The connection.** Three things the deck teaches separately are the same shape:
+
+- A **seam** is where one thing's promise runs out and nobody owns what is past it (slide 17).
+- A **guardrail** is what we put at a seam to bound what crosses it. Code review is one.
+  Blast radius is one. Authorization is one.
+- What a guardrail is actually worth is usually **independence** — a reading, a check or an
+  enforcement that did not come from the thing being checked (slides 6, 7, 20).
+
+The pipeline arrows on slide 26 are seams. *"A prompt is not a security boundary"* is a seam
+sentence wearing Trap 5's clothes: it looks like a guardrail, and its promise does not hold.
+And the engine explains why they fail quietly — the guardrail was often a **byproduct** of
+friction rather than a thing anyone budgeted for (D-73), so when the friction went, nothing
+announced that the guardrail had gone with it.
+
+**Placing guardrails is a judgment call, and that judgment has to scale.** Which seams
+matter, and what is proportionate at each, cannot be answered by adding reviewers. The deck
+already answers it, on slide 31: *the point is not humans supervising machines — that
+framing loses eventually; the point is designing accountability that scales with authority.*
+
+**This is speaker understanding. Do not teach it.** Naming "seams and guardrails" as a model
+on stage builds precisely the taxonomy D-17 bans, and the deck is at its conceptual load
+limit. Its job is to make individual lines sharper, not to become a slide.
+
+**Where it already pays off, without being named:**
+
+| Slide | What the idea is doing |
+|---|---|
+| 17 | defines the seam, and the compiler and cloud rungs are two of them |
+| 26 | answers *"why didn't review get faster?"* — review is the guardrail, and independence is what it sells |
+| 30 | *"a prompt is not a security boundary"* |
+| 31–32 | blast radius, reversibility, accountability that scales with authority |
+
+**Open, and worth deciding before rehearsal:** if *accountability that scales with authority*
+is the deck's real thesis, it currently gets its only statement as one sentence inside a
+dense block on the second-to-last content slide.
+
 ## G. Rejected — do not reopen without new information
 
 | Idea | Why it was rejected |

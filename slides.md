@@ -1367,6 +1367,14 @@ Same question we asked about those forty-seven passing tests — could that chec
 - You'll get: *"implementation time dropped, but review wait increased, concentrated in changes touching these three components."*
 - **That is a hypothesis, not a finding.** Go check it with telemetry. Same rule as Trap 1 — but say it as *the same question we asked about those forty-seven passing tests* (D-75: never the trap number out loud).
 
+**IF ASKED "WHY DIDN'T REVIEW GET FASTER? AI CAN REVIEW CODE." — somebody will, and it is the best question in this trap:**
+- **Concede it instantly.** It can review, it does review, and it is good at it. Nothing here claims otherwise — we said as much when we talked about it arguing with your design at eleven at night.
+- The point is what review is *for*. It was never only labor. It is the guardrail at that handoff, and what it actually supplies is **independence** — a second reading that did not come from the thing being reviewed.
+- AI reviewing its own output, in the same session, inherits the same framing, the same words, the same assumptions. That is the identical limit we already admitted about pairing. Faster review of that kind is not more evidence; it is the same evidence, arriving sooner.
+- **So AI can absorb the labor half and leave the guardrail half exactly where it was** — which is precisely why coding time falls while the waiting grows.
+- What buys it back is what always bought it back: a fresh context, a different model, a check sourced from somewhere else. *The same question we asked about those forty-seven passing tests.*
+- **Do not build this into a model on stage** (D-17, D-76). Answer the question, then move.
+
 → Before we decide what to do with the new capacity, name the decision.
 -->
 
@@ -1377,7 +1385,7 @@ class: q-slide
 
 # What got faster — and where should that capacity go?
 
-## Capacity is not a plan. Measure where the constraint moved before deciding how to spend it.
+## Capacity is not a plan.<br/>Measure where the constraint moved before deciding how to spend it.
 
 <!--
 ~0:30
