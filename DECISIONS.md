@@ -106,12 +106,12 @@ prevents narrative whiplash without requiring every trap to reuse the same proce
   13 makes explicit that the AI found the pattern while faster resolution
   removed the organizational pressure to notice its cause (D-64, D-67).
 - **Trap 5, slide 28** — the authority ladder escalating one rung per click, cold.
-- **The close** — five questions on slide 30 → Sowell callback → *"The goal isn't maximum AI."* **No
-  re-summary after it** (D-16).
+- **The close** — five questions on slide 33 → the talk itself as a brief case study →
+  Sowell callback → *"The goal isn't maximum AI."* **No re-summary after it** (D-16, D-78).
 
 ### Current state
 
-35 slides · ~50:00 planned. Every trap ends on its exact Monday question (D-61).
+36 slides · ~50:45 planned. Every trap ends on its exact Monday question (D-61).
 Opening through Trap 2 is presentation-quality.
 Traps 3–5 have had a structural pass but not a full narrative one. Nothing has been
 rehearsed against a clock (R-09) — **every timing number in this deck is a guess.**
@@ -1737,6 +1737,67 @@ limit. Its job is to make individual lines sharper, not to become a slide.
 **Open, and worth deciding before rehearsal:** if *accountability that scales with authority*
 is the deck's real thesis, it currently gets its only statement as one sentence inside a
 dense block on the second-to-last content slide.
+
+### D-77 · Slide 20's headline was wrong: XP was already "on purpose"; the new threat is extraction
+**Decided** 2026-09-03 · **Status** Active · **Amends:** D-73 (which amended D-58)
+
+**The problem, raised by the speaker.** *"We used to get independence by accident"* (D-73)
+undersells what XP actually was. D-59, on the very same slide, argues the opposite: XP's
+pairing, TDD, on-site customer and CI were **deliberate, expensive machinery** — the room
+spent real effort getting people deeper into the loop specifically to manufacture
+independence. Only the *bonus* on top of that — different people, different days, the time
+things took — was ever accidental. The old headline collapsed both into one word and
+mislabeled the deliberate half.
+
+**What was also missing.** The slide's "two things changed" beat treated AI as making the
+old machinery cheap again (good) and removing the accidental friction bonus (bad) — but
+understated the bigger change: AI is starting to pull the **people** those practices
+depended on out of the loop entirely — the second reader, the test writer, the customer in
+the room. That is not friction going away; it is the machinery's load-bearing part leaving.
+
+**The fix.** New on-screen headline, XP unnamed (stays a spoken lineage per D-59):
+
+> We spent decades getting people deeper into the loop. Now AI is pulling them out.
+
+Spoken track reframed to match: XP was deliberate machinery, abandoned for cost, not
+because it didn't work (unchanged from D-59). What's new is not "the accident stopped" —
+it's AI extracting the people the machinery was built around, on top of the friction loss.
+Closing line changes what "on purpose" means: not reviving the old practices now that
+they're cheap, but **deliberately designing new mechanisms for a process with fewer people
+in it**.
+
+**What stays.** The honest limit (AI-as-pair is a partial substitute, not a replacement),
+the ban on an on-screen XP checklist (D-59), and the transition into slide 21's judgment
+beat.
+
+**Also fixed:** the D-58 pull-quote inside slide 20's Supporting Notes, updated to state the
+"already on purpose, now extraction" claim rather than the superseded "by accident" one.
+
+### D-78 · The close reveals that the audience has been watching another case study
+**Decided** 2026-09-03 · **Status** Active · **Extends:** D-09, D-16
+
+After the five-question rollup and before the Sowell callback, one spare slide reveals:
+*"One last case study. This talk."* The speaker briefly names the lived irony: AI challenged
+blind spots and made excellent decisions while also making subtle choices the speaker did
+not always notice and occasionally producing elegant examples that failed against lived
+experience.
+
+**Why it belongs.** The production of the talk demonstrates the argument without inventing
+another example. The speaker offloaded substantial work but retained responsibility through
+repeated passes until the result was understood, believed and defensible. Version control,
+preserved conversations, easy reversal and low consequences made broad AI use a reasonable
+trade-off here. That is the authority question applied proportionately, not an exception to
+it, and it hands directly into Sowell.
+
+**Hard limit.** This is a ~0:45 BTW, not a sixth argument. The live track does not teach a
+red-team method, compare providers, explain correlated blind spots or enumerate the five
+traps. It ends on the self-deprecating *"Apparently this talk needed one more late-breaking
+example,"* lets the laugh land, and advances to *"Back where we started."*
+
+**Rejected:** placing the material inside Trap 5, where it would interrupt the clean move
+from the authority question into the five-question rollup and make an all-five callback
+sound like merely another authority example. Also rejected: *"Both are true"* on screen;
+the contradiction is already evident and stating it is too on the nose.
 
 ## G. Rejected — do not reopen without new information
 

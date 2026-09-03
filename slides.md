@@ -905,6 +905,8 @@ What we can do is offload the implementation **effort** without disconnecting fr
 But remember that the moment you stop touching real code, real incidents, real production - your judgment stops being calibrated with reality.
 
 And we already have a name for that role: the ivory tower architect. 🤮
+
+{side note: I've noticed that while developing the talk. The more powerful model, Opus, has made a lot more decisions for me than Sonnet is willing to. Often, they're great decisions. But I've also had to constantly pull it back to lived reality.}
 -->
 
 ---
@@ -957,15 +959,15 @@ layout: default
 class: statement-slide
 ---
 
-# We used to get independence **by accident.**
+# We spent decades getting people **deeper into the loop.**
 
-# Now you have to build it **on purpose.**
+# Now AI is pulling them **out.**
 
 <!--
 ~1:15
 
 
-Look at what XP actually was. It was **independence machinery**, installed along the whole path.
+Look at what XP actually was. It was **independence machinery**, installed along the whole path — and it took real, deliberate effort to build.
 
 How many of you have done XP?
 
@@ -981,11 +983,11 @@ We didn't abandon those practices because they didn't work. We abandoned them be
 
 --
 
-Now two things have changed at once, and they push in the same direction.
+Now something bigger is happening than the practices just getting affordable again.
 
-AI cut the price of that machinery. And AI removed the accidental independence friction used to hand us — different people, different days, the time things took. Nobody was paying for that on purpose, which is exactly why nobody noticed it stop.
+AI isn't only cutting the price of that machinery. It's starting to pull the **people** out of the loop those practices were built around — the second reader, the test writer, the customer in the room. Nobody decided to do that. It's just what happens when AI can do the step faster than finding a person to do it.
 
-More affordable and more necessary. At the same time.
+The accidental friction that used to hand us a bonus dose of independence — different people, different days, the time things took — is gone too. But that was never the main event. The people leaving the loop is.
 
 --
 
@@ -997,15 +999,17 @@ It is superb for attention, for momentum, for unfamiliar territory. It is a **pa
 
 Same with generated tests. Excellent — and a thousand tests you never read is not evidence.
 
+So "on purpose" doesn't mean reviving the old practices now that they're cheap again. It means deliberately designing new ways to put independence back into a process that has fewer people in it than it used to.
+
 
 # Supporting Notes
 
 - **This is not "go do XP."** XP is a lineage here, not a practice checklist (D-59). The room should leave understanding *why* those practices existed, not with an adoption list.
-- The four practices stay **spoken**, deliberately. Putting them on screen turns the argument into a checklist.
-- **The claim that makes this qualitative, not quantitative** (D-58):
-> "Independence used to arrive as a byproduct — different people, different days, the time it took. Nobody budgeted for it, so nobody noticed when it stopped arriving."
+- The four practices — and the word "XP" itself — stay **spoken**, deliberately (D-77). The on-screen title never names XP; the slide's claim is the extraction, not the lineage.
+- **The claim that makes this qualitative, not quantitative** (D-58, reframed D-77):
+> "We already knew how to build independence on purpose — that's what XP's practices were. What's new is that AI is pulling the people those practices depended on out of the loop, not just removing the friction that used to hand us a bonus dose of it for free."
 
-- Speed did not merely produce more of the same evidence. It **removed the accidental mechanism that used to produce independent evidence**, and nobody decided to remove it.
+- Speed did not merely produce more of the same evidence. It **removed the accidental friction that used to produce independent evidence, and it's starting to remove the people too** — and nobody decided to do either.
 - **Do not skip the honest limit.** It is what stops this becoming evangelism. AI inherits your framing, so it is a partial substitute for independence, never a replacement.
 
 → So which questions can reality settle, and which ones are left?
@@ -1737,7 +1741,7 @@ AI failure looks like this: the operation completed successfully, and what it di
 
 We already watched that happen tonight. The support dashboard was green too.
 
-For these systems, "nothing threw an exception" is an especially weak definition of success.
+For these systems, "nothing threw an exception" is an especially weak definition of success akin to "it compiles."
 
 **Can we undo it?** Reversibility buys you more than almost any control you can build.
 
@@ -1833,6 +1837,36 @@ If one of them makes you stop and ask a better question a month from now, this w
 **[5]** *What can it do when it's wrong?* — authority is the thing that changed, not intelligence.
 
 > If one of these makes you stop and ask a better question a month from now, this was worth your evening.
+-->
+
+---
+layout: default
+class: statement-slide
+---
+
+# One last case study.
+
+# **This talk.**
+
+<!--
+~0:45
+
+One last thing I realized today — because of course it was today.
+
+You've been watching another case study.
+
+I built this talk with AI. Extensively. It challenged my blind spots and made excellent decisions. It also sometimes made choices I didn't notice, or produced elegant examples that didn't survive contact with what I'd lived.
+
+I offloaded a lot of work. I did not offload responsibility. I made pass after pass until this became something I understand, believe, and am willing to defend.
+
+That was a reasonable trade-off here: every change is version controlled, mistakes are easy to undo, and the blast radius is a worse slide — not a wire transfer.
+
+Apparently this talk needed one more late-breaking example.
+
+# Supporting Notes
+
+- **Keep this a BTW, not a sixth argument.** Do not explain red-teaming, model switching, independence, or proportional controls; the room has the vocabulary already.
+- Let the laugh land, then advance to Sowell: *"Back where we started."*
 -->
 
 ---
