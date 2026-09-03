@@ -849,17 +849,7 @@ class: anchor-slide
 
 We can't simply say "AI writes the code, and we provide the judgment." As we've talked about repeatedly, AI participates in judgment too.
 
-What we *can* do is offload the implementation **effort** without disconnecting from the implementation **evidence**.
-
 And we already have a name for that role: the ivory tower architect. 🤮
-
-# Supporting Notes
-
-- **This is the answer to the working developer's objection**: *"so AI writes everything AND I have to understand everything?"* No. Offload the effort aggressively; stay attached to the evidence.
-- **The ivory-tower line is spoken, not on the slide.** It's a laugh and it belongs to the room.
-- On juniors, if you want it here: some traditional junior work really is getting less valuable — boilerplate, routine implementation, basic debugging. But there is a difference between juniors producing junior artifacts and engineers developing judgment. *"Ask, generate, tests pass, merge"* does not produce the second one.
-
-→ So which questions can reality settle, and which ones are left?
 -->
 
 ---
@@ -892,7 +882,7 @@ Use judgment for what it can't.
 
 We're at an Agile Meetup — does anybody recognize this?
 
-Twenty-five years of: we don't know everything up front, so build feedback loops, ship working systems, let them produce evidence, learn, adapt.
+A quarter century of: We don't know everything up front, so build feedback loops, ship working systems, let them produce evidence, learn, adapt.
 
 AI makes that argument a whole lot stronger.
 
@@ -930,7 +920,10 @@ How many of you have done XP?
 
 As a developer, I LOVED it. Sometimes it was annoying, but worth the trade-offs. My management was good with it because we crushed it on results — but they had to constantly defend it to their management.
 
-- Pair programming: two readers, two sets of priors. TDD: a check written before the implementation, so it can't just rubber-stamp what you built. On-site customer: the person who owns the meaning, right there. Collective ownership and CI: continuous independent verification before it ever touches production.
+- Pair programming: two readers, two sets of priors.
+- TDD: a check written before the implementation, so it can't just rubber-stamp what you built.
+- On-site customer: the person who owns the meaning, right there.
+- Collective ownership and CI: continuous independent verification in an environment before it ever touches production.
 
 But all of that was expensive. Pairing costs two salaries at one keyboard. TDD costs time up front. An on-site customer costs a specialist devoting their time to us.
 
@@ -938,50 +931,15 @@ That's why most shops quietly stopped.
 
 We didn't abandon those practices because they didn't work. We abandoned them because we couldn't afford them.
 
---
+[click]
 
 Now something bigger is happening than the practices just getting affordable again.
 
-AI isn't only cutting the price of that machinery. It's starting to pull the **people** out of the loop those practices were built around — the second reader, the test writer, the customer in the room. Nobody decided to do that. It's just what happens when AI can do the step faster than finding a person to do it.
+AI isn't only cutting the price of that machinery. It's starting to pull the **people** out of the loop those practices were built around — the second reader, the test writer, the customer in the room.
 
-The accidental friction that used to hand us a bonus dose of independence — different people, different days, the time things took — is gone too. But that was never the main event. The people leaving the loop is.
-
---
+The friction gave us a bonus dose of independent review.
 
 But there are trade-offs, as always.
-
-[click]
-
-AI as a pair partner is not a second person. A human pair brings genuinely different priors. AI in your session inherits your framing, your words, your assumptions. That's the independence problem again, wearing a friendly face.
-
-It is superb for attention, for momentum, for unfamiliar territory. It is a **partial** substitute. Not a replacement.
-
-So the process has fewer people in it than it used to, and we haven't said what goes in their place. Hold on to that one.
-
-# Supporting Notes
-
-- **This is not "go do XP."** XP is a lineage here, not a practice checklist (D-59). The room should leave understanding *why* those practices existed, not with an adoption list.
-- The four practices — and the word "XP" itself — stay **spoken**, deliberately (D-77). The on-screen title never names XP; the slide's claim is the extraction, not the lineage.
-- **The claim that makes this qualitative, not quantitative** (D-58, reframed D-77):
-> "We already knew how to build independence on purpose — that's what XP's practices were. What's new is that AI is pulling the people those practices depended on out of the loop, not just removing the friction that used to hand us a bonus dose of it for free."
-
-- Speed did not merely produce more of the same evidence. It **removed the accidental friction that used to produce independent evidence, and it's starting to remove the people too** — and nobody decided to do either.
-
-**[1] anchor — the honest limit, now on screen (D-80)**
-- **Do not skip it.** It is what stops this slide becoming evangelism, and it is the one line a link-follower needs to see the trade-off rather than a complaint.
-- The anchor states the limit only. **It does not resolve the slide** — see below.
-
-**END ON A FORWARD-LEAN, NOT A RESOLUTION.** This slide used to close by answering itself —
-*"'on purpose' means deliberately designing new ways to put independence back into a process
-that has fewer people in it."* That answer now belongs to the authority arithmetic, where the
-ten-thousand / one-hundred numbers prove *why* another pair of eyes was never the replacement.
-Here, just name the hole and leave it open: fewer people in the loop, nothing said yet about
-what goes in their place. **Do not restore the resolution** — paying it twice costs the later
-slide its hinge. The anchor is a limit, not an answer; keep it that way.
-- Resist the urge to soften *"hold on to that one"* into a promise about what's coming. The room
-  should feel the gap, not be told there's an answer scheduled.
-
-→ So which questions can reality settle, and which ones are left?
 -->
 
 ---
@@ -1034,29 +992,9 @@ Not to confirm the plan. To attack it.
 
 [click]
 
-And notice what AI did to the other side of this. It made asking **bad** questions cheap too. Irrelevant critiques. Prototypes nobody needed.
+AI made asking **bad** questions cheap, too. Irrelevant critiques. Prototypes nobody needed.
 
 Old assumptions about what's cheap and what's expensive have moved.
-
-The scarce thing now often isn't answers. It's deciding which questions deserve your attention at all.
-
-Which practices, how much, and where — that's judgment, and it always was.
-
-
-# Supporting Notes
-
-- **This slide is what earns Trap 3's place** around the XP material. Without it, slides 19–20 read as an Agile interlude. Here the argument comes home: everything reality can't cheaply settle is judgment, and judgment is where slide 18's **"Challenge my understanding"** is the tool.
-- **Say the callback out loud.** The room saw that phrase on the two-modes slide; name it again here so the connection is explicit rather than implied.
-
-**[1]** The right column is the one to slow down on. The left is already intuitive to this room.
-- **The qualification a senior architect will nail you on:** not every question is experimentally answerable. Concede it before they raise it.
-
-**[2]** AI made bad questions cheap too.
-> The scarce thing now isn't answers. It's deciding which questions deserve your attention at all.
-
-- **Do not turn this into a framework.** Two lanes, named once, then move (D-17).
-
-→ So the Monday question for this trap.
 -->
 
 ---
@@ -1072,22 +1010,11 @@ class: q-slide
 ~0:30
 
 
-So, Monday.
+This is not "did I write the code myself?" — I don't care.
 
-- this is not "did I write the code myself?" — I genuinely don't care about that
-- it's whether I can still test my mental model against what the system actually does
-- offload the work. Stay close enough to the evidence to keep your judgment calibrated.
+Can I test my mental model against what the system actually does? That I DO care about.
 
-
-# Supporting Notes
-
-- **Pause. This is the conclusion of Trap 3.**
-> Am I understanding faster — or avoiding understanding?
-
-- This is not "did I write the code myself?"
-- It is whether I can still test my mental model against what the system actually does.
-
-→ Suppose all of this works and we really are dramatically faster. Now what?
+Offload the work, but stay close enough to the evidence to keep your judgment calibrated.
 -->
 
 ---
@@ -1118,21 +1045,9 @@ Now — and let me say this immediately, before half of you write me off —
 
 [click]
 
-**sometimes more is exactly what you should do.**
-
 This is not an anti-productivity talk. I like shipping things.
 
-But "we got faster" and "we should therefore do more of the same thing" is a leap. And nobody is checking it.
-
-# Supporting Notes
-
-- **QUALIFY IMMEDIATELY AND OUT LOUD:** *"And sometimes more is exactly what you should do."*
-- Otherwise this reads as anti-productivity and half the room stops listening.
-
-**[1] anchor — the qualification, now on screen (D-80)**
-- This title is the most misreadable in the deck out of context, and the deck gets shared. The qualification no longer depends on being in the room.
-- **Click it early — right after the title lands, before the objection forms.** It is not a terminal beat here; it is the second half of the title.
-- Say it anyway. The slide carrying it is insurance, not delivery.
+But "we got faster" and "we should therefore do more of the same thing" is a leap.
 -->
 
 ---
@@ -1147,14 +1062,13 @@ class: statement-slide
 <!--
 ~2:00
 
-
 Say implementation capacity goes up fifty percent.
 
 The automatic response is fifty percent more stories. More PRs. More features.
 
-And maybe! Maybe that's exactly where the value is. I'm not ruling it out.
+And that may well be right. I'm not ruling it out.
 
-But notice that nobody put the other options on the table. Every one of these spends the same capacity — so choosing one is choosing against the rest.
+But that fifty percent is one pool of hours, and it gets spent once. So before we spend it, let me say some of the other things out loud.
 
 We could build three prototypes before committing to one.
 
@@ -1162,20 +1076,39 @@ Review was already the bottleneck, and we just made it dramatically worse.
 
 Maybe integration is the actual problem.
 
-Maybe customers don't want more features — they want the three we already have to work properly.
+Maybe customers don't want more features — they want the three we already have to work properly. (Like the product problem we noted before.)
 
 Maybe we can finally fix that operational thing we've been ignoring for two years.
 
-Or — and here it comes — maybe the same business outcome now genuinely needs fewer people.
+Or... maybe the same business outcome now genuinely needs fewer people.
 
-I'm not going to dodge that last one.
+--
 
+Every one of those is drawing on the same fifty percent. There's one pool and more than one thing to do with it, so picking any one of them is declining the others. Not because they're bad ideas — just because the hours are already spoken for.
+
+So the uncomfortable part isn't that we chose more features. That might be exactly right.
+
+It's that we never actually chose. Nobody wrote this list down. "More stories" didn't win an argument — it won by default, because it was the only option anybody said out loud.
 
 # Supporting Notes
 
-- **The Sowell thread surfaces here. Do not name it.** These options are competing claims on
-  one resource — say that they compete, and move. Never say "trade-off" on this slide, never
-  reach for the quote, and do not explain the engine (D-09, D-14, D-17).
+**WHY THE LIST COMES BEFORE THE CLAIM.** *"Choosing one is choosing against the rest"* used to
+be said up front, and it landed as abstract — the room had nothing concrete for *"the rest"*
+to point at yet. Say the options first, then the claim about them. The sentence only has
+teeth once there are five real things sitting on the table.
+
+**Land the closing move, it is the whole slide:** the failure is not the choice, it is that
+no choice was made. An unmade decision wearing the costume of an obvious one.
+
+- **Say "one pool of hours, spent once."** Concrete and countable. Do not reach for
+  "allocation," "opportunity cost," or "zero-sum" — wrong register for this room (D-07).
+- **The Sowell thread surfaces here. Do not name it** (D-09, D-14, D-17). These options are
+  competing claims on one resource — show that they compete and move on. **Never say
+  "trade-off" on this slide, and never reach for the quote.** It gets paid at the close.
+- **Do not dodge the last option.** Fewer people is on the list because it belongs on the
+  list. Say it plainly and let it sit; the next slide is where it gets answered.
+- Keep the pace brisk through the five. They are a list, not five arguments — the room should
+  feel the pile growing, not evaluate each one.
 -->
 
 ---
@@ -1189,11 +1122,11 @@ class: statement-slide
 ~2:30
 
 
-There it is. Somebody in your organization is already saying this, in a meeting you weren't invited to.
+Somebody in your organization is already saying this, in a meeting you weren't invited to.
 
-And I want to be clear: **this is a legitimate question.** It is not hostile.
+**This is a legitimate question.**
 
-You're a CFO. Engineering is your largest line item. The engineers are telling you they're twice as fast. You would be negligent not to ask.
+You're a CFO. Engineering is your largest line item. The engineers are telling you they're twice as fast because of this really, really cool. You would be negligent not to ask.
 
 --
 
