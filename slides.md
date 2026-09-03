@@ -1851,7 +1851,7 @@ class: statement-slide
 <!--
 ~0:45
 
-One last thing I realized today — because of course it was today.
+One last thing I realized today — because, of course, it was today.
 
 You've been watching another case study.
 
@@ -1863,10 +1863,7 @@ That was a reasonable trade-off here: every change is version controlled, mistak
 
 Apparently this talk needed one more late-breaking example.
 
-# Supporting Notes
-
-- **Keep this a BTW, not a sixth argument.** Do not explain red-teaming, model switching, independence, or proportional controls; the room has the vocabulary already.
-- Let the laugh land, then advance to Sowell: *"Back where we started."*
+But now, back to where we started...
 -->
 
 ---
