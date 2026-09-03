@@ -1665,6 +1665,8 @@ We did this once already. At internet scale, checking each transaction by hand s
 
 Same move now. What's different is what we're placing it on: not who can call an endpoint, but what an agent is allowed to do when it's wrong.
 
+And AI can build much of that side itself — the checks, the monitoring, the detection. This was never humans supervising machines.
+
 Authority and oversight should grow together. Right now we are very, very good at scaling one of them.
 
 
@@ -1733,6 +1735,8 @@ Three follow-ups — the same ones you already use for everything else.
 
 AI failure looks like this: the operation completed successfully, and what it did was wrong. Nothing threw. Every dashboard is green.
 
+We already watched that happen tonight. The support dashboard was green too.
+
 For these systems, "nothing threw an exception" is an especially weak definition of success.
 
 **Can we undo it?** Reversibility buys you more than almost any control you can build.
@@ -1744,8 +1748,6 @@ And do not gold-plate this. Controls aren't free either — latency, flexibility
 If the consequence is small and reversible, let the system move. "Yeah, that might break, and we're fine with that" is a completely legitimate engineering conclusion.
 
 Deliberately accepting risk **is** engineering.
-
-I don't want to replace AI maximalism with governance maximalism.
 
 
 # Supporting Notes
@@ -1760,6 +1762,7 @@ I don't want to replace AI maximalism with governance maximalism.
 - **How bad is it?** A wrong draft in a queue is not a wrong wire transfer.
 - **Will we notice?** — dwell here. Our entire monitoring tradition is built on things that break *loudly*. Exception, crash, timeout, p99.
 > AI failure looks like: the operation completed successfully, and what it did was wrong. Nothing threw. Every dashboard is green.
+- **Name the callback** (D-75): *the support dashboard was green too.* Same image as the checkout defect, deliberately — this is where Trap 2 compounds into Trap 5. Say it once and move; do not re-explain the support story.
 - For AI systems, "nothing threw an exception" is an especially weak definition of success.
 - **Can we undo it?** Reversibility buys you more than almost any control does.
 
@@ -1767,6 +1770,7 @@ I don't want to replace AI maximalism with governance maximalism.
 - Controls aren't free either — latency, flexibility, engineering time, customer experience.
 - If the consequence is small and reversible, let the system move. *"Yeah, that might break, and we're fine with that"* is a legitimate engineering conclusion. **Deliberately accepting risk is engineering.**
 > I don't want to replace AI maximalism with governance maximalism.
+- **End on *deliberately accepting risk is engineering*.** The maximalism line is a guard against being misheard, and the paragraph above it already does that work — closing on the guard ends the trap defensively. Keep it in reserve for Q&A.
 
 → Five traps. Five questions.
 -->
