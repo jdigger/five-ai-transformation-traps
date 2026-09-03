@@ -165,7 +165,7 @@ class: trap-slide trap-01
 
 # A Great Answer Doesn't Mean You're Right
 
-<div class="trap-promise">Spot it. Then choose differently.</div>
+<div class="trap-promise">Spot it. Then decide on purpose.</div>
 
 </div>
 
@@ -387,7 +387,7 @@ class: trap-slide trap-02
 
 # AI Can Solve the Wrong Problem Really Well
 
-<div class="trap-promise">Spot it. Then choose differently.</div>
+<div class="trap-promise">Spot it. Then decide on purpose.</div>
 
 <div class="anchor good" v-click="1">
 Assume the answer is completely, verifiably right.
@@ -693,7 +693,7 @@ class: trap-slide trap-03
 
 # Are You Understanding Faster — or Avoiding Understanding?
 
-<div class="trap-promise">Spot it. Then choose differently.</div>
+<div class="trap-promise">Spot it. Then decide on purpose.</div>
 
 <div class="anchor trap" v-click="1">
 “I don't understand this” &rarr; working code.<br/>But no “Now I understand this.”
@@ -1028,7 +1028,7 @@ class: trap-slide trap-04
 
 # Faster Doesn't Mean You Should Do More
 
-<div class="trap-promise">Spot it. Then choose differently.</div>
+<div class="trap-promise">Spot it. Then decide on purpose.</div>
 
 <div class="anchor good" v-click="1">
 And sometimes more is exactly what you should do.
@@ -1261,7 +1261,7 @@ class: trap-slide trap-05
 
 # When AI Gets It Wrong, What Is It Allowed To Do?
 
-<div class="trap-promise">Spot it. Then choose differently.</div>
+<div class="trap-promise">Spot it. Then decide on purpose.</div>
 
 </div>
 
@@ -1302,9 +1302,9 @@ Same model. Same error rate. What changed is <strong>authority</strong>.
 </div>
 
 <!--
-~2:30 across the reveals. Go slowly. Let each one land.
+~2:30 
 
-Same product. Same model. Same prompt, more or less.
+Back to issuing refunds.
 
 Read the customer's email.
 

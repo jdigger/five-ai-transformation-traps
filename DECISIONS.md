@@ -1381,9 +1381,10 @@ palette and teal constructive palette.
 
 The cover and five trap openers use coordinated flat editorial illustrations of a capable
 engineer moving through visible hazards. Trap slides sit on a warm light ground, retain a
-coral act-break rail, name both the numbered trap and its kind, and repeat the promise:
+coral act-break rail, name both the numbered trap and its kind, and repeat the promise
+(reworded by D-86):
 
-> Spot it. Then choose differently.
+> Spot it. Then decide on purpose.
 
 Each illustration makes the specific mechanism visible: correlated checks, the wrong
 target, speed skipping understanding, throughput hitting a bottleneck, and authority
@@ -2101,6 +2102,50 @@ it; a bare instruction closes the trap on a chore.
 
 ---
 
+### D-86 · The trap promise is *"Spot it. Then decide on purpose."*
+**Decided** 2026-09-03 · **Status** Active · **Rewords the promise in D-65**
+
+All five trap openers carried *"Spot it. Then choose differently."* They now carry
+**"Spot it. Then decide on purpose."**
+
+**Why the old one was wrong, and specifically wrong for the authority trap.** *"Choose
+differently"* describes catching yourself mid-action and picking another option. That is a
+fair description of the first four traps and a false one for the fifth: its failure is
+silent, and the decision has to be made **in advance, in the architecture**. Nobody spots a
+blast radius after the fact. A promise that misdescribes the trap it sits above is worse than
+no promise.
+
+**Why the new one fits all five.** *Deciding on purpose* covers both a choice made at the
+keyboard and a bound designed in before anything runs:
+
+| Trap | Spot it | Decide on purpose |
+|---|---|---|
+| 1 | the checks all came from one reading | what would count as evidence |
+| 2 | the question already picked the answer | which problem we are solving |
+| 3 | working code with no understanding behind it | which seams you keep |
+| 4 | the constraint moved | where the capacity goes |
+| 5 | what it is allowed to do today | what it should be allowed to do |
+
+It also carries a phrase the deck already uses — every rung of the offloading ladder was a
+trade *made on purpose* — so the promise and that beat now rhyme deliberately.
+
+**It stays a single repeated line.** D-65's point is a recurring navigation surface: the same
+rail, the same shape, the same promise, five times. Five bespoke promises would be five things
+to read instead of one thing to recognize.
+
+**Watch this** (R-nn territory): *decide on purpose* sits one step from the engine — every
+trap is a job that stopped being done because nobody decided (D-14). Two words in a promise
+is not teaching the engine, and must not become an invitation to. **Do not gloss the promise
+on stage.** It is a rail, not a talking point.
+
+**Rejected:** five tailored promises, one per trap. Loses the recurring surface D-65 exists
+to create, and turns a rail into copy.
+
+**Rejected:** dropping the promise from the authority opener alone. The gap would read as an
+oversight on the one slide the room is most alert to.
+
+---
+
 ## G. Rejected — do not reopen without new information
 
 | Idea | Why it was rejected |
@@ -2137,3 +2182,5 @@ it; a bare instruction closes the trap on a chore.
 | Setting slide measures from the 45–75 character readability rule | That rule is for scanned paragraphs, not one display sentence on a projector; it wastes half the frame (D-84) |
 | "Capacity is not a plan" as the throughput trap's Monday line | Needs the argument explained first, and "capacity" is a word the room has to translate (D-85) |
 | Closing the throughput trap on the measure-the-constraint instruction alone | The instruction is the Monday action, but a bare instruction ends the trap on a chore (D-85) |
+| "Spot it. Then choose differently." as the trap promise | Misdescribes the authority trap, whose failure is silent and whose decision is made in advance (D-86) |
+| Five tailored trap promises, one per trap | Loses the recurring navigation surface D-65 exists to create (D-86) |
