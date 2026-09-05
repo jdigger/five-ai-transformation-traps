@@ -266,7 +266,7 @@
   color: var(--ink-soft); margin-bottom: 1.6rem; font-weight: 600;
 }
 
-/* A qualifier that must survive the slide leaving the room (D-56). Reads as a
+/* A qualifier that must survive the slide leaving the room. Reads as a
    chart label, not a footnote, and is present from the first frame. */
 .diagram .caption .qualifier {
   text-transform: none; letter-spacing: 0.01em; font-weight: 500;
@@ -304,7 +304,7 @@
 .annot.good { color: var(--good); border-left-color: var(--good); }
 
 /* dimming: the diagram deflates when the real question arrives -----------
-   0.30, not 0.16 (D-46). The audience must still see the ghost of the design
+   0.30, not 0.16. The audience must still see the ghost of the design
    they just approved; on an unknown projector in a lit room 16% vanishes and
    the reveal reads as a slide malfunction rather than a gut-punch. */
 .dimmable { transition: opacity 420ms ease, filter 420ms ease; }
@@ -381,9 +381,9 @@
 .qlist .q .n { font-size: 1.1rem; font-weight: 700; color: var(--good); flex: none; width: 1.6rem; }
 .qlist .q .t { font-size: 1.85rem; font-weight: 550; line-height: 1.25; }
 
-/* The trap each question came out of, under the question (D-82).
+/* The trap each question came out of, under the question.
    The room has no numbered index in front of it and cannot dereference "Trap 2"
-   mid-talk (D-75) — but on the one slide that gathers all five, naming the path
+   mid-talk — but on the one slide that gathers all five, naming the path
    is what makes the set recallable rather than five loose questions. Orange
    because the trap is the thing that bites you; the question above it is the
    answer. Small and light: this is a footprint, not a second headline, and the
@@ -446,7 +446,7 @@
 }
 .approvals .seq { color: #b9b2a8; font-size: 1.35rem; line-height: 1; flex: none; transition: opacity 260ms ease; }
 
-/* Volume per step (D-53). The escalation has to be VISIBLE before the reveal,
+/* Volume per step. The escalation has to be VISIBLE before the reveal,
    or click 4 asserts the filtering instead of exposing it. 2,000 -> 200 -> 20
    in sequence; all three become 2,000 the instant the restack lands. */
 .approvals .node { padding-left: 0.85rem; padding-right: 0.85rem; white-space: nowrap; }
@@ -463,7 +463,7 @@
 .approvals.parallel .seq { display: none; }
 .approvals.parallel .node { width: 100%; padding: 0.3rem 0.9rem; font-size: 1rem; }
 
-/* the reveal: the arrows come BACK, in orange (D-49).
+/* the reveal: the arrows come BACK, in orange.
    The sequence was never latency — it was the escalation chain, each level
    reviewing the level beneath it. Parallelising deleted it, and the deleted
    thing is invisible, which is the whole point. So it has to return on screen. */
@@ -479,7 +479,7 @@
   to   { opacity: 1; transform: rotate(90deg) translateX(0); }
 }
 
-/* the consequence, in the empty space right of the chain (D-50).
+/* the consequence, in the empty space right of the chain.
    Deleting an escalation chain doesn't just remove a control — it removes the
    FILTER. Supervisor and Finance used to see the exceptions; now they see
    everything. That complaint is the only signal anything was lost, and it will
@@ -506,7 +506,7 @@
    The deck is shared as a link afterward, so the claims that used to live
    only in the speaker's mouth — and especially the qualifications that keep
    a provocative title from reading as anti-AI out of context — now have to
-   survive on screen without him (D-79).
+   survive on screen without him.
 
    It is a PUNCTUATION mark, not a body-copy surface. One or two lines. If an
    anchor needs a third, it is an explanation and belongs in the notes.
@@ -570,7 +570,7 @@
 .anchor + .anchor { border-top: none; margin-top: 1.3rem; padding-top: 0; }
 
 
-/* MEASURE, and why these numbers look large (D-84).
+/* MEASURE, and why these numbers look large.
    `ch` is the width of the ZERO glyph, and in Inter that is materially wider
    than average lowercase prose — roughly 1.25x. A cap of 40ch therefore lets a
    sentence run only about 56% of the frame, which reads as text stopping half
@@ -581,7 +581,7 @@
 
 /* ========================================================= ANCHOR SLIDE === */
 /* An anchor that gets its own frame instead of riding on a slide that is
-   already carrying a diagram, a list, or three large numbers (D-81).
+   already carrying a diagram, a list, or three large numbers.
 
    The deck's pace is deliberate: slides move quickly and the speaker fills the
    gaps. A one-line slide is not wasted — it is the beat where a single sentence

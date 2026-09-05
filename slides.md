@@ -625,7 +625,7 @@ The alarm is still ringing. We're just looking at the dashboard.
 - **Distinguish noticing from tolerating.** Once the business clearly sees the product defect, it can consciously decide whether the cost of fixing it exceeds the harm it causes. That may be an uncomfortable decision — especially because customers still bear the failure — but at least it is a decision.
 - **The trap is that nobody made that decision.** Faster support let the problem fall below organizational attention before it could demand one.
 - **The faster support is an absolute good. Say so, and do not hedge it.** The automation is not the villain here; it did its job extremely well. That is exactly why this is dangerous.
-- The green dashboard image comes back at the end of the authority trap — *the support dashboard was green too*. Same picture, deliberately (D-75). Do not foreshadow it.
+- The green dashboard image comes back at the end of the authority trap — *the support dashboard was green too*. Same picture, deliberately. Do not foreshadow it.
 
 → So how do you get at the question the question already answered?
 -->
@@ -774,7 +774,7 @@ I still don't know what the compiler is doing in there, and I don't need to. But
 
 # Supporting Notes
 
-**[2] anchor — the definition of "seam" (D-80, corrected by D-83)**
+**[2] anchor — the definition of "seam"**
 - **The definition is load-bearing.** Without it the examples are just war stories, and a reader who wasn't here gets only the war stories.
 - **"Everything past it is MINE" is the point — do not soften it back to "nobody owns it."**
   Nobody-owns-it is a complaint about the org chart, and it lets the room off. The honest
@@ -1244,7 +1244,7 @@ So go find out where the constraint actually moved. Then choose.
 - **Say why it gets skipped, because that is the honest part.** Speed feels like progress on its own. Nobody skips the decision out of laziness; they skip it because the win already looks complete.
 - **Both callbacks in one breath, then stop.** The −8% and the five unnamed options are the evidence for the line — reference them, do not re-run them.
 - **The instruction is the second half of the slide.** Go measure. That is the thing that actually happens Monday; the aphorism is just what makes someone want to.
-- **Never say "trade-off" here, and don't reach for the quote** (D-09, D-14, D-17). This trap stays in its own register — hours, constraints, where the work went — and the frame gets paid at the close.
+- **Never say "trade-off" here, and don't reach for the quote.** This trap stays in its own register — hours, constraints, where the work went — and the frame gets paid at the close.
 - Do not re-open the fewer-people option here. It was named where it belonged; this slide is about how to decide, not what to decide.
 
 → So far AI has mostly been *handing* us things: answers, code, designs. Increasingly it doesn't hand you the thing. It just does it.
@@ -1352,7 +1352,7 @@ Rung one is an email somebody else wrote. Rung five is money leaving the company
 - **Concede properly:** an organization may legitimately decide AI should do all of these autonomously. Real possibility, and don't argue against it from human dignity.
 > I'm not making an argument about intelligence at all. I'm making one about consequences.
 
-**THE HANDOFF — this is now the bridge straight into the arithmetic (D-87).**
+**THE HANDOFF — this is the bridge straight into the arithmetic.**
 - *Rung one is an email somebody else wrote. Rung five is money leaving the company.* Two sentences, then go.
 - **The point is inevitability, not attack.** It will get something wrong eventually — that is true of every system and every person, and it needs no villain to be true. Do not reach for a malicious example here; the trap is about what the failure is permitted to reach, not about who caused it.
 - **No pause at the end.** Before anybody reaches for "we'll catch it in review," go straight at the arithmetic.
@@ -1569,8 +1569,8 @@ And keep doing that. Because this is going to move again next year.
 
 # Supporting Notes
 
-**PREPARED ANSWERS** — parked here because the slide that used to hold them was cut (Q-10).
-Move them if a new final slide arrives.
+**PREPARED ANSWERS** — parked here because this is the last slide. Move them if a new
+closing slide arrives.
 
 **"Doesn't this all assume today's AI stays unreliable?"**
 - No. Every question here gets *more* important with better models, because we'll grant more authority. "What can it do when it's wrong" is not a question about capability.
@@ -1593,7 +1593,7 @@ Move them if a new final slide arrives.
 **"I'm a small business — I need to survive 18 months, not build a talent pipeline."**
 - Completely legitimate. Then the throughput trap is your trap: figure out what actually got faster in *your* pipeline before you staff to it.
 
-**"Does any of this change TDD?" (Q-08 — likely, it's an Agile room)**
+**"Does any of this change TDD?" (likely — it's an Agile room)**
 - Test-first was always partly a *don't-fool-yourself* mechanism: a test written before the implementation can't have been derived from it. AI makes that ordering **more** valuable, because derived-check contamination is now fast, fluent and voluminous. It also kills the oldest objection — that tests are expensive to write.
 - **The honest limit:** TDD gives independence from the *implementation*, nothing against a misread *requirement*. Write a test-first test encoding the misunderstanding and you're exactly as wrong. That's where the refund example lives.
 - **The concrete technique:** "write the implementation" then "now write the tests" in the same context is maximum contamination. Generating tests from the requirement in a **fresh context**, before the implementation exists, is meaningfully better evidence for the same effort.

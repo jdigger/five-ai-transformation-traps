@@ -1,45 +1,41 @@
-# The Five Biggest AI Transformation Traps
+# The Five Biggest AI Transformation Traps: Do This, Not That
 
-Slides for the talk *"The Five Biggest AI Transformation Traps"*, built with
-[Slidev](https://sli.dev).
+A one-hour talk by Jim Moore, built with [Slidev](https://sli.dev).
 
-## Working on the talk
+**Slides:** https://jdigger.github.io/five-ai-transformation-traps/
 
-| File | What it holds |
-|---|---|
-| [AGENTS.md](./AGENTS.md) | How agents should work in this repo (`CLAUDE.md` symlinks to it). |
-| [slides.md](./slides.md) | The deck. Speaker notes carry the argument; slides stay sparse. |
-| [DECISIONS.md](./DECISIONS.md) | Settled decisions and why, including what was rejected. |
-| [OPEN-QUESTIONS.md](./OPEN-QUESTIONS.md) | Open questions, risks, and what only rehearsal can settle. |
-| [RESTART.md](./RESTART.md) | Paste into a fresh session to resume work against those files. |
+Speaker notes are part of the deck and carry the argument; the slides themselves stay
+sparse. Read them at
+[`/#/notes`](https://jdigger.github.io/five-ai-transformation-traps/#/notes) or in
+[`slides.md`](./slides.md), where each note opens with a `~M:SS` timing cue followed by the
+spoken script.
 
-## Develop
+## Run it locally
 
 ```bash
 npm install
-npm run dev
+npm run dev      # http://localhost:3030
 ```
 
-Then visit <http://localhost:3030>. Edit [slides.md](./slides.md) to change content.
+`http://localhost:3030/notes` is the full-width notes view for the lectern — use that rather
+than `/presenter/`, which gives the notes only a small corner. `/presenter/` is still the
+right view for slide + next + timer together.
 
-## Codex support
-
-This repository configures Slidev's MCP server in [`.codex/config.toml`](./.codex/config.toml),
-giving Codex slide-aware tools for inspecting and editing the deck. After cloning the
-repository or installing dependencies, restart Codex and open a new task in this project.
-Use `/mcp` in Codex or run `codex mcp list` to confirm that `slidev` is connected.
-
-The server uses `npx --no-install`, so it runs the repository's installed Slidev version
-without downloading another package. Run `npm install` first if dependencies are absent.
-
-## Build / export
+Jump to a slide with its reveals fired: `http://localhost:3030/12?clicks=1`.
 
 ```bash
-npm run build    # static site -> dist/
-npm run export   # PDF export
+npm run build    # confirms the deck compiles
 ```
 
-## Deploy
+## Deploying
 
-`npm run build` produces a static site in `dist/` that can be hosted on GitHub
-Pages, Netlify, or Vercel (config for the latter two is already included).
+Pushing to `main` builds and publishes to GitHub Pages via
+[`.github/workflows/pages.yml`](./.github/workflows/pages.yml).
+
+## Layout
+
+| Path | What it is |
+|---|---|
+| [`slides.md`](./slides.md) | The deck, and the speaker notes with it |
+| [`styles/index.css`](./styles/index.css) | The visual language — colors are semantic; read the header comment |
+| `public/` | Illustrations and portraits |
